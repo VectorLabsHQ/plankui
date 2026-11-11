@@ -1,0 +1,536 @@
+/* PlankUI tokens, v0.1.0. Themes, styles and colours as CSS variables. */
+/* PlankUI design tokens.
+ * 1. Knobs: hue, chroma, lightness, radius, fonts.
+ * 2. Palette: :root (white) and .dark (black).
+ * 3. Themes: [data-theme] tints the palette and sets fonts and the accent.
+ * 4. Accent formulas, recomputed wherever a theme or accent is set.
+ * 5. Accent presets: [data-accent].
+ * 6. Component styles: [data-style] = soft | flat | glass | keycap | brutal. */
+
+/* ───────── 1. Knobs ───────── */
+:root {
+  --h: 262;
+  --c: 0.22;
+  --l: 55%;
+  --radius-factor: 1;
+  --ff-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --ff-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --ff-code: "JetBrains Mono", ui-monospace, monospace;
+  --display-weight: 600;
+  --display-tracking: -0.045em;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+}
+
+/* ───────── 2. Palette ───────── */
+:root {
+  color-scheme: light;
+  --paper: oklch(100% 0 0);
+  --paper-2: oklch(97% 0 0);
+  --paper-3: oklch(92.2% 0 0);
+  --ink: oklch(14.5% 0 0);
+  --ink-2: oklch(37% 0 0);
+  --muted: oklch(52% 0 0);
+  --rule: oklch(92.2% 0 0);
+  --rule-2: oklch(87% 0 0);
+  --field-edge: oklch(70.8% 0 0);
+
+  --glass-edge: oklch(100% 0 0 / 0.65);
+  --glass-hi: oklch(100% 0 0 / 0.8);
+  --sh-a: 0.06;
+
+  --wash-l: 96.5%;
+  --wash-c: 0.16;
+  --wash-ink-l: 45%;
+  --hover-d: -5%;
+  --focus-d: 0%;
+
+  --graphite: oklch(17% 0 0);
+  --graphite-2: oklch(21% 0 0);
+  --graphite-ink: oklch(94% 0 0);
+  --graphite-muted: oklch(66% 0 0);
+  --graphite-rule: oklch(27% 0 0);
+  --code-string: oklch(52% 0.13 150);
+  --key-edge: oklch(84% 0 0);
+
+  --danger: oklch(57.7% 0.215 27);
+  --danger-edge: oklch(44% 0.17 27);
+  --danger-wash: oklch(96.5% 0.02 17);
+  --danger-wash-ink: oklch(50.5% 0.19 27);
+  --success: oklch(62.7% 0.17 150);
+  --success-wash: oklch(96.5% 0.045 150);
+  --success-wash-ink: oklch(44.8% 0.12 151);
+  --warning: oklch(76.9% 0.165 70);
+  --warning-wash: oklch(97% 0.05 90);
+  --warning-wash-ink: oklch(47% 0.12 46);
+  --white: oklch(100% 0 0);
+  --overlay: oklch(0% 0 0 / 0.4);
+
+  /* Chart series: the accent first, then four companions that stay distinct in every theme */
+  --chart-2: oklch(70% 0.17 350);
+  --chart-3: oklch(66% 0.17 295);
+  --chart-4: oklch(76% 0.15 62);
+  --chart-5: oklch(70% 0.15 165);
+}
+
+.dark {
+  color-scheme: dark;
+  --paper: oklch(0% 0 0);
+  --paper-2: oklch(15.5% 0 0);
+  --paper-3: oklch(21.5% 0 0);
+  --ink: oklch(98.5% 0 0);
+  --ink-2: oklch(85% 0 0);
+  --muted: oklch(66% 0 0);
+  --rule: oklch(23% 0 0);
+  --rule-2: oklch(31% 0 0);
+  --field-edge: oklch(44% 0 0);
+
+  --glass-edge: oklch(100% 0 0 / 0.13);
+  --glass-hi: oklch(100% 0 0 / 0.1);
+  --sh-a: 0.5;
+
+  --wash-l: 25%;
+  --wash-c: 0.4;
+  --wash-ink-l: 84%;
+  --hover-d: 6%;
+  --focus-d: 12%;
+
+  --key-edge: oklch(0% 0 0);
+  --code-string: oklch(80% 0.12 150);
+
+  --danger-wash: oklch(25% 0.07 25);
+  --danger-wash-ink: oklch(80% 0.13 25);
+  --success-wash: oklch(24% 0.055 150);
+  --success-wash-ink: oklch(82% 0.15 150);
+  --warning-wash: oklch(25% 0.055 75);
+  --warning-wash-ink: oklch(86% 0.13 80);
+  --overlay: oklch(0% 0 0 / 0.7);
+}
+
+/* ───────── 3. Themes ───────── */
+/* Base: pure white and black, Inter, blue. The defaults above. */
+[data-theme="base"] { --h: 262; --c: 0.22; --l: 55%; }
+
+/* Ember: warm paper, Bricolage Grotesque, orange. */
+[data-theme="ember"] {
+  --h: 48; --c: 0.19; --l: 66%;
+  --ff-display: "Bricolage Grotesque", "Inter", sans-serif;
+  --display-weight: 700;
+  --display-tracking: -0.04em;
+  --accent-ink-override: oklch(20% 0.04 50);
+  --paper: oklch(99.2% 0.005 80);
+  --paper-2: oklch(96.4% 0.011 75);
+  --paper-3: oklch(91.6% 0.016 72);
+  --ink: oklch(19% 0.02 55);
+  --ink-2: oklch(38% 0.025 55);
+  --muted: oklch(52% 0.025 60);
+  --rule: oklch(91% 0.014 72);
+  --rule-2: oklch(85.5% 0.018 70);
+  --field-edge: oklch(70% 0.025 65);
+}
+.dark[data-theme="ember"], .dark [data-theme="ember"] {
+  --paper: oklch(12.5% 0.012 55);
+  --paper-2: oklch(18% 0.016 55);
+  --paper-3: oklch(23.5% 0.02 55);
+  --ink: oklch(97% 0.01 80);
+  --ink-2: oklch(85% 0.015 75);
+  --muted: oklch(67% 0.02 70);
+  --rule: oklch(24.5% 0.018 55);
+  --rule-2: oklch(31.5% 0.022 55);
+  --field-edge: oklch(45% 0.025 60);
+}
+
+/* Grove: olive paper, Fraunces serif heads, sage. */
+[data-theme="grove"] {
+  --h: 150; --c: 0.085; --l: 48%;
+  --ff-display: "Fraunces", Georgia, serif;
+  --display-weight: 500;
+  --display-tracking: -0.025em;
+  --paper: oklch(99% 0.006 110);
+  --paper-2: oklch(96.2% 0.012 115);
+  --paper-3: oklch(91.5% 0.018 115);
+  --ink: oklch(21% 0.025 140);
+  --ink-2: oklch(38% 0.025 140);
+  --muted: oklch(51% 0.025 130);
+  --rule: oklch(90.5% 0.016 115);
+  --rule-2: oklch(85% 0.02 115);
+  --field-edge: oklch(68% 0.025 120);
+}
+.dark[data-theme="grove"], .dark [data-theme="grove"] {
+  --paper: oklch(13% 0.014 130);
+  --paper-2: oklch(18.5% 0.018 130);
+  --paper-3: oklch(24% 0.022 130);
+  --ink: oklch(96.5% 0.012 110);
+  --ink-2: oklch(84% 0.018 115);
+  --muted: oklch(67% 0.025 120);
+  --rule: oklch(25% 0.02 130);
+  --rule-2: oklch(32% 0.024 130);
+  --field-edge: oklch(46% 0.028 125);
+}
+
+/* Nebula: navy paper, Space Grotesk, violet. */
+[data-theme="nebula"] {
+  --h: 292; --c: 0.2; --l: 56%;
+  --ff-display: "Space Grotesk", "Inter", sans-serif;
+  --ff-body: "Space Grotesk", "Inter", sans-serif;
+  --display-weight: 600;
+  --display-tracking: -0.04em;
+  --paper: oklch(99.3% 0.004 285);
+  --paper-2: oklch(96.5% 0.01 285);
+  --paper-3: oklch(92% 0.016 285);
+  --ink: oklch(18% 0.035 280);
+  --ink-2: oklch(36% 0.035 280);
+  --muted: oklch(52% 0.03 280);
+  --rule: oklch(91.5% 0.014 285);
+  --rule-2: oklch(86% 0.018 285);
+  --field-edge: oklch(69% 0.03 285);
+}
+.dark[data-theme="nebula"], .dark [data-theme="nebula"] {
+  --paper: oklch(13% 0.035 275);
+  --paper-2: oklch(18.5% 0.042 275);
+  --paper-3: oklch(24% 0.048 278);
+  --ink: oklch(97% 0.012 285);
+  --ink-2: oklch(85% 0.02 285);
+  --muted: oklch(68% 0.035 285);
+  --rule: oklch(25% 0.045 278);
+  --rule-2: oklch(32% 0.05 280);
+  --field-edge: oklch(47% 0.05 282);
+}
+
+/* Terminal: pure neutrals, JetBrains Mono everywhere, phosphor green. */
+[data-theme="terminal"] {
+  --h: 148; --c: 0.19; --l: 60%;
+  --ff-display: "JetBrains Mono", ui-monospace, monospace;
+  --ff-body: "JetBrains Mono", ui-monospace, monospace;
+  --display-weight: 700;
+  --display-tracking: -0.06em;
+  --accent-ink-override: oklch(14% 0.03 150);
+}
+
+/* Candy: blush paper, Nunito, rose. */
+[data-theme="candy"] {
+  --h: 355; --c: 0.19; --l: 62%;
+  --ff-display: "Nunito", "Inter", sans-serif;
+  --ff-body: "Nunito", "Inter", sans-serif;
+  --display-weight: 800;
+  --display-tracking: -0.035em;
+  --paper: oklch(99.4% 0.004 350);
+  --paper-2: oklch(97% 0.012 350);
+  --paper-3: oklch(93% 0.02 350);
+  --ink: oklch(22% 0.03 350);
+  --ink-2: oklch(40% 0.035 350);
+  --muted: oklch(54% 0.035 350);
+  --rule: oklch(92.5% 0.016 350);
+  --rule-2: oklch(87.5% 0.022 350);
+  --field-edge: oklch(71% 0.035 350);
+}
+.dark[data-theme="candy"], .dark [data-theme="candy"] {
+  --paper: oklch(13.5% 0.02 350);
+  --paper-2: oklch(19% 0.026 350);
+  --paper-3: oklch(24.5% 0.03 350);
+  --ink: oklch(97.5% 0.01 350);
+  --ink-2: oklch(86% 0.02 350);
+  --muted: oklch(69% 0.03 350);
+  --rule: oklch(25.5% 0.028 350);
+  --rule-2: oklch(32.5% 0.032 350);
+  --field-edge: oklch(47% 0.04 350);
+}
+
+/* Surfaces derived from the palette, recomputed wherever a theme re-tints it */
+:root, [data-theme] {
+  --raised: var(--paper);
+  --inset-c: var(--paper);
+  --pop-c: var(--paper);
+  --field-c: var(--paper);
+}
+.dark, .dark [data-theme] {
+  --raised: oklch(from var(--paper-2) calc(l + 0.02) c h);
+  --inset-c: oklch(from var(--paper-2) calc(l + 0.045) c h);
+  --pop-c: oklch(from var(--paper-2) calc(l - 0.02) c h);
+  --field-c: oklch(from var(--paper) calc(l + 0.06) c h);
+  --graphite: oklch(from var(--paper-2) calc(l - 0.035) c h);
+  --graphite-2: oklch(from var(--paper-2) calc(l + 0.01) c h);
+  --graphite-rule: var(--rule);
+}
+
+/* ───────── 4. Accent formulas ─────────
+ * Declared on every element that can change the knobs, so a scoped theme recomputes them. */
+:root, .dark, [data-theme], [data-accent] {
+  --accent: oklch(var(--l) var(--c) var(--h));
+  --accent-hover: oklch(calc(var(--l) + var(--hover-d)) var(--c) var(--h));
+  --accent-edge: oklch(calc(var(--l) - 16%) calc(var(--c) * 0.85) var(--h));
+  --accent-ink: var(--accent-ink-override, oklch(100% 0 0));
+  --accent-wash: oklch(var(--wash-l) calc(var(--c) * var(--wash-c)) var(--h));
+  --accent-wash-ink: oklch(var(--wash-ink-l) var(--c) var(--h));
+  --accent-2: oklch(80% calc(var(--c) * 0.55) var(--h));
+  --focus: oklch(calc(var(--l) + var(--focus-d)) var(--c) var(--h));
+  --ring: oklch(calc(var(--l) + var(--focus-d)) var(--c) var(--h) / 0.28);
+}
+
+/* ───────── 5. Accent presets (override a theme's accent) ───────── */
+[data-accent="blue"] { --h: 262; --c: 0.22; --l: 55%; --swatch-l: 58%; --accent-ink-override: initial; }
+[data-accent="violet"] { --h: 292; --c: 0.22; --l: 54%; --swatch-l: 58%; --accent-ink-override: initial; }
+[data-accent="emerald"] { --h: 160; --c: 0.15; --l: 50%; --swatch-l: 62%; --accent-ink-override: initial; }
+[data-accent="vermilion"] { --h: 33; --c: 0.205; --l: 58%; --swatch-l: 60%; --accent-ink-override: initial; }
+[data-accent="rose"] { --h: 12; --c: 0.21; --l: 55%; --swatch-l: 62%; --accent-ink-override: initial; }
+[data-accent="amber"] { --h: 62; --c: 0.16; --l: 76%; --swatch-l: 76%; --accent-ink-override: oklch(21% 0.03 62); }
+[data-accent="mono"] {
+  --h: 0;
+  --c: 0;
+  --swatch-l: 22%;
+  --accent: var(--ink);
+  --accent-hover: var(--ink-2);
+  --accent-edge: var(--ink);
+  --accent-ink: var(--paper);
+  --accent-wash: var(--paper-3);
+  --accent-wash-ink: var(--ink);
+  --accent-2: var(--graphite-ink);
+  --focus: var(--ink);
+  --ring: oklch(55% 0 0 / 0.3);
+}
+
+/* ───────── 6. Component styles ─────────
+ * The :where() part re-applies a style inside a scoped theme so its tokens follow that palette. */
+:root,
+[data-style="soft"],
+:where([data-style="soft"]) :where([data-theme], .dark) {
+  --card: var(--paper-2);
+  --card-border: transparent;
+  --elev-card: none;
+  --inset: var(--inset-c);
+  --pop: var(--pop-c);
+  --pop-border: var(--rule);
+  --elev-pop: 0 1px 2px oklch(0% 0 0 / var(--sh-a)), 0 14px 36px -10px oklch(0% 0 0 / calc(var(--sh-a) * 2.6));
+  --field: var(--field-c);
+  --field-border: var(--field-edge);
+  --elev-field: 0 1px 2px oklch(0% 0 0 / var(--sh-a));
+  --key-face: var(--raised);
+  --key-border: var(--rule);
+  --elev-key: 0 1px 2px oklch(0% 0 0 / var(--sh-a));
+  --btn-bg: var(--accent);
+  --btn-image: linear-gradient(oklch(calc(var(--l) + 5%) var(--c) var(--h)), oklch(calc(var(--l) - 4%) var(--c) calc(var(--h) + 6)));
+  --btn-border: transparent;
+  --elev-key-accent: inset 0 1px 0 oklch(100% 0 0 / 0.2), 0 1px 2px oklch(0% 0 0 / calc(var(--sh-a) * 1.6));
+  --elev-key-danger: inset 0 1px 0 oklch(100% 0 0 / 0.2), 0 1px 2px oklch(0% 0 0 / calc(var(--sh-a) * 1.6));
+  --elev-key-press: inset 0 1px 2px oklch(0% 0 0 / calc(var(--sh-a) * 2.5));
+  --lift: 0px;
+  --press: 0.5px;
+  --tray: var(--paper-2);
+  --tray-border: var(--rule);
+  --surface-filter: none;
+  --stage: none;
+}
+
+[data-style="flat"],
+:where([data-style="flat"]) :where([data-theme], .dark) {
+  --card: var(--paper);
+  --card-border: var(--rule-2);
+  --elev-card: none;
+  --inset: var(--paper-2);
+  --pop: var(--pop-c);
+  --pop-border: var(--rule-2);
+  --elev-pop: none;
+  --field: var(--paper-2);
+  --field-border: var(--field-edge);
+  --elev-field: none;
+  --key-face: var(--paper-2);
+  --key-border: var(--paper-2);
+  --elev-key: none;
+  --btn-bg: var(--accent);
+  --btn-image: none;
+  --btn-border: transparent;
+  --elev-key-accent: none;
+  --elev-key-danger: none;
+  --elev-key-press: none;
+  --lift: 0px;
+  --press: 0px;
+  --tray: var(--paper-2);
+  --tray-border: var(--paper-2);
+  --surface-filter: none;
+  --stage: none;
+}
+
+[data-style="glass"],
+:where([data-style="glass"]) :where([data-theme], .dark) {
+  --card: color-mix(in oklab, var(--paper) 42%, transparent);
+  --card-border: var(--glass-edge);
+  --elev-card: inset 0 1px 0 var(--glass-hi), 0 10px 40px -14px oklch(0% 0 0 / calc(var(--sh-a) * 4));
+  --inset: color-mix(in oklab, var(--paper) 55%, transparent);
+  --pop: color-mix(in oklab, var(--pop-c) 66%, transparent);
+  --pop-border: var(--glass-edge);
+  --elev-pop: inset 0 1px 0 var(--glass-hi), 0 18px 48px -14px oklch(0% 0 0 / calc(var(--sh-a) * 5));
+  --field: color-mix(in oklab, var(--paper) 40%, transparent);
+  --field-border: var(--glass-edge);
+  --elev-field: inset 0 1px 3px oklch(0% 0 0 / var(--sh-a));
+  --key-face: color-mix(in oklab, var(--paper) 38%, transparent);
+  --key-border: var(--glass-edge);
+  --elev-key: inset 0 1px 0 var(--glass-hi), 0 4px 14px -6px oklch(0% 0 0 / calc(var(--sh-a) * 3));
+  --btn-bg: transparent;
+  --btn-image: linear-gradient(oklch(calc(var(--l) + 8%) var(--c) var(--h) / 0.85), oklch(var(--l) var(--c) var(--h) / 0.9));
+  --btn-border: oklch(100% 0 0 / 0.28);
+  --elev-key-accent: inset 0 1px 0 oklch(100% 0 0 / 0.4), 0 6px 18px -6px oklch(var(--l) var(--c) var(--h) / 0.65);
+  --elev-key-danger: inset 0 1px 0 oklch(100% 0 0 / 0.4), 0 6px 18px -6px oklch(57% 0.2 27 / 0.6);
+  --elev-key-press: inset 0 2px 6px oklch(0% 0 0 / calc(var(--sh-a) * 2));
+  --lift: 0px;
+  --press: 0.5px;
+  --tray: color-mix(in oklab, var(--paper) 30%, transparent);
+  --tray-border: var(--glass-edge);
+  --surface-filter: blur(22px) saturate(1.8);
+  /* One soft wash of the accent on the page colour: enough behind the glass to show the frost, no rainbow. */
+  --stage:
+    radial-gradient(60% 80% at 25% 15%, color-mix(in oklab, var(--accent) 22%, transparent), transparent 70%),
+    linear-gradient(160deg, color-mix(in oklab, var(--paper) 94%, var(--accent)), var(--paper-2));
+}
+
+[data-style="keycap"],
+:where([data-style="keycap"]) :where([data-theme], .dark) {
+  --card: var(--paper);
+  --card-border: var(--rule);
+  --elev-card: 0 1px 2px oklch(0% 0 0 / var(--sh-a));
+  --inset: var(--paper-2);
+  --pop: var(--pop-c);
+  --pop-border: var(--rule);
+  --elev-pop: 0 1px 2px oklch(0% 0 0 / var(--sh-a)), 0 14px 36px -10px oklch(0% 0 0 / calc(var(--sh-a) * 2.6));
+  --field: var(--field-c);
+  --field-border: var(--field-edge);
+  --elev-field: inset 0 1px 2px oklch(0% 0 0 / var(--sh-a));
+  --key-face: var(--raised);
+  --key-border: var(--rule-2);
+  --elev-key: 0 2px 0 0 var(--key-edge), 0 5px 8px -5px oklch(0% 0 0 / calc(var(--sh-a) * 4)), inset 0 1px 0 var(--glass-hi);
+  --btn-bg: var(--accent);
+  --btn-image: none;
+  --btn-border: var(--accent-edge);
+  --elev-key-accent: 0 2px 0 0 var(--accent-edge), 0 5px 8px -5px oklch(30% 0.12 var(--h) / 0.45), inset 0 1px 0 oklch(100% 0 0 / 0.22);
+  --elev-key-danger: 0 2px 0 0 var(--danger-edge), 0 5px 8px -5px oklch(30% 0.12 27 / 0.45), inset 0 1px 0 oklch(100% 0 0 / 0.22);
+  --elev-key-press: inset 0 1px 2px oklch(0% 0 0 / calc(var(--sh-a) * 2.5));
+  --lift: -1px;
+  --press: 2px;
+  --tray: var(--paper-3);
+  --tray-border: var(--rule);
+  --surface-filter: none;
+  --stage: none;
+}
+
+[data-style="brutal"],
+:where([data-style="brutal"]) :where([data-theme], .dark) {
+  --card: var(--paper);
+  --card-border: var(--ink);
+  --elev-card: 4px 4px 0 0 var(--ink);
+  --inset: var(--paper-2);
+  --pop: var(--paper);
+  --pop-border: var(--ink);
+  --elev-pop: 5px 5px 0 0 var(--ink);
+  --field: var(--paper);
+  --field-border: var(--ink);
+  --elev-field: 2px 2px 0 0 var(--ink);
+  --key-face: var(--paper);
+  --key-border: var(--ink);
+  --elev-key: 3px 3px 0 0 var(--ink);
+  --btn-bg: var(--accent);
+  --btn-image: none;
+  --btn-border: var(--ink);
+  --elev-key-accent: 3px 3px 0 0 var(--ink);
+  --elev-key-danger: 3px 3px 0 0 var(--ink);
+  --elev-key-press: 0 0 0 0 var(--ink);
+  --lift: -1px;
+  --press: 2px;
+  --tray: var(--paper);
+  --tray-border: var(--ink);
+  --surface-filter: none;
+  --stage: none;
+}
+
+/* ───────── 7. Field and control tokens ─────────
+ * Soft: filled fields with no border and an inset focus ring, white controls that
+ * turn into a lit accent gradient when on. The other styles keep outlined fields and flat fills. */
+:root, [data-theme] {
+  --field-soft: color-mix(in oklab, var(--ink) 7.5%, var(--paper));
+  --field-soft-hover: color-mix(in oklab, var(--ink) 10.5%, var(--paper));
+  --control-on-soft: linear-gradient(var(--accent), color-mix(in oklab, var(--accent) 80%, oklch(0% 0 0)));
+}
+:root:not([data-style]),
+[data-style="soft"],
+:where([data-style="soft"]) :where([data-theme], .dark) {
+  --field: var(--field-soft);
+  --field-border: transparent;
+  --elev-field: none;
+  --field-hover: var(--field-soft-hover);
+  --field-hover-border: transparent;
+  --field-focus-border: transparent;
+  --field-focus-ring: inset 0 0 0 2px var(--accent);
+  --control: var(--raised);
+  --control-border: var(--rule-2);
+  --elev-control: 0 1px 2px oklch(0% 0 0 / var(--sh-a));
+  --control-on-image: var(--control-on-soft);
+  --elev-control-on: inset 0 2px 0 oklch(100% 0 0 / 0.25), inset 0 0 0 1px var(--accent);
+  --track-off: var(--field-soft-hover);
+  --thumb-image: linear-gradient(var(--raised) 44%, var(--paper-2));
+  --elev-thumb: 0 3px 3px oklch(0% 0 0 / 0.04), 0 0.75px 0 oklch(0% 0 0 / 0.08);
+  --tray-border: transparent;
+  /* Floating bars need an edge even where trays have none. */
+  --float-border: var(--rule);
+  --pill-radius: calc(6px * var(--radius-factor));
+}
+[data-style="flat"], :where([data-style="flat"]) :where([data-theme], .dark),
+[data-style="glass"], :where([data-style="glass"]) :where([data-theme], .dark),
+[data-style="keycap"], :where([data-style="keycap"]) :where([data-theme], .dark),
+[data-style="brutal"], :where([data-style="brutal"]) :where([data-theme], .dark) {
+  --field-hover: var(--field);
+  --field-hover-border: var(--muted);
+  --field-focus-border: var(--accent);
+  --field-focus-ring: 0 0 0 3px var(--ring);
+  --control: var(--field);
+  --control-border: var(--field-border);
+  --elev-control: var(--elev-field);
+  --control-on-image: none;
+  --elev-control-on: none;
+  --track-off: var(--rule-2);
+  --thumb-image: none;
+  --elev-thumb: 0 1px 3px var(--overlay);
+  --float-border: var(--tray-border);
+  --pill-radius: var(--radius-input);
+}
+[data-style="keycap"], :where([data-style="keycap"]) :where([data-theme], .dark) {
+  --control-on-image: var(--control-on-soft);
+  --elev-control-on: inset 0 1px 0 oklch(100% 0 0 / 0.25), 0 1px 0 var(--accent-edge);
+}
+[data-style="brutal"], :where([data-style="brutal"]) :where([data-theme], .dark) {
+  --field-focus-border: var(--ink);
+  --field-focus-ring: 3px 3px 0 0 var(--accent);
+  --elev-thumb: none;
+}
+
+/* Soft popovers: a hairline and a light lift. Danger buttons get the same lit gradient as primary. */
+:root:not([data-style]), [data-style="soft"], :where([data-style="soft"]) :where([data-theme], .dark) {
+  --elev-pop: 0 1px 1px oklch(0% 0 0 / 0.04), 0 4px 4px oklch(0% 0 0 / 0.02), 0 16px 32px -16px oklch(0% 0 0 / calc(var(--sh-a) * 2));
+  --btn-danger-image: linear-gradient(color-mix(in oklab, var(--danger) 92%, oklch(100% 0 0)), color-mix(in oklab, var(--danger) 86%, oklch(0% 0 0)));
+}
+[data-style="keycap"], :where([data-style="keycap"]) :where([data-theme], .dark) {
+  --btn-danger-image: linear-gradient(color-mix(in oklab, var(--danger) 92%, oklch(100% 0 0)), color-mix(in oklab, var(--danger) 86%, oklch(0% 0 0)));
+}
+[data-style="flat"], :where([data-style="flat"]) :where([data-theme], .dark),
+[data-style="glass"], :where([data-style="glass"]) :where([data-theme], .dark),
+[data-style="brutal"], :where([data-style="brutal"]) :where([data-theme], .dark) {
+  --btn-danger-image: none;
+}
+
+/* ───────── 8. Brand ─────────
+ * The PlankUI mark on the site takes the visitor's accent: planks in the accent's ink on an accent tile.
+ * Files outside the site (favicon, badges, social card) keep the fixed blue below. */
+:root {
+  --brand-blue: oklch(56% 0.22 263);
+  --brand-tile: var(--accent, var(--brand-blue));
+  --brand-plank: var(--accent-ink, oklch(100% 0 0));
+}
+
+/* Holographic foil for PlankUI Pro: soft pastels that shift like a tilted sticker. Fixed in every theme. */
+:root {
+  --holo-1: oklch(88% 0.08 350);
+  --holo-2: oklch(86% 0.08 285);
+  --holo-3: oklch(90% 0.07 215);
+  --holo-4: oklch(92% 0.08 160);
+  --holo-5: oklch(95% 0.09 95);
+  --holo-ink: oklch(24% 0.06 285);
+  --holo-edge: oklch(100% 0 0);
+}

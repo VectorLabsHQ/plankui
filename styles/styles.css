@@ -1,0 +1,371 @@
+/* PlankUI base styles, v0.1.0. Import this once; it imports Tailwind and tokens.css. */
+@import "tailwindcss";
+@import "./tokens.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-paper-3: var(--paper-3);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-rule-2: var(--rule-2);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-edge: var(--accent-edge);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-wash: var(--accent-wash);
+  --color-accent-wash-ink: var(--accent-wash-ink);
+  --color-accent-2: var(--accent-2);
+  --color-graphite: var(--graphite);
+  --color-graphite-2: var(--graphite-2);
+  --color-graphite-ink: var(--graphite-ink);
+  --color-graphite-muted: var(--graphite-muted);
+  --color-graphite-rule: var(--graphite-rule);
+  --color-key-face: var(--key-face);
+  --color-key-edge: var(--key-edge);
+  --color-danger: var(--danger);
+  --color-danger-wash: var(--danger-wash);
+  --color-danger-wash-ink: var(--danger-wash-ink);
+  --color-success: var(--success);
+  --color-success-wash: var(--success-wash);
+  --color-success-wash-ink: var(--success-wash-ink);
+  --color-warning: var(--warning);
+  --color-warning-wash: var(--warning-wash);
+  --color-warning-wash-ink: var(--warning-wash-ink);
+  --color-overlay: var(--overlay);
+  --color-white: var(--white);
+  --color-focus: var(--focus);
+  --color-field-edge: var(--field-edge);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-inset: var(--inset);
+  --color-pop: var(--pop);
+  --color-pop-border: var(--pop-border);
+  --color-field: var(--field);
+  --color-field-border: var(--field-border);
+  --color-tray: var(--tray);
+  --color-tray-border: var(--tray-border);
+  --color-raised: var(--raised);
+
+  --font-display: var(--ff-display);
+  --font-sans: var(--ff-body);
+  --font-mono: var(--ff-code);
+
+  --shadow-card: var(--elev-card);
+  --shadow-pop: var(--elev-pop);
+  --shadow-key: var(--elev-key);
+  --shadow-key-accent: var(--elev-key-accent);
+  --shadow-key-danger: var(--elev-key-danger);
+  --shadow-key-press: var(--elev-key-press);
+  --shadow-field: var(--elev-field);
+}
+
+@theme {
+  --radius-sm: calc(6px * var(--radius-factor));
+  --radius-input: calc(10px * var(--radius-factor));
+  --radius-card: calc(12px * var(--radius-factor));
+  --radius-panel: calc(18px * var(--radius-factor));
+  --radius-tile: calc(16px * var(--radius-factor));
+  --radius-shell: calc(22px * var(--radius-factor));
+  --radius-frame: calc(28px * var(--radius-factor));
+  --radius-pill: calc(999px * var(--radius-factor));
+}
+
+/* ───────────── Base ───────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { scroll-padding-top: 96px; scrollbar-color: var(--rule-2) var(--paper); }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  caret-color: var(--accent);
+}
+::selection { background: color-mix(in oklab, var(--accent) 22%, transparent); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+h1, h2, h3, h4 {
+  font-family: var(--ff-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  line-height: 1.05;
+  overflow-wrap: break-word;
+  min-width: 0;
+  text-wrap: balance;
+  font-synthesis: none;
+}
+h3, h4 { font-weight: 500; line-height: 1.2; }
+p { text-wrap: pretty; }
+code, kbd, pre { font-family: var(--ff-code); }
+
+/* Hairline ruled grid used behind previews and the hero bench */
+.bg-cells {
+  background-image:
+    radial-gradient(circle at 1px 1px, var(--rule-2) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* Radix enter/exit motion: opacity and transform only */
+@keyframes vx-pop-in { from { opacity: 0; transform: translateY(-4px) scale(0.98); } }
+@keyframes vx-pop-out { to { opacity: 0; transform: translateY(-4px) scale(0.98); } }
+@keyframes vx-fade-in { from { opacity: 0; } }
+@keyframes vx-fade-out { to { opacity: 0; } }
+@keyframes vx-dialog-in { from { opacity: 0; transform: translate(-50%, -48%) scale(0.97); } }
+@keyframes vx-dialog-out { to { opacity: 0; transform: translate(-50%, -48%) scale(0.97); } }
+@keyframes vx-toast-in { from { opacity: 0; transform: translateY(8px) scale(0.98); } }
+@keyframes vx-spin { to { transform: rotate(360deg); } }
+@keyframes vx-shimmer { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+@keyframes vx-reveal { from { opacity: 0; transform: translateY(4px); } }
+
+.vx-pop[data-state="open"], .vx-pop[data-state="delayed-open"], .vx-pop[data-state="instant-open"] { animation: vx-pop-in var(--dur-short) var(--ease-out); }
+.vx-pop[data-state="closed"] { animation: vx-pop-out var(--dur-micro) ease-in; }
+.vx-fade[data-state="open"] { animation: vx-fade-in var(--dur-short) var(--ease-out); }
+.vx-fade[data-state="closed"] { animation: vx-fade-out var(--dur-micro) ease-in; }
+.vx-dialog[data-state="open"] { animation: vx-dialog-in var(--dur-short) var(--ease-out); }
+.vx-dialog[data-state="closed"] { animation: vx-dialog-out var(--dur-micro) ease-in; }
+.vx-toast { animation: vx-toast-in var(--dur-short) var(--ease-out); }
+.vx-spin { animation: vx-spin 0.8s linear infinite; }
+.vx-reveal[data-state="open"] { animation: vx-reveal var(--dur-short) var(--ease-out); }
+.vx-shimmer { position: relative; overflow: hidden; }
+.vx-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--paper) 60%, transparent), transparent);
+  animation: vx-shimmer 1.4s ease-in-out infinite;
+}
+
+/* sugar-high code tokens: one accent, never a rainbow */
+.code-block {
+  --sh-class: var(--accent-wash-ink);
+  --sh-identifier: var(--ink);
+  --sh-sign: var(--muted);
+  --sh-property: var(--ink-2);
+  --sh-entity: var(--accent-wash-ink);
+  --sh-jsxliterals: var(--ink);
+  --sh-string: var(--code-string);
+  --sh-keyword: oklch(from var(--accent-wash-ink) l c calc(h + 40));
+  --sh-comment: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* An accent preview chip: computes its colour on the element, so a nested data-accent shows that hue */
+.swatch { background: oklch(var(--swatch-l, 56%) var(--c) var(--h)); }
+
+/* Sheet slides: transform only */
+@keyframes vx-sheet-right { from { transform: translateX(100%); } }
+@keyframes vx-sheet-right-out { to { transform: translateX(100%); } }
+@keyframes vx-sheet-left { from { transform: translateX(-100%); } }
+@keyframes vx-sheet-left-out { to { transform: translateX(-100%); } }
+@keyframes vx-sheet-bottom { from { transform: translateY(100%); } }
+@keyframes vx-sheet-bottom-out { to { transform: translateY(100%); } }
+.vx-sheet-right[data-state="open"] { animation: vx-sheet-right var(--dur-short) var(--ease-out); }
+.vx-sheet-right[data-state="closed"] { animation: vx-sheet-right-out var(--dur-short) ease-in; }
+.vx-sheet-left[data-state="open"] { animation: vx-sheet-left var(--dur-short) var(--ease-out); }
+.vx-sheet-left[data-state="closed"] { animation: vx-sheet-left-out var(--dur-short) ease-in; }
+.vx-sheet-bottom[data-state="open"] { animation: vx-sheet-bottom var(--dur-short) var(--ease-out); }
+.vx-sheet-bottom[data-state="closed"] { animation: vx-sheet-bottom-out var(--dur-short) ease-in; }
+@keyframes vx-caret { 50% { opacity: 0; } }
+.vx-caret { animation: vx-caret 1s step-end infinite; }
+
+/* Component style hooks */
+.vx-glass { -webkit-backdrop-filter: var(--surface-filter); backdrop-filter: var(--surface-filter); }
+[data-style="glass"] .vx-stage, .vx-stage[data-style="glass"] { background-image: var(--stage); }
+
+/* Moving columns: transform only, paused on hover, still under reduced motion */
+@keyframes vx-marquee-up { to { transform: translateY(-50%); } }
+@keyframes vx-marquee-down { from { transform: translateY(-50%); } to { transform: translateY(0); } }
+.vx-marquee-track { animation: vx-marquee-up var(--marquee-dur, 40s) linear infinite; will-change: transform; }
+.vx-marquee-track[data-reverse] { animation-name: vx-marquee-down; }
+.vx-marquee:hover .vx-marquee-track { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .vx-marquee-track { animation: none !important; } }
+
+/* Scoped themes need their own body face */
+[data-theme] { font-family: var(--ff-body); }
+
+/* Theme graphics: one decorative layer behind the hero, different per theme */
+.vx-graphic {
+  background:
+    radial-gradient(28% 60% at 22% 0%, oklch(78% 0.14 var(--h) / 0.35), transparent 70%),
+    radial-gradient(26% 55% at 50% 0%, oklch(82% 0.12 calc(var(--h) + 120) / 0.3), transparent 70%),
+    radial-gradient(28% 60% at 80% 0%, oklch(84% 0.11 calc(var(--h) - 80) / 0.3), transparent 70%);
+}
+[data-theme="ember"] .vx-graphic, .vx-graphic[data-theme="ember"] {
+  background:
+    radial-gradient(50% 70% at 50% 0%, oklch(75% 0.17 var(--h) / 0.35), transparent 70%),
+    repeating-linear-gradient(90deg, transparent 0 22px, oklch(70% 0.15 var(--h) / 0.14) 22px 24px, transparent 24px 60px, oklch(80% 0.12 calc(var(--h) + 20) / 0.1) 60px 61px);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 85%);
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+[data-theme="grove"] .vx-graphic, .vx-graphic[data-theme="grove"] {
+  background:
+    radial-gradient(circle at 1px 1px, oklch(55% 0.06 var(--h) / 0.35) 1.2px, transparent 0) 0 0 / 22px 22px,
+    radial-gradient(45% 60% at 50% 0%, oklch(85% 0.08 var(--h) / 0.45), transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 20%, black 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse at 50% 20%, black 30%, transparent 75%);
+}
+[data-theme="nebula"] .vx-graphic, .vx-graphic[data-theme="nebula"] {
+  background:
+    radial-gradient(1px 1px at 12% 18%, var(--ink) 50%, transparent 51%),
+    radial-gradient(1px 1px at 32% 42%, var(--ink) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 58% 12%, var(--ink) 50%, transparent 51%),
+    radial-gradient(1px 1px at 74% 36%, var(--ink) 50%, transparent 51%),
+    radial-gradient(1px 1px at 88% 16%, var(--ink) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 44% 28%, var(--ink) 50%, transparent 51%),
+    radial-gradient(1px 1px at 22% 58%, var(--ink) 50%, transparent 51%),
+    radial-gradient(1px 1px at 66% 54%, var(--ink) 50%, transparent 51%),
+    radial-gradient(35% 50% at 25% 10%, oklch(65% 0.2 var(--h) / 0.4), transparent 70%),
+    radial-gradient(35% 50% at 78% 20%, oklch(70% 0.16 calc(var(--h) - 60) / 0.35), transparent 70%);
+  opacity: 0.9;
+}
+[data-theme="terminal"] .vx-graphic, .vx-graphic[data-theme="terminal"] {
+  background:
+    repeating-linear-gradient(0deg, oklch(60% 0.15 var(--h) / 0.07) 0 1px, transparent 1px 4px),
+    linear-gradient(90deg, var(--rule) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(0deg, var(--rule) 1px, transparent 1px) 0 0 / 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 15%, black 25%, transparent 75%);
+  mask-image: radial-gradient(ellipse at 50% 15%, black 25%, transparent 75%);
+}
+[data-theme="candy"] .vx-graphic, .vx-graphic[data-theme="candy"] {
+  background:
+    radial-gradient(22% 38% at 15% 10%, oklch(85% 0.12 var(--h) / 0.7), transparent 70%),
+    radial-gradient(20% 34% at 40% 0%, oklch(88% 0.1 80 / 0.6), transparent 70%),
+    radial-gradient(22% 38% at 66% 8%, oklch(86% 0.1 200 / 0.6), transparent 70%),
+    radial-gradient(20% 34% at 90% 4%, oklch(85% 0.12 300 / 0.55), transparent 70%);
+}
+
+/* Radius scales recomputed inside scoped themes */
+[data-theme], [style*="--radius-factor"] {
+  --radius-sm: calc(6px * var(--radius-factor));
+  --radius-input: calc(10px * var(--radius-factor));
+  --radius-card: calc(12px * var(--radius-factor));
+  --radius-panel: calc(18px * var(--radius-factor));
+  --radius-tile: calc(16px * var(--radius-factor));
+  --radius-shell: calc(22px * var(--radius-factor));
+  --radius-frame: calc(28px * var(--radius-factor));
+  --radius-pill: calc(999px * var(--radius-factor));
+}
+
+/* Charts and composer motion: transform, opacity, clip-path and stroke only */
+@keyframes vx-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes vx-fade-up { from { opacity: 0; transform: translateY(6px); } }
+.vx-draw { stroke-dasharray: 1; animation: vx-draw 1.1s var(--ease-out) both; }
+.vx-fade-up { animation: vx-fade-up var(--dur-short) var(--ease-out) both; }
+.vx-orbit { animation: vx-spin 2.6s linear infinite; }
+.vx-orbit-slow { animation: vx-spin 6s linear infinite; }
+
+/* Colour picker hue strip */
+.vx-hue { background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00); }
+.vx-hue::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 999px; background: var(--white); border: 2px solid var(--white); box-shadow: 0 0 0 1px oklch(0% 0 0 / 0.3), 0 2px 4px oklch(0% 0 0 / 0.3); }
+.vx-hue::-moz-range-thumb { width: 14px; height: 14px; border-radius: 999px; background: var(--white); border: 2px solid var(--white); box-shadow: 0 0 0 1px oklch(0% 0 0 / 0.3); }
+
+/* Mode and theme switches: a circle grows from the click for mode, a soft crossfade for themes */
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 360ms; animation-timing-function: var(--ease-out); }
+[data-vt="reveal"]::view-transition-old(root), [data-vt="reveal"]::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+[data-vt="reveal"]::view-transition-old(root) { z-index: 1; }
+[data-vt="reveal"]::view-transition-new(root) { z-index: 2; }
+
+/* Composer light: a dash that laps the rim at constant speed */
+@keyframes vx-rim { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -100; } }
+.vx-rim { animation: vx-rim 4.5s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .vx-rim { animation: none; } }
+
+/* Thinking: text with a light passing through it */
+@keyframes vx-shimmer-text { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+.vx-shimmer-text {
+  color: transparent;
+  background: linear-gradient(90deg, var(--muted) 0%, var(--muted) 40%, var(--ink) 50%, var(--muted) 60%, var(--muted) 100%) 0 0 / 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: vx-shimmer-text 1.8s linear infinite;
+}
+
+/* Docs side menu: one guide line, a short tick into each row, a rounded corner on the last */
+/* Sidebar tree: the guide sits in the gutter, outside each row, so a selected row's card never covers it.
+   Rows touch (no gap) and each guide segment runs past the row's 1px border, so the line is continuous. */
+.vx-tree { --tree-line: color-mix(in oklab, var(--muted) 38%, transparent); display: grid; gap: 0; }
+.vx-tree > * { position: relative; margin-left: 22px; padding-left: 10px !important; }
+.vx-tree > *::before {
+  content: ""; position: absolute; left: -9px; top: -1px; bottom: -1px; border-left: 1px solid var(--tree-line);
+}
+.vx-tree > *::after {
+  content: ""; position: absolute; left: -9px; top: 50%; width: 6px; border-top: 1px solid var(--tree-line);
+}
+.vx-tree > *:last-child::before { bottom: calc(50% - 1px); width: 6px; border-bottom: 1px solid var(--tree-line); border-bottom-left-radius: calc(5px * var(--radius-factor)); }
+.vx-tree > *:last-child::after { display: none; }
+
+/* Bar list, radar and activity rings entrances */
+@keyframes vx-grow-x { from { transform: scaleX(0); } }
+@keyframes vx-radar { from { opacity: 0; transform: scale(0.6); } }
+@keyframes vx-ring { from { stroke-dasharray: 0 var(--len); } }
+.vx-grow-x { transform-origin: left; animation: vx-grow-x 0.7s var(--ease-out) both; }
+.vx-radar { animation: vx-radar 0.6s var(--ease-out) both; }
+.vx-ring { animation: vx-ring 1.1s var(--ease-out) both; }
+@media (prefers-reduced-motion: reduce) { .vx-grow-x, .vx-radar, .vx-ring { animation: none; } }
+/* Reveal lines left to right; safe with non-scaling strokes, unlike dash-offset drawing. */
+@keyframes vx-wipe { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+.vx-wipe { animation: vx-wipe 1.1s var(--ease-out) both; }
+@media (prefers-reduced-motion: reduce) { .vx-wipe { animation: none; } }
+
+/* Field states follow the style: Soft fills and rings inside, the rest outline and glow. */
+@utility field-hover {
+  border-color: var(--field-hover-border);
+  background-color: var(--field-hover);
+}
+@utility field-focus {
+  border-color: var(--field-focus-border);
+  box-shadow: var(--field-focus-ring);
+}
+@keyframes vx-slide-next { from { opacity: 0; transform: translateX(16px); } }
+@keyframes vx-slide-prev { from { opacity: 0; transform: translateX(-16px); } }
+@keyframes vx-rise { from { transform: scaleY(0); } }
+.vx-rise { animation: vx-rise 0.7s var(--ease-out) both; }
+@media (prefers-reduced-motion: reduce) { .vx-rise { animation: none; } }
+
+/* Holographic sticker: a conic foil, a light sweep on hover, and an optional slow drift. */
+@property --holo-angle { syntax: "<angle>"; initial-value: 200deg; inherits: false; }
+.vx-holo {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(120% 90% at var(--holo-x, 30%) var(--holo-y, 20%), oklch(100% 0 0 / 0.55), transparent 55%),
+    conic-gradient(from var(--holo-angle) at 50% 50%, var(--holo-1), var(--holo-2), var(--holo-3), var(--holo-4), var(--holo-5), var(--holo-1));
+  color: var(--holo-ink);
+}
+.vx-holo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(115deg, transparent 30%, oklch(100% 0 0 / 0.75) 45%, transparent 60%);
+  transform: translateX(-130%);
+  transition: transform 0.9s var(--ease-out);
+}
+.vx-holo:hover::after, .group:hover .vx-holo::after { transform: translateX(130%); }
+@keyframes vx-holo-drift { to { --holo-angle: 560deg; } }
+.vx-holo-live { animation: vx-holo-drift 9s linear infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .vx-holo::after { transition: none; }
+  .vx-holo-live { animation: none; }
+}
+
+/* Menus and dialogs lock scrolling with `overflow: hidden` on body. With overflow-x clipped on html, that turns
+   body into its own scroll box, and sticky elements (the docs sidebar, the top bar) jump to the top of the page.
+   `clip` keeps body from becoming a scroll box; the lock still blocks wheel and touch scrolling. */
+html body[data-scroll-locked] { overflow: clip !important; margin-right: 0 !important; padding-right: 0 !important; }

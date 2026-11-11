@@ -1,0 +1,34 @@
+{
+  "name": "plankui",
+  "version": "0.1.0",
+  "description": "Add PlankUI components to your React and Tailwind CSS v4 project.",
+  "type": "module",
+  "bin": {
+    "plankui": "index.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "react",
+    "tailwindcss",
+    "radix",
+    "components",
+    "ui",
+    "plankui"
+  ],
+  "homepage": "https://plankui.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VectorLabsHQ/plankui.git",
+    "directory": "cli"
+  },
+  "bugs": {
+    "url": "https://github.com/VectorLabsHQ/plankui/issues"
+  }
+}

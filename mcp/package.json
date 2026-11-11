@@ -1,6 +1,6 @@
 {
   "name": "@plankui/mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server for PlankUI: gives AI coding agents every component's source, props, usage and the setup files.",
   "type": "module",
   "bin": {

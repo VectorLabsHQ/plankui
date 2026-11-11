@@ -39,7 +39,7 @@ Full guides for Vite, Next.js and React Router: [plankui.com/docs/installation](
 
 **Navigation:** [Tabs](https://plankui.com/docs/components/tabs), [Accordion](https://plankui.com/docs/components/accordion), [Breadcrumb](https://plankui.com/docs/components/breadcrumb), [Pagination](https://plankui.com/docs/components/pagination)
 
-**Templates:** [Sign in](https://plankui.com/docs/templates/sign-in)
+
 
 ## Use it with your AI agent
 
@@ -57,7 +57,6 @@ Setup for every client: [plankui.com/docs/mcp](https://plankui.com/docs/mcp).
 | --- | --- |
 | `components/ui` | Every component, exactly as `plankui add` writes it |
 | `lib`, `styles` | The `cn` helper, `tokens.css` and `styles.css`, as `plankui init` writes them |
-| `templates` | Complete screens built from the components |
 | `cli` | The `plankui` command ([npm](https://www.npmjs.com/package/plankui)) |
 | `mcp` | The `@plankui/mcp` server ([npm](https://www.npmjs.com/package/@plankui/mcp)) |
 

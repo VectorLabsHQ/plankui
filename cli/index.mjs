@@ -6,13 +6,13 @@
 //   npx plankui@latest add button select dialog
 //   npx plankui@latest list
 //   npx plankui@latest login YOUR_LICENSE_KEY
-import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, lstatSync, mkdirSync, readFileSync, realpathSync, rmSync, writeFileSync } from "node:fs";
 import { homedir } from "node:os";
-import { dirname, join, relative } from "node:path";
+import { dirname, isAbsolute, join, relative, resolve, sep } from "node:path";
 import { spawnSync } from "node:child_process";
 import { createInterface } from "node:readline/promises";
 
-const VERSION = "0.1.0";
+const VERSION = "0.1.1";
 const DEFAULT_REGISTRY = "https://plankui.com/r";
 
 /* ── Arguments ── */
@@ -147,10 +147,41 @@ async function fetchJson(name) {
 }
 
 /** Write files under the project base, keeping existing ones unless asked. Returns what happened per file. */
+/** True when `p` is `root` itself or inside it. */
+const inside = (root, p) => p === root || p.startsWith(root + sep);
+
+/** The real path of `p`, or of its nearest existing parent, so links are followed before we compare. */
+function realish(p) {
+  let dir = p;
+  while (!existsSync(dir) && dirname(dir) !== dir) dir = dirname(dir);
+  return resolve(realpathSync(dir), relative(dir, p));
+}
+
+/**
+ * Where a registry file may be written: inside the project, never above it.
+ * A registry is remote input (and --registry can point anywhere), so a path like "../../.zshrc",
+ * an absolute path, or a symlinked folder that leads outside the project stops the whole install.
+ */
+function safeTarget(base, path) {
+  const bad = (why) => fail(`The registry sent an unsafe file path (${why}): ${JSON.stringify(path)}. Nothing was written.`);
+  if (typeof path !== "string" || !path.trim()) bad("empty");
+  if (path.includes("\0")) bad("null byte");
+  if (isAbsolute(path) || /^[a-zA-Z]:/.test(path) || path.startsWith("\\\\")) bad("absolute");
+  if (path.split(/[\\/]+/).includes("..")) bad("goes up a folder");
+  const root = resolve(base);
+  const target = resolve(root, path);
+  if (!inside(root, target) || target === root) bad("outside the project");
+  if (!inside(realish(root), realish(target))) bad("a linked folder leads outside the project");
+  if (existsSync(target) && lstatSync(target).isSymbolicLink()) bad("the file is a symlink");
+  return target;
+}
+
 async function writeFiles(base, files) {
+  // Check every path first, so a bad one stops the install before any file is touched.
+  const targets = files.map((f) => safeTarget(base, f.path));
   const done = [];
-  for (const f of files) {
-    const target = join(base, f.path);
+  for (const [i, f] of files.entries()) {
+    const target = targets[i];
     const shown = relative(cwd, target);
     if (existsSync(target) && !overwrite) {
       const same = readFileSync(target, "utf8") === f.content;

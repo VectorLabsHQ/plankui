@@ -1,6 +1,6 @@
 {
   "name": "plankui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Add PlankUI components to your React and Tailwind CSS v4 project.",
   "type": "module",
   "bin": {

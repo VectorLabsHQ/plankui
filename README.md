@@ -34,21 +34,23 @@ Full guides for Vite, Next.js and React Router: [plankui.com/docs/installation](
 
 ## Components
 
-43 components today, with more every week.
+66 components today, with more every week.
 
-**Actions:** [Button](https://plankui.com/docs/components/button), [Segmented control](https://plankui.com/docs/components/segmented), [Dropdown menu](https://plankui.com/docs/components/dropdown-menu), [Button group](https://plankui.com/docs/components/button-group), [Copy button](https://plankui.com/docs/components/copy-button)
+**Actions:** [Button](https://plankui.com/docs/components/button), [Segmented control](https://plankui.com/docs/components/segmented), [Dropdown menu](https://plankui.com/docs/components/dropdown-menu), [Toggle](https://plankui.com/docs/components/toggle), [Command](https://plankui.com/docs/components/command), [Button group](https://plankui.com/docs/components/button-group), [Copy button](https://plankui.com/docs/components/copy-button), [Theme toggle](https://plankui.com/docs/components/theme-toggle)
 
-**Forms:** [Input](https://plankui.com/docs/components/input), [Textarea](https://plankui.com/docs/components/textarea), [Select](https://plankui.com/docs/components/select), [Checkbox](https://plankui.com/docs/components/checkbox), [Radio group](https://plankui.com/docs/components/radio-group), [Switch](https://plankui.com/docs/components/switch), [Slider](https://plankui.com/docs/components/slider), [Combobox](https://plankui.com/docs/components/combobox), [Input OTP](https://plankui.com/docs/components/input-otp), [Password input](https://plankui.com/docs/components/password-input)
+**Forms:** [Input](https://plankui.com/docs/components/input), [Textarea](https://plankui.com/docs/components/textarea), [Select](https://plankui.com/docs/components/select), [Checkbox](https://plankui.com/docs/components/checkbox), [Radio group](https://plankui.com/docs/components/radio-group), [Switch](https://plankui.com/docs/components/switch), [Slider](https://plankui.com/docs/components/slider), [Combobox](https://plankui.com/docs/components/combobox), [Number input](https://plankui.com/docs/components/number-input), [Input OTP](https://plankui.com/docs/components/input-otp), [Calendar](https://plankui.com/docs/components/calendar), [Password input](https://plankui.com/docs/components/password-input), [Tag input](https://plankui.com/docs/components/tag-input), [Rating](https://plankui.com/docs/components/rating), [Search field](https://plankui.com/docs/components/search-field), [Time field](https://plankui.com/docs/components/time-field)
 
-**Overlays:** [Dialog](https://plankui.com/docs/components/dialog), [Popover](https://plankui.com/docs/components/popover), [Tooltip](https://plankui.com/docs/components/tooltip), [Sheet](https://plankui.com/docs/components/sheet), [Alert dialog](https://plankui.com/docs/components/alert-dialog)
+**Overlays:** [Dialog](https://plankui.com/docs/components/dialog), [Popover](https://plankui.com/docs/components/popover), [Tooltip](https://plankui.com/docs/components/tooltip), [Sheet](https://plankui.com/docs/components/sheet), [Alert dialog](https://plankui.com/docs/components/alert-dialog), [Hover card](https://plankui.com/docs/components/hover-card), [Context menu](https://plankui.com/docs/components/context-menu)
 
-**Feedback:** [Toast](https://plankui.com/docs/components/toast), [Alert](https://plankui.com/docs/components/alert), [Progress](https://plankui.com/docs/components/progress), [Skeleton](https://plankui.com/docs/components/skeleton), [Spinner](https://plankui.com/docs/components/spinner)
+**Feedback:** [Toast](https://plankui.com/docs/components/toast), [Alert](https://plankui.com/docs/components/alert), [Progress](https://plankui.com/docs/components/progress), [Skeleton](https://plankui.com/docs/components/skeleton), [Spinner](https://plankui.com/docs/components/spinner), [Empty state](https://plankui.com/docs/components/empty-state), [Announcement](https://plankui.com/docs/components/announcement), [Progress circle](https://plankui.com/docs/components/progress-circle)
 
-**Display:** [Card](https://plankui.com/docs/components/card), [Avatar](https://plankui.com/docs/components/avatar), [Badge](https://plankui.com/docs/components/badge), [Kbd](https://plankui.com/docs/components/kbd), [Separator](https://plankui.com/docs/components/separator), [Table](https://plankui.com/docs/components/table)
+**Display:** [Card](https://plankui.com/docs/components/card), [Avatar](https://plankui.com/docs/components/avatar), [Badge](https://plankui.com/docs/components/badge), [Kbd](https://plankui.com/docs/components/kbd), [Separator](https://plankui.com/docs/components/separator), [Table](https://plankui.com/docs/components/table), [Stat](https://plankui.com/docs/components/stat), [Chip](https://plankui.com/docs/components/chip), [Count up](https://plankui.com/docs/components/count-up), [Timeline](https://plankui.com/docs/components/timeline), [Divider](https://plankui.com/docs/components/divider)
 
-**Navigation:** [Tabs](https://plankui.com/docs/components/tabs), [Accordion](https://plankui.com/docs/components/accordion), [Breadcrumb](https://plankui.com/docs/components/breadcrumb), [Pagination](https://plankui.com/docs/components/pagination)
+**Navigation:** [Tabs](https://plankui.com/docs/components/tabs), [Accordion](https://plankui.com/docs/components/accordion), [Breadcrumb](https://plankui.com/docs/components/breadcrumb), [Pagination](https://plankui.com/docs/components/pagination), [Stepper](https://plankui.com/docs/components/stepper)
 
 **Charts:** [Bar chart](https://plankui.com/docs/components/bar-chart), [Sparkline](https://plankui.com/docs/components/sparkline), [Line chart](https://plankui.com/docs/components/line-chart), [Bar list](https://plankui.com/docs/components/bar-list), [Stage bars](https://plankui.com/docs/components/stage-bars), [Chart card](https://plankui.com/docs/components/chart-card), [Steps card](https://plankui.com/docs/components/steps-card), [Most active days](https://plankui.com/docs/components/active-days-card)
+
+**Blocks:** [Task list](https://plankui.com/docs/components/task-list), [Stat cards](https://plankui.com/docs/components/stat-cards), [Agent limits](https://plankui.com/docs/components/agent-limits)
 
 
 
@@ -67,7 +69,7 @@ Setup for every client: [plankui.com/docs/mcp](https://plankui.com/docs/mcp).
 | Folder | What it is |
 | --- | --- |
 | `components/ui` | Every component, exactly as `plankui add` writes it, on Radix UI |
-| `components/base-ui` | The Base UI versions of the 20 components built on primitives. The rest are shared |
+| `components/base-ui` | The Base UI versions of the 24 components built on primitives. The rest are shared |
 | `lib`, `styles` | The `cn` helper, `tokens.css` and `styles.css`, as `plankui init` writes them |
 | `cli` | The `plankui` command ([npm](https://www.npmjs.com/package/plankui)) |
 | `mcp` | The `@plankui/mcp` server ([npm](https://www.npmjs.com/package/@plankui/mcp)) |

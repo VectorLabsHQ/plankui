@@ -76,7 +76,7 @@ The CLI picks your package manager (npm, pnpm, yarn or bun) from your lockfile, 
 
 ## Components
 
-35 components today, with more every week.
+43 components today, with more every week.
 
 | | |
 | --- | --- |
@@ -86,6 +86,7 @@ The CLI picks your package manager (npm, pnpm, yarn or bun) from your lockfile, 
 | **Feedback** | [Toast](https://plankui.com/docs/components/toast), [Alert](https://plankui.com/docs/components/alert), [Progress](https://plankui.com/docs/components/progress), [Skeleton](https://plankui.com/docs/components/skeleton), [Spinner](https://plankui.com/docs/components/spinner) |
 | **Display** | [Card](https://plankui.com/docs/components/card), [Avatar](https://plankui.com/docs/components/avatar), [Badge](https://plankui.com/docs/components/badge), [Kbd](https://plankui.com/docs/components/kbd), [Separator](https://plankui.com/docs/components/separator), [Table](https://plankui.com/docs/components/table) |
 | **Navigation** | [Tabs](https://plankui.com/docs/components/tabs), [Accordion](https://plankui.com/docs/components/accordion), [Breadcrumb](https://plankui.com/docs/components/breadcrumb), [Pagination](https://plankui.com/docs/components/pagination) |
+| **Charts** | [Bar chart](https://plankui.com/docs/components/bar-chart), [Line chart](https://plankui.com/docs/components/line-chart), [Sparkline](https://plankui.com/docs/components/sparkline), [Bar list](https://plankui.com/docs/components/bar-list), [Stage bars](https://plankui.com/docs/components/stage-bars), [Chart card](https://plankui.com/docs/components/chart-card), [Steps card](https://plankui.com/docs/components/steps-card), [Most active days](https://plankui.com/docs/components/active-days-card) |
 
 ## Themes and styles
 

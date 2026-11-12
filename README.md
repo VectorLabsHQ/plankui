@@ -34,7 +34,7 @@ Full guides for Vite, Next.js and React Router: [plankui.com/docs/installation](
 
 ## Components
 
-35 components today, with more every week.
+43 components today, with more every week.
 
 **Actions:** [Button](https://plankui.com/docs/components/button), [Segmented control](https://plankui.com/docs/components/segmented), [Dropdown menu](https://plankui.com/docs/components/dropdown-menu), [Button group](https://plankui.com/docs/components/button-group), [Copy button](https://plankui.com/docs/components/copy-button)
 
@@ -47,6 +47,8 @@ Full guides for Vite, Next.js and React Router: [plankui.com/docs/installation](
 **Display:** [Card](https://plankui.com/docs/components/card), [Avatar](https://plankui.com/docs/components/avatar), [Badge](https://plankui.com/docs/components/badge), [Kbd](https://plankui.com/docs/components/kbd), [Separator](https://plankui.com/docs/components/separator), [Table](https://plankui.com/docs/components/table)
 
 **Navigation:** [Tabs](https://plankui.com/docs/components/tabs), [Accordion](https://plankui.com/docs/components/accordion), [Breadcrumb](https://plankui.com/docs/components/breadcrumb), [Pagination](https://plankui.com/docs/components/pagination)
+
+**Charts:** [Bar chart](https://plankui.com/docs/components/bar-chart), [Sparkline](https://plankui.com/docs/components/sparkline), [Line chart](https://plankui.com/docs/components/line-chart), [Bar list](https://plankui.com/docs/components/bar-list), [Stage bars](https://plankui.com/docs/components/stage-bars), [Chart card](https://plankui.com/docs/components/chart-card), [Steps card](https://plankui.com/docs/components/steps-card), [Most active days](https://plankui.com/docs/components/active-days-card)
 
 
 

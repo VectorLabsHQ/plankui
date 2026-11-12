@@ -245,7 +245,7 @@
   --field-c: var(--paper);
 }
 .dark, .dark [data-theme] {
-  --raised: oklch(from var(--paper-2) calc(l + 0.02) c h);
+  --raised: oklch(from var(--paper-2) calc(l + 0.035) c h);
   --inset-c: oklch(from var(--paper-2) calc(l + 0.045) c h);
   --pop-c: oklch(from var(--paper-2) calc(l - 0.02) c h);
   --field-c: oklch(from var(--paper) calc(l + 0.06) c h);
@@ -296,8 +296,8 @@
 [data-style="soft"],
 :where([data-style="soft"]) :where([data-theme], .dark) {
   --card: var(--paper-2);
-  --card-border: transparent;
-  --elev-card: none;
+  --card-border: var(--soft-edge);
+  --elev-card: var(--soft-lift);
   --inset: var(--inset-c);
   --pop: var(--pop-c);
   --pop-border: var(--rule);
@@ -306,8 +306,8 @@
   --field-border: var(--field-edge);
   --elev-field: 0 1px 2px oklch(0% 0 0 / var(--sh-a));
   --key-face: var(--raised);
-  --key-border: var(--rule);
-  --elev-key: 0 1px 2px oklch(0% 0 0 / var(--sh-a));
+  --key-border: var(--soft-key-edge, var(--rule));
+  --elev-key: inset 0 1px 0 oklch(100% 0 0 / var(--soft-hi-a, 0)), 0 1px 2px oklch(0% 0 0 / var(--sh-a));
   --btn-bg: var(--accent);
   --btn-image: linear-gradient(oklch(calc(var(--l) + 5%) var(--c) var(--h)), oklch(calc(var(--l) - 4%) var(--c) calc(var(--h) + 6)));
   --btn-border: transparent;
@@ -449,6 +449,19 @@
   --field-soft-hover: color-mix(in oklab, var(--ink) 10.5%, var(--paper));
   --control-on-soft: linear-gradient(var(--accent), color-mix(in oklab, var(--accent) 80%, oklch(0% 0 0)));
 }
+/* Dark Soft: shadows vanish on black, so cards get a faint light edge, and fields sit a step above the card
+ * instead of sinking below it. Light Soft keeps no edge. */
+:root { --soft-edge: transparent; --soft-lift: none; }
+.dark {
+  --soft-edge: oklch(100% 0 0 / 0.08);
+  --soft-lift: inset 0 1px 0 oklch(100% 0 0 / 0.05);
+}
+.dark, .dark [data-theme] {
+  --soft-key-edge: var(--rule-2);
+  --soft-hi-a: 0.06;
+  --field-soft: color-mix(in oklab, var(--ink) 8%, var(--paper-2));
+  --field-soft-hover: color-mix(in oklab, var(--ink) 12%, var(--paper-2));
+}
 :root:not([data-style]),
 [data-style="soft"],
 :where([data-style="soft"]) :where([data-theme], .dark) {
@@ -514,6 +527,36 @@
 [data-style="brutal"], :where([data-style="brutal"]) :where([data-theme], .dark) {
   --btn-danger-image: none;
 }
+
+/* Chart colour, per style. Each series blends from a neighbouring hue (shifted by --chart-shift degrees and
+ * lifted by --chart-lift) into its own colour, and areas fade down from --chart-area-a.
+ * Soft and Keycap: a gentle blend. Glass: a wider, brighter blend. Flat: solid colour, light wash. Brutal: solid, no wash. */
+:root,
+[data-style="soft"], :where([data-style="soft"]) :where([data-theme], .dark),
+[data-style="keycap"], :where([data-style="keycap"]) :where([data-theme], .dark) {
+  --chart-shift: -50;
+  --chart-lift: 0.08;
+  --chart-area-a: 0.34;
+}
+[data-style="glass"], :where([data-style="glass"]) :where([data-theme], .dark) {
+  --chart-shift: -70;
+  --chart-lift: 0.12;
+  --chart-area-a: 0.42;
+}
+[data-style="flat"], :where([data-style="flat"]) :where([data-theme], .dark) {
+  --chart-shift: 0;
+  --chart-lift: 0;
+  --chart-area-a: 0.14;
+}
+[data-style="brutal"], :where([data-style="brutal"]) :where([data-theme], .dark) {
+  --chart-shift: 0;
+  --chart-lift: 0;
+  --chart-area-a: 0;
+}
+/* Override the style's chart look with data-chart on any element: blend, vivid or solid. */
+[data-chart="blend"], [data-chart="blend"] :where([data-theme], .dark) { --chart-shift: -50; --chart-lift: 0.08; --chart-area-a: 0.34; }
+[data-chart="vivid"], [data-chart="vivid"] :where([data-theme], .dark) { --chart-shift: -100; --chart-lift: 0.12; --chart-area-a: 0.45; }
+[data-chart="solid"], [data-chart="solid"] :where([data-theme], .dark) { --chart-shift: 0; --chart-lift: 0; --chart-area-a: 0.14; }
 
 /* ───────── 8. Brand ─────────
  * The PlankUI mark on the site takes the visitor's accent: planks in the accent's ink on an accent tile.

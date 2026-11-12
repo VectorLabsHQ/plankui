@@ -6,6 +6,15 @@
 
 <p align="center"><a href="https://plankui.com">Website</a> · <a href="https://plankui.com/docs">Docs</a> · <a href="https://plankui.com/docs/components">Components</a> · <a href="https://plankui.com/docs/mcp">MCP server</a></p>
 
+<p align="center">
+  <a href="https://plankui.com">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://plankui.com/readme/components-dark.jpg" />
+      <img src="https://plankui.com/readme/components-light.jpg" alt="PlankUI components: charts, forms, a command menu, navigation, toggles and an upload card" />
+    </picture>
+  </a>
+</p>
+
 ---
 
 PlankUI is a set of React components you add to your own project. The code lands in your repo, so you can read it, change any line and never wait on a package upgrade. Every colour, radius and shadow is a CSS variable, so six themes and five component styles come from one tokens file.

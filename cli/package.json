@@ -1,7 +1,7 @@
 {
   "name": "plankui",
-  "version": "0.1.1",
-  "description": "Add PlankUI components to your React and Tailwind CSS v4 project.",
+  "version": "0.1.2",
+  "description": "Add accessible React components for Tailwind CSS v4 to your project. Six themes, five styles, and you own the code.",
   "type": "module",
   "bin": {
     "plankui": "index.mjs"
@@ -15,13 +15,22 @@
   },
   "keywords": [
     "react",
+    "react-19",
     "tailwindcss",
-    "radix",
+    "tailwind-v4",
+    "radix-ui",
     "components",
     "ui",
+    "design-system",
+    "component-library",
+    "cli",
+    "accessible",
+    "dark-mode",
+    "themes",
+    "copy-paste",
     "plankui"
   ],
-  "homepage": "https://plankui.com",
+  "homepage": "https://plankui.com/docs/installation",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -30,5 +39,6 @@
   },
   "bugs": {
     "url": "https://github.com/VectorLabsHQ/plankui/issues"
-  }
+  },
+  "author": "Vector Labs (https://plankui.com)"
 }

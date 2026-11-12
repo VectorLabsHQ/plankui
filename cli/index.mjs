@@ -12,7 +12,7 @@ import { dirname, isAbsolute, join, relative, resolve, sep } from "node:path";
 import { spawnSync } from "node:child_process";
 import { createInterface } from "node:readline/promises";
 
-const VERSION = "0.1.1";
+const VERSION = "0.1.2";
 const DEFAULT_REGISTRY = "https://plankui.com/r";
 
 /* ── Arguments ── */

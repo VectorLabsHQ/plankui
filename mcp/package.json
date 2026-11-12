@@ -1,7 +1,7 @@
 {
   "name": "@plankui/mcp",
-  "version": "0.1.1",
-  "description": "MCP server for PlankUI: gives AI coding agents every component's source, props, usage and the setup files.",
+  "version": "0.1.2",
+  "description": "MCP server for PlankUI: gives Cursor, Claude Code, VS Code, Codex and other AI agents the real source, props and usage of every component.",
   "type": "module",
   "bin": {
     "plank-mcp": "server.mjs"
@@ -15,7 +15,7 @@
     "node": ">=18"
   },
   "license": "MIT",
-  "homepage": "https://plankui.com",
+  "homepage": "https://plankui.com/docs/mcp",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/VectorLabsHQ/plankui.git",
@@ -26,9 +26,18 @@
   },
   "keywords": [
     "mcp",
+    "mcp-server",
     "model-context-protocol",
+    "ai",
+    "cursor",
+    "claude-code",
+    "codex",
+    "vscode",
     "react",
     "tailwindcss",
+    "components",
+    "design-system",
     "plankui"
-  ]
+  ],
+  "author": "Vector Labs (https://plankui.com)"
 }

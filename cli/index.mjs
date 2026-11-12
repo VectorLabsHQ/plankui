@@ -4,6 +4,7 @@
 //
 //   npx plankui@latest init
 //   npx plankui@latest add button select dialog
+//   npx plankui@latest add select --base       (the Base UI version)
 //   npx plankui@latest list
 //   npx plankui@latest login YOUR_LICENSE_KEY
 import { existsSync, lstatSync, mkdirSync, readFileSync, realpathSync, rmSync, writeFileSync } from "node:fs";
@@ -12,7 +13,7 @@ import { dirname, isAbsolute, join, relative, resolve, sep } from "node:path";
 import { spawnSync } from "node:child_process";
 import { createInterface } from "node:readline/promises";
 
-const VERSION = "0.1.2";
+const VERSION = "0.1.3";
 const DEFAULT_REGISTRY = "https://plankui.com/r";
 
 /* ── Arguments ── */
@@ -31,6 +32,8 @@ const yes = flags.has("--yes") || flags.has("-y");
 const overwrite = flags.has("--overwrite");
 const skipInstall = flags.has("--no-install");
 const cwd = opt("cwd", process.cwd());
+/** Primitives asked for on this run: --base or --radix. Otherwise plankui.json decides. */
+const libFlag = flags.has("--base") ? "base" : flags.has("--radix") ? "radix" : null;
 const registry = (opt("registry", process.env.PLANKUI_REGISTRY) ?? DEFAULT_REGISTRY).replace(/\/$/, "");
 
 /* ── Output ── */
@@ -52,6 +55,29 @@ async function confirm(question, fallback) {
   rl.close();
   return answer ? answer.startsWith("y") : fallback;
 }
+
+/** Pick one of two answers. With --yes or no terminal, takes the first. */
+async function choose(question, options) {
+  if (yes || !process.stdin.isTTY) return options[0].value;
+  const rl = createInterface({ input: process.stdin, output: process.stdout });
+  say(question);
+  options.forEach((o, i) => say(`  ${i + 1}. ${o.label}${i === 0 ? dim(" (default)") : ""}`));
+  const answer = (await rl.question(dim("Choose 1 or 2: "))).trim();
+  rl.close();
+  return options[Number(answer) - 1]?.value ?? options[0].value;
+}
+
+/* ── Project settings: plankui.json ── */
+const settingsFile = () => join(cwd, "plankui.json");
+function settings() {
+  try {
+    return JSON.parse(readFileSync(settingsFile(), "utf8"));
+  } catch {
+    return {};
+  }
+}
+/** "radix" or "base": the flag, then plankui.json, then Radix. */
+const primitives = () => libFlag ?? (settings().primitives === "base" ? "base" : "radix");
 
 /* ── Project ── */
 function project() {
@@ -207,6 +233,12 @@ async function init() {
   say(bold("PlankUI") + dim(` init, into ${relative(cwd, base) || "."}`));
   if (!deps.tailwindcss) say(`${yellow("note")} Tailwind CSS v4 is not in package.json. PlankUI needs it: see the framework guides.`);
   if (!deps.react) fail("React is not in package.json. PlankUI is for React 19 projects.");
+  const lib = libFlag ?? (await choose("Which primitives should the components use?", [
+    { value: "radix", label: "Radix UI" },
+    { value: "base", label: "Base UI" },
+  ]));
+  writeFileSync(settingsFile(), JSON.stringify({ ...settings(), primitives: lib }, null, 2) + "\n");
+  say(`${green("saved")} plankui.json ${dim(`(components use ${lib === "base" ? "Base UI" : "Radix UI"})`)}`);
   const spec = await fetchJson("init");
   if (!spec) fail("The registry has no init file.");
   for (const [state, file] of await writeFiles(base, spec.files)) say(`${state} ${file}`);
@@ -228,12 +260,14 @@ async function add() {
     if (!(await confirm("Add components anyway?", true))) process.exit(1);
   }
   // Resolve every PlankUI file the requested components build on.
+  // With Base UI, each component comes from base/ when it has a Base UI version, otherwise the shared file.
+  const lib = primitives();
   const queue = [...names.map((n) => n.toLowerCase())];
   const seen = new Map();
   while (queue.length) {
     const name = queue.shift();
     if (seen.has(name)) continue;
-    let item = await fetchJson(name);
+    let item = (lib === "base" ? await fetchJson(`base/${name}`) : null) ?? (await fetchJson(name));
     if (!item) fail(`No component called "${name}". Run ${green("npx plankui@latest list")} to see them all.`);
     const key = item.pro ? licenceKey() : null;
     if (key) item = (await fetchPro(name, key)) ?? item;
@@ -250,7 +284,7 @@ async function add() {
   }
   if (!free.length) process.exit(locked.length ? 1 : 0);
   const extra = free.filter((i) => !names.includes(i.name)).map((i) => i.name);
-  say(bold("PlankUI") + dim(` add ${free.map((i) => i.name).join(", ")}`) + (extra.length ? dim(` (needed by your picks: ${extra.join(", ")})`) : ""));
+  say(bold("PlankUI") + dim(` add ${free.map((i) => i.name).join(", ")}`) + (extra.length ? dim(` (needed by your picks: ${extra.join(", ")})`) : "") + (lib === "base" ? dim(", Base UI") : ""));
   for (const [state, file] of await writeFiles(base, free.flatMap((i) => i.files))) say(`${state} ${file}`);
   install(pm, free.flatMap((i) => i.dependencies), deps);
   say();
@@ -280,7 +314,7 @@ const help = () => {
   say(`${bold("plankui")} ${VERSION}: add PlankUI components to your React project.
 
 ${bold("Commands")}
-  init                 Write tokens.css, styles.css and the cn helper, install shared packages
+  init                 Choose Radix UI or Base UI, write tokens.css, styles.css and the cn helper
   add <names...>       Copy components and every PlankUI file they build on, install their packages
   list                 Show every component
   login <key>          Save your PlankUI Pro licence key (once per machine)
@@ -290,6 +324,7 @@ ${bold("Options")}
   --yes, -y            Answer every prompt with its default (keeps files that already exist)
   --overwrite          Replace files that already exist
   --no-install         Write files but skip installing npm packages
+  --base, --radix      Use Base UI or Radix UI primitives (init saves the choice in plankui.json)
   --cwd <dir>          Run in another folder
   --registry <url>     Read components from another registry`);
 };

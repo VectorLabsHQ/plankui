@@ -2,7 +2,7 @@
 
 <h1 align="center">PlankUI</h1>
 
-<p align="center">Beautiful by default, yours to shape.<br />Accessible React components for Tailwind CSS v4 and Radix.</p>
+<p align="center">Beautiful by default, yours to shape.<br />Accessible React components for Tailwind CSS v4, on Radix or Base UI.</p>
 
 <p align="center"><a href="https://plankui.com">Website</a> · <a href="https://plankui.com/docs">Docs</a> · <a href="https://plankui.com/docs/components">Components</a> · <a href="https://plankui.com/docs/mcp">MCP server</a></p>
 
@@ -28,7 +28,7 @@ npx plankui@latest init
 npx plankui@latest add button select dialog
 ```
 
-`init` writes `tokens.css`, `styles.css` and the `cn` helper and installs the shared packages. `add` copies each component and every PlankUI file it builds on, then installs their npm packages. Prefer to copy by hand? Every file is in this repo and on each component's page.
+`init` asks whether to build on Radix UI or Base UI, then writes `tokens.css`, `styles.css` and the `cn` helper and installs the shared packages. `add` copies each component and every PlankUI file it builds on, then installs their npm packages. Prefer to copy by hand? Every file is in this repo and on each component's page.
 
 Full guides for Vite, Next.js and React Router: [plankui.com/docs/installation](https://plankui.com/docs/installation).
 
@@ -66,7 +66,8 @@ Setup for every client: [plankui.com/docs/mcp](https://plankui.com/docs/mcp).
 
 | Folder | What it is |
 | --- | --- |
-| `components/ui` | Every component, exactly as `plankui add` writes it |
+| `components/ui` | Every component, exactly as `plankui add` writes it, on Radix UI |
+| `components/base-ui` | The Base UI versions of the 20 components built on primitives. The rest are shared |
 | `lib`, `styles` | The `cn` helper, `tokens.css` and `styles.css`, as `plankui init` writes them |
 | `cli` | The `plankui` command ([npm](https://www.npmjs.com/package/plankui)) |
 | `mcp` | The `@plankui/mcp` server ([npm](https://www.npmjs.com/package/@plankui/mcp)) |

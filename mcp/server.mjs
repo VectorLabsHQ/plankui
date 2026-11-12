@@ -21,11 +21,17 @@ function closure(slug, seen = new Set()) {
   return seen;
 }
 
-function componentDoc(c, withSource = true) {
+/** "base" serves the Base UI version of each file that has one; everything else is shared. */
+const libOf = (v) => (String(v ?? "").toLowerCase().startsWith("base") ? "base" : "radix");
+
+function componentDoc(c, withSource = true, lib = "radix") {
   const files = [...closure(c.slug)];
-  const deps = [...new Set(files.flatMap((s) => bySlug(reg.components, s)?.deps ?? []))];
+  const useBase = (f) => lib === "base" && Boolean(bySlug(reg.components, f)?.baseSource);
+  const deps = [...new Set(files.flatMap((f) => (bySlug(reg.components, f)?.deps ?? []).map((d) => (d === "radix-ui" && useBase(f) ? "@base-ui/react" : d))))];
   const props = c.props.map(([n, t, d, desc]) => `| \`${n}\` | \`${t}\` | ${d ? `\`${d}\`` : ""} | ${desc} |`).join("\n");
-  let out = `# ${c.name}${c.pro ? " (Pro)" : ""}\n\n${c.description}\n\nCategory: ${c.category}\n\n## Install\n\n`;
+  let out = `# ${c.name}${c.pro ? " (Pro)" : ""}\n\n${c.description}\n\nCategory: ${c.category}\n\n`;
+  if (c.baseSource) out += lib === "base" ? "Primitives: Base UI. The same component on Radix UI: call again with primitives \"radix\".\n\n" : "Primitives: Radix UI. A Base UI version exists: call again with primitives \"base\".\n\n";
+  out += "## Install\n\n";
   out += deps.length ? `\`\`\`bash\nnpm i ${deps.join(" ")}\n\`\`\`\n\n` : "No extra dependencies.\n\n";
   out += `Copy into \`src/components/ui/\`: ${files.map((f) => `\`${f}.tsx\``).join(", ")}.\n\n`;
   out += `## Usage\n\n\`\`\`tsx\nimport { ${pascal(c.slug)} } from "@/components/ui/${c.slug}";\n\n${c.usage}\n\`\`\`\n\n`;
@@ -34,7 +40,8 @@ function componentDoc(c, withSource = true) {
     for (const f of files) {
       const dep = bySlug(reg.components, f);
       out += `## src/components/ui/${f}.tsx\n\n`;
-      out += dep?.source ? `\`\`\`tsx\n${dep.source}\n\`\`\`\n\n` : `${PRO_NOTE}\n\n`;
+      const src = useBase(f) ? dep.baseSource : dep?.source;
+      out += src ? `\`\`\`tsx\n${src}\n\`\`\`\n\n` : `${PRO_NOTE}\n\n`;
     }
   }
   return out;
@@ -61,19 +68,19 @@ const tools = {
     },
   },
   get_component: {
-    description: "Get one component: install command, every file it needs with full source, usage example and props.",
-    inputSchema: { type: "object", properties: { slug: { type: "string", description: "Component slug, such as button or dialog." } }, required: ["slug"] },
-    run: ({ slug }) => {
+    description: "Get one component: install command, every file it needs with full source, usage example and props. Pass primitives \"base\" for the Base UI version.",
+    inputSchema: { type: "object", properties: { slug: { type: "string", description: "Component slug, such as button or dialog." }, primitives: { type: "string", enum: ["radix", "base"], description: "Optional: \"radix\" (default) or \"base\" for the Base UI version, where one exists." } }, required: ["slug"] },
+    run: ({ slug, primitives }) => {
       const c = bySlug(reg.components, slug);
-      return c ? componentDoc(c) : `No component "${slug}". Call list_components to see the slugs.`;
+      return c ? componentDoc(c, true, libOf(primitives)) : `No component "${slug}". Call list_components to see the slugs.`;
     },
   },
   get_component_usage: {
     description: "Get a component's usage example and props without the source. Lighter than get_component.",
-    inputSchema: { type: "object", properties: { slug: { type: "string" } }, required: ["slug"] },
-    run: ({ slug }) => {
+    inputSchema: { type: "object", properties: { slug: { type: "string" }, primitives: { type: "string", enum: ["radix", "base"], description: "Optional: \"radix\" (default) or \"base\" for the Base UI version, where one exists." } }, required: ["slug"] },
+    run: ({ slug, primitives }) => {
       const c = bySlug(reg.components, slug);
-      return c ? componentDoc(c, false) : `No component "${slug}".`;
+      return c ? componentDoc(c, false, libOf(primitives)) : `No component "${slug}".`;
     },
   },
   list_templates: {

@@ -133,6 +133,20 @@ code, kbd, pre { font-family: var(--ff-code); }
 .vx-toast { animation: vx-toast-in var(--dur-short) var(--ease-out); }
 .vx-spin { animation: vx-spin 0.8s linear infinite; }
 .vx-reveal[data-state="open"] { animation: vx-reveal var(--dur-short) var(--ease-out); }
+/* The same motion for the Base UI versions, which mark state with data-open and data-closed. */
+.vx-pop[data-open] { animation: vx-pop-in var(--dur-short) var(--ease-out); }
+.vx-pop[data-closed] { animation: vx-pop-out var(--dur-micro) ease-in; }
+.vx-fade[data-open] { animation: vx-fade-in var(--dur-short) var(--ease-out); }
+.vx-fade[data-closed] { animation: vx-fade-out var(--dur-micro) ease-in; }
+.vx-dialog[data-open] { animation: vx-dialog-in var(--dur-short) var(--ease-out); }
+.vx-dialog[data-closed] { animation: vx-dialog-out var(--dur-micro) ease-in; }
+.vx-reveal[data-open] { animation: vx-reveal var(--dur-short) var(--ease-out); }
+.vx-sheet-right[data-open] { animation: vx-sheet-right var(--dur-short) var(--ease-out); }
+.vx-sheet-right[data-closed] { animation: vx-sheet-right-out var(--dur-short) ease-in; }
+.vx-sheet-left[data-open] { animation: vx-sheet-left var(--dur-short) var(--ease-out); }
+.vx-sheet-left[data-closed] { animation: vx-sheet-left-out var(--dur-short) ease-in; }
+.vx-sheet-bottom[data-open] { animation: vx-sheet-bottom var(--dur-short) var(--ease-out); }
+.vx-sheet-bottom[data-closed] { animation: vx-sheet-bottom-out var(--dur-short) ease-in; }
 .vx-shimmer { position: relative; overflow: hidden; }
 .vx-shimmer::after {
   content: "";

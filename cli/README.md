@@ -37,7 +37,7 @@ npx plankui@latest init
 npx plankui@latest add button select dialog
 ```
 
-That's it. `init` sets up the design tokens once, and `add` drops each component into `components/ui`, together with every PlankUI file it builds on and the npm packages it needs.
+That's it. `init` asks whether to build on **Radix UI or Base UI** and sets up the design tokens once, and `add` drops each component into `components/ui`, together with every PlankUI file it builds on and the npm packages it needs.
 
 ```tsx
 import { Button } from "@/components/ui/button";
@@ -51,6 +51,7 @@ export function Save() {
 
 - **You own the code.** Components land in your repo as plain TypeScript. Read them, change any line, never wait on a package upgrade.
 - **Beautiful by default.** Six themes and five component styles (Soft, Flat, Liquid glass, Keycap, Brutal), in light and dark, from one tokens file.
+- **Radix UI or Base UI.** Every component built on primitives comes in both, with the same props. Choose once at `init`.
 - **Accessible.** Keyboard support, focus rings, ARIA roles and reduced motion handled for you.
 - **Agent ready.** The [PlankUI MCP server](https://www.npmjs.com/package/@plankui/mcp) gives Cursor, Claude Code, VS Code and other agents the real source of every component.
 
@@ -58,7 +59,7 @@ export function Save() {
 
 | Command | What it does |
 | --- | --- |
-| `plankui init` | Writes `tokens.css`, `styles.css` and the `cn` helper, and installs `clsx` and `tailwind-merge` |
+| `plankui init` | Asks Radix UI or Base UI (saved in `plankui.json`), writes `tokens.css`, `styles.css` and the `cn` helper, and installs `clsx` and `tailwind-merge` |
 | `plankui add <names…>` | Copies components and the PlankUI files they build on, then installs their npm packages |
 | `plankui list` | Lists every component you can add |
 
@@ -69,6 +70,7 @@ export function Save() {
 | `--yes`, `-y` | Answer every prompt with its default and keep files that already exist. Use it in CI and for coding agents |
 | `--overwrite` | Replace files that already exist |
 | `--no-install` | Write the files but skip installing npm packages |
+| `--base`, `--radix` | Use Base UI or Radix UI primitives for this run, whatever `plankui.json` says |
 | `--cwd <dir>` | Run in another folder |
 | `--registry <url>` | Read components from another registry |
 

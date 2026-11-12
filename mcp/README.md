@@ -101,6 +101,8 @@ Tools load when a session starts, so restart the client or open a new chat after
 
 > Set up PlankUI in this project with the Ember theme and the Keycap style.
 
+> Add a PlankUI select and dialog using Base UI.
+
 The agent looks components up, reads their real source and props, and writes code that matches the library, including the right install commands.
 
 ## Tools
@@ -109,8 +111,8 @@ The agent looks components up, reads their real source and props, and writes cod
 | --- | --- |
 | `list_components` | Every component with its slug, category and one line on what it does |
 | `search_components` | Components that match an intent, such as "confirm dialog" |
-| `get_component` | Install command, full source of every file it needs, usage and props |
-| `get_component_usage` | Usage and props only |
+| `get_component` | Install command, full source of every file it needs, usage and props. Pass `primitives: "base"` for the Base UI version |
+| `get_component_usage` | Usage and props only (same `primitives` option) |
 | `list_templates` | Every template |
 | `get_template` | A template's full source |
 | `get_setup` | The tokens, styles and `cn` helper every project needs |

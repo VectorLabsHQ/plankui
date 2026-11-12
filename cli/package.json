@@ -1,6 +1,6 @@
 {
   "name": "plankui",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Add accessible React components for Tailwind CSS v4 to your project. Six themes, five styles, and you own the code.",
   "type": "module",
   "bin": {
@@ -28,7 +28,8 @@
     "dark-mode",
     "themes",
     "copy-paste",
-    "plankui"
+    "plankui",
+    "base-ui"
   ],
   "homepage": "https://plankui.com/docs/installation",
   "license": "MIT",

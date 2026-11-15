@@ -26,6 +26,38 @@ npx plankui@latest add button select dialog
 
 `init` saves your choice of Radix UI or Base UI and adds the shared styles and class helper. `add` copies the component source and installs its dependencies. See the [installation guide](https://plankui.com/docs/installation) for Vite, Next.js, React Router, and manual setup.
 
+Run `npx plankui@latest list` to browse the catalog from your terminal.
+
+## Use PlankUI with an agent
+
+The MCP server gives your agent component source, props, and usage examples. To connect it to Claude Code, run the following command.
+
+```bash
+claude mcp add plankui -- npx -y @plankui/mcp
+```
+
+For Cursor and other clients that use an `mcpServers` config, add the following entry.
+
+```json
+{
+  "mcpServers": {
+    "plankui": { "command": "npx", "args": ["-y", "@plankui/mcp"] }
+  }
+}
+```
+
+Try asking your agent to build a settings panel with PlankUI's Tabs, Switch, and Button. See the [MCP guide](https://plankui.com/docs/mcp) for setup in Codex, VS Code, and other clients.
+
+## Repository layout
+
+| Folder | Contents |
+| --- | --- |
+| [components/ui](components/ui) | Free components, including the Radix UI implementations |
+| [components/base-ui](components/base-ui) | 24 dedicated Base UI implementations. The other components use shared source |
+| [styles](styles) and [lib](lib) | Theme tokens, base styles, and the class helper |
+| [cli](cli) | The `plankui` installer |
+| [mcp](mcp) | The `@plankui/mcp` server and component registry |
+
 ## Browse components
 
 Select a component to see its live preview and usage examples. Run its CLI command from your project to add it.
@@ -141,25 +173,5 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 | [Task list](https://plankui.com/docs/components/task-list) | A checklist with progress, priorities, add and delete. Done tasks strike through. | `npx plankui@latest add task-list` |
 | [Stat cards](https://plankui.com/docs/components/stat-cards) | KPI cards: a grey shell, a lit icon tile, the number and a white footer with the change. | `npx plankui@latest add stat-cards` |
 | [Agent limits](https://plankui.com/docs/components/agent-limits) | Usage against plan limits. Bars turn amber at 80% and red at the limit, with a note. | `npx plankui@latest add agent-limits` |
-
-## Use PlankUI with an agent
-
-The MCP server gives your agent component source, props, and usage examples. To connect it to Claude Code, run the command below.
-
-```bash
-claude mcp add plankui -- npx -y @plankui/mcp
-```
-
-See the [MCP guide](https://plankui.com/docs/mcp) for Cursor, Codex, VS Code, and other clients.
-
-## Repository layout
-
-| Folder | Contents |
-| --- | --- |
-| [components/ui](components/ui) | Free components, including the Radix UI implementations |
-| [components/base-ui](components/base-ui) | 24 dedicated Base UI implementations. The other components use shared source |
-| [styles](styles) and [lib](lib) | Theme tokens, base styles, and the class helper |
-| [cli](cli) | The `plankui` installer |
-| [mcp](mcp) | The `@plankui/mcp` server and component registry |
 
 [MIT license](LICENSE) · Built by Vector Labs

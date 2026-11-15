@@ -30,14 +30,15 @@
 
 ## Quick start
 
-In a React 19 project with Tailwind CSS v4:
+Run these commands in a React 19 project with Tailwind CSS v4.
 
 ```bash
 npx plankui@latest init
+npx plankui@latest list
 npx plankui@latest add button select dialog
 ```
 
-That's it. `init` asks whether to build on **Radix UI or Base UI** and sets up the design tokens once, and `add` drops each component into `components/ui`, together with every PlankUI file it builds on and the npm packages it needs.
+`init` saves your choice of Radix UI or Base UI in `plankui.json` and sets up shared styles. `list` shows the available component slugs. `add` copies each component into `components/ui` under your app’s source directory and installs its dependencies.
 
 ```tsx
 import { Button } from "@/components/ui/button";
@@ -51,13 +52,13 @@ export function Save() {
 
 - **You own the code.** Components land in your repo as plain TypeScript. Read them, change any line, never wait on a package upgrade.
 - **Beautiful by default.** Six themes and five component styles (Soft, Flat, Liquid glass, Keycap, Brutal), in light and dark, from one tokens file.
-- **Radix UI or Base UI.** Every component built on primitives comes in both, with the same props. Choose once at `init`.
+- **Radix UI or Base UI.** Choose your default at `init`. The CLI uses dedicated Base UI implementations where available and shared source for the other free components.
 - **Accessible.** Keyboard support, focus rings, ARIA roles and reduced motion handled for you.
 - **Agent ready.** The [PlankUI MCP server](https://www.npmjs.com/package/@plankui/mcp) gives Cursor, Claude Code, VS Code and other agents the real source of every component.
 
 ## Commands
 
-| Command | What it does |
+| Command | Description |
 | --- | --- |
 | `plankui init` | Asks Radix UI or Base UI (saved in `plankui.json`), writes `tokens.css`, `styles.css` and the `cn` helper, and installs `clsx` and `tailwind-merge` |
 | `plankui add <names…>` | Copies components and the PlankUI files they build on, then installs their npm packages |
@@ -65,7 +66,7 @@ export function Save() {
 
 ## Options
 
-| Option | |
+| Option | Description |
 | --- | --- |
 | `--yes`, `-y` | Answer every prompt with its default and keep files that already exist. Use it in CI and for coding agents |
 | `--overwrite` | Replace files that already exist |
@@ -78,7 +79,7 @@ The CLI picks your package manager (npm, pnpm, yarn or bun) from your lockfile, 
 
 ## Components
 
-72 components today, with more every week.
+Browse 72 free components by category below. Each links to its documentation and live preview. For a catalog with a copyable command per component, see the [GitHub README](https://github.com/VectorLabsHQ/plankui#browse-components).
 
 | | |
 | --- | --- |

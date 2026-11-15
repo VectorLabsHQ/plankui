@@ -5,8 +5,7 @@
 <h1 align="center">@plankui/mcp</h1>
 
 <p align="center">
-  The <a href="https://plankui.com">PlankUI</a> MCP server. Your AI coding agent gets the real source, props and usage<br />
-  of every component, so it builds with PlankUI instead of guessing.
+  Give your coding agent the source, props, and usage examples for <a href="https://plankui.com/docs/components">72 free PlankUI components</a>.
 </p>
 
 <p align="center">
@@ -89,11 +88,11 @@ In your Zed settings:
 
 </details>
 
-One-click installs for Cursor and VS Code, and setup for every client: [plankui.com/docs/mcp](https://plankui.com/docs/mcp).
+Open the [MCP setup guide](https://plankui.com/docs/mcp) for one-click installs in Cursor and VS Code and configuration for other clients.
 
 Tools load when a session starts, so restart the client or open a new chat after adding the server.
 
-## Then just ask
+## Example prompts
 
 > Build a settings page with PlankUI: tabs for Profile and Billing, a form with a select and a switch, and a confirm dialog before deleting the account.
 
@@ -103,24 +102,22 @@ Tools load when a session starts, so restart the client or open a new chat after
 
 > Add a PlankUI select and dialog using Base UI.
 
-The agent looks components up, reads their real source and props, and writes code that matches the library, including the right install commands.
+The server returns source and setup instructions that your agent can use to add the components to your project. To install components directly from the terminal, use the [PlankUI CLI](https://www.npmjs.com/package/plankui).
 
 ## Tools
 
-| Tool | Returns |
+| Tool | Description |
 | --- | --- |
-| `list_components` | Every component with its slug, category and one line on what it does |
+| `list_components` | Component slugs, categories, and descriptions. Filter by category if needed |
 | `search_components` | Components that match an intent, such as "confirm dialog" |
-| `get_component` | Install command, full source of every file it needs, usage and props. Pass `primitives: "base"` for the Base UI version |
+| `get_component` | Source, dependencies, usage, and props. Pass `primitives: "base"` to request Base UI implementations where available |
 | `get_component_usage` | Usage and props only (same `primitives` option) |
-| `list_templates` | Every template |
-| `get_template` | A template's full source |
 | `get_setup` | The tokens, styles and `cn` helper every project needs |
 | `get_theming` | Themes, styles, accents and how to change them |
 
-## Private by design
+## How it runs
 
-The server runs on your machine over stdio and reads a registry bundled in the package. Nothing is hosted, nothing is sent anywhere and there is nothing to sign up for.
+The server runs locally over stdio and reads the component registry bundled with the package.
 
 ## Requirements
 

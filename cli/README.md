@@ -85,6 +85,7 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 
 | Component | Description | CLI command |
 | --- | --- | --- |
+| [Toolbar](https://plankui.com/docs/components/toolbar) | Group related actions with a shared label and regular Tab navigation. | `npx plankui@latest add toolbar` |
 | [Icon button](https://plankui.com/docs/components/icon-button) | A compact icon-only action with a required accessible label. | `npx plankui@latest add icon-button` |
 | [Button](https://plankui.com/docs/components/button) | A keycap with a real bottom edge. It lifts on hover and sinks when pressed. | `npx plankui@latest add button` |
 | [Segmented control](https://plankui.com/docs/components/segmented) | One choice from a short set. A raised pill slides to the chosen option. | `npx plankui@latest add segmented` |
@@ -135,6 +136,7 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 
 | Component | Description | CLI command |
 | --- | --- | --- |
+| [Native meter](https://plankui.com/docs/components/native-meter) | Show a measured value within a known range, such as storage usage. | `npx plankui@latest add native-meter` |
 | [Status indicator](https://plankui.com/docs/components/status-indicator) | A colored dot and text label for service health, availability or job state. | `npx plankui@latest add status-indicator` |
 | [Toast](https://plankui.com/docs/components/toast) | Brief, non-blocking messages. Mount Toaster once and call toast() from anywhere. | `npx plankui@latest add toast` |
 | [Alert](https://plankui.com/docs/components/alert) | An inline message about the state of a page or section. | `npx plankui@latest add alert` |
@@ -149,6 +151,9 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 
 | Component | Description | CLI command |
 | --- | --- | --- |
+| [Figure](https://plankui.com/docs/components/figure) | Group an image, diagram, or code sample with a caption. | `npx plankui@latest add figure` |
+| [Inline code](https://plankui.com/docs/components/inline-code) | Highlight short commands, identifiers, and code inside a sentence. | `npx plankui@latest add inline-code` |
+| [Timestamp](https://plankui.com/docs/components/timestamp) | Display a date or time with a machine-readable value. | `npx plankui@latest add timestamp` |
 | [Blockquote](https://plankui.com/docs/components/blockquote) | Set off a quotation with an accent rule and optional attribution. | `npx plankui@latest add blockquote` |
 | [Scroll area](https://plankui.com/docs/components/scroll-area) | A keyboard-focusable region for scrolling lists or panels within a limited height. | `npx plankui@latest add scroll-area` |
 | [Disclosure](https://plankui.com/docs/components/disclosure) | A single expandable section for shipping details, notes or other supporting information. | `npx plankui@latest add disclosure` |
@@ -169,6 +174,7 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 
 | Component | Description | CLI command |
 | --- | --- | --- |
+| [Skip link](https://plankui.com/docs/components/skip-link) | Let keyboard users bypass repeated navigation and jump to content. | `npx plankui@latest add skip-link` |
 | [Tabs](https://plankui.com/docs/components/tabs) | Switch between views in place. Two variants: a tray with a sliding pill, and a line. | `npx plankui@latest add tabs` |
 | [Accordion](https://plankui.com/docs/components/accordion) | Stacked sections that expand one or many at a time. | `npx plankui@latest add accordion` |
 | [Breadcrumb](https://plankui.com/docs/components/breadcrumb) | Where the current page sits in the hierarchy, with links back up. | `npx plankui@latest add breadcrumb` |

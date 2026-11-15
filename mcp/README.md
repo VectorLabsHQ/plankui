@@ -5,7 +5,7 @@
 <h1 align="center">@plankui/mcp</h1>
 
 <p align="center">
-  Give your coding agent the source, props, and usage examples for <a href="https://plankui.com/docs/components">76 free PlankUI components</a>.
+  Give your coding agent the source, props, and usage examples for <a href="https://plankui.com/docs/components">82 free PlankUI components</a>.
 </p>
 
 <p align="center">
@@ -93,6 +93,8 @@ Open the [MCP setup guide](https://plankui.com/docs/mcp) for one-click installs 
 Tools load when a session starts, so restart the client or open a new chat after adding the server.
 
 ## Example prompts
+
+> Build a storage overview with a Native meter for disk usage, a Figure for the usage chart, and a Skip link before navigation.
 
 > Build a settings page with PlankUI: tabs for Profile and Billing, a form with a select and a switch, and a confirm dialog before deleting the account.
 

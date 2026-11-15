@@ -1,0 +1,14 @@
+import type { ComponentPropsWithoutRef } from "react";
+import { cn } from "@/lib/cn";
+
+export interface TimestampProps extends ComponentPropsWithoutRef<"time"> {
+  dateTime: string;
+}
+
+export function Timestamp({ dateTime, children, className, ...props }: TimestampProps) {
+  return (
+    <time {...props} dateTime={dateTime} className={cn("text-xs tabular-nums text-muted", className)}>
+      {children ?? dateTime}
+    </time>
+  );
+}

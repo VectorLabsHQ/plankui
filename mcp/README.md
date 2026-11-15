@@ -5,7 +5,7 @@
 <h1 align="center">@plankui/mcp</h1>
 
 <p align="center">
-  Give your coding agent the source, props, and usage examples for <a href="https://plankui.com/docs/components">72 free PlankUI components</a>.
+  Give your coding agent the source, props, and usage examples for <a href="https://plankui.com/docs/components">76 free PlankUI components</a>.
 </p>
 
 <p align="center">
@@ -96,11 +96,11 @@ Tools load when a session starts, so restart the client or open a new chat after
 
 > Build a settings page with PlankUI: tabs for Profile and Billing, a form with a select and a switch, and a confirm dialog before deleting the account.
 
-> Which PlankUI component should I use for picking one option from a short list?
+> Show a short conversation with incoming and outgoing PlankUI chat messages.
 
 > Set up PlankUI in this project with the Ember theme and the Keycap style.
 
-> Add a PlankUI select and dialog using Base UI.
+> Add a PlankUI icon button and fieldset to my settings form using Base UI.
 
 The server returns source and setup instructions that your agent can use to add the components to your project. To install components directly from the terminal, use the [PlankUI CLI](https://www.npmjs.com/package/plankui).
 

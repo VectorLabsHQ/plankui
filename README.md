@@ -11,7 +11,7 @@
 [![MCP version](https://img.shields.io/npm/v/%40plankui%2Fmcp?label=MCP)](https://www.npmjs.com/package/@plankui/mcp)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-**72 free React components for Tailwind CSS v4.** Choose Radix UI or Base UI and copy the components into your project. Shared CSS variables power six themes, five styles, and light and dark mode.
+**76 free React components for Tailwind CSS v4.** Choose Radix UI or Base UI and copy the components into your project. Shared CSS variables power six themes, five styles, and light and dark mode.
 
 [Website](https://plankui.com) · [Docs](https://plankui.com/docs) · [Component playground](https://plankui.com/docs/components) · [MCP setup](https://plankui.com/docs/mcp)
 
@@ -66,6 +66,7 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 
 | Component | Description | CLI command |
 | --- | --- | --- |
+| [Icon button](https://plankui.com/docs/components/icon-button) | A compact icon-only action with a required accessible label. | `npx plankui@latest add icon-button` |
 | [Button](https://plankui.com/docs/components/button) | A keycap with a real bottom edge. It lifts on hover and sinks when pressed. | `npx plankui@latest add button` |
 | [Segmented control](https://plankui.com/docs/components/segmented) | One choice from a short set. A raised pill slides to the chosen option. | `npx plankui@latest add segmented` |
 | [Dropdown menu](https://plankui.com/docs/components/dropdown-menu) | A menu of actions with shortcuts, checkable items and nested submenus. | `npx plankui@latest add dropdown-menu` |
@@ -79,6 +80,7 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 
 | Component | Description | CLI command |
 | --- | --- | --- |
+| [Fieldset](https://plankui.com/docs/components/fieldset) | Group related form controls under a native legend. | `npx plankui@latest add fieldset` |
 | [Textarea counter](https://plankui.com/docs/components/textarea-counter) | A multiline field that shows the character count and enforces a length limit. | `npx plankui@latest add textarea-counter` |
 | [Native select](https://plankui.com/docs/components/native-select) | A styled browser select that keeps the platform’s own picker and keyboard behavior. | `npx plankui@latest add native-select` |
 | [Input](https://plankui.com/docs/components/input) | A text field with optional leading and trailing slots. Pair it with Field for label, hint and error. | `npx plankui@latest add input` |
@@ -128,6 +130,7 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 
 | Component | Description | CLI command |
 | --- | --- | --- |
+| [Blockquote](https://plankui.com/docs/components/blockquote) | Set off a quotation with an accent rule and optional attribution. | `npx plankui@latest add blockquote` |
 | [Scroll area](https://plankui.com/docs/components/scroll-area) | A keyboard-focusable region for scrolling lists or panels within a limited height. | `npx plankui@latest add scroll-area` |
 | [Disclosure](https://plankui.com/docs/components/disclosure) | A single expandable section for shipping details, notes or other supporting information. | `npx plankui@latest add disclosure` |
 | [Description list](https://plankui.com/docs/components/description-list) | A responsive list of labeled values for account details, specifications or summaries. | `npx plankui@latest add description-list` |
@@ -170,6 +173,7 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 
 | Component | Description | CLI command |
 | --- | --- | --- |
+| [Chat message](https://plankui.com/docs/components/chat-message) | An incoming or outgoing message with author, time, and optional avatar. | `npx plankui@latest add chat-message` |
 | [Task list](https://plankui.com/docs/components/task-list) | A checklist with progress, priorities, add and delete. Done tasks strike through. | `npx plankui@latest add task-list` |
 | [Stat cards](https://plankui.com/docs/components/stat-cards) | KPI cards: a grey shell, a lit icon tile, the number and a white footer with the change. | `npx plankui@latest add stat-cards` |
 | [Agent limits](https://plankui.com/docs/components/agent-limits) | Usage against plan limits. Bars turn amber at 80% and red at the limit, with a note. | `npx plankui@latest add agent-limits` |

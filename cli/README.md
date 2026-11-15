@@ -77,20 +77,125 @@ export function Save() {
 
 The CLI picks your package manager (npm, pnpm, yarn or bun) from your lockfile, never writes outside your project and has no dependencies of its own.
 
-## Components
+## Browse components
 
-Browse 72 free components by category below. Each links to its documentation and live preview. For a catalog with a copyable command per component, see the [GitHub README](https://github.com/VectorLabsHQ/plankui#browse-components).
+Select a component to see its live preview and usage examples. Run its CLI command from your project to add it.
 
-| | |
-| --- | --- |
-| **Actions** | [Button](https://plankui.com/docs/components/button), [Segmented control](https://plankui.com/docs/components/segmented), [Dropdown menu](https://plankui.com/docs/components/dropdown-menu), [Toggle](https://plankui.com/docs/components/toggle), [Command](https://plankui.com/docs/components/command), [Button group](https://plankui.com/docs/components/button-group), [Copy button](https://plankui.com/docs/components/copy-button), [Theme toggle](https://plankui.com/docs/components/theme-toggle) |
-| **Forms** | [Textarea counter](https://plankui.com/docs/components/textarea-counter), [Native select](https://plankui.com/docs/components/native-select), [Input](https://plankui.com/docs/components/input), [Textarea](https://plankui.com/docs/components/textarea), [Select](https://plankui.com/docs/components/select), [Checkbox](https://plankui.com/docs/components/checkbox), [Radio group](https://plankui.com/docs/components/radio-group), [Switch](https://plankui.com/docs/components/switch), [Slider](https://plankui.com/docs/components/slider), [Combobox](https://plankui.com/docs/components/combobox), [Number input](https://plankui.com/docs/components/number-input), [Input OTP](https://plankui.com/docs/components/input-otp), [Calendar](https://plankui.com/docs/components/calendar), [Password input](https://plankui.com/docs/components/password-input), [Tag input](https://plankui.com/docs/components/tag-input), [Rating](https://plankui.com/docs/components/rating), [Search field](https://plankui.com/docs/components/search-field), [Time field](https://plankui.com/docs/components/time-field) |
-| **Overlays** | [Dialog](https://plankui.com/docs/components/dialog), [Popover](https://plankui.com/docs/components/popover), [Tooltip](https://plankui.com/docs/components/tooltip), [Sheet](https://plankui.com/docs/components/sheet), [Alert dialog](https://plankui.com/docs/components/alert-dialog), [Hover card](https://plankui.com/docs/components/hover-card), [Context menu](https://plankui.com/docs/components/context-menu) |
-| **Feedback** | [Status indicator](https://plankui.com/docs/components/status-indicator), [Toast](https://plankui.com/docs/components/toast), [Alert](https://plankui.com/docs/components/alert), [Progress](https://plankui.com/docs/components/progress), [Skeleton](https://plankui.com/docs/components/skeleton), [Spinner](https://plankui.com/docs/components/spinner), [Empty state](https://plankui.com/docs/components/empty-state), [Announcement](https://plankui.com/docs/components/announcement), [Progress circle](https://plankui.com/docs/components/progress-circle) |
-| **Display** | [Scroll area](https://plankui.com/docs/components/scroll-area), [Disclosure](https://plankui.com/docs/components/disclosure), [Description list](https://plankui.com/docs/components/description-list), [Card](https://plankui.com/docs/components/card), [Avatar](https://plankui.com/docs/components/avatar), [Badge](https://plankui.com/docs/components/badge), [Kbd](https://plankui.com/docs/components/kbd), [Separator](https://plankui.com/docs/components/separator), [Table](https://plankui.com/docs/components/table), [Stat](https://plankui.com/docs/components/stat), [Chip](https://plankui.com/docs/components/chip), [Count up](https://plankui.com/docs/components/count-up), [Timeline](https://plankui.com/docs/components/timeline), [Divider](https://plankui.com/docs/components/divider) |
-| **Navigation** | [Tabs](https://plankui.com/docs/components/tabs), [Accordion](https://plankui.com/docs/components/accordion), [Breadcrumb](https://plankui.com/docs/components/breadcrumb), [Pagination](https://plankui.com/docs/components/pagination), [Stepper](https://plankui.com/docs/components/stepper) |
-| **Charts** | [Bar chart](https://plankui.com/docs/components/bar-chart), [Sparkline](https://plankui.com/docs/components/sparkline), [Line chart](https://plankui.com/docs/components/line-chart), [Bar list](https://plankui.com/docs/components/bar-list), [Stage bars](https://plankui.com/docs/components/stage-bars), [Chart card](https://plankui.com/docs/components/chart-card), [Steps card](https://plankui.com/docs/components/steps-card), [Most active days](https://plankui.com/docs/components/active-days-card) |
-| **Blocks** | [Task list](https://plankui.com/docs/components/task-list), [Stat cards](https://plankui.com/docs/components/stat-cards), [Agent limits](https://plankui.com/docs/components/agent-limits) |
+### Actions
+
+| Component | Description | CLI command |
+| --- | --- | --- |
+| [Icon button](https://plankui.com/docs/components/icon-button) | A compact icon-only action with a required accessible label. | `npx plankui@latest add icon-button` |
+| [Button](https://plankui.com/docs/components/button) | A keycap with a real bottom edge. It lifts on hover and sinks when pressed. | `npx plankui@latest add button` |
+| [Segmented control](https://plankui.com/docs/components/segmented) | One choice from a short set. A raised pill slides to the chosen option. | `npx plankui@latest add segmented` |
+| [Dropdown menu](https://plankui.com/docs/components/dropdown-menu) | A menu of actions with shortcuts, checkable items and nested submenus. | `npx plankui@latest add dropdown-menu` |
+| [Toggle](https://plankui.com/docs/components/toggle) | A two-state button for formatting and view options. | `npx plankui@latest add toggle` |
+| [Command](https://plankui.com/docs/components/command) | A searchable, keyboard-driven list of actions. CommandDialog wraps it in a modal with a hotkey. | `npx plankui@latest add command` |
+| [Button group](https://plankui.com/docs/components/button-group) | Buttons fused into one row, for ranges and paired actions. | `npx plankui@latest add button-group` |
+| [Copy button](https://plankui.com/docs/components/copy-button) | Copies a value and confirms with a check for a moment. | `npx plankui@latest add copy-button` |
+| [Theme toggle](https://plankui.com/docs/components/theme-toggle) | Switch light and dark: a sliding switch, a three-way segmented control with system, or one icon button. | `npx plankui@latest add theme-toggle` |
+
+### Forms
+
+| Component | Description | CLI command |
+| --- | --- | --- |
+| [Fieldset](https://plankui.com/docs/components/fieldset) | Group related form controls under a native legend. | `npx plankui@latest add fieldset` |
+| [Textarea counter](https://plankui.com/docs/components/textarea-counter) | A multiline field that shows the character count and enforces a length limit. | `npx plankui@latest add textarea-counter` |
+| [Native select](https://plankui.com/docs/components/native-select) | A styled browser select that keeps the platform’s own picker and keyboard behavior. | `npx plankui@latest add native-select` |
+| [Input](https://plankui.com/docs/components/input) | A text field with optional leading and trailing slots. Pair it with Field for label, hint and error. | `npx plankui@latest add input` |
+| [Textarea](https://plankui.com/docs/components/textarea) | A multi-line field that shares the input's border, focus ring and error states. | `npx plankui@latest add textarea` |
+| [Select](https://plankui.com/docs/components/select) | A listbox for picking one value, with groups, labels and disabled options. | `npx plankui@latest add select` |
+| [Checkbox](https://plankui.com/docs/components/checkbox) | A binary or indeterminate choice, for lists where many items can be on. | `npx plankui@latest add checkbox` |
+| [Radio group](https://plankui.com/docs/components/radio-group) | One choice from a visible set. RadioCard wraps each option in a selectable panel. | `npx plankui@latest add radio-group` |
+| [Switch](https://plankui.com/docs/components/switch) | An on and off setting that applies immediately. | `npx plankui@latest add switch` |
+| [Slider](https://plankui.com/docs/components/slider) | Pick a value or a range by dragging. Pass two values for a range. | `npx plankui@latest add slider` |
+| [Combobox](https://plankui.com/docs/components/combobox) | A select with a search field, for option lists too long to scan. | `npx plankui@latest add combobox` |
+| [Number input](https://plankui.com/docs/components/number-input) | A number field with step keys. Arrow keys step by one, Shift by ten. | `npx plankui@latest add number-input` |
+| [Input OTP](https://plankui.com/docs/components/input-otp) | One-time code entry with auto-advance, paste support and grouped cells. | `npx plankui@latest add input-otp` |
+| [Calendar](https://plankui.com/docs/components/calendar) | A month grid with event dots, disabled days and full keyboard navigation. | `npx plankui@latest add calendar` |
+| [Password input](https://plankui.com/docs/components/password-input) | A password field with a show and hide key and an optional strength meter. | `npx plankui@latest add password-input` |
+| [Tag input](https://plankui.com/docs/components/tag-input) | Type and press Enter or comma to add tags, with suggestions and a limit. | `npx plankui@latest add tag-input` |
+| [Rating](https://plankui.com/docs/components/rating) | Stars as a radio group with hover preview, arrow keys and a read-only mode. | `npx plankui@latest add rating` |
+| [Search field](https://plankui.com/docs/components/search-field) | A search input with a clear button, a focus shortcut and a loading state. Escape clears it. | `npx plankui@latest add search-field` |
+| [Time field](https://plankui.com/docs/components/time-field) | A time input in segments. Arrows step, digits type, left and right move between hours, minutes and AM/PM. | `npx plankui@latest add time-field` |
+
+### Overlays
+
+| Component | Description | CLI command |
+| --- | --- | --- |
+| [Dialog](https://plankui.com/docs/components/dialog) | A modal window that traps focus and returns it to the trigger when closed. | `npx plankui@latest add dialog` |
+| [Popover](https://plankui.com/docs/components/popover) | Rich, interactive content anchored to a trigger. | `npx plankui@latest add popover` |
+| [Tooltip](https://plankui.com/docs/components/tooltip) | A short label on hover or focus, with an optional key hint. Wrap your app in TooltipProvider. | `npx plankui@latest add tooltip` |
+| [Sheet](https://plankui.com/docs/components/sheet) | A panel that slides in from an edge, for forms and details that keep page context. | `npx plankui@latest add sheet` |
+| [Alert dialog](https://plankui.com/docs/components/alert-dialog) | A modal that interrupts to confirm an important or irreversible action. | `npx plankui@latest add alert-dialog` |
+| [Hover card](https://plankui.com/docs/components/hover-card) | A preview of a linked person or page, shown on hover or focus. | `npx plankui@latest add hover-card` |
+| [Context menu](https://plankui.com/docs/components/context-menu) | The menu that opens on right-click or a long press. | `npx plankui@latest add context-menu` |
+
+### Feedback
+
+| Component | Description | CLI command |
+| --- | --- | --- |
+| [Status indicator](https://plankui.com/docs/components/status-indicator) | A colored dot and text label for service health, availability or job state. | `npx plankui@latest add status-indicator` |
+| [Toast](https://plankui.com/docs/components/toast) | Brief, non-blocking messages. Mount Toaster once and call toast() from anywhere. | `npx plankui@latest add toast` |
+| [Alert](https://plankui.com/docs/components/alert) | An inline message about the state of a page or section. | `npx plankui@latest add alert` |
+| [Progress](https://plankui.com/docs/components/progress) | Linear progress for a task, and Meter, a cell meter for quotas. | `npx plankui@latest add progress` |
+| [Skeleton](https://plankui.com/docs/components/skeleton) | A shimmering placeholder that holds the shape of content while it loads. | `npx plankui@latest add skeleton` |
+| [Spinner](https://plankui.com/docs/components/spinner) | An indeterminate loading indicator that inherits the text colour. | `npx plankui@latest add spinner` |
+| [Empty state](https://plankui.com/docs/components/empty-state) | What a list or page shows before it has content, with a way forward. | `npx plankui@latest add empty-state` |
+| [Announcement](https://plankui.com/docs/components/announcement) | A dismissible card for product news, with one action. | `npx plankui@latest add announcement` |
+| [Progress circle](https://plankui.com/docs/components/progress-circle) | A ring that fills to a value, with the percentage or your own content inside. | `npx plankui@latest add progress-circle` |
+
+### Display
+
+| Component | Description | CLI command |
+| --- | --- | --- |
+| [Blockquote](https://plankui.com/docs/components/blockquote) | Set off a quotation with an accent rule and optional attribution. | `npx plankui@latest add blockquote` |
+| [Scroll area](https://plankui.com/docs/components/scroll-area) | A keyboard-focusable region for scrolling lists or panels within a limited height. | `npx plankui@latest add scroll-area` |
+| [Disclosure](https://plankui.com/docs/components/disclosure) | A single expandable section for shipping details, notes or other supporting information. | `npx plankui@latest add disclosure` |
+| [Description list](https://plankui.com/docs/components/description-list) | A responsive list of labeled values for account details, specifications or summaries. | `npx plankui@latest add description-list` |
+| [Card](https://plankui.com/docs/components/card) | A hairline-bordered surface with header, content and a footer strip. | `npx plankui@latest add card` |
+| [Avatar](https://plankui.com/docs/components/avatar) | An image with initials as fallback, a presence dot, and an overlapping group. | `npx plankui@latest add avatar` |
+| [Badge](https://plankui.com/docs/components/badge) | A compact label for status, version or category. | `npx plankui@latest add badge` |
+| [Kbd](https://plankui.com/docs/components/kbd) | A keyboard key, for shortcuts in menus, tooltips and docs. | `npx plankui@latest add kbd` |
+| [Separator](https://plankui.com/docs/components/separator) | A hairline between groups of content, horizontal or vertical. | `npx plankui@latest add separator` |
+| [Table](https://plankui.com/docs/components/table) | Ruled data table parts with selectable rows and a sortable header button. | `npx plankui@latest add table` |
+| [Stat](https://plankui.com/docs/components/stat) | One number with its label, change against a previous period and a sparkline. | `npx plankui@latest add stat` |
+| [Chip](https://plankui.com/docs/components/chip) | A compact, removable token for filters and selections. | `npx plankui@latest add chip` |
+| [Count up](https://plankui.com/docs/components/count-up) | A number that climbs to its new value. Still under reduced motion. | `npx plankui@latest add count-up` |
+| [Timeline](https://plankui.com/docs/components/timeline) | A vertical list of events joined by a line, with icons and tones. | `npx plankui@latest add timeline` |
+| [Divider](https://plankui.com/docs/components/divider) | A rule with an optional label, such as “or” between sign-in options or a date between messages. | `npx plankui@latest add divider` |
+
+### Navigation
+
+| Component | Description | CLI command |
+| --- | --- | --- |
+| [Tabs](https://plankui.com/docs/components/tabs) | Switch between views in place. Two variants: a tray with a sliding pill, and a line. | `npx plankui@latest add tabs` |
+| [Accordion](https://plankui.com/docs/components/accordion) | Stacked sections that expand one or many at a time. | `npx plankui@latest add accordion` |
+| [Breadcrumb](https://plankui.com/docs/components/breadcrumb) | Where the current page sits in the hierarchy, with links back up. | `npx plankui@latest add breadcrumb` |
+| [Pagination](https://plankui.com/docs/components/pagination) | Move through pages of results, with gaps for long ranges. | `npx plankui@latest add pagination` |
+| [Stepper](https://plankui.com/docs/components/stepper) | Progress through a multi-step flow, horizontal or vertical. | `npx plankui@latest add stepper` |
+
+### Charts
+
+| Component | Description | CLI command |
+| --- | --- | --- |
+| [Bar chart](https://plankui.com/docs/components/bar-chart) | Rounded bars on a track. Bars grow in; hover or focus a bar for its value. | `npx plankui@latest add bar-chart` |
+| [Sparkline](https://plankui.com/docs/components/sparkline) | A small trend line for tables, stats and cards. | `npx plankui@latest add sparkline` |
+| [Line chart](https://plankui.com/docs/components/line-chart) | Lines with a y axis and legend. Dash a series for targets or last period. Hover or arrow through points. | `npx plankui@latest add line-chart` |
+| [Bar list](https://plankui.com/docs/components/bar-list) | Ranked rows with a bar behind each name, for top pages, sources or countries. | `npx plankui@latest add bar-list` |
+| [Stage bars](https://plankui.com/docs/components/stage-bars) | Horizontal bars split into stages, such as a pipeline per rep or sleep phases per night. | `npx plankui@latest add stage-bars` |
+| [Chart card](https://plankui.com/docs/components/chart-card) | The shell every chart card shares: title, number and change, the chart on a white panel, a footer. | `npx plankui@latest add chart-card` |
+| [Steps card](https://plankui.com/docs/components/steps-card) | Daily steps against a dashed goal line. Days over the goal are lit. | `npx plankui@latest add steps-card` |
+| [Most active days](https://plankui.com/docs/components/active-days-card) | Seven columns for the week with the busiest day lit and named. | `npx plankui@latest add active-days-card` |
+
+### Blocks
+
+| Component | Description | CLI command |
+| --- | --- | --- |
+| [Chat message](https://plankui.com/docs/components/chat-message) | An incoming or outgoing message with author, time, and optional avatar. | `npx plankui@latest add chat-message` |
+| [Task list](https://plankui.com/docs/components/task-list) | A checklist with progress, priorities, add and delete. Done tasks strike through. | `npx plankui@latest add task-list` |
+| [Stat cards](https://plankui.com/docs/components/stat-cards) | KPI cards: a grey shell, a lit icon tile, the number and a white footer with the change. | `npx plankui@latest add stat-cards` |
+| [Agent limits](https://plankui.com/docs/components/agent-limits) | Usage against plan limits. Bars turn amber at 80% and red at the limit, with a note. | `npx plankui@latest add agent-limits` |
 
 ## Themes and styles
 

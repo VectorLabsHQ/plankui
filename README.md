@@ -11,7 +11,7 @@
 [![MCP version](https://img.shields.io/npm/v/%40plankui%2Fmcp?label=MCP)](https://www.npmjs.com/package/@plankui/mcp)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-**82 free React components for Tailwind CSS v4.** Choose Radix UI or Base UI and copy the components into your project. Shared CSS variables power six themes, five styles, and light and dark mode.
+**87 free React components for Tailwind CSS v4.** Choose Radix UI or Base UI and copy the components into your project. Shared CSS variables power six themes, five styles, and light and dark mode.
 
 [Website](https://plankui.com) · [Docs](https://plankui.com/docs) · [Component playground](https://plankui.com/docs/components) · [MCP setup](https://plankui.com/docs/mcp)
 
@@ -53,7 +53,7 @@ Try asking your agent to build a settings panel with PlankUI's Tabs, Switch, and
 | Folder | Contents |
 | --- | --- |
 | [components/ui](components/ui) | Free components, including the Radix UI implementations |
-| [components/base-ui](components/base-ui) | 24 dedicated Base UI implementations. The other components use shared source |
+| [components/base-ui](components/base-ui) | 27 dedicated Base UI implementations. The other components use shared source |
 | [styles](styles) and [lib](lib) | Theme tokens, base styles, and the class helper |
 | [cli](cli) | The `plankui` installer |
 | [mcp](mcp) | The `@plankui/mcp` server and component registry |
@@ -72,6 +72,7 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 | [Segmented control](https://plankui.com/docs/components/segmented) | One choice from a short set. A raised pill slides to the chosen option. | `npx plankui@latest add segmented` |
 | [Dropdown menu](https://plankui.com/docs/components/dropdown-menu) | A menu of actions with shortcuts, checkable items and nested submenus. | `npx plankui@latest add dropdown-menu` |
 | [Toggle](https://plankui.com/docs/components/toggle) | A two-state button for formatting and view options. | `npx plankui@latest add toggle` |
+| [Toggle group](https://plankui.com/docs/components/toggle-group) | A set of toggles on one tray: one on at a time, or several. Arrow keys move between them. | `npx plankui@latest add toggle-group` |
 | [Command](https://plankui.com/docs/components/command) | A searchable, keyboard-driven list of actions. CommandDialog wraps it in a modal with a hotkey. | `npx plankui@latest add command` |
 | [Button group](https://plankui.com/docs/components/button-group) | Buttons fused into one row, for ranges and paired actions. | `npx plankui@latest add button-group` |
 | [Copy button](https://plankui.com/docs/components/copy-button) | Copies a value and confirms with a check for a moment. | `npx plankui@latest add copy-button` |
@@ -91,6 +92,7 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 | [Radio group](https://plankui.com/docs/components/radio-group) | One choice from a visible set. RadioCard wraps each option in a selectable panel. | `npx plankui@latest add radio-group` |
 | [Switch](https://plankui.com/docs/components/switch) | An on and off setting that applies immediately. | `npx plankui@latest add switch` |
 | [Slider](https://plankui.com/docs/components/slider) | Pick a value or a range by dragging. Pass two values for a range. | `npx plankui@latest add slider` |
+| [Label and Field](https://plankui.com/docs/components/label) | A form label, and Field: label, control and hint or error in one, wired together for screen readers. | `npx plankui@latest add label` |
 | [Combobox](https://plankui.com/docs/components/combobox) | A select with a search field, for option lists too long to scan. | `npx plankui@latest add combobox` |
 | [Number input](https://plankui.com/docs/components/number-input) | A number field with step keys. Arrow keys step by one, Shift by ten. | `npx plankui@latest add number-input` |
 | [Input OTP](https://plankui.com/docs/components/input-otp) | One-time code entry with auto-advance, paste support and grouped cells. | `npx plankui@latest add input-otp` |
@@ -144,6 +146,8 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 | [Badge](https://plankui.com/docs/components/badge) | A compact label for status, version or category. | `npx plankui@latest add badge` |
 | [Kbd](https://plankui.com/docs/components/kbd) | A keyboard key, for shortcuts in menus, tooltips and docs. | `npx plankui@latest add kbd` |
 | [Separator](https://plankui.com/docs/components/separator) | A hairline between groups of content, horizontal or vertical. | `npx plankui@latest add separator` |
+| [Collapsible](https://plankui.com/docs/components/collapsible) | Shows and hides one section, growing smoothly to its height. For a list of sections, use Accordion. | `npx plankui@latest add collapsible` |
+| [Aspect ratio](https://plankui.com/docs/components/aspect-ratio) | Keeps media at a fixed shape as the width changes. Images and video inside crop to fill it. | `npx plankui@latest add aspect-ratio` |
 | [Table](https://plankui.com/docs/components/table) | Ruled data table parts with selectable rows and a sortable header button. | `npx plankui@latest add table` |
 | [Stat](https://plankui.com/docs/components/stat) | One number with its label, change against a previous period and a sparkline. | `npx plankui@latest add stat` |
 | [Chip](https://plankui.com/docs/components/chip) | A compact, removable token for filters and selections. | `npx plankui@latest add chip` |
@@ -181,6 +185,7 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 | --- | --- | --- |
 | [Chat message](https://plankui.com/docs/components/chat-message) | An incoming or outgoing message with author, time, and optional avatar. | `npx plankui@latest add chat-message` |
 | [Task list](https://plankui.com/docs/components/task-list) | A checklist with progress, priorities, add and delete. Done tasks strike through. | `npx plankui@latest add task-list` |
+| [Auth card](https://plankui.com/docs/components/auth-card) | Sign in, sign up and a one-time code step in one card. Uncontrolled, it hands you FormData. | `npx plankui@latest add auth-card` |
 | [Stat cards](https://plankui.com/docs/components/stat-cards) | KPI cards: a grey shell, a lit icon tile, the number and a white footer with the change. | `npx plankui@latest add stat-cards` |
 | [Agent limits](https://plankui.com/docs/components/agent-limits) | Usage against plan limits. Bars turn amber at 80% and red at the limit, with a note. | `npx plankui@latest add agent-limits` |
 

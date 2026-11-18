@@ -141,6 +141,14 @@ code, kbd, pre { font-family: var(--ff-code); }
 .vx-dialog[data-open] { animation: vx-dialog-in var(--dur-short) var(--ease-out); }
 .vx-dialog[data-closed] { animation: vx-dialog-out var(--dur-micro) ease-in; }
 .vx-reveal[data-open] { animation: vx-reveal var(--dur-short) var(--ease-out); }
+/* Collapsible: height from the measured content, for Radix (data-state) and Base UI (data-open / data-closed). */
+@keyframes vx-collapse-in { from { height: 0; opacity: 0; } to { height: var(--vx-collapse-h); opacity: 1; } }
+@keyframes vx-collapse-out { from { height: var(--vx-collapse-h); opacity: 1; } to { height: 0; opacity: 0; } }
+.vx-collapse { overflow: hidden; }
+.vx-collapse[data-state] { --vx-collapse-h: var(--radix-collapsible-content-height); }
+.vx-collapse[data-open], .vx-collapse[data-closed] { --vx-collapse-h: var(--collapsible-panel-height); }
+.vx-collapse[data-state="open"], .vx-collapse[data-open] { animation: vx-collapse-in var(--dur-short) var(--ease-out); }
+.vx-collapse[data-state="closed"], .vx-collapse[data-closed] { animation: vx-collapse-out var(--dur-short) ease-in; }
 .vx-sheet-right[data-open] { animation: vx-sheet-right var(--dur-short) var(--ease-out); }
 .vx-sheet-right[data-closed] { animation: vx-sheet-right-out var(--dur-short) ease-in; }
 .vx-sheet-left[data-open] { animation: vx-sheet-left var(--dur-short) var(--ease-out); }

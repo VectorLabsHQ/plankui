@@ -11,7 +11,7 @@
 [![MCP version](https://img.shields.io/npm/v/%40plankui%2Fmcp?label=MCP)](https://www.npmjs.com/package/@plankui/mcp)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-**87 free React components for Tailwind CSS v4.** Choose Radix UI or Base UI and copy the components into your project. Shared CSS variables power six themes, five styles, and light and dark mode.
+**91 free React components for Tailwind CSS v4.** Choose Radix UI or Base UI and copy the components into your project. Shared CSS variables power six themes, five styles, and light and dark mode.
 
 [Website](https://plankui.com) · [Docs](https://plankui.com/docs) · [Component playground](https://plankui.com/docs/components) · [MCP setup](https://plankui.com/docs/mcp)
 
@@ -186,6 +186,10 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 | --- | --- | --- |
 | [Chat message](https://plankui.com/docs/components/chat-message) | An incoming or outgoing message with author, time, and optional avatar. | `npx plankui@latest add chat-message` |
 | [Task list](https://plankui.com/docs/components/task-list) | A checklist with progress, priorities, add and delete. Done tasks strike through. | `npx plankui@latest add task-list` |
+| [Profile card](https://plankui.com/docs/components/profile-card) | A person at a glance: avatar and status, role, labelled details and contact actions. | `npx plankui@latest add profile-card` |
+| [Invite members](https://plankui.com/docs/components/invite-members) | Invite by email, change each member's role, and copy a link that gives access. | `npx plankui@latest add invite-members` |
+| [Account menu](https://plankui.com/docs/components/account-menu) | The signed-in user's menu: name and plan, a dark mode switch, links, another account and sign out. | `npx plankui@latest add account-menu` |
+| [Applied filters](https://plankui.com/docs/components/applied-filters) | The filters in effect as removable chips, with clear all and a button to add more. | `npx plankui@latest add applied-filters` |
 | [Auth card](https://plankui.com/docs/components/auth-card) | Sign in, sign up and a one-time code step in one card. Uncontrolled, it hands you FormData. | `npx plankui@latest add auth-card` |
 | [Stat cards](https://plankui.com/docs/components/stat-cards) | KPI cards: a grey shell, a lit icon tile, the number and a white footer with the change. | `npx plankui@latest add stat-cards` |
 | [Agent limits](https://plankui.com/docs/components/agent-limits) | Usage against plan limits. Bars turn amber at 80% and red at the limit, with a note. | `npx plankui@latest add agent-limits` |

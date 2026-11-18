@@ -1,5 +1,5 @@
 {
- "version": "0.1.0",
+ "version": "0.2.0",
  "strokeWidth": 1.75,
  "categories": [
   "Arrows",
@@ -6189,6 +6189,3475 @@
      "path",
      {
       "d": "M12 20.5c3.3 0 6-2.4 6-5.75 0-4.25-3.5-6.25-4.25-11.25-2.25 1.75-3.6 4.4-3.25 7.25-1.25-.4-2-1.4-2.25-2.75C6.9 9.6 6 11.5 6 14.75c0 3.35 2.7 5.75 6 5.75z"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "refresh-ccw",
+   "component": "RefreshCcwIcon",
+   "category": "Arrows",
+   "tags": [
+    "reload",
+    "sync",
+    "reverse"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M4.5 12a7.5 7.5 0 0 1 13.1-5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M19.5 12a7.5 7.5 0 0 1-13.1 5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M17.6 3.2V7h-3.8"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M6.4 20.8V17h3.8"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "move",
+   "component": "MoveIcon",
+   "category": "Arrows",
+   "tags": [
+    "drag",
+    "position",
+    "arrows"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M12 3.5v17M3.5 12h17"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M9.25 6.25 12 3.5l2.75 2.75"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m9.25 17.75 2.75 2.75 2.75-2.75"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M6.25 9.25 3.5 12l2.75 2.75"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m17.75 9.25 2.75 2.75-2.75 2.75"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "expand",
+   "component": "ExpandIcon",
+   "category": "Arrows",
+   "tags": [
+    "maximize",
+    "fullscreen",
+    "enlarge",
+    "diagonal"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M14.5 4H20v5.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M20 4l-6.25 6.25"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M9.5 20H4v-5.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M4 20l6.25-6.25"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "shrink",
+   "component": "ShrinkIcon",
+   "category": "Arrows",
+   "tags": [
+    "minimize",
+    "collapse",
+    "reduce",
+    "diagonal"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M14 4.5V10h5.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M14 10l6-6"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M10 19.5V14H4.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M10 14l-6 6"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "corner-down-left",
+   "component": "CornerDownLeftIcon",
+   "category": "Arrows",
+   "tags": [
+    "enter",
+    "return"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M19.5 4.5V10a4 4 0 0 1-4 4H5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M9 10l-4 4 4 4"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "corner-down-right",
+   "component": "CornerDownRightIcon",
+   "category": "Arrows",
+   "tags": [
+    "indent",
+    "reply"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M4.5 4.5V10a4 4 0 0 0 4 4H19"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m15 10 4 4-4 4"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "corner-up-left",
+   "component": "CornerUpLeftIcon",
+   "category": "Arrows",
+   "tags": [
+    "back",
+    "undo"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M19.5 19.5V14a4 4 0 0 0-4-4H5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M9 6 5 10l4 4"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "corner-up-right",
+   "component": "CornerUpRightIcon",
+   "category": "Arrows",
+   "tags": [
+    "forward",
+    "redo"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M4.5 19.5V14a4 4 0 0 1 4-4H19"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m15 6 4 4-4 4"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "chevrons-up",
+   "component": "ChevronsUpIcon",
+   "category": "Arrows",
+   "tags": [
+    "top",
+    "collapse"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "m7 11.5 5-5 5 5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m7 18 5-5 5 5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "chevrons-down",
+   "component": "ChevronsDownIcon",
+   "category": "Arrows",
+   "tags": [
+    "bottom",
+    "expand"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "m7 6 5 5 5-5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m7 12.5 5 5 5-5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "arrow-right-circle",
+   "component": "ArrowRightCircleIcon",
+   "category": "Arrows",
+   "tags": [
+    "next",
+    "go",
+    "forward"
+   ],
+   "nodes": [
+    [
+     "circle",
+     {
+      "cx": 12,
+      "cy": 12,
+      "r": 8.75
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M8 12h8"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m12.5 8.5 3.5 3.5-3.5 3.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "arrow-down-circle",
+   "component": "ArrowDownCircleIcon",
+   "category": "Arrows",
+   "tags": [
+    "download",
+    "scroll",
+    "down"
+   ],
+   "nodes": [
+    [
+     "circle",
+     {
+      "cx": 12,
+      "cy": 12,
+      "r": 8.75
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 8v8"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m8.5 12.5 3.5 3.5 3.5-3.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "arrow-down-to-line",
+   "component": "ArrowDownToLineIcon",
+   "category": "Arrows",
+   "tags": [
+    "download",
+    "bottom",
+    "save"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M12 4v11"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m7.5 10.5 4.5 4.5 4.5-4.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M5 20h14"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "arrow-up-from-line",
+   "component": "ArrowUpFromLineIcon",
+   "category": "Arrows",
+   "tags": [
+    "upload",
+    "share",
+    "top"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M12 16.5V4"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M7.5 8.5 12 4l4.5 4.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M5 20h14"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "repeat",
+   "component": "RepeatIcon",
+   "category": "Arrows",
+   "tags": [
+    "loop",
+    "again",
+    "cycle"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M4.5 11V9.5a3 3 0 0 1 3-3H19"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m16 3.5 3 3-3 3"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M19.5 13v1.5a3 3 0 0 1-3 3H5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m8 20.5-3-3 3-3"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "shuffle",
+   "component": "ShuffleIcon",
+   "category": "Arrows",
+   "tags": [
+    "random",
+    "mix"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M3.5 7h2.6a4 4 0 0 1 3.3 1.75l5.2 6.5A4 4 0 0 0 17.9 17h2.6"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3.5 17h2.6a4 4 0 0 0 3.3-1.75"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M14.6 8.75A4 4 0 0 1 17.9 7h2.6"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m18 4.5 2.5 2.5-2.5 2.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m18 14.5 2.5 2.5-2.5 2.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "strikethrough",
+   "component": "StrikethroughIcon",
+   "category": "Text",
+   "tags": [
+    "format",
+    "delete",
+    "line"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M16.5 7.25c-.6-1.4-2.3-2.5-4.5-2.5-2.6 0-4.5 1.4-4.5 3.25 0 1.1.6 1.9 1.6 2.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M15.4 14.5c.7.6 1.1 1.3 1.1 2.25 0 1.85-1.9 3.25-4.5 3.25-2.4 0-4.2-1.1-4.75-2.75"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M4 12h16"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "heading",
+   "component": "HeadingIcon",
+   "category": "Text",
+   "tags": [
+    "title",
+    "header",
+    "h1"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M6 4.5v15M18 4.5v15M6 12h12"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "link-2",
+   "component": "Link2Icon",
+   "category": "Text",
+   "tags": [
+    "chain",
+    "url",
+    "hyperlink"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M9 7.5H7.5a4.5 4.5 0 0 0 0 9H9"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M15 7.5h1.5a4.5 4.5 0 0 1 0 9H15"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M8.5 12h7"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "unlink",
+   "component": "UnlinkIcon",
+   "category": "Text",
+   "tags": [
+    "remove",
+    "link",
+    "break",
+    "chain"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M9 7.5H7.5a4.5 4.5 0 0 0 0 9H9"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M15 7.5h1.5a4.5 4.5 0 0 1 0 9H15"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 3.5v2M12 18.5v2"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "indent",
+   "component": "IndentIcon",
+   "category": "Text",
+   "tags": [
+    "tab",
+    "increase",
+    "paragraph"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M4 5.5h16M11 10h9M11 14h9M4 18.5h16"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m4 9 3 3-3 3"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "outdent",
+   "component": "OutdentIcon",
+   "category": "Text",
+   "tags": [
+    "tab",
+    "decrease",
+    "paragraph"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M4 5.5h16M11 10h9M11 14h9M4 18.5h16"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M7 9l-3 3 3 3"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "align-justify",
+   "component": "AlignJustifyIcon",
+   "category": "Text",
+   "tags": [
+    "paragraph",
+    "text",
+    "full"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M4 6h16M4 10h16M4 14h16M4 18h16"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "pilcrow",
+   "component": "PilcrowIcon",
+   "category": "Text",
+   "tags": [
+    "paragraph",
+    "mark"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M13 4.5v15M17 4.5v15"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M19 4.5H9.5a4 4 0 0 0 0 8H13"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "text-quote",
+   "component": "TextQuoteIcon",
+   "category": "Text",
+   "tags": [
+    "blockquote",
+    "citation"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M4.5 6.5h15M9 12h10.5M9 17.5h10.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M4.5 11v7.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "file-plus",
+   "component": "FilePlusIcon",
+   "category": "Files",
+   "tags": [
+    "new",
+    "document",
+    "add"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M13.75 3.5H7.5A2.5 2.5 0 0 0 5 6v12a2.5 2.5 0 0 0 2.5 2.5h9A2.5 2.5 0 0 0 19 18V8.75z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M13.75 3.5v3.75a1.5 1.5 0 0 0 1.5 1.5H19"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 11.5v6M9 14.5h6"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "file-minus",
+   "component": "FileMinusIcon",
+   "category": "Files",
+   "tags": [
+    "remove",
+    "document"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M13.75 3.5H7.5A2.5 2.5 0 0 0 5 6v12a2.5 2.5 0 0 0 2.5 2.5h9A2.5 2.5 0 0 0 19 18V8.75z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M13.75 3.5v3.75a1.5 1.5 0 0 0 1.5 1.5H19"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M9 14.5h6"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "file-check",
+   "component": "FileCheckIcon",
+   "category": "Files",
+   "tags": [
+    "document",
+    "done",
+    "approved"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M13.75 3.5H7.5A2.5 2.5 0 0 0 5 6v12a2.5 2.5 0 0 0 2.5 2.5h9A2.5 2.5 0 0 0 19 18V8.75z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M13.75 3.5v3.75a1.5 1.5 0 0 0 1.5 1.5H19"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m9 14.5 2 2 4-4"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "file-search",
+   "component": "FileSearchIcon",
+   "category": "Files",
+   "tags": [
+    "find",
+    "document"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M13.75 3.5H7.5A2.5 2.5 0 0 0 5 6v12a2.5 2.5 0 0 0 2.5 2.5h9A2.5 2.5 0 0 0 19 18V8.75z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M13.75 3.5v3.75a1.5 1.5 0 0 0 1.5 1.5H19"
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 11.25,
+      "cy": 14,
+      "r": 2.5
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m13.1 15.85 2.15 2.15"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "file-type",
+   "component": "FileTypeIcon",
+   "category": "Files",
+   "tags": [
+    "document",
+    "text",
+    "font"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M13.75 3.5H7.5A2.5 2.5 0 0 0 5 6v12a2.5 2.5 0 0 0 2.5 2.5h9A2.5 2.5 0 0 0 19 18V8.75z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M13.75 3.5v3.75a1.5 1.5 0 0 0 1.5 1.5H19"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M9 11.5h6M12 11.5v6"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "files",
+   "component": "FilesIcon",
+   "category": "Files",
+   "tags": [
+    "documents",
+    "copies",
+    "pages"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M15.5 3.5H10a2.5 2.5 0 0 0-2.5 2.5v9.5A2.5 2.5 0 0 0 10 18h7a2.5 2.5 0 0 0 2.5-2.5V7.5z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M15.5 3.5V6a1.5 1.5 0 0 0 1.5 1.5h2.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M7.5 6.5h-1A2.5 2.5 0 0 0 4 9v9.5A2.5 2.5 0 0 0 6.5 21h7a2.5 2.5 0 0 0 2.5-2.5V18"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "folder-code",
+   "component": "FolderCodeIcon",
+   "category": "Files",
+   "tags": [
+    "project",
+    "source",
+    "directory"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M3.75 7.25a2.5 2.5 0 0 1 2.5-2.5h3.1a2 2 0 0 1 1.5.68l1.25 1.42a2 2 0 0 0 1.5.68h4.15a2.5 2.5 0 0 1 2.5 2.5v7.22a2.5 2.5 0 0 1-2.5 2.5H6.25a2.5 2.5 0 0 1-2.5-2.5z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m10.25 11.5-1.75 1.75 1.75 1.75"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m13.75 11.5 1.75 1.75-1.75 1.75"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "clipboard",
+   "component": "ClipboardIcon",
+   "category": "Files",
+   "tags": [
+    "paste",
+    "board"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M8.5 4.75H8a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V7.75a3 3 0 0 0-3-3h-.5"
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 8.5,
+      "y": 3,
+      "width": 7,
+      "height": 3.5,
+      "rx": 1.25
+     }
+    ]
+   ]
+  },
+  {
+   "name": "clipboard-check",
+   "component": "ClipboardCheckIcon",
+   "category": "Files",
+   "tags": [
+    "done",
+    "task",
+    "copied"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M8.5 4.75H8a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V7.75a3 3 0 0 0-3-3h-.5"
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 8.5,
+      "y": 3,
+      "width": 7,
+      "height": 3.5,
+      "rx": 1.25
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m9 13.5 2 2 4-4.25"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "clipboard-list",
+   "component": "ClipboardListIcon",
+   "category": "Files",
+   "tags": [
+    "tasks",
+    "checklist",
+    "notes"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M8.5 4.75H8a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V7.75a3 3 0 0 0-3-3h-.5"
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 8.5,
+      "y": 3,
+      "width": 7,
+      "height": 3.5,
+      "rx": 1.25
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M9 11h6M9 14.5h6M9 18h3.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "save",
+   "component": "SaveIcon",
+   "category": "Files",
+   "tags": [
+    "floppy",
+    "disk",
+    "store"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M4 6.5A2.5 2.5 0 0 1 6.5 4h9.4a2 2 0 0 1 1.4.6l2.1 2.1a2 2 0 0 1 .6 1.4v9.4a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 17.5z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M8 4v3.5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V4"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M7.5 20v-4.5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1V20"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "history",
+   "component": "HistoryIcon",
+   "category": "Files",
+   "tags": [
+    "recent",
+    "time",
+    "past",
+    "log"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M4.5 12A7.5 7.5 0 1 0 6.7 6.7L4.5 9"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M4.5 4.75V9h4.25"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 8v4l2.75 1.75"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "book-text",
+   "component": "BookTextIcon",
+   "category": "Files",
+   "tags": [
+    "docs",
+    "read",
+    "guide",
+    "notes"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M12 6.5c-1.6-1.3-3.8-2-6.5-2H4.25a.75.75 0 0 0-.75.75v12c0 .41.34.75.75.75H6c2.4 0 4.4.6 6 1.75 1.6-1.15 3.6-1.75 6-1.75h1.75a.75.75 0 0 0 .75-.75v-12a.75.75 0 0 0-.75-.75H18.5c-2.7 0-4.9.7-6.5 2z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 6.5v13.25"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M6.5 9h3M6.5 12h3M14.5 9h3M14.5 12h3"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "user-minus",
+   "component": "UserMinusIcon",
+   "category": "Users",
+   "tags": [
+    "remove",
+    "person"
+   ],
+   "nodes": [
+    [
+     "circle",
+     {
+      "cx": 10,
+      "cy": 8,
+      "r": 3.75
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3 20a7 7 0 0 1 14 0"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M17 10h5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "user-x",
+   "component": "UserXIcon",
+   "category": "Users",
+   "tags": [
+    "remove",
+    "block",
+    "person"
+   ],
+   "nodes": [
+    [
+     "circle",
+     {
+      "cx": 10,
+      "cy": 8,
+      "r": 3.75
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3 20a7 7 0 0 1 14 0"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m17.5 7.75 4.5 4.5M22 7.75l-4.5 4.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "users-round",
+   "component": "UsersRoundIcon",
+   "category": "Users",
+   "tags": [
+    "people",
+    "team",
+    "group"
+   ],
+   "nodes": [
+    [
+     "circle",
+     {
+      "cx": 8.5,
+      "cy": 9,
+      "r": 3
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3 19.5a5.5 5.5 0 0 1 11 0"
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 16,
+      "cy": 7.5,
+      "r": 3
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M14.5 13.75a5.5 5.5 0 0 1 6.5 5.75"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "contact",
+   "component": "ContactIcon",
+   "category": "Users",
+   "tags": [
+    "address",
+    "book",
+    "person",
+    "card"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 4.5,
+      "y": 3,
+      "width": 15,
+      "height": 18,
+      "rx": 3
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 12,
+      "cy": 10.5,
+      "r": 2.5
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M8 17a4 4 0 0 1 8 0"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3 8h1.5M3 12h1.5M3 16h1.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "id-card",
+   "component": "IdCardIcon",
+   "category": "Users",
+   "tags": [
+    "identity",
+    "badge",
+    "licence"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 2.75,
+      "y": 5,
+      "width": 18.5,
+      "height": 14,
+      "rx": 3
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 8.5,
+      "cy": 11,
+      "r": 2
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M5.5 16a3 3 0 0 1 6 0"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M14 10h4M14 13.5h3"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "accessibility",
+   "component": "AccessibilityIcon",
+   "category": "Users",
+   "tags": [
+    "a11y",
+    "person",
+    "access"
+   ],
+   "nodes": [
+    [
+     "circle",
+     {
+      "cx": 12,
+      "cy": 4.75,
+      "r": 1.75
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M5 8.5l7 1.5 7-1.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 10v4.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M9 21l3-6.5 3 6.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "tag-plus",
+   "component": "TagPlusIcon",
+   "category": "Commerce",
+   "tags": [
+    "add",
+    "label",
+    "price"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M3.75 5.75a2 2 0 0 1 2-2h5.4a2 2 0 0 1 1.42.59l7.5 7.5a2 2 0 0 1 0 2.83l-5.4 5.4a2 2 0 0 1-2.83 0l-7.5-7.5a2 2 0 0 1-.59-1.42z"
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 8,
+      "cy": 8,
+      "r": 0.5
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M14.5 12.25v4.5M12.25 14.5h4.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "percent",
+   "component": "PercentIcon",
+   "category": "Commerce",
+   "tags": [
+    "discount",
+    "sale",
+    "rate"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M18 6 6 18"
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 7.5,
+      "cy": 7.5,
+      "r": 2.25
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 16.5,
+      "cy": 16.5,
+      "r": 2.25
+     }
+    ]
+   ]
+  },
+  {
+   "name": "coins",
+   "component": "CoinsIcon",
+   "category": "Commerce",
+   "tags": [
+    "money",
+    "cash",
+    "change"
+   ],
+   "nodes": [
+    [
+     "circle",
+     {
+      "cx": 14.5,
+      "cy": 14.5,
+      "r": 6
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M15.43 8.57A6 6 0 1 0 8.57 15.43"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M14.5 12v5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "banknote",
+   "component": "BanknoteIcon",
+   "category": "Commerce",
+   "tags": [
+    "money",
+    "cash",
+    "bill"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 2.75,
+      "y": 6,
+      "width": 18.5,
+      "height": 12,
+      "rx": 3
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 12,
+      "cy": 12,
+      "r": 2.5
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 6.5,
+      "cy": 12,
+      "r": 0.5
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 17.5,
+      "cy": 12,
+      "r": 0.5
+     }
+    ]
+   ]
+  },
+  {
+   "name": "truck",
+   "component": "TruckIcon",
+   "category": "Commerce",
+   "tags": [
+    "delivery",
+    "shipping"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M3.5 16V6.5A1.5 1.5 0 0 1 5 5h8.5A1.5 1.5 0 0 1 15 6.5V17"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M15 9h3l2.5 3.25V16a1 1 0 0 1-1 1H19"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3.5 16a1 1 0 0 0 1 1h1"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M9.5 17H15"
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 7.75,
+      "cy": 17.25,
+      "r": 1.75
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 16.75,
+      "cy": 17.25,
+      "r": 1.75
+     }
+    ]
+   ]
+  },
+  {
+   "name": "package",
+   "component": "PackageIcon",
+   "category": "Commerce",
+   "tags": [
+    "parcel",
+    "shipping",
+    "box",
+    "order"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M12 3.5l7.5 4.25v8.5L12 20.5l-7.5-4.25v-8.5z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M4.5 7.75 12 12l7.5-4.25"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 12v8.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M8.25 5.63 15.75 9.88v3.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "store",
+   "component": "StoreIcon",
+   "category": "Commerce",
+   "tags": [
+    "shop",
+    "market",
+    "building"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M4.5 10.5V19a1.5 1.5 0 0 0 1.5 1.5h12a1.5 1.5 0 0 0 1.5-1.5v-8.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M4 8l1.25-4h13.5L20 8a2.67 2.67 0 0 1-5.33 0 2.67 2.67 0 0 1-5.34 0A2.67 2.67 0 0 1 4 8z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M9.5 20.5V16a2.5 2.5 0 0 1 5 0v4.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "barcode",
+   "component": "BarcodeIcon",
+   "category": "Commerce",
+   "tags": [
+    "scan",
+    "product",
+    "sku"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M4 6v12M7 6v12M10.5 6v12M14 6v12M16.5 6v12M20 6v12"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "qr-code",
+   "component": "QrCodeIcon",
+   "category": "Commerce",
+   "tags": [
+    "scan",
+    "code",
+    "link"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 4,
+      "y": 4,
+      "width": 6,
+      "height": 6,
+      "rx": 1.5
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 14,
+      "y": 4,
+      "width": 6,
+      "height": 6,
+      "rx": 1.5
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 4,
+      "y": 14,
+      "width": 6,
+      "height": 6,
+      "rx": 1.5
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 14.5,
+      "cy": 14.5,
+      "r": 0.5
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 17,
+      "cy": 17,
+      "r": 0.5
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 19.5,
+      "cy": 19.5,
+      "r": 0.5
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 14.5,
+      "cy": 19.5,
+      "r": 0.5
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 19.5,
+      "cy": 14.5,
+      "r": 0.5
+     }
+    ]
+   ]
+  },
+  {
+   "name": "ticket",
+   "component": "TicketIcon",
+   "category": "Commerce",
+   "tags": [
+    "event",
+    "pass",
+    "coupon"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M3.5 8.5V7A1.5 1.5 0 0 1 5 5.5h14A1.5 1.5 0 0 1 20.5 7v1.5a3.5 3.5 0 0 0 0 7V17a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 17v-1.5a3.5 3.5 0 0 0 0-7z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M14 5.5v2M14 10.75v2.5M14 16.5v2"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "headphones",
+   "component": "HeadphonesIcon",
+   "category": "Media",
+   "tags": [
+    "audio",
+    "music",
+    "listen"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M4 14.5V13a8 8 0 0 1 16 0v1.5"
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 4,
+      "y": 13.5,
+      "width": 4,
+      "height": 6.5,
+      "rx": 1.75
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 16,
+      "y": 13.5,
+      "width": 4,
+      "height": 6.5,
+      "rx": 1.75
+     }
+    ]
+   ]
+  },
+  {
+   "name": "speaker",
+   "component": "SpeakerIcon",
+   "category": "Media",
+   "tags": [
+    "audio",
+    "sound",
+    "music"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 5.5,
+      "y": 3,
+      "width": 13,
+      "height": 18,
+      "rx": 3
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 12,
+      "cy": 14.5,
+      "r": 3.25
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 12,
+      "cy": 7.5,
+      "r": 0.5
+     }
+    ]
+   ]
+  },
+  {
+   "name": "film",
+   "component": "FilmIcon",
+   "category": "Media",
+   "tags": [
+    "movie",
+    "video",
+    "cinema"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 3.75,
+      "y": 3.75,
+      "width": 16.5,
+      "height": 16.5,
+      "rx": 4.5
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M8.5 3.75v16.5M15.5 3.75v16.5M3.75 9.25h4.75M3.75 14.75h4.75M15.5 9.25h4.75M15.5 14.75h4.75"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "music",
+   "component": "MusicIcon",
+   "category": "Media",
+   "tags": [
+    "song",
+    "audio",
+    "note"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M9 18V5.5l11-2v12"
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 6.5,
+      "cy": 18,
+      "r": 2.5
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 17.5,
+      "cy": 15.5,
+      "r": 2.5
+     }
+    ]
+   ]
+  },
+  {
+   "name": "battery",
+   "component": "BatteryIcon",
+   "category": "Devices",
+   "tags": [
+    "power",
+    "charge",
+    "level"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 2.75,
+      "y": 7,
+      "width": 16,
+      "height": 10,
+      "rx": 2.5
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M21.25 10.5v3"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M6.5 10.5v3M9.5 10.5v3"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "battery-charging",
+   "component": "BatteryChargingIcon",
+   "category": "Devices",
+   "tags": [
+    "power",
+    "charge",
+    "plug"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 2.75,
+      "y": 7,
+      "width": 16,
+      "height": 10,
+      "rx": 2.5
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M21.25 10.5v3"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M11.5 9 9.5 12h3l-2 3"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "bluetooth",
+   "component": "BluetoothIcon",
+   "category": "Devices",
+   "tags": [
+    "wireless",
+    "connect"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "m7 7.5 10 9-5 4.5v-17l5 4.5-10 9"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "cast",
+   "component": "CastIcon",
+   "category": "Devices",
+   "tags": [
+    "screen",
+    "mirror",
+    "stream"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M3.5 8.5v-1a3 3 0 0 1 3-3h11a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-4.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3.5 12.5a7 7 0 0 1 7 7"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3.5 16A3.5 3.5 0 0 1 7 19.5"
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 3.75,
+      "cy": 19.5,
+      "r": 0.5
+     }
+    ]
+   ]
+  },
+  {
+   "name": "airplay",
+   "component": "AirplayIcon",
+   "category": "Devices",
+   "tags": [
+    "screen",
+    "stream",
+    "mirror"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M6.5 17H6a2.5 2.5 0 0 1-2.5-2.5v-8A2.5 2.5 0 0 1 6 4h12a2.5 2.5 0 0 1 2.5 2.5v8A2.5 2.5 0 0 1 18 17h-.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 14.5l4.5 6h-9z"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "tv",
+   "component": "TvIcon",
+   "category": "Devices",
+   "tags": [
+    "television",
+    "screen"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 3,
+      "y": 6.5,
+      "width": 18,
+      "height": 13,
+      "rx": 3
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m8 3 4 3.5 4-3.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "watch",
+   "component": "WatchIcon",
+   "category": "Devices",
+   "tags": [
+    "time",
+    "wearable",
+    "clock"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 6.5,
+      "y": 6.5,
+      "width": 11,
+      "height": 11,
+      "rx": 3.5
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 9.75V12l1.5 1"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M8.5 6.5l.6-2.4A1.5 1.5 0 0 1 10.55 3h2.9a1.5 1.5 0 0 1 1.45 1.1l.6 2.4"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M8.5 17.5l.6 2.4a1.5 1.5 0 0 0 1.45 1.1h2.9a1.5 1.5 0 0 0 1.45-1.1l.6-2.4"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "activity",
+   "component": "ActivityIcon",
+   "category": "Status",
+   "tags": [
+    "pulse",
+    "health",
+    "heartbeat"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M3 12h3.5L9 5l5 14 2.5-7H21"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "ban",
+   "component": "BanIcon",
+   "category": "Status",
+   "tags": [
+    "block",
+    "forbidden",
+    "prohibited"
+   ],
+   "nodes": [
+    [
+     "circle",
+     {
+      "cx": 12,
+      "cy": 12,
+      "r": 8.75
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M5.8 5.8l12.4 12.4"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "badge-check",
+   "component": "BadgeCheckIcon",
+   "category": "Status",
+   "tags": [
+    "verified",
+    "approved"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M12 3L14.91 4.98L18.36 5.64L19.02 9.09L21 12L19.02 14.91L18.36 18.36L14.91 19.02L12 21L9.09 19.02L5.64 18.36L4.98 14.91L3 12L4.98 9.09L5.64 5.64L9.09 4.98z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m8.75 12 2.25 2.25 4.25-4.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "toggle-left",
+   "component": "ToggleLeftIcon",
+   "category": "Status",
+   "tags": [
+    "switch",
+    "off"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 2.5,
+      "y": 6.5,
+      "width": 19,
+      "height": 11,
+      "rx": 5.5
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 8,
+      "cy": 12,
+      "r": 2.75
+     }
+    ]
+   ]
+  },
+  {
+   "name": "toggle-right",
+   "component": "ToggleRightIcon",
+   "category": "Status",
+   "tags": [
+    "switch",
+    "on"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 2.5,
+      "y": 6.5,
+      "width": 19,
+      "height": 11,
+      "rx": 5.5
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 16,
+      "cy": 12,
+      "r": 2.75
+     }
+    ]
+   ]
+  },
+  {
+   "name": "power-off",
+   "component": "PowerOffIcon",
+   "category": "Status",
+   "tags": [
+    "shutdown",
+    "disabled"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M12 3.5v4"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M7 6.5a7.5 7.5 0 1 0 10 0"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3.5 3.5l17 17"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "shield-alert",
+   "component": "ShieldAlertIcon",
+   "category": "Status",
+   "tags": [
+    "security",
+    "warning"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M12 3.5l7 2.6v5.4c0 4.45-2.9 7.9-7 9.25-4.1-1.35-7-4.8-7-9.25V6.1z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 8.5v4"
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 12,
+      "cy": 15.75,
+      "r": 0.5
+     }
+    ]
+   ]
+  },
+  {
+   "name": "alert-octagon",
+   "component": "AlertOctagonIcon",
+   "category": "Status",
+   "tags": [
+    "stop",
+    "error",
+    "danger"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M15.44 3.7 20.3 8.56v6.88l-4.86 4.86H8.56L3.7 15.44V8.56L8.56 3.7z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 8v4.5"
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 12,
+      "cy": 16,
+      "r": 0.5
+     }
+    ]
+   ]
+  },
+  {
+   "name": "phone-call",
+   "component": "PhoneCallIcon",
+   "category": "Communication",
+   "tags": [
+    "ringing",
+    "call"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M8.6 4.1 6.4 3.9A2 2 0 0 0 4.3 5.6c-.6 7.4 6.7 14.7 14.1 14.1a2 2 0 0 0 1.7-2.1l-.2-2.2a1.5 1.5 0 0 0-1.1-1.3l-2.6-.7a1.5 1.5 0 0 0-1.5.4l-1.2 1.2a12 12 0 0 1-4.8-4.8l1.2-1.2a1.5 1.5 0 0 0 .4-1.5l-.7-2.6a1.5 1.5 0 0 0-1.3-1.1z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M14.5 3.75a6.5 6.5 0 0 1 5.75 5.75"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M14.5 7.25a3 3 0 0 1 2.25 2.25"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "voicemail",
+   "component": "VoicemailIcon",
+   "category": "Communication",
+   "tags": [
+    "message",
+    "recording"
+   ],
+   "nodes": [
+    [
+     "circle",
+     {
+      "cx": 7,
+      "cy": 12,
+      "r": 3.5
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 17,
+      "cy": 12,
+      "r": 3.5
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M7 15.5h10"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "mail-open",
+   "component": "MailOpenIcon",
+   "category": "Communication",
+   "tags": [
+    "email",
+    "read"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M3.5 10.5 12 4l8.5 6.5V18a2.5 2.5 0 0 1-2.5 2.5H6A2.5 2.5 0 0 1 3.5 18z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3.75 10.75 12 16l8.25-5.25"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "inbox-arrow",
+   "component": "InboxArrowIcon",
+   "category": "Communication",
+   "tags": [
+    "receive",
+    "download",
+    "incoming"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M8 8.5H6.4l-2.65 5v4.25a2.5 2.5 0 0 0 2.5 2.5h11.5a2.5 2.5 0 0 0 2.5-2.5V13.5L17.6 8.5H16"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3.75 13.5h4.5l1.5 2.25h4.5l1.5-2.25h4.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 3.5v8"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m9 8.5 3 3 3-3"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "reply",
+   "component": "ReplyIcon",
+   "category": "Communication",
+   "tags": [
+    "answer",
+    "respond"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M9.5 6 4 11.5l5.5 5.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M4 11.5h9a7 7 0 0 1 7 7v1"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "reply-all",
+   "component": "ReplyAllIcon",
+   "category": "Communication",
+   "tags": [
+    "answer",
+    "everyone"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M8 6.5 3 11.5l5 5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12.5 6.5l-5 5 5 5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M7.5 11.5H13a7 7 0 0 1 7 7v1"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "forward",
+   "component": "ForwardIcon",
+   "category": "Communication",
+   "tags": [
+    "send",
+    "share",
+    "pass",
+    "on"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "m14.5 6 5.5 5.5-5.5 5.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M20 11.5h-9a7 7 0 0 0-7 7v1"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "send-horizontal",
+   "component": "SendHorizontalIcon",
+   "category": "Communication",
+   "tags": [
+    "paper",
+    "plane",
+    "submit"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M4 4.5 20.5 12 4 19.5l2.75-7.5z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M6.75 12H20.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "message-circle",
+   "component": "MessageCircleIcon",
+   "category": "Communication",
+   "tags": [
+    "chat",
+    "comment",
+    "bubble",
+    "round"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M12 20a8 8 0 1 0-7.1-4.3L3.75 20.25l4.5-1.15A8 8 0 0 0 12 20z"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "cloud-rain",
+   "component": "CloudRainIcon",
+   "category": "Nature",
+   "tags": [
+    "weather",
+    "rain",
+    "shower"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M7 16a4 4 0 0 1-.6-7.95A5.75 5.75 0 0 1 17.6 6.8 4.6 4.6 0 0 1 17 16z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M8 18.5l-.75 2M12 18.5l-.75 2M16 18.5l-.75 2"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "cloud-lightning",
+   "component": "CloudLightningIcon",
+   "category": "Nature",
+   "tags": [
+    "weather",
+    "storm",
+    "thunder"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M8.5 16H7a4 4 0 0 1-.6-7.95A5.75 5.75 0 0 1 17.6 6.8 4.6 4.6 0 0 1 17 16h-1"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M13 12.5 10.5 16.5h3L11 20.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "cloud-sun",
+   "component": "CloudSunIcon",
+   "category": "Nature",
+   "tags": [
+    "weather",
+    "partly",
+    "cloudy"
+   ],
+   "nodes": [
+    [
+     "circle",
+     {
+      "cx": 8.5,
+      "cy": 8.5,
+      "r": 3
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M8.5 3v1.25M3 8.5h1.25M4.6 4.6l.9.9M12.4 4.6l-.9.9"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M10.5 19.5a3.25 3.25 0 0 1-.5-6.45A4.75 4.75 0 0 1 19.2 12a3.75 3.75 0 0 1-.45 7.5z"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "snowflake",
+   "component": "SnowflakeIcon",
+   "category": "Nature",
+   "tags": [
+    "winter",
+    "cold",
+    "snow"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m9.5 4.5 2.5 2 2.5-2"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m9.5 19.5 2.5-2 2.5 2"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "wind",
+   "component": "WindIcon",
+   "category": "Nature",
+   "tags": [
+    "weather",
+    "air",
+    "breeze"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M3.5 9H14a2.75 2.75 0 1 0-2.75-2.75"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3.5 15h13a3 3 0 1 1-3 3"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3.5 12h6"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "leaf",
+   "component": "LeafIcon",
+   "category": "Nature",
+   "tags": [
+    "eco",
+    "plant",
+    "green"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M5 19c0-8 4.5-14 15-14.5-.5 10.5-6.5 15-15 14.5z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M5 19l7-7"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "tree",
+   "component": "TreeIcon",
+   "category": "Nature",
+   "tags": [
+    "pine",
+    "forest",
+    "nature"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M12 3.5 6 11h3l-4 5.5h14l-4-5.5h3z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 16.5v4"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "mountain",
+   "component": "MountainIcon",
+   "category": "Nature",
+   "tags": [
+    "peak",
+    "landscape",
+    "hike"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M3 19.5 9.5 7l4 7.5 2-3 5.5 8z"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "waves",
+   "component": "WavesIcon",
+   "category": "Nature",
+   "tags": [
+    "water",
+    "sea",
+    "ocean"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M3 7c1.5 0 2.25-1.5 4.5-1.5s3 1.5 4.5 1.5 2.25-1.5 4.5-1.5 3 1.5 4.5 1.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3 12c1.5 0 2.25-1.5 4.5-1.5s3 1.5 4.5 1.5 2.25-1.5 4.5-1.5 3 1.5 4.5 1.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3 17c1.5 0 2.25-1.5 4.5-1.5s3 1.5 4.5 1.5 2.25-1.5 4.5-1.5 3 1.5 4.5 1.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "umbrella",
+   "component": "UmbrellaIcon",
+   "category": "Nature",
+   "tags": [
+    "rain",
+    "weather",
+    "cover",
+    "insurance"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M12 3.5a8.5 8.5 0 0 1 8.5 8.5h-17A8.5 8.5 0 0 1 12 3.5z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 12v6.25a1.75 1.75 0 0 1-3.5 0"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "thermometer",
+   "component": "ThermometerIcon",
+   "category": "Nature",
+   "tags": [
+    "temperature",
+    "weather",
+    "heat"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M10 14.5v-9a2 2 0 0 1 4 0v9a3.75 3.75 0 1 1-4 0z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 9v7"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "pin",
+   "component": "PinIcon",
+   "category": "Interface",
+   "tags": [
+    "pushpin",
+    "keep",
+    "attach"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M9 3.5h6"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M10 3.5V9l-3 4v1.5h10V13l-3-4V3.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 14.5v6"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "pin-off",
+   "component": "PinOffIcon",
+   "category": "Interface",
+   "tags": [
+    "unpin",
+    "remove"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M9 3.5h6"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M10 3.5V9l-3 4v1.5h10V13l-3-4V3.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 14.5v6"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M4 4l16 16"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "picture-in-picture",
+   "component": "PictureInPictureIcon",
+   "category": "Interface",
+   "tags": [
+    "pip",
+    "video",
+    "window"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 3,
+      "y": 5,
+      "width": 18,
+      "height": 14,
+      "rx": 3
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 12,
+      "y": 12,
+      "width": 6,
+      "height": 4.5,
+      "rx": 1.25
+     }
+    ]
+   ]
+  },
+  {
+   "name": "panel-right",
+   "component": "PanelRightIcon",
+   "category": "Interface",
+   "tags": [
+    "sidebar",
+    "layout",
+    "inspector"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 3.75,
+      "y": 3.75,
+      "width": 16.5,
+      "height": 16.5,
+      "rx": 4.5
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M14.5 3.75v16.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "panel-bottom",
+   "component": "PanelBottomIcon",
+   "category": "Interface",
+   "tags": [
+    "layout",
+    "footer",
+    "drawer"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 3.75,
+      "y": 3.75,
+      "width": 16.5,
+      "height": 16.5,
+      "rx": 4.5
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3.75 14.5h16.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "layout-dashboard",
+   "component": "LayoutDashboardIcon",
+   "category": "Interface",
+   "tags": [
+    "dashboard",
+    "widgets",
+    "grid"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 4,
+      "y": 4,
+      "width": 7,
+      "height": 9,
+      "rx": 2
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 13,
+      "y": 4,
+      "width": 7,
+      "height": 5,
+      "rx": 2
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 13,
+      "y": 11,
+      "width": 7,
+      "height": 9,
+      "rx": 2
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 4,
+      "y": 15,
+      "width": 7,
+      "height": 5,
+      "rx": 2
+     }
+    ]
+   ]
+  },
+  {
+   "name": "layout-template",
+   "component": "LayoutTemplateIcon",
+   "category": "Interface",
+   "tags": [
+    "layout",
+    "page",
+    "sections"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 4,
+      "y": 4,
+      "width": 16,
+      "height": 6,
+      "rx": 2
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 4,
+      "y": 13,
+      "width": 7,
+      "height": 7,
+      "rx": 2
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 14,
+      "y": 13,
+      "width": 6,
+      "height": 7,
+      "rx": 2
+     }
+    ]
+   ]
+  },
+  {
+   "name": "table-grid",
+   "component": "TableGridIcon",
+   "category": "Interface",
+   "tags": [
+    "spreadsheet",
+    "cells"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 3.75,
+      "y": 3.75,
+      "width": 16.5,
+      "height": 16.5,
+      "rx": 4.5
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3.75 9.25h16.5M3.75 14.75h16.5M9.25 3.75v16.5M14.75 3.75v16.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "app-window",
+   "component": "AppWindowIcon",
+   "category": "Interface",
+   "tags": [
+    "browser",
+    "application"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 3,
+      "y": 4.5,
+      "width": 18,
+      "height": 15,
+      "rx": 3
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3 9h18"
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 6.5,
+      "cy": 6.75,
+      "r": 0.5
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 9,
+      "cy": 6.75,
+      "r": 0.5
+     }
+    ]
+   ]
+  },
+  {
+   "name": "blocks",
+   "component": "BlocksIcon",
+   "category": "Interface",
+   "tags": [
+    "components",
+    "modules",
+    "build"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 3.75,
+      "y": 12.5,
+      "width": 7.75,
+      "height": 7.75,
+      "rx": 2
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 12.5,
+      "y": 12.5,
+      "width": 7.75,
+      "height": 7.75,
+      "rx": 2
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 12.5,
+      "y": 3.75,
+      "width": 7.75,
+      "height": 7.75,
+      "rx": 2
+     }
+    ]
+   ]
+  },
+  {
+   "name": "shapes",
+   "component": "ShapesIcon",
+   "category": "Interface",
+   "tags": [
+    "triangle",
+    "circle",
+    "square",
+    "design"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M7.5 3.5l4 7h-8z"
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 16.75,
+      "cy": 7.25,
+      "r": 3.5
+     }
+    ],
+    [
+     "rect",
+     {
+      "x": 13,
+      "y": 13,
+      "width": 7.5,
+      "height": 7.5,
+      "rx": 2
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 7.5,
+      "cy": 16.75,
+      "r": 3.5
+     }
+    ]
+   ]
+  },
+  {
+   "name": "swatch-book",
+   "component": "SwatchBookIcon",
+   "category": "Interface",
+   "tags": [
+    "colours",
+    "palette",
+    "theme"
+   ],
+   "nodes": [
+    [
+     "rect",
+     {
+      "x": 3.5,
+      "y": 3.5,
+      "width": 7,
+      "height": 17,
+      "rx": 2.5
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 7,
+      "cy": 16.75,
+      "r": 0.5
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M10.5 8.5l3.75-3.75a2 2 0 0 1 2.83 0l2.17 2.17a2 2 0 0 1 0 2.83L10.5 18"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M7 20.5h11.5a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2h-2.25"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "mouse-pointer",
+   "component": "MousePointerIcon",
+   "category": "Interface",
+   "tags": [
+    "cursor",
+    "click",
+    "select"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M5 4.5 18.5 10l-5.75 2.25L10.5 18z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m12.75 12.25 5.5 5.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "mouse-pointer-click",
+   "component": "MousePointerClickIcon",
+   "category": "Interface",
+   "tags": [
+    "cursor",
+    "click",
+    "tap"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M9 9l11 4.5-4.75 1.75L13.5 20z"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "m15.25 15.25 4.25 4.25"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M7 3v2.25M3 7h2.25M4.3 4.3l1.6 1.6M10.5 4.5 9.25 5.75"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "scan",
+   "component": "ScanIcon",
+   "category": "Interface",
+   "tags": [
+    "scanner",
+    "capture",
+    "frame"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M4 9V6.5A2.5 2.5 0 0 1 6.5 4H9"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M15 4h2.5A2.5 2.5 0 0 1 20 6.5V9"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M20 15v2.5a2.5 2.5 0 0 1-2.5 2.5H15"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M9 20H6.5A2.5 2.5 0 0 1 4 17.5V15"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M7.5 12h9"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "timer",
+   "component": "TimerIcon",
+   "category": "Interface",
+   "tags": [
+    "stopwatch",
+    "countdown"
+   ],
+   "nodes": [
+    [
+     "circle",
+     {
+      "cx": 12,
+      "cy": 13.5,
+      "r": 7.25
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M10 2.75h4"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 13.5V10"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M18 7.5l1.25-1.25"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "hourglass",
+   "component": "HourglassIcon",
+   "category": "Interface",
+   "tags": [
+    "wait",
+    "time",
+    "loading"
+   ],
+   "nodes": [
+    [
+     "path",
+     {
+      "d": "M6.5 3.5h11M6.5 20.5h11"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M7.5 3.5c0 4 1.5 6 4.5 8.5-3 2.5-4.5 4.5-4.5 8.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M16.5 3.5c0 4-1.5 6-4.5 8.5 3 2.5 4.5 4.5 4.5 8.5"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "alarm",
+   "component": "AlarmIcon",
+   "category": "Interface",
+   "tags": [
+    "clock",
+    "wake",
+    "reminder"
+   ],
+   "nodes": [
+    [
+     "circle",
+     {
+      "cx": 12,
+      "cy": 13,
+      "r": 7
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M12 9.5V13l2 1.5"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M4 5.5l2.5-2.25M20 5.5l-2.5-2.25"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M6.5 19.5l-1.25 1.5M17.5 19.5l1.25 1.5"
      }
     ]
    ]

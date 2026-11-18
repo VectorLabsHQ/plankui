@@ -83,6 +83,14 @@ const SHIELD = "M12 3.5l7 2.6v5.4c0 4.45-2.9 7.9-7 9.25-4.1-1.35-7-4.8-7-9.25V6.
 const SPEAKER = "M4 9.5v5a1 1 0 0 0 1 1h2.5l4.25 3.5a.75.75 0 0 0 1.25-.6V5.6a.75.75 0 0 0-1.25-.6L7.5 8.5H5a1 1 0 0 0-1 1z";
 const MIC = [R(9, 3.5, 6, 11, 3), "M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5v3"];
 
+const CLIP = ["M8.5 4.75H8a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V7.75a3 3 0 0 0-3-3h-.5", R(8.5, 3, 7, 3.5, 1.25)];
+const CLOUD_S = "M7 16a4 4 0 0 1-.6-7.95A5.75 5.75 0 0 1 17.6 6.8 4.6 4.6 0 0 1 17 16z";
+const TAG = "M3.75 5.75a2 2 0 0 1 2-2h5.4a2 2 0 0 1 1.42.59l7.5 7.5a2 2 0 0 1 0 2.83l-5.4 5.4a2 2 0 0 1-2.83 0l-7.5-7.5a2 2 0 0 1-.59-1.42z";
+const BOOK = "M12 6.5c-1.6-1.3-3.8-2-6.5-2H4.25a.75.75 0 0 0-.75.75v12c0 .41.34.75.75.75H6c2.4 0 4.4.6 6 1.75 1.6-1.15 3.6-1.75 6-1.75h1.75a.75.75 0 0 0 .75-.75v-12a.75.75 0 0 0-.75-.75H18.5c-2.7 0-4.9.7-6.5 2z";
+const PHONE = "M8.6 4.1 6.4 3.9A2 2 0 0 0 4.3 5.6c-.6 7.4 6.7 14.7 14.1 14.1a2 2 0 0 0 1.7-2.1l-.2-2.2a1.5 1.5 0 0 0-1.1-1.3l-2.6-.7a1.5 1.5 0 0 0-1.5.4l-1.2 1.2a12 12 0 0 1-4.8-4.8l1.2-1.2a1.5 1.5 0 0 0 .4-1.5l-.7-2.6a1.5 1.5 0 0 0-1.3-1.1z";
+/** A soft wave across the grid at height y. */
+const wave = (y) => `M3 ${y}c1.5 0 2.25-1.5 4.5-1.5s3 1.5 4.5 1.5 2.25-1.5 4.5-1.5 3 1.5 4.5 1.5`;
+
 export const categories = ["Arrows", "Interface", "Status", "Users", "Text", "Files", "Communication", "Media", "Devices", "Charts", "Commerce", "Development", "Places", "Nature"];
 
 export const icons = [
@@ -321,4 +329,126 @@ export const icons = [
   ["moon", "Nature", "dark mode night", ["M19.5 14.25A7.75 7.75 0 1 1 9.75 4.5a7 7 0 0 0 9.75 9.75z"]],
   ["droplet", "Nature", "water liquid colour", ["M12 3.5c3.25 3.75 6 7.2 6 10.5a6 6 0 0 1-12 0c0-3.3 2.75-6.75 6-10.5z"]],
   ["flame", "Nature", "fire hot trending", ["M12 20.5c3.3 0 6-2.4 6-5.75 0-4.25-3.5-6.25-4.25-11.25-2.25 1.75-3.6 4.4-3.25 7.25-1.25-.4-2-1.4-2.25-2.75C6.9 9.6 6 11.5 6 14.75c0 3.35 2.7 5.75 6 5.75z"]],
+
+  /* ───── 0.2.0 ───── */
+  ["refresh-ccw", "Arrows", "reload sync reverse", ["M4.5 12a7.5 7.5 0 0 1 13.1-5", "M19.5 12a7.5 7.5 0 0 1-13.1 5", "M17.6 3.2V7h-3.8", "M6.4 20.8V17h3.8"]],
+  ["move", "Arrows", "drag position arrows", ["M12 3.5v17M3.5 12h17", "M9.25 6.25 12 3.5l2.75 2.75", "m9.25 17.75 2.75 2.75 2.75-2.75", "M6.25 9.25 3.5 12l2.75 2.75", "m17.75 9.25 2.75 2.75-2.75 2.75"]],
+  ["expand", "Arrows", "maximize fullscreen enlarge diagonal", ["M14.5 4H20v5.5", "M20 4l-6.25 6.25", "M9.5 20H4v-5.5", "M4 20l6.25-6.25"]],
+  ["shrink", "Arrows", "minimize collapse reduce diagonal", ["M14 4.5V10h5.5", "M14 10l6-6", "M10 19.5V14H4.5", "M10 14l-6 6"]],
+  ["corner-down-left", "Arrows", "enter return", ["M19.5 4.5V10a4 4 0 0 1-4 4H5", "M9 10l-4 4 4 4"]],
+  ["corner-down-right", "Arrows", "indent reply", ["M4.5 4.5V10a4 4 0 0 0 4 4H19", "m15 10 4 4-4 4"]],
+  ["corner-up-left", "Arrows", "back undo", ["M19.5 19.5V14a4 4 0 0 0-4-4H5", "M9 6 5 10l4 4"]],
+  ["corner-up-right", "Arrows", "forward redo", ["M4.5 19.5V14a4 4 0 0 1 4-4H19", "m15 6 4 4-4 4"]],
+  ["chevrons-up", "Arrows", "top collapse", ["m7 11.5 5-5 5 5", "m7 18 5-5 5 5"]],
+  ["chevrons-down", "Arrows", "bottom expand", ["m7 6 5 5 5-5", "m7 12.5 5 5 5-5"]],
+  ["arrow-right-circle", "Arrows", "next go forward", [RING, "M8 12h8", "m12.5 8.5 3.5 3.5-3.5 3.5"]],
+  ["arrow-down-circle", "Arrows", "download scroll down", [RING, "M12 8v8", "m8.5 12.5 3.5 3.5 3.5-3.5"]],
+  ["arrow-down-to-line", "Arrows", "download bottom save", ["M12 4v11", "m7.5 10.5 4.5 4.5 4.5-4.5", "M5 20h14"]],
+  ["arrow-up-from-line", "Arrows", "upload share top", ["M12 16.5V4", "M7.5 8.5 12 4l4.5 4.5", "M5 20h14"]],
+  ["repeat", "Arrows", "loop again cycle", ["M4.5 11V9.5a3 3 0 0 1 3-3H19", "m16 3.5 3 3-3 3", "M19.5 13v1.5a3 3 0 0 1-3 3H5", "m8 20.5-3-3 3-3"]],
+  ["shuffle", "Arrows", "random mix", ["M3.5 7h2.6a4 4 0 0 1 3.3 1.75l5.2 6.5A4 4 0 0 0 17.9 17h2.6", "M3.5 17h2.6a4 4 0 0 0 3.3-1.75", "M14.6 8.75A4 4 0 0 1 17.9 7h2.6", "m18 4.5 2.5 2.5-2.5 2.5", "m18 14.5 2.5 2.5-2.5 2.5"]],
+
+  ["strikethrough", "Text", "format delete line", ["M16.5 7.25c-.6-1.4-2.3-2.5-4.5-2.5-2.6 0-4.5 1.4-4.5 3.25 0 1.1.6 1.9 1.6 2.5", "M15.4 14.5c.7.6 1.1 1.3 1.1 2.25 0 1.85-1.9 3.25-4.5 3.25-2.4 0-4.2-1.1-4.75-2.75", "M4 12h16"]],
+  ["heading", "Text", "title header h1", ["M6 4.5v15M18 4.5v15M6 12h12"]],
+  ["link-2", "Text", "chain url hyperlink", ["M9 7.5H7.5a4.5 4.5 0 0 0 0 9H9", "M15 7.5h1.5a4.5 4.5 0 0 1 0 9H15", "M8.5 12h7"]],
+  ["unlink", "Text", "remove link break chain", ["M9 7.5H7.5a4.5 4.5 0 0 0 0 9H9", "M15 7.5h1.5a4.5 4.5 0 0 1 0 9H15", "M12 3.5v2M12 18.5v2"]],
+  ["indent", "Text", "tab increase paragraph", ["M4 5.5h16M11 10h9M11 14h9M4 18.5h16", "m4 9 3 3-3 3"]],
+  ["outdent", "Text", "tab decrease paragraph", ["M4 5.5h16M11 10h9M11 14h9M4 18.5h16", "M7 9l-3 3 3 3"]],
+  ["align-justify", "Text", "paragraph text full", ["M4 6h16M4 10h16M4 14h16M4 18h16"]],
+  ["pilcrow", "Text", "paragraph mark", ["M13 4.5v15M17 4.5v15", "M19 4.5H9.5a4 4 0 0 0 0 8H13"]],
+  ["text-quote", "Text", "blockquote citation", ["M4.5 6.5h15M9 12h10.5M9 17.5h10.5", "M4.5 11v7.5"]],
+
+  ["file-plus", "Files", "new document add", [FILE, FILE_FOLD, "M12 11.5v6M9 14.5h6"]],
+  ["file-minus", "Files", "remove document", [FILE, FILE_FOLD, "M9 14.5h6"]],
+  ["file-check", "Files", "document done approved", [FILE, FILE_FOLD, "m9 14.5 2 2 4-4"]],
+  ["file-search", "Files", "find document", [FILE, FILE_FOLD, C(11.25, 14, 2.5), "m13.1 15.85 2.15 2.15"]],
+  ["file-type", "Files", "document text font", [FILE, FILE_FOLD, "M9 11.5h6M12 11.5v6"]],
+  ["files", "Files", "documents copies pages", ["M15.5 3.5H10a2.5 2.5 0 0 0-2.5 2.5v9.5A2.5 2.5 0 0 0 10 18h7a2.5 2.5 0 0 0 2.5-2.5V7.5z", "M15.5 3.5V6a1.5 1.5 0 0 0 1.5 1.5h2.5", "M7.5 6.5h-1A2.5 2.5 0 0 0 4 9v9.5A2.5 2.5 0 0 0 6.5 21h7a2.5 2.5 0 0 0 2.5-2.5V18"]],
+  ["folder-code", "Files", "project source directory", [FOLDER, "m10.25 11.5-1.75 1.75 1.75 1.75", "m13.75 11.5 1.75 1.75-1.75 1.75"]],
+  ["clipboard", "Files", "paste board", CLIP],
+  ["clipboard-check", "Files", "done task copied", [...CLIP, "m9 13.5 2 2 4-4.25"]],
+  ["clipboard-list", "Files", "tasks checklist notes", [...CLIP, "M9 11h6M9 14.5h6M9 18h3.5"]],
+  ["save", "Files", "floppy disk store", ["M4 6.5A2.5 2.5 0 0 1 6.5 4h9.4a2 2 0 0 1 1.4.6l2.1 2.1a2 2 0 0 1 .6 1.4v9.4a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 17.5z", "M8 4v3.5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V4", "M7.5 20v-4.5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1V20"]],
+  ["history", "Files", "recent time past log", ["M4.5 12A7.5 7.5 0 1 0 6.7 6.7L4.5 9", "M4.5 4.75V9h4.25", "M12 8v4l2.75 1.75"]],
+  ["book-text", "Files", "docs read guide notes", [BOOK, "M12 6.5v13.25", "M6.5 9h3M6.5 12h3M14.5 9h3M14.5 12h3"]],
+
+  ["user-minus", "Users", "remove person", [...PERSON_L, "M17 10h5"]],
+  ["user-x", "Users", "remove block person", [...PERSON_L, "m17.5 7.75 4.5 4.5M22 7.75l-4.5 4.5"]],
+  ["users-round", "Users", "people team group", [C(8.5, 9, 3), "M3 19.5a5.5 5.5 0 0 1 11 0", C(16, 7.5, 3), "M14.5 13.75a5.5 5.5 0 0 1 6.5 5.75"]],
+  ["contact", "Users", "address book person card", [R(4.5, 3, 15, 18, 3), C(12, 10.5, 2.5), "M8 17a4 4 0 0 1 8 0", "M3 8h1.5M3 12h1.5M3 16h1.5"]],
+  ["id-card", "Users", "identity badge licence", [R(2.75, 5, 18.5, 14, 3), C(8.5, 11, 2), "M5.5 16a3 3 0 0 1 6 0", "M14 10h4M14 13.5h3"]],
+  ["accessibility", "Users", "a11y person access", [C(12, 4.75, 1.75), "M5 8.5l7 1.5 7-1.5", "M12 10v4.5", "M9 21l3-6.5 3 6.5"]],
+
+  ["tag-plus", "Commerce", "add label price", [TAG, dot(8, 8), "M14.5 12.25v4.5M12.25 14.5h4.5"]],
+  ["percent", "Commerce", "discount sale rate", ["M18 6 6 18", C(7.5, 7.5, 2.25), C(16.5, 16.5, 2.25)]],
+  ["coins", "Commerce", "money cash change", [C(14.5, 14.5, 6), "M15.43 8.57A6 6 0 1 0 8.57 15.43", "M14.5 12v5"]],
+  ["banknote", "Commerce", "money cash bill", [R(2.75, 6, 18.5, 12, 3), C(12, 12, 2.5), dot(6.5, 12), dot(17.5, 12)]],
+  ["truck", "Commerce", "delivery shipping", ["M3.5 16V6.5A1.5 1.5 0 0 1 5 5h8.5A1.5 1.5 0 0 1 15 6.5V17", "M15 9h3l2.5 3.25V16a1 1 0 0 1-1 1H19", "M3.5 16a1 1 0 0 0 1 1h1", "M9.5 17H15", C(7.75, 17.25, 1.75), C(16.75, 17.25, 1.75)]],
+  ["package", "Commerce", "parcel shipping box order", ["M12 3.5l7.5 4.25v8.5L12 20.5l-7.5-4.25v-8.5z", "M4.5 7.75 12 12l7.5-4.25", "M12 12v8.5", "M8.25 5.63 15.75 9.88v3.5"]],
+  ["store", "Commerce", "shop market building", ["M4.5 10.5V19a1.5 1.5 0 0 0 1.5 1.5h12a1.5 1.5 0 0 0 1.5-1.5v-8.5", "M4 8l1.25-4h13.5L20 8a2.67 2.67 0 0 1-5.33 0 2.67 2.67 0 0 1-5.34 0A2.67 2.67 0 0 1 4 8z", "M9.5 20.5V16a2.5 2.5 0 0 1 5 0v4.5"]],
+  ["barcode", "Commerce", "scan product sku", ["M4 6v12M7 6v12M10.5 6v12M14 6v12M16.5 6v12M20 6v12"]],
+  ["qr-code", "Commerce", "scan code link", [R(4, 4, 6, 6, 1.5), R(14, 4, 6, 6, 1.5), R(4, 14, 6, 6, 1.5), dot(14.5, 14.5), dot(17, 17), dot(19.5, 19.5), dot(14.5, 19.5), dot(19.5, 14.5)]],
+  ["ticket", "Commerce", "event pass coupon", ["M3.5 8.5V7A1.5 1.5 0 0 1 5 5.5h14A1.5 1.5 0 0 1 20.5 7v1.5a3.5 3.5 0 0 0 0 7V17a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 17v-1.5a3.5 3.5 0 0 0 0-7z", "M14 5.5v2M14 10.75v2.5M14 16.5v2"]],
+
+  ["headphones", "Media", "audio music listen", ["M4 14.5V13a8 8 0 0 1 16 0v1.5", R(4, 13.5, 4, 6.5, 1.75), R(16, 13.5, 4, 6.5, 1.75)]],
+  ["speaker", "Media", "audio sound music", [R(5.5, 3, 13, 18, 3), C(12, 14.5, 3.25), dot(12, 7.5)]],
+  ["film", "Media", "movie video cinema", [SQ, "M8.5 3.75v16.5M15.5 3.75v16.5M3.75 9.25h4.75M3.75 14.75h4.75M15.5 9.25h4.75M15.5 14.75h4.75"]],
+  ["music", "Media", "song audio note", ["M9 18V5.5l11-2v12", C(6.5, 18, 2.5), C(17.5, 15.5, 2.5)]],
+  ["battery", "Devices", "power charge level", [R(2.75, 7, 16, 10, 2.5), "M21.25 10.5v3", "M6.5 10.5v3M9.5 10.5v3"]],
+  ["battery-charging", "Devices", "power charge plug", [R(2.75, 7, 16, 10, 2.5), "M21.25 10.5v3", "M11.5 9 9.5 12h3l-2 3"]],
+  ["bluetooth", "Devices", "wireless connect", ["m7 7.5 10 9-5 4.5v-17l5 4.5-10 9"]],
+  ["cast", "Devices", "screen mirror stream", ["M3.5 8.5v-1a3 3 0 0 1 3-3h11a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-4.5", "M3.5 12.5a7 7 0 0 1 7 7", "M3.5 16A3.5 3.5 0 0 1 7 19.5", dot(3.75, 19.5)]],
+  ["airplay", "Devices", "screen stream mirror", ["M6.5 17H6a2.5 2.5 0 0 1-2.5-2.5v-8A2.5 2.5 0 0 1 6 4h12a2.5 2.5 0 0 1 2.5 2.5v8A2.5 2.5 0 0 1 18 17h-.5", "M12 14.5l4.5 6h-9z"]],
+  ["tv", "Devices", "television screen", [R(3, 6.5, 18, 13, 3), "m8 3 4 3.5 4-3.5"]],
+  ["watch", "Devices", "time wearable clock", [R(6.5, 6.5, 11, 11, 3.5), "M12 9.75V12l1.5 1", "M8.5 6.5l.6-2.4A1.5 1.5 0 0 1 10.55 3h2.9a1.5 1.5 0 0 1 1.45 1.1l.6 2.4", "M8.5 17.5l.6 2.4a1.5 1.5 0 0 0 1.45 1.1h2.9a1.5 1.5 0 0 0 1.45-1.1l.6-2.4"]],
+
+  ["activity", "Status", "pulse health heartbeat", ["M3 12h3.5L9 5l5 14 2.5-7H21"]],
+  ["ban", "Status", "block forbidden prohibited", [RING, "M5.8 5.8l12.4 12.4"]],
+  ["badge-check", "Status", "verified approved", [star(12, 12, 9, 7.6, 8), "m8.75 12 2.25 2.25 4.25-4.5"]],
+  ["toggle-left", "Status", "switch off", [R(2.5, 6.5, 19, 11, 5.5), C(8, 12, 2.75)]],
+  ["toggle-right", "Status", "switch on", [R(2.5, 6.5, 19, 11, 5.5), C(16, 12, 2.75)]],
+  ["power-off", "Status", "shutdown disabled", ["M12 3.5v4", "M7 6.5a7.5 7.5 0 1 0 10 0", "M3.5 3.5l17 17"]],
+  ["shield-alert", "Status", "security warning", [SHIELD, "M12 8.5v4", dot(12, 15.75)]],
+  ["alert-octagon", "Status", "stop error danger", ["M15.44 3.7 20.3 8.56v6.88l-4.86 4.86H8.56L3.7 15.44V8.56L8.56 3.7z", "M12 8v4.5", dot(12, 16)]],
+
+  ["phone-call", "Communication", "ringing call", [PHONE, "M14.5 3.75a6.5 6.5 0 0 1 5.75 5.75", "M14.5 7.25a3 3 0 0 1 2.25 2.25"]],
+  ["voicemail", "Communication", "message recording", [C(7, 12, 3.5), C(17, 12, 3.5), "M7 15.5h10"]],
+  ["mail-open", "Communication", "email read", ["M3.5 10.5 12 4l8.5 6.5V18a2.5 2.5 0 0 1-2.5 2.5H6A2.5 2.5 0 0 1 3.5 18z", "M3.75 10.75 12 16l8.25-5.25"]],
+  ["inbox-arrow", "Communication", "receive download incoming", ["M8 8.5H6.4l-2.65 5v4.25a2.5 2.5 0 0 0 2.5 2.5h11.5a2.5 2.5 0 0 0 2.5-2.5V13.5L17.6 8.5H16", "M3.75 13.5h4.5l1.5 2.25h4.5l1.5-2.25h4.5", "M12 3.5v8", "m9 8.5 3 3 3-3"]],
+  ["reply", "Communication", "answer respond", ["M9.5 6 4 11.5l5.5 5.5", "M4 11.5h9a7 7 0 0 1 7 7v1"]],
+  ["reply-all", "Communication", "answer everyone", ["M8 6.5 3 11.5l5 5", "M12.5 6.5l-5 5 5 5", "M7.5 11.5H13a7 7 0 0 1 7 7v1"]],
+  ["forward", "Communication", "send share pass on", ["m14.5 6 5.5 5.5-5.5 5.5", "M20 11.5h-9a7 7 0 0 0-7 7v1"]],
+  ["send-horizontal", "Communication", "paper plane submit", ["M4 4.5 20.5 12 4 19.5l2.75-7.5z", "M6.75 12H20.5"]],
+  ["message-circle", "Communication", "chat comment bubble round", ["M12 20a8 8 0 1 0-7.1-4.3L3.75 20.25l4.5-1.15A8 8 0 0 0 12 20z"]],
+
+  ["cloud-rain", "Nature", "weather rain shower", [CLOUD_S, "M8 18.5l-.75 2M12 18.5l-.75 2M16 18.5l-.75 2"]],
+  ["cloud-lightning", "Nature", "weather storm thunder", ["M8.5 16H7a4 4 0 0 1-.6-7.95A5.75 5.75 0 0 1 17.6 6.8 4.6 4.6 0 0 1 17 16h-1", "M13 12.5 10.5 16.5h3L11 20.5"]],
+  ["cloud-sun", "Nature", "weather partly cloudy", [C(8.5, 8.5, 3), "M8.5 3v1.25M3 8.5h1.25M4.6 4.6l.9.9M12.4 4.6l-.9.9", "M10.5 19.5a3.25 3.25 0 0 1-.5-6.45A4.75 4.75 0 0 1 19.2 12a3.75 3.75 0 0 1-.45 7.5z"]],
+  ["snowflake", "Nature", "winter cold snow", ["M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9", "m9.5 4.5 2.5 2 2.5-2", "m9.5 19.5 2.5-2 2.5 2"]],
+  ["wind", "Nature", "weather air breeze", ["M3.5 9H14a2.75 2.75 0 1 0-2.75-2.75", "M3.5 15h13a3 3 0 1 1-3 3", "M3.5 12h6"]],
+  ["leaf", "Nature", "eco plant green", ["M5 19c0-8 4.5-14 15-14.5-.5 10.5-6.5 15-15 14.5z", "M5 19l7-7"]],
+  ["tree", "Nature", "pine forest nature", ["M12 3.5 6 11h3l-4 5.5h14l-4-5.5h3z", "M12 16.5v4"]],
+  ["mountain", "Nature", "peak landscape hike", ["M3 19.5 9.5 7l4 7.5 2-3 5.5 8z"]],
+  ["waves", "Nature", "water sea ocean", [wave(7), wave(12), wave(17)]],
+  ["umbrella", "Nature", "rain weather cover insurance", ["M12 3.5a8.5 8.5 0 0 1 8.5 8.5h-17A8.5 8.5 0 0 1 12 3.5z", "M12 12v6.25a1.75 1.75 0 0 1-3.5 0"]],
+  ["thermometer", "Nature", "temperature weather heat", ["M10 14.5v-9a2 2 0 0 1 4 0v9a3.75 3.75 0 1 1-4 0z", "M12 9v7"]],
+
+  ["pin", "Interface", "pushpin keep attach", ["M9 3.5h6", "M10 3.5V9l-3 4v1.5h10V13l-3-4V3.5", "M12 14.5v6"]],
+  ["pin-off", "Interface", "unpin remove", ["M9 3.5h6", "M10 3.5V9l-3 4v1.5h10V13l-3-4V3.5", "M12 14.5v6", "M4 4l16 16"]],
+  ["picture-in-picture", "Interface", "pip video window", [R(3, 5, 18, 14, 3), R(12, 12, 6, 4.5, 1.25)]],
+  ["panel-right", "Interface", "sidebar layout inspector", [SQ, "M14.5 3.75v16.5"]],
+  ["panel-bottom", "Interface", "layout footer drawer", [SQ, "M3.75 14.5h16.5"]],
+  ["layout-dashboard", "Interface", "dashboard widgets grid", [R(4, 4, 7, 9, 2), R(13, 4, 7, 5, 2), R(13, 11, 7, 9, 2), R(4, 15, 7, 5, 2)]],
+  ["layout-template", "Interface", "layout page sections", [R(4, 4, 16, 6, 2), R(4, 13, 7, 7, 2), R(14, 13, 6, 7, 2)]],
+  ["table-grid", "Interface", "spreadsheet cells", [SQ, "M3.75 9.25h16.5M3.75 14.75h16.5M9.25 3.75v16.5M14.75 3.75v16.5"]],
+  ["app-window", "Interface", "browser application", [R(3, 4.5, 18, 15, 3), "M3 9h18", dot(6.5, 6.75), dot(9, 6.75)]],
+  ["blocks", "Interface", "components modules build", [R(3.75, 12.5, 7.75, 7.75, 2), R(12.5, 12.5, 7.75, 7.75, 2), R(12.5, 3.75, 7.75, 7.75, 2)]],
+  ["shapes", "Interface", "triangle circle square design", ["M7.5 3.5l4 7h-8z", C(16.75, 7.25, 3.5), R(13, 13, 7.5, 7.5, 2), C(7.5, 16.75, 3.5)]],
+  ["swatch-book", "Interface", "colours palette theme", [R(3.5, 3.5, 7, 17, 2.5), dot(7, 16.75), "M10.5 8.5l3.75-3.75a2 2 0 0 1 2.83 0l2.17 2.17a2 2 0 0 1 0 2.83L10.5 18", "M7 20.5h11.5a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2h-2.25"]],
+  ["mouse-pointer", "Interface", "cursor click select", ["M5 4.5 18.5 10l-5.75 2.25L10.5 18z", "m12.75 12.25 5.5 5.5"]],
+  ["mouse-pointer-click", "Interface", "cursor click tap", ["M9 9l11 4.5-4.75 1.75L13.5 20z", "m15.25 15.25 4.25 4.25", "M7 3v2.25M3 7h2.25M4.3 4.3l1.6 1.6M10.5 4.5 9.25 5.75"]],
+  ["scan", "Interface", "scanner capture frame", ["M4 9V6.5A2.5 2.5 0 0 1 6.5 4H9", "M15 4h2.5A2.5 2.5 0 0 1 20 6.5V9", "M20 15v2.5a2.5 2.5 0 0 1-2.5 2.5H15", "M9 20H6.5A2.5 2.5 0 0 1 4 17.5V15", "M7.5 12h9"]],
+  ["timer", "Interface", "stopwatch countdown", [C(12, 13.5, 7.25), "M10 2.75h4", "M12 13.5V10", "M18 7.5l1.25-1.25"]],
+  ["hourglass", "Interface", "wait time loading", ["M6.5 3.5h11M6.5 20.5h11", "M7.5 3.5c0 4 1.5 6 4.5 8.5-3 2.5-4.5 4.5-4.5 8.5", "M16.5 3.5c0 4-1.5 6-4.5 8.5 3 2.5 4.5 4.5 4.5 8.5"]],
+  ["alarm", "Interface", "clock wake reminder", [C(12, 13, 7), "M12 9.5V13l2 1.5", "M4 5.5l2.5-2.25M20 5.5l-2.5-2.25", "M6.5 19.5l-1.25 1.5M17.5 19.5l1.25 1.5"]],
 ];

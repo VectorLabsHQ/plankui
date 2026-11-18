@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Dialog as DialogPrimitive } from "radix-ui";
-import { Search } from "lucide-react";
+import { SearchIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 import { menuCheck, menuItem, menuLabel, menuPanel } from "./menu-styles";
 import { Kbd } from "./kbd";
@@ -57,7 +57,7 @@ export function Command({ groups, placeholder = "Type a command or search", empt
   return (
     <div className={cn("vx-glass flex flex-col overflow-hidden rounded-card border border-pop-border bg-pop text-ink", className)}>
       <div className="flex items-center gap-2 border-b border-rule px-3">
-        <Search className="size-4 shrink-0 text-muted" />
+        <SearchIcon className="size-4 shrink-0 text-muted" />
         <input
           autoFocus={autoFocus}
           value={q}

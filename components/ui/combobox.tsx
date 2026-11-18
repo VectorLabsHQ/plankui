@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Popover as PopoverPrimitive } from "radix-ui";
-import { Check, ChevronsUpDown, Search } from "lucide-react";
+import { CheckIcon, ChevronsUpDownIcon, SearchIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 import { menuCheck, menuItem, menuLabel, menuPanel } from "./menu-styles";
 
@@ -60,7 +60,7 @@ export function Combobox({
         )}
       >
         <span className={cn("truncate", !selected && "text-muted")}>{selected?.label ?? placeholder}</span>
-        <ChevronsUpDown className="size-4 shrink-0 text-muted" />
+        <ChevronsUpDownIcon className="size-4 shrink-0 text-muted" />
       </PopoverPrimitive.Trigger>
       <PopoverPrimitive.Portal>
         <PopoverPrimitive.Content
@@ -69,7 +69,7 @@ export function Combobox({
           className={cn(menuPanel, "w-[var(--radix-popover-trigger-width)] min-w-56 p-0")}
         >
           <div className="flex items-center gap-2 border-b border-rule px-3">
-            <Search className="size-4 text-muted" />
+            <SearchIcon className="size-4 text-muted" />
             <input
               autoFocus
               value={q}
@@ -100,7 +100,7 @@ export function Combobox({
                   <span>{o.label}</span>
                   {o.description && <span className="text-xs text-muted">{o.description}</span>}
                 </span>
-                {o.value === current && <Check className={menuCheck} />}
+                {o.value === current && <CheckIcon className={menuCheck} />}
               </li>
             ))}
           </ul>

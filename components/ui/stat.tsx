@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TrendingDown, TrendingUp } from "lucide-react";
+import { TrendingDownIcon, TrendingUpIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 import { Sparkline } from "./sparkline";
 
@@ -20,7 +20,7 @@ export interface StatProps {
 /** One number, with its label, change and trend. */
 export function Stat({ label, value, delta, deltaLabel, invert, trend, className }: StatProps) {
   const good = delta === undefined ? undefined : invert ? delta < 0 : delta >= 0;
-  const Icon = delta !== undefined && delta < 0 ? TrendingDown : TrendingUp;
+  const Icon = delta !== undefined && delta < 0 ? TrendingDownIcon : TrendingUpIcon;
   return (
     <div className={cn("vx-glass grid gap-2 rounded-panel border border-card-border bg-card p-5 shadow-card", className)}>
       <p className="text-sm text-muted">{label}</p>

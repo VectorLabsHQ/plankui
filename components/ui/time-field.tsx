@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Clock } from "lucide-react";
+import { ClockIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 export interface Time {
@@ -77,7 +77,7 @@ export function TimeField({ value, defaultValue = { hours: 9, minutes: 0 }, onVa
         className,
       )}
     >
-      <Clock aria-hidden className="mr-1.5 size-4 text-muted" />
+      <ClockIcon aria-hidden className="mr-1.5 size-4 text-muted" />
       {segs.map((seg, i) => {
         const label = seg === "hours" ? "Hours" : seg === "minutes" ? "Minutes" : "AM or PM";
         const text = seg === "hours" ? pad(shownHours) : seg === "minutes" ? pad(t.minutes) : pm ? "PM" : "AM";

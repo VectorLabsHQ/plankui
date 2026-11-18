@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TrendingDown, TrendingUp } from "lucide-react";
+import { TrendingDownIcon, TrendingUpIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 export interface ChartCardProps {
@@ -24,7 +24,7 @@ export interface ChartCardProps {
 /** The shell every chart card shares: a grey card, the title and number, the chart on a white panel, and an optional footer. */
 export function ChartCard({ title, value, delta, invert, caption, action, footer, children, flat, className }: ChartCardProps) {
   const good = delta === undefined ? undefined : invert ? delta < 0 : delta >= 0;
-  const Trend = delta !== undefined && delta < 0 ? TrendingDown : TrendingUp;
+  const Trend = delta !== undefined && delta < 0 ? TrendingDownIcon : TrendingUpIcon;
   return (
     <section aria-label={title} className={cn("flex min-w-0 flex-col text-ink", flat ? "gap-4" : "vx-glass gap-2 rounded-panel border border-card-border bg-card p-2 shadow-card", className)}>
       <header className={cn("flex items-start justify-between gap-3", !flat && "px-2.5 pt-2")}>

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Info, TrendingDown, TrendingUp } from "lucide-react";
+import { InfoIcon, TrendingDownIcon, TrendingUpIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 import { Tooltip } from "./tooltip";
 
@@ -23,7 +23,7 @@ export interface StatCardProps {
 /** A KPI card: a grey shell, a coloured icon, the number, and a white footer with the change. */
 export function StatCard({ label, value, delta, comparison = "From last month", icon, color = "var(--accent)", info, invert, className }: StatCardProps) {
   const good = delta === undefined ? undefined : invert ? delta < 0 : delta >= 0;
-  const Trend = delta !== undefined && delta < 0 ? TrendingDown : TrendingUp;
+  const Trend = delta !== undefined && delta < 0 ? TrendingDownIcon : TrendingUpIcon;
   return (
     <section aria-label={label} className={cn("vx-glass flex min-w-0 flex-col gap-4 rounded-panel border border-card-border bg-card p-2 text-ink shadow-card", className)}>
       <div className="grid gap-3 px-2 pt-2">
@@ -36,7 +36,7 @@ export function StatCard({ label, value, delta, comparison = "From last month", 
           {info && (
             <Tooltip content={info}>
               <button type="button" aria-label={`About ${label}`} className="grid size-6 place-items-center rounded-full text-muted hover:text-ink focus-visible:outline-2 focus-visible:outline-focus">
-                <Info className="size-4" />
+                <InfoIcon className="size-4" />
               </button>
             </Tooltip>
           )}

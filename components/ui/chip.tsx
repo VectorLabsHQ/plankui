@@ -1,5 +1,5 @@
 import * as React from "react";
-import { X } from "lucide-react";
+import { XIcon } from "@plankui/icons";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/cn";
 
@@ -39,7 +39,7 @@ export function Chip({ className, variant, leading, onRemove, children, ...props
           aria-label={`Remove ${typeof children === "string" ? children : "item"}`}
           className="grid size-5 place-items-center rounded-[calc(4px*var(--radius-factor))] opacity-60 hover:bg-ink/10 hover:opacity-100 focus-visible:outline-2 focus-visible:outline-focus"
         >
-          <X />
+          <XIcon />
         </button>
       )}
     </span>

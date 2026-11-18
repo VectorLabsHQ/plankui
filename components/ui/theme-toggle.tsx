@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Monitor, Moon, Sun } from "lucide-react";
+import { MonitorIcon, MoonIcon, SunIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 export type ColorMode = "light" | "dark" | "system";
@@ -37,14 +37,14 @@ export function ThemeToggle({ value, defaultValue = "light", onValueChange, vari
           className,
         )}
       >
-        <Sun aria-hidden className={cn(icon, "absolute", dark ? "rotate-90 scale-50 opacity-0" : "rotate-0 opacity-100")} />
-        <Moon aria-hidden className={cn(icon, "absolute", dark ? "rotate-0 opacity-100" : "-rotate-90 scale-50 opacity-0")} />
+        <SunIcon aria-hidden className={cn(icon, "absolute", dark ? "rotate-90 scale-50 opacity-0" : "rotate-0 opacity-100")} />
+        <MoonIcon aria-hidden className={cn(icon, "absolute", dark ? "rotate-0 opacity-100" : "-rotate-90 scale-50 opacity-0")} />
       </button>
     );
   }
 
   if (variant === "segmented") {
-    const opts: [ColorMode, typeof Sun, string][] = [["light", Sun, "Light"], ["dark", Moon, "Dark"], ["system", Monitor, "System"]];
+    const opts: [ColorMode, typeof SunIcon, string][] = [["light", SunIcon, "Light"], ["dark", MoonIcon, "Dark"], ["system", MonitorIcon, "System"]];
     return (
       <div role="radiogroup" aria-label="Colour mode" className={cn("inline-flex gap-0.5 rounded-input border border-tray-border bg-tray p-0.5", className)}>
         {opts.map(([m, Icon, label]) => (
@@ -82,8 +82,8 @@ export function ThemeToggle({ value, defaultValue = "light", onValueChange, vari
         className,
       )}
     >
-      <Sun aria-hidden className="absolute left-2 size-3.5 text-muted" />
-      <Moon aria-hidden className="absolute right-2 size-3.5 text-muted" />
+      <SunIcon aria-hidden className="absolute left-2 size-3.5 text-muted" />
+      <MoonIcon aria-hidden className="absolute right-2 size-3.5 text-muted" />
       <span
         className={cn(
           "relative z-10 grid size-[26px] place-items-center rounded-full bg-key-face text-ink shadow-key",
@@ -91,7 +91,7 @@ export function ThemeToggle({ value, defaultValue = "light", onValueChange, vari
           dark && "translate-x-[28px]",
         )}
       >
-        {dark ? <Moon aria-hidden className="size-3.5" /> : <Sun aria-hidden className="size-3.5" />}
+        {dark ? <MoonIcon aria-hidden className="size-3.5" /> : <SunIcon aria-hidden className="size-3.5" />}
       </span>
     </button>
   );

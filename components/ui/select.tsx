@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Select as SelectPrimitive } from "radix-ui";
-import { Check, ChevronsUpDown } from "lucide-react";
+import { CheckIcon, ChevronsUpDownIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 import { menuItem, menuLabel, menuPanel, menuSeparator } from "./menu-styles";
 
@@ -21,7 +21,7 @@ export function SelectTrigger({ className, children, ...props }: React.Component
     >
       {children}
       <SelectPrimitive.Icon asChild>
-        <ChevronsUpDown className="size-4 shrink-0 text-muted" />
+        <ChevronsUpDownIcon className="size-4 shrink-0 text-muted" />
       </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
   );
@@ -67,7 +67,7 @@ export function SelectItem({ className, children, ...props }: React.ComponentPro
       <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
       <span className="absolute right-2.5 flex size-4 items-center justify-center [&_svg]:!text-accent">
         <SelectPrimitive.ItemIndicator>
-          <Check className="size-4" />
+          <CheckIcon className="size-4" />
         </SelectPrimitive.ItemIndicator>
       </span>
     </SelectPrimitive.Item>

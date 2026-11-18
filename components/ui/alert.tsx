@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { CircleAlert, CircleCheck, Info, TriangleAlert, X } from "lucide-react";
+import { AlertCircleIcon, CheckCircleIcon, InfoIcon, WarningIcon, XIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 const alertVariants = cva("relative flex gap-3 rounded-card border p-3.5 text-sm", {
@@ -15,7 +15,7 @@ const alertVariants = cva("relative flex gap-3 rounded-card border p-3.5 text-sm
   defaultVariants: { variant: "info" },
 });
 
-const icons = { info: Info, success: CircleCheck, warning: TriangleAlert, danger: CircleAlert };
+const icons = { info: InfoIcon, success: CheckCircleIcon, warning: WarningIcon, danger: AlertCircleIcon };
 
 export interface AlertProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "title">, VariantProps<typeof alertVariants> {
   title?: React.ReactNode;
@@ -39,7 +39,7 @@ export function Alert({ className, variant = "info", title, action, onDismiss, c
           aria-label="Dismiss"
           className="-m-1 grid size-6 place-items-center rounded-sm opacity-70 hover:opacity-100 focus-visible:outline-2 focus-visible:outline-focus"
         >
-          <X className="size-4" />
+          <XIcon className="size-4" />
         </button>
       )}
     </div>

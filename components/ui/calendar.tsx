@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 export interface DateRange {
@@ -89,13 +89,13 @@ export function Calendar(props: CalendarProps) {
     <div className={cn("w-[280px] select-none", className)}>
       <div className="mb-3 flex items-center justify-between">
         <button type="button" onClick={() => shift(-1)} aria-label="Previous month" className="grid size-8 place-items-center rounded-input text-ink-2 hover:bg-paper-3 focus-visible:outline-2 focus-visible:outline-focus">
-          <ChevronLeft className="size-4" />
+          <ChevronLeftIcon className="size-4" />
         </button>
         <p className="text-sm font-semibold" aria-live="polite">
           {month.toLocaleDateString(undefined, { month: "long", year: "numeric" })}
         </p>
         <button type="button" onClick={() => shift(1)} aria-label="Next month" className="grid size-8 place-items-center rounded-input text-ink-2 hover:bg-paper-3 focus-visible:outline-2 focus-visible:outline-focus">
-          <ChevronRight className="size-4" />
+          <ChevronRightIcon className="size-4" />
         </button>
       </div>
       <div className="grid grid-cols-7 pb-1 text-center text-xs text-muted">

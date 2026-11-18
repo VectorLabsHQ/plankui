@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Star } from "lucide-react";
+import { StarIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 export interface RatingProps {
@@ -51,7 +51,7 @@ export function Rating({ value, defaultValue = 0, onValueChange, max = 5, readOn
           }}
           className="rounded-sm p-0.5 transition-transform duration-[var(--dur-micro)] enabled:hover:scale-110 focus-visible:outline-2 focus-visible:outline-focus disabled:cursor-default"
         >
-          <Star className={cn(sizes[size], n <= shown ? "fill-warning text-warning" : "fill-transparent text-rule-2")} />
+          <StarIcon className={cn(sizes[size], n <= shown ? "fill-warning text-warning" : "fill-transparent text-rule-2")} />
         </button>
       ))}
     </div>

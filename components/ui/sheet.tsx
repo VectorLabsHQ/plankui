@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Dialog as SheetPrimitive } from "radix-ui";
-import { X } from "lucide-react";
+import { XIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 export const Sheet = SheetPrimitive.Root;
@@ -31,7 +31,7 @@ export function SheetContent({
           aria-label="Close"
           className="absolute right-4 top-4 grid size-7 place-items-center rounded-input text-muted hover:bg-paper-3 hover:text-ink focus-visible:outline-2 focus-visible:outline-focus"
         >
-          <X className="size-4" />
+          <XIcon className="size-4" />
         </SheetPrimitive.Close>
       </SheetPrimitive.Content>
     </SheetPrimitive.Portal>

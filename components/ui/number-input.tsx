@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Minus, Plus } from "lucide-react";
+import { MinusIcon, PlusIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 export interface NumberInputProps {
@@ -44,7 +44,7 @@ export function NumberInput({
       )}
     >
       <button type="button" tabIndex={-1} aria-label="Decrease" className={cn(key, "border-r border-rule")} disabled={disabled || current <= min} onClick={() => commit(current - step)}>
-        <Minus />
+        <MinusIcon />
       </button>
       <input
         id={rest.id}
@@ -68,7 +68,7 @@ export function NumberInput({
         className="w-16 min-w-0 flex-1 bg-transparent text-center text-sm tabular-nums text-ink outline-none"
       />
       <button type="button" tabIndex={-1} aria-label="Increase" className={cn(key, "border-l border-rule")} disabled={disabled || current >= max} onClick={() => commit(current + step)}>
-        <Plus />
+        <PlusIcon />
       </button>
     </div>
   );

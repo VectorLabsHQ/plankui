@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 function range(page: number, count: number, siblings: number): (number | "gap")[] {
@@ -32,7 +32,7 @@ export function Pagination({ page, pageCount, onPageChange, siblings = 1, labels
   return (
     <nav aria-label="Pagination" className={cn("flex max-w-full items-center gap-1", className)}>
       <button className={cn(cell, "text-ink-2 hover:bg-paper-3")} disabled={page <= 1} onClick={() => onPageChange(page - 1)} aria-label={labels ? undefined : "Previous page"}>
-        <ChevronLeft className="size-4" /> {labels && <span className="hidden sm:inline">Previous</span>}
+        <ChevronLeftIcon className="size-4" /> {labels && <span className="hidden sm:inline">Previous</span>}
       </button>
       {range(page, pageCount, siblings).map((p, i) =>
         p === "gap" ? (
@@ -53,7 +53,7 @@ export function Pagination({ page, pageCount, onPageChange, siblings = 1, labels
         ),
       )}
       <button className={cn(cell, "text-ink-2 hover:bg-paper-3")} disabled={page >= pageCount} onClick={() => onPageChange(page + 1)} aria-label={labels ? undefined : "Next page"}>
-        {labels && <span className="hidden sm:inline">Next</span>} <ChevronRight className="size-4" />
+        {labels && <span className="hidden sm:inline">Next</span>} <ChevronRightIcon className="size-4" />
       </button>
     </nav>
   );

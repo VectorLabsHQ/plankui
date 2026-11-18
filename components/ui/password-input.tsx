@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Check, Eye, EyeOff, Lock, X } from "lucide-react";
+import { CheckIcon, EyeIcon, EyeOffIcon, LockIcon, XIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 import { Input, type InputProps } from "./input";
 
@@ -34,7 +34,7 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, PasswordInputPro
             setInner(e.target.value);
             onChange?.(e);
           }}
-          leading={<Lock />}
+          leading={<LockIcon />}
           trailing={
             <button
               type="button"
@@ -43,7 +43,7 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, PasswordInputPro
               aria-pressed={shown}
               className="grid size-7 place-items-center rounded-sm text-muted hover:text-ink focus-visible:outline-2 focus-visible:outline-focus"
             >
-              {shown ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
+              {shown ? <EyeOffIcon className="size-4" /> : <EyeIcon className="size-4" />}
             </button>
           }
           {...props}
@@ -63,7 +63,7 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, PasswordInputPro
                 const ok = r.test(v);
                 return (
                   <li key={r.label} className={cn("flex items-center gap-1.5", ok ? "text-success-wash-ink" : "text-muted")}>
-                    {ok ? <Check className="size-3.5" /> : <X className="size-3.5" />} {r.label}
+                    {ok ? <CheckIcon className="size-3.5" /> : <XIcon className="size-3.5" />} {r.label}
                   </li>
                 );
               })}

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { LoaderCircle, Search, X } from "lucide-react";
+import { LoaderIcon, SearchIcon, XIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 import { fieldBase } from "./input";
 import { Kbd } from "./kbd";
@@ -39,7 +39,7 @@ export const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>(
       window.addEventListener("keydown", onKey);
       return () => window.removeEventListener("keydown", onKey);
     }, [shortcut]);
-    const Icon = loading ? LoaderCircle : Search;
+    const Icon = loading ? LoaderIcon : SearchIcon;
     return (
       <div className={cn("relative flex items-center", className)}>
         <Icon aria-hidden className={cn("pointer-events-none absolute left-3 size-4 text-muted", loading && "animate-spin motion-reduce:animate-none", size === "sm" && "left-2.5 size-3.5")} />
@@ -69,7 +69,7 @@ export const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>(
               }}
               className="grid size-6 place-items-center rounded-sm text-muted hover:bg-paper-3 hover:text-ink focus-visible:outline-2 focus-visible:outline-focus"
             >
-              <X className="size-3.5" />
+              <XIcon className="size-3.5" />
             </button>
           ) : (
             shortcut && <Kbd className="mr-0.5">{shortcut}</Kbd>

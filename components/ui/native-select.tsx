@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDownIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 export interface NativeSelectProps extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, "size"> {
@@ -27,7 +27,7 @@ export const NativeSelect = React.forwardRef<HTMLSelectElement, NativeSelectProp
       >
         {children}
       </select>
-      <ChevronDown
+      <ChevronDownIcon
         aria-hidden
         className={cn("pointer-events-none absolute top-1/2 size-4 -translate-y-1/2 text-muted", size === "md" ? "right-3.5" : "right-3")}
       />

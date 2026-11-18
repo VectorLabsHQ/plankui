@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeftIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 import { Button } from "./button";
 import { Checkbox } from "./checkbox";
@@ -64,7 +64,7 @@ export function AuthCard({ mode: controlled, onModeChange, title, description, p
     return (
       <section aria-labelledby={`${id}-t`} className={shell}>
         <button type="button" onClick={() => setMode("sign-in")} className="flex items-center gap-1 justify-self-start rounded-sm text-sm text-muted hover:text-ink focus-visible:outline-2 focus-visible:outline-focus">
-          <ArrowLeft className="size-4" /> Back
+          <ArrowLeftIcon className="size-4" /> Back
         </button>
         <header className="grid gap-1">
           <h2 id={`${id}-t`} className="text-xl font-semibold tracking-tight">Check your email</h2>

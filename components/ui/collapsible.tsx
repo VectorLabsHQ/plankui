@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Collapsible as CollapsiblePrimitive } from "radix-ui";
-import { ChevronDown } from "lucide-react";
+import { ChevronDownIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 export const Collapsible = CollapsiblePrimitive.Root;
@@ -18,7 +18,7 @@ export function CollapsibleTrigger({ className, children, asChild, ...props }: R
       {...props}
     >
       {children}
-      <ChevronDown aria-hidden className="size-4 text-muted transition-transform duration-[var(--dur-short)] ease-[var(--ease-out)] group-data-[state=open]:rotate-180" />
+      <ChevronDownIcon aria-hidden className="size-4 text-muted transition-transform duration-[var(--dur-short)] ease-[var(--ease-out)] group-data-[state=open]:rotate-180" />
     </CollapsiblePrimitive.Trigger>
   );
 }

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Menu } from "@base-ui/react/menu";
-import { Check, ChevronRight } from "lucide-react";
+import { CheckIcon, ChevronRightIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 import { menuItem, menuLabel, menuPanel, menuSeparator } from "./menu-styles";
 
@@ -96,7 +96,7 @@ export function DropdownMenuCheckboxItem({
     <Menu.CheckboxItem className={cn(item, "pl-9", className)} {...props}>
       <span className="absolute left-2.5 flex size-4 items-center justify-center">
         <Menu.CheckboxItemIndicator>
-          <Check className="!text-accent" />
+          <CheckIcon className="!text-accent" />
         </Menu.CheckboxItemIndicator>
       </span>
       {children}
@@ -138,7 +138,7 @@ export function DropdownMenuSubTrigger({
   return (
     <Menu.SubmenuTrigger className={cn(item, "data-[popup-open]:bg-paper-3", className)} {...props}>
       {children}
-      <ChevronRight className="ml-auto" />
+      <ChevronRightIcon className="ml-auto" />
     </Menu.SubmenuTrigger>
   );
 }

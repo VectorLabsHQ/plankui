@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CircleAlert, CircleCheck, Info, X } from "lucide-react";
+import { AlertCircleIcon, CheckCircleIcon, InfoIcon, XIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 type Tone = "default" | "success" | "danger";
@@ -33,7 +33,7 @@ export function toast(input: string | Omit<ToastItem, "id">) {
 toast.success = (title: string, description?: string) => toast({ title, description, tone: "success" });
 toast.error = (title: string, description?: string) => toast({ title, description, tone: "danger" });
 
-const icons = { default: Info, success: CircleCheck, danger: CircleAlert };
+const icons = { default: InfoIcon, success: CheckCircleIcon, danger: AlertCircleIcon };
 const iconTone = { default: "text-accent", success: "text-success", danger: "text-danger" };
 
 /** Mount once near the root of your app. */
@@ -79,7 +79,7 @@ export function Toaster({ className }: { className?: string }) {
               aria-label="Dismiss"
               className="-m-1 grid size-6 place-items-center rounded-sm text-muted hover:text-ink focus-visible:outline-2 focus-visible:outline-focus"
             >
-              <X className="size-4" />
+              <XIcon className="size-4" />
             </button>
           </li>
         );

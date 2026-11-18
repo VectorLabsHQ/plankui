@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Megaphone, X } from "lucide-react";
+import { MegaphoneIcon, XIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 export interface AnnouncementProps {
@@ -13,7 +13,7 @@ export interface AnnouncementProps {
 }
 
 /** A dismissible card for product news. */
-export function Announcement({ title, children, icon = <Megaphone />, action, onDismiss, className }: AnnouncementProps) {
+export function Announcement({ title, children, icon = <MegaphoneIcon />, action, onDismiss, className }: AnnouncementProps) {
   return (
     <div role="status" className={cn("vx-glass relative grid w-full max-w-sm gap-3 rounded-panel border border-card-border bg-card p-4 shadow-card", className)}>
       <div className="flex items-start gap-3 pr-6">
@@ -33,7 +33,7 @@ export function Announcement({ title, children, icon = <Megaphone />, action, on
           aria-label="Dismiss"
           className="absolute right-3 top-3 grid size-7 place-items-center rounded-input text-muted hover:bg-paper-3 hover:text-ink focus-visible:outline-2 focus-visible:outline-focus"
         >
-          <X className="size-4" />
+          <XIcon className="size-4" />
         </button>
       )}
     </div>

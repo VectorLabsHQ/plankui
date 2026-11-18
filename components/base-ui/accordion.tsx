@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
-import { Plus } from "lucide-react";
+import { PlusIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 type Single = { type?: "single"; value?: string; defaultValue?: string; onValueChange?: (value: string) => void };
@@ -57,7 +57,7 @@ export function AccordionTrigger({
         {...props}
       >
         {children}
-        <Plus className="size-4 shrink-0 text-muted transition-transform duration-[var(--dur-short)] ease-[var(--ease-out)] group-data-[panel-open]:rotate-45" />
+        <PlusIcon className="size-4 shrink-0 text-muted transition-transform duration-[var(--dur-short)] ease-[var(--ease-out)] group-data-[panel-open]:rotate-45" />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   );

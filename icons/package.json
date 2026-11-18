@@ -1,0 +1,49 @@
+{
+  "name": "@plankui/icons",
+  "version": "0.1.0",
+  "description": "PlankUI Icons: soft, rounded outline icons on a 24 px grid, drawn for PlankUI. React components and raw SVGs.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./icons.json": "./lib/icons.json",
+    "./svg/*": "./svg/*"
+  },
+  "sideEffects": false,
+  "files": [
+    "lib",
+    "svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "keywords": [
+    "icons",
+    "svg",
+    "react",
+    "react-icons",
+    "icon-set",
+    "outline-icons",
+    "tailwindcss",
+    "plankui",
+    "design-system"
+  ],
+  "homepage": "https://plankui.com/docs/icons",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VectorLabsHQ/plankui.git",
+    "directory": "icons"
+  },
+  "bugs": {
+    "url": "https://github.com/VectorLabsHQ/plankui/issues"
+  },
+  "author": "Vector Labs (https://plankui.com)"
+}

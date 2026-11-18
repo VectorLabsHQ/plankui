@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ContextMenu as Menu } from "@base-ui/react/context-menu";
-import { Check, ChevronRight } from "lucide-react";
+import { CheckIcon, ChevronRightIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 import { menuItem, menuLabel, menuPanel, menuSeparator } from "./menu-styles";
 
@@ -66,7 +66,7 @@ export function ContextMenuCheckboxItem({ className, children, ...props }: Omit<
   return (
     <Menu.CheckboxItem className={cn(item, "pl-9", className)} {...props}>
       <span className="absolute left-2.5 flex size-4 items-center justify-center">
-        <Menu.CheckboxItemIndicator><Check className="!text-accent" /></Menu.CheckboxItemIndicator>
+        <Menu.CheckboxItemIndicator><CheckIcon className="!text-accent" /></Menu.CheckboxItemIndicator>
       </span>
       {children}
     </Menu.CheckboxItem>
@@ -86,7 +86,7 @@ export function ContextMenuSubTrigger({ className, children, ...props }: Omit<Re
   return (
     <Menu.SubmenuTrigger className={cn(item, "data-[popup-open]:bg-paper-3", className)} {...props}>
       {children}
-      <ChevronRight className="ml-auto" />
+      <ChevronRightIcon className="ml-auto" />
     </Menu.SubmenuTrigger>
   );
 }

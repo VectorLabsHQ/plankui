@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Check } from "lucide-react";
+import { CheckIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 export interface StepperProps {
@@ -33,7 +33,7 @@ export function Stepper({ steps, current, orientation = "horizontal", className 
                   state === "todo" && "border-rule-2 bg-paper text-muted",
                 )}
               >
-                {state === "done" ? <Check className="size-3.5" strokeWidth={3} /> : i + 1}
+                {state === "done" ? <CheckIcon className="size-3.5" strokeWidth={3} /> : i + 1}
               </span>
               {!last && (
                 <span

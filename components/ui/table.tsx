@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ArrowDown, ArrowUp, ChevronsUpDown } from "lucide-react";
+import { ArrowDownIcon, ArrowUpIcon, ChevronsUpDownIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 export function Table({ className, ...props }: React.ComponentProps<"table">) {
@@ -38,7 +38,7 @@ export function TableSortButton({
   onClick: () => void;
   children: React.ReactNode;
 }) {
-  const Icon = direction === "asc" ? ArrowUp : direction === "desc" ? ArrowDown : ChevronsUpDown;
+  const Icon = direction === "asc" ? ArrowUpIcon : direction === "desc" ? ArrowDownIcon : ChevronsUpDownIcon;
   return (
     <button
       onClick={onClick}

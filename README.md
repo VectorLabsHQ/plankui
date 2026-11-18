@@ -56,6 +56,7 @@ Try asking your agent to build a settings panel with PlankUI's Tabs, Switch, and
 | [components/base-ui](components/base-ui) | 27 dedicated Base UI implementations. The other components use shared source |
 | [styles](styles) and [lib](lib) | Theme tokens, base styles, and the class helper |
 | [cli](cli) | The `plankui` installer |
+| [icons](icons) | PlankUI Icons, the `@plankui/icons` package: React components and SVGs |
 | [mcp](mcp) | The `@plankui/mcp` server and component registry |
 
 ## Browse components

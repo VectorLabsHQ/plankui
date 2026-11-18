@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TriangleAlert, Zap } from "lucide-react";
+import { WarningIcon, ZapIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 import { Button } from "./button";
 
@@ -32,7 +32,7 @@ export function AgentLimits({ plan = "Free", limits, resets, onUpgrade, classNam
           <p className="text-sm font-medium">Usage</p>
           <p className="text-xs text-muted">{plan} plan{resets && `, resets ${resets}`}</p>
         </div>
-        {onUpgrade && <Button size="xs" onClick={onUpgrade}><Zap /> Upgrade</Button>}
+        {onUpgrade && <Button size="xs" onClick={onUpgrade}><ZapIcon /> Upgrade</Button>}
       </header>
       <ul className="grid gap-3.5 rounded-input bg-paper p-3.5 shadow-[0_1px_1px_oklch(0%_0_0/0.05)]">
         {limits.map((l) => {
@@ -52,7 +52,7 @@ export function AgentLimits({ plan = "Free", limits, resets, onUpgrade, classNam
       </ul>
       {worst >= 0.8 && (
         <p className={cn("flex items-start gap-2 rounded-input px-3 py-2 text-xs", worst >= 1 ? "bg-danger-wash text-danger-wash-ink" : "bg-warning-wash text-warning-wash-ink")}>
-          <TriangleAlert className="mt-px size-3.5 shrink-0" />
+          <WarningIcon className="mt-px size-3.5 shrink-0" />
           {worst >= 1 ? "You have reached a limit. New runs wait until it resets." : "You are close to a limit. Runs may pause soon."}
         </p>
       )}

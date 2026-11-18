@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Checkbox as CheckboxPrimitive } from "radix-ui";
-import { Check, Minus } from "lucide-react";
+import { CheckIcon, MinusIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 
 export const Checkbox = React.forwardRef<
@@ -22,9 +22,9 @@ export const Checkbox = React.forwardRef<
   >
     <CheckboxPrimitive.Indicator className="grid place-items-center">
       {props.checked === "indeterminate" ? (
-        <Minus className="size-3" strokeWidth={3} />
+        <MinusIcon className="size-3" strokeWidth={3} />
       ) : (
-        <Check className="size-3" strokeWidth={3.5} />
+        <CheckIcon className="size-3" strokeWidth={3.5} />
       )}
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>

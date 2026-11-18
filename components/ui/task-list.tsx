@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Plus, Trash2 } from "lucide-react";
+import { PlusIcon, TrashIcon } from "@plankui/icons";
 import { cn } from "@/lib/cn";
 import { Checkbox } from "./checkbox";
 
@@ -65,7 +65,7 @@ export function TaskList({ tasks: controlled, onTasksChange, title = "Tasks", ad
               onClick={() => set(tasks.filter((x) => x.id !== t.id))}
               className="grid size-7 place-items-center rounded-sm text-muted opacity-0 hover:bg-paper-3 hover:text-danger focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-focus group-hover:opacity-100"
             >
-              <Trash2 className="size-3.5" />
+              <TrashIcon className="size-3.5" />
             </button>
           </li>
         ))}
@@ -81,7 +81,7 @@ export function TaskList({ tasks: controlled, onTasksChange, title = "Tasks", ad
             setDraft("");
           }}
         >
-          <Plus aria-hidden className="size-4 text-muted" />
+          <PlusIcon aria-hidden className="size-4 text-muted" />
           <input
             value={draft}
             onChange={(e) => setDraft(e.target.value)}

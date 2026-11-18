@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Check, Copy } from "lucide-react";
+import { CheckIcon, CopyIcon } from "@plankui/icons";
 import { Button, type ButtonProps } from "./button";
 
 export interface CopyButtonProps extends Omit<ButtonProps, "onClick"> {
@@ -27,7 +27,7 @@ export function CopyButton({ value, label, onCopied, variant = "secondary", size
       }
       {...props}
     >
-      {done ? <Check className="text-success" /> : <Copy />}
+      {done ? <CheckIcon className="text-success" /> : <CopyIcon />}
       {label && (done ? "Copied" : label)}
     </Button>
   );

@@ -1,7 +1,7 @@
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import type { ComponentProps, ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
-export interface FigureProps extends ComponentPropsWithoutRef<"figure"> {
+export interface FigureProps extends ComponentProps<"figure"> {
   caption: ReactNode;
 }
 

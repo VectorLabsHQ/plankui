@@ -1,7 +1,7 @@
-import type { ComponentPropsWithoutRef } from "react";
+import type { ComponentProps } from "react";
 import { cn } from "@/lib/cn";
 
-export interface TimestampProps extends ComponentPropsWithoutRef<"time"> {
+export interface TimestampProps extends ComponentProps<"time"> {
   dateTime: string;
 }
 

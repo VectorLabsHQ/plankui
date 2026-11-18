@@ -1,7 +1,7 @@
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import type { ComponentProps, ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
-export interface BlockquoteProps extends Omit<ComponentPropsWithoutRef<"figure">, "cite"> {
+export interface BlockquoteProps extends Omit<ComponentProps<"figure">, "cite"> {
   cite?: string;
   attribution?: ReactNode;
 }

@@ -1,7 +1,7 @@
-import type { ComponentPropsWithoutRef } from "react";
+import type { ComponentProps } from "react";
 import { cn } from "@/lib/cn";
 
-export interface SkipLinkProps extends ComponentPropsWithoutRef<"a"> {
+export interface SkipLinkProps extends ComponentProps<"a"> {
   href: `#${string}`;
 }
 

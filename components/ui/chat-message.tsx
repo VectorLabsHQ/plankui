@@ -1,7 +1,7 @@
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import type { ComponentProps, ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
-export interface ChatMessageProps extends ComponentPropsWithoutRef<"div"> {
+export interface ChatMessageProps extends ComponentProps<"div"> {
   author: string;
   side?: "start" | "end";
   timestamp?: string;
@@ -19,7 +19,7 @@ export function ChatMessage({ author, side = "start", timestamp, dateTime, avata
           <span className="font-medium text-ink">{author}</span>
           {timestamp && <time dateTime={dateTime}>{timestamp}</time>}
         </div>
-        <div className={cn("rounded-card px-3 py-2 text-sm [overflow-wrap:anywhere]", outgoing ? "bg-accent-wash text-accent-wash-ink" : "bg-paper-2 text-ink")}>
+        <div className={cn("rounded-card px-3 py-2 text-sm [overflow-wrap:anywhere]", outgoing ? "bg-accent-wash text-accent-wash-ink" : "vx-glass border border-card-border bg-card text-ink shadow-card")}>
           {children}
         </div>
       </div>

@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef } from "react";
+import type { ComponentProps } from "react";
 import { cn } from "@/lib/cn";
 
 const tones = {
@@ -8,7 +8,7 @@ const tones = {
   danger: "bg-danger",
 };
 
-export interface StatusIndicatorProps extends Omit<ComponentPropsWithoutRef<"span">, "children"> {
+export interface StatusIndicatorProps extends Omit<ComponentProps<"span">, "children"> {
   label: string;
   tone?: keyof typeof tones;
 }

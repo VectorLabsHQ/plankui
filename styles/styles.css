@@ -89,6 +89,17 @@ body {
   -webkit-font-smoothing: antialiased;
   caret-color: var(--accent);
 }
+/* Glass needs something to frost: a faint glow of the accent and two chart colours behind the page and the previews. */
+html[data-style="glass"] body,
+:is([data-style="glass"] .vx-stage, .vx-stage[data-style="glass"]) {
+  background:
+    radial-gradient(55% 45% at 8% 0%, color-mix(in oklab, var(--accent) var(--glass-glow, 16%), transparent), transparent 70%),
+    radial-gradient(45% 40% at 96% 12%, color-mix(in oklab, var(--chart-3) var(--glass-glow, 16%), transparent), transparent 70%),
+    radial-gradient(50% 45% at 50% 100%, color-mix(in oklab, var(--chart-2) calc(var(--glass-glow, 16%) * 0.8), transparent), transparent 70%),
+    var(--paper);
+}
+html[data-style="glass"] body { background-attachment: fixed; }
+.dark { --glass-glow: 24%; }
 ::selection { background: color-mix(in oklab, var(--accent) 22%, transparent); color: var(--ink); }
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 h1, h2, h3, h4 {

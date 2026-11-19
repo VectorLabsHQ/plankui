@@ -1,6 +1,6 @@
 {
- "version": "0.3.0",
- "strokeWidth": 1.75,
+ "version": "0.4.0",
+ "strokeWidth": 1.5,
  "categories": [
   "Arrows",
   "Interface",
@@ -27,6 +27,7 @@
     "forward",
     "go"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -51,6 +52,7 @@
     "previous",
     "return"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -75,6 +77,7 @@
     "rise",
     "increase"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -99,6 +102,7 @@
     "fall",
     "decrease"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -123,6 +127,7 @@
     "diagonal",
     "open"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -145,6 +150,7 @@
    "tags": [
     "diagonal"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -167,6 +173,7 @@
    "tags": [
     "diagonal"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -191,6 +198,7 @@
     "incoming",
     "received"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -215,6 +223,7 @@
     "order",
     "swap"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -251,6 +260,7 @@
     "exchange",
     "transfer"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -287,6 +297,7 @@
     "caret",
     "expand"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -305,6 +316,7 @@
     "previous",
     "caret"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -322,6 +334,7 @@
     "collapse",
     "caret"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -340,6 +353,7 @@
     "caret",
     "dropdown"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -358,6 +372,7 @@
     "sort",
     "expand"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -382,6 +397,7 @@
     "skip",
     "forward"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -406,6 +422,7 @@
     "skip",
     "back"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -431,6 +448,7 @@
     "back",
     "reset"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -455,6 +473,7 @@
     "clockwise",
     "forward"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -479,6 +498,7 @@
     "sync",
     "update"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -516,6 +536,7 @@
     "tab",
     "outside"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -545,6 +566,7 @@
     "save",
     "get"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -574,6 +596,7 @@
     "send",
     "import"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -603,6 +626,7 @@
     "send",
     "export"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -633,6 +657,7 @@
     "in",
     "enter"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -664,6 +689,7 @@
     "exit",
     "leave"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -694,6 +720,7 @@
     "increase",
     "chart"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -718,6 +745,7 @@
     "decrease",
     "chart"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -741,6 +769,7 @@
     "fullscreen",
     "expand"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -777,6 +806,7 @@
     "fullscreen",
     "collapse"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -814,6 +844,7 @@
     "confirm",
     "yes"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -833,6 +864,7 @@
     "done",
     "all"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -858,6 +890,7 @@
     "remove",
     "times"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -882,6 +915,7 @@
     "new",
     "create"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -905,6 +939,7 @@
     "remove",
     "subtract"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -923,6 +958,7 @@
     "magnifier",
     "look"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -948,6 +984,7 @@
     "magnify",
     "enlarge"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -979,6 +1016,7 @@
     "magnify",
     "shrink"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -1012,6 +1050,7 @@
     "preferences",
     "options"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -1039,6 +1078,7 @@
     "tune",
     "settings"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -1079,6 +1119,7 @@
     "refine",
     "narrow"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -1097,6 +1138,7 @@
     "navigation",
     "lines"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -1116,13 +1158,14 @@
     "options",
     "horizontal"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
      {
       "cx": 6,
       "cy": 12,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -1130,7 +1173,7 @@
      {
       "cx": 12,
       "cy": 12,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -1138,7 +1181,7 @@
      {
       "cx": 18,
       "cy": 12,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -1153,13 +1196,14 @@
     "kebab",
     "options"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
      {
       "cx": 12,
       "cy": 6,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -1167,7 +1211,7 @@
      {
       "cx": 12,
       "cy": 12,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -1175,7 +1219,7 @@
      {
       "cx": 12,
       "cy": 18,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -1189,13 +1233,14 @@
     "handle",
     "reorder"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
      {
       "cx": 9,
       "cy": 6,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -1203,7 +1248,7 @@
      {
       "cx": 15,
       "cy": 6,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -1211,7 +1256,7 @@
      {
       "cx": 9,
       "cy": 12,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -1219,7 +1264,7 @@
      {
       "cx": 15,
       "cy": 12,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -1227,7 +1272,7 @@
      {
       "cx": 9,
       "cy": 18,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -1235,7 +1280,7 @@
      {
       "cx": 15,
       "cy": 18,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -1249,13 +1294,14 @@
     "handle",
     "reorder"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
      {
       "cx": 6,
       "cy": 9,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -1263,7 +1309,7 @@
      {
       "cx": 6,
       "cy": 15,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -1271,7 +1317,7 @@
      {
       "cx": 12,
       "cy": 9,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -1279,7 +1325,7 @@
      {
       "cx": 12,
       "cy": 15,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -1287,7 +1333,7 @@
      {
       "cx": 18,
       "cy": 9,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -1295,7 +1341,7 @@
      {
       "cx": 18,
       "cy": 15,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -1309,6 +1355,7 @@
     "start",
     "main"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -1334,6 +1381,7 @@
     "apps",
     "dashboard"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -1386,6 +1434,7 @@
     "list",
     "table"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -1413,6 +1462,7 @@
     "layout",
     "split"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -1441,6 +1491,7 @@
     "spreadsheet",
     "data"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -1469,6 +1520,7 @@
     "layout",
     "navigation"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -1485,12 +1537,6 @@
      {
       "d": "M9.5 3.75v16.5"
      }
-    ],
-    [
-     "path",
-     {
-      "d": "M6.25 7.5h.5M6.25 10.5h.5"
-     }
     ]
    ]
   },
@@ -1503,6 +1549,7 @@
     "columns",
     "tasks"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -1531,6 +1578,7 @@
     "levels",
     "arrange"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -1561,6 +1609,7 @@
     "cube",
     "product"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -1590,6 +1639,7 @@
     "shape",
     "stop"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -1611,6 +1661,7 @@
     "shape",
     "round"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -1631,6 +1682,7 @@
     "rounded",
     "border"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -1649,6 +1701,7 @@
     "done",
     "task"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -1677,6 +1730,7 @@
     "selected",
     "record"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -1705,6 +1759,7 @@
     "pending",
     "empty"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -1724,6 +1779,7 @@
     "progress",
     "wait"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -1743,6 +1799,7 @@
     "visible",
     "watch"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -1769,6 +1826,7 @@
     "hidden",
     "invisible"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -1805,6 +1863,7 @@
     "private",
     "password"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -1833,6 +1892,7 @@
     "private",
     "vault"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -1874,6 +1934,7 @@
     "open",
     "unsecure"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -1902,6 +1963,7 @@
     "access",
     "credential"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -1914,9 +1976,9 @@
     [
      "circle",
      {
-      "cx": 16.5,
-      "cy": 7.5,
-      "r": 0.5
+      "cx": 15.25,
+      "cy": 8.75,
+      "r": 0.4
      }
     ],
     [
@@ -1948,6 +2010,7 @@
     "protect",
     "safe"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -1966,6 +2029,7 @@
     "verified",
     "safe"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -1990,6 +2054,7 @@
     "remove",
     "bin"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2026,6 +2091,7 @@
     "clone",
     "clipboard"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -2054,6 +2120,7 @@
     "write",
     "change"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2078,6 +2145,7 @@
     "write",
     "sign"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2103,6 +2171,7 @@
     "square",
     "pen"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2127,6 +2196,7 @@
     "url",
     "hyperlink"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2151,6 +2221,7 @@
     "attachment",
     "file"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2169,6 +2240,7 @@
     "read",
     "later"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2187,6 +2259,7 @@
     "price",
     "category"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2199,7 +2272,7 @@
      {
       "cx": 8,
       "cy": 8,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -2213,6 +2286,7 @@
     "mark",
     "milestone"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2237,6 +2311,7 @@
     "rate",
     "bookmark"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2255,6 +2330,7 @@
     "love",
     "favourite"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2274,6 +2350,7 @@
     "power",
     "fast"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2293,6 +2370,7 @@
     "new",
     "shine"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2317,6 +2395,7 @@
     "shortcut",
     "cmd"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2335,6 +2414,7 @@
     "channel",
     "tag"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2370,6 +2450,7 @@
     "email",
     "mention"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -2396,6 +2477,7 @@
     "tray",
     "messages"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2420,6 +2502,7 @@
     "store",
     "keep"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -2454,6 +2537,7 @@
     "off",
     "shutdown"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2478,6 +2562,7 @@
     "schedule",
     "history"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -2504,6 +2589,7 @@
     "schedule",
     "event"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -2532,6 +2618,7 @@
     "schedule",
     "month"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -2554,7 +2641,7 @@
      {
       "cx": 8,
       "cy": 13.75,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -2562,7 +2649,7 @@
      {
       "cx": 12,
       "cy": 13.75,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -2570,31 +2657,31 @@
      {
       "cx": 16,
       "cy": 13.75,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
      "circle",
      {
       "cx": 8,
-      "cy": 17,
-      "r": 0.5
+      "cy": 17.25,
+      "r": 0.4
      }
     ],
     [
      "circle",
      {
       "cx": 12,
-      "cy": 17,
-      "r": 0.5
+      "cy": 17.25,
+      "r": 0.4
      }
     ],
     [
      "circle",
      {
       "cx": 16,
-      "cy": 17,
-      "r": 0.5
+      "cy": 17.25,
+      "r": 0.4
      }
     ]
    ]
@@ -2609,6 +2696,7 @@
     "details",
     "help"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -2629,7 +2717,7 @@
      {
       "cx": 12,
       "cy": 7.75,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -2643,6 +2731,7 @@
     "error",
     "attention"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -2663,7 +2752,7 @@
      {
       "cx": 12,
       "cy": 16.25,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -2677,6 +2766,7 @@
     "support",
     "faq"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -2696,8 +2786,8 @@
      "circle",
      {
       "cx": 12,
-      "cy": 16.75,
-      "r": 0.5
+      "cy": 17,
+      "r": 0.4
      }
     ]
    ]
@@ -2712,6 +2802,7 @@
     "caution",
     "danger"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -2730,7 +2821,7 @@
      {
       "cx": 12,
       "cy": 16.75,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -2744,6 +2835,7 @@
     "done",
     "complete"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -2770,6 +2862,7 @@
     "cancel",
     "close"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -2796,6 +2889,7 @@
     "new",
     "create"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -2821,6 +2915,7 @@
     "remove",
     "subtract"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -2847,17 +2942,18 @@
     "alert",
     "ring"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"
+      "d": "M6 15.5v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"
      }
     ],
     [
      "path",
      {
-      "d": "M9.75 20.75a2.5 2.5 0 0 0 4.5 0"
+      "d": "M9.75 20.25a2.5 2.5 0 0 0 4.5 0"
      }
     ]
    ]
@@ -2871,17 +2967,18 @@
     "silent",
     "notification"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"
+      "d": "M6 15.5v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"
      }
     ],
     [
      "path",
      {
-      "d": "M9.75 20.75a2.5 2.5 0 0 0 4.5 0"
+      "d": "M9.75 20.25a2.5 2.5 0 0 0 4.5 0"
      }
     ],
     [
@@ -2901,19 +2998,20 @@
     "account",
     "profile"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
      {
       "cx": 12,
-      "cy": 8,
-      "r": 3.75
+      "cy": 7.5,
+      "r": 3.5
      }
     ],
     [
      "path",
      {
-      "d": "M5 20a7 7 0 0 1 14 0"
+      "d": "M5.5 20.5a6.5 6.5 0 0 1 13 0"
      }
     ]
    ]
@@ -2927,31 +3025,32 @@
     "team",
     "group"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
      {
       "cx": 9,
-      "cy": 8.5,
-      "r": 3.25
+      "cy": 7.75,
+      "r": 3
      }
     ],
     [
      "path",
      {
-      "d": "M3 19.5a6 6 0 0 1 12 0"
+      "d": "M3 20a6 6 0 0 1 12 0"
      }
     ],
     [
      "path",
      {
-      "d": "M15 5.4a3.25 3.25 0 0 1 0 6.2"
+      "d": "M15 4.9a3 3 0 0 1 0 5.7"
      }
     ],
     [
      "path",
      {
-      "d": "M17.5 14a5.5 5.5 0 0 1 3.5 5.5"
+      "d": "M17.75 14.5A5.5 5.5 0 0 1 21 20"
      }
     ]
    ]
@@ -2965,19 +3064,20 @@
     "person",
     "invite"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
      {
       "cx": 10,
-      "cy": 8,
-      "r": 3.75
+      "cy": 7.5,
+      "r": 3.5
      }
     ],
     [
      "path",
      {
-      "d": "M3 20a7 7 0 0 1 14 0"
+      "d": "M3.5 20.5a6.5 6.5 0 0 1 13 0"
      }
     ],
     [
@@ -2997,19 +3097,20 @@
     "person",
     "approved"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
      {
       "cx": 10,
-      "cy": 8,
-      "r": 3.75
+      "cy": 7.5,
+      "r": 3.5
      }
     ],
     [
      "path",
      {
-      "d": "M3 20a7 7 0 0 1 14 0"
+      "d": "M3.5 20.5a6.5 6.5 0 0 1 13 0"
      }
     ],
     [
@@ -3029,6 +3130,7 @@
     "account",
     "profile"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -3042,14 +3144,14 @@
      "circle",
      {
       "cx": 12,
-      "cy": 10,
-      "r": 3
+      "cy": 9.5,
+      "r": 2.75
      }
     ],
     [
      "path",
      {
-      "d": "M6.75 18.25a6.25 6.25 0 0 1 10.5 0"
+      "d": "M6.14 18.5a7 7 0 0 1 11.72 0"
      }
     ]
    ]
@@ -3064,13 +3166,14 @@
     "assistant",
     "agent"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
      {
-      "x": 4.5,
+      "x": 5,
       "y": 8,
-      "width": 15,
+      "width": 14,
       "height": 11.5,
       "rx": 3.5
      }
@@ -3092,23 +3195,23 @@
     [
      "circle",
      {
-      "cx": 9.25,
+      "cx": 9.5,
       "cy": 13.25,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
      "circle",
      {
-      "cx": 14.75,
+      "cx": 14.5,
       "cy": 13.25,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
      "path",
      {
-      "d": "M2.5 12.5v2.5M21.5 12.5v2.5"
+      "d": "M2.25 12.5v2.5M21.75 12.5v2.5"
      }
     ]
    ]
@@ -3121,6 +3224,7 @@
     "strong",
     "format"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3145,6 +3249,7 @@
     "format",
     "slant"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3168,6 +3273,7 @@
     "format",
     "line"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3191,6 +3297,7 @@
     "paragraph",
     "text"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3209,6 +3316,7 @@
     "text",
     "middle"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3226,6 +3334,7 @@
     "paragraph",
     "text"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3243,13 +3352,14 @@
     "bullets",
     "items"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
      {
       "cx": 5,
       "cy": 6.5,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -3257,7 +3367,7 @@
      {
       "cx": 5,
       "cy": 12,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -3265,7 +3375,7 @@
      {
       "cx": 5,
       "cy": 17.5,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -3284,6 +3394,7 @@
     "numbers",
     "steps"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3320,6 +3431,7 @@
     "todo",
     "done"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3351,6 +3463,7 @@
     "type",
     "caret"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3381,6 +3494,7 @@
     "text",
     "letter"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3410,6 +3524,7 @@
     "blockquote",
     "citation"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3434,6 +3549,7 @@
     "page",
     "blank"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3458,6 +3574,7 @@
     "page",
     "notes"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3488,6 +3605,7 @@
     "source",
     "script"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3525,6 +3643,7 @@
     "csv",
     "excel"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3564,6 +3683,7 @@
     "directory",
     "group"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3581,17 +3701,18 @@
     "directory",
     "browse"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M3.75 16.5V7.25a2.5 2.5 0 0 1 2.5-2.5h3.1a2 2 0 0 1 1.5.68l1.25 1.42a2 2 0 0 0 1.5.68h3.15a2.5 2.5 0 0 1 2.5 2.5v.97"
+      "d": "M4 17.5V7.25a2.5 2.5 0 0 1 2.5-2.5h3a2 2 0 0 1 1.5.68l1.25 1.42a2 2 0 0 0 1.5.68h3a2.5 2.5 0 0 1 2.5 2.5v.57"
      }
     ],
     [
      "path",
      {
-      "d": "M5.55 18.6l1.9-6.1A2 2 0 0 1 9.35 11.1H19.9a1.25 1.25 0 0 1 1.2 1.6l-1.65 5.4a2 2 0 0 1-1.9 1.4H6.25a1.5 1.5 0 0 1-1.5-1.5"
+      "d": "M4 17.5l2.1-5.6a2 2 0 0 1 1.87-1.3H20a1.25 1.25 0 0 1 1.18 1.66l-1.9 5.5a2 2 0 0 1-1.88 1.49H5.75A1.75 1.75 0 0 1 4 17.5z"
      }
     ]
    ]
@@ -3605,6 +3726,7 @@
     "directory",
     "create"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3629,6 +3751,7 @@
     "board",
     "directory"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3654,6 +3777,7 @@
     "guide",
     "manual"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3678,6 +3802,7 @@
     "photo",
     "media"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -3715,6 +3840,7 @@
     "upload",
     "photo"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3753,6 +3879,7 @@
     "sync",
     "weather"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3771,17 +3898,18 @@
     "sync",
     "upload"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M8.5 18.5H7a4 4 0 0 1-.6-7.95A5.75 5.75 0 0 1 17.6 9.3 4.6 4.6 0 0 1 17 18.5h-1.5"
+      "d": "M7 18.5a4 4 0 0 1-.6-7.95A5.75 5.75 0 0 1 17.6 9.3 4.6 4.6 0 0 1 17 18.5"
      }
     ],
     [
      "path",
      {
-      "d": "M12 20.5v-7"
+      "d": "M12 21v-8.5"
      }
     ],
     [
@@ -3801,23 +3929,24 @@
     "download",
     "fetch"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M8.5 18.5H7a4 4 0 0 1-.6-7.95A5.75 5.75 0 0 1 17.6 9.3 4.6 4.6 0 0 1 17 18.5h-1.5"
+      "d": "M7 18.5a4 4 0 0 1-.6-7.95A5.75 5.75 0 0 1 17.6 9.3 4.6 4.6 0 0 1 17 18.5"
      }
     ],
     [
      "path",
      {
-      "d": "M12 12.5v8"
+      "d": "M12 12v8.5"
      }
     ],
     [
      "path",
      {
-      "d": "m9 17.5 3 3 3-3"
+      "d": "m9.5 18 2.5 2.5 2.5-2.5"
      }
     ]
    ]
@@ -3831,6 +3960,7 @@
     "envelope",
     "message"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -3860,6 +3990,7 @@
     "message",
     "submit"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3884,6 +4015,7 @@
     "comment",
     "bubble"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3902,6 +4034,7 @@
     "comment",
     "reply"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3926,6 +4059,7 @@
     "conversation",
     "thread"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3950,6 +4084,7 @@
     "contact",
     "telephone"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3968,6 +4103,7 @@
     "marketing",
     "broadcast"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -3999,6 +4135,7 @@
     "internet",
     "language"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -4031,6 +4168,7 @@
     "network",
     "signal"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4055,7 +4193,7 @@
      {
       "cx": 12,
       "cy": 18.75,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -4069,6 +4207,7 @@
     "help",
     "rescue"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -4103,6 +4242,7 @@
     "video",
     "audio"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4120,6 +4260,7 @@
     "stop",
     "hold"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -4152,6 +4293,7 @@
     "film",
     "record"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -4180,6 +4322,7 @@
     "picture",
     "capture"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4206,6 +4349,7 @@
     "voice",
     "record"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -4233,6 +4377,7 @@
     "mute",
     "microphone"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -4267,6 +4412,7 @@
     "audio",
     "speaker"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4297,6 +4443,7 @@
     "sound",
     "silent"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4322,6 +4469,7 @@
     "theme",
     "design"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4334,7 +4482,7 @@
      {
       "cx": 7.75,
       "cy": 11.25,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -4342,7 +4490,7 @@
      {
       "cx": 9.5,
       "cy": 7.5,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -4350,7 +4498,7 @@
      {
       "cx": 14,
       "cy": 7,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -4358,7 +4506,7 @@
      {
       "cx": 16.75,
       "cy": 10,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -4372,6 +4520,7 @@
     "design",
     "art"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4396,6 +4545,7 @@
     "screen",
     "display"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -4423,6 +4573,7 @@
     "computer",
     "notebook"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -4450,6 +4601,7 @@
     "ipad",
     "device"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -4478,6 +4630,7 @@
     "phone",
     "device"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -4506,6 +4659,7 @@
     "input",
     "keys"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -4520,33 +4674,25 @@
     [
      "circle",
      {
-      "cx": 7,
+      "cx": 7.5,
       "cy": 10,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
      "circle",
      {
-      "cx": 10.33,
+      "cx": 12,
       "cy": 10,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
      "circle",
      {
-      "cx": 13.67,
+      "cx": 16.5,
       "cy": 10,
-      "r": 0.5
-     }
-    ],
-    [
-     "circle",
-     {
-      "cx": 17,
-      "cy": 10,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -4565,6 +4711,7 @@
     "print",
     "paper"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4599,14 +4746,15 @@
     "backend",
     "rack"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
      {
       "x": 3.75,
-      "y": 4,
+      "y": 3.5,
       "width": 16.5,
-      "height": 7,
+      "height": 6.75,
       "rx": 2.5
      }
     ],
@@ -4614,9 +4762,9 @@
      "rect",
      {
       "x": 3.75,
-      "y": 13,
+      "y": 13.75,
       "width": 16.5,
-      "height": 7,
+      "height": 6.75,
       "rx": 2.5
      }
     ],
@@ -4624,16 +4772,16 @@
      "circle",
      {
       "cx": 7.5,
-      "cy": 7.5,
-      "r": 0.5
+      "cy": 6.88,
+      "r": 0.4
      }
     ],
     [
      "circle",
      {
       "cx": 7.5,
-      "cy": 16.5,
-      "r": 0.5
+      "cy": 17.13,
+      "r": 0.4
      }
     ]
    ]
@@ -4647,6 +4795,7 @@
     "data",
     "sql"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4677,6 +4826,7 @@
     "processor",
     "hardware"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -4715,6 +4865,7 @@
     "integration",
     "power"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4745,6 +4896,7 @@
     "analytics",
     "graph"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4770,6 +4922,7 @@
     "graph",
     "bars"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4808,6 +4961,7 @@
     "horizontal",
     "bars"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4846,6 +5000,7 @@
     "trend",
     "graph"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4871,6 +5026,7 @@
     "smooth",
     "graph"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4895,6 +5051,7 @@
     "share",
     "donut"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -4919,6 +5076,7 @@
     "aim",
     "focus"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -4941,7 +5099,7 @@
      {
       "cx": 12,
       "cy": 12,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -4955,6 +5113,7 @@
     "detect",
     "sweep"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -4967,13 +5126,13 @@
     [
      "path",
      {
-      "d": "M12 12l5.5-5.5"
+      "d": "M12 7.5a4.5 4.5 0 1 0 4.5 4.5"
      }
     ],
     [
      "path",
      {
-      "d": "M12 7.5a4.5 4.5 0 1 0 4.5 4.5"
+      "d": "M12 12l3.5-3.5"
      }
     ],
     [
@@ -4981,7 +5140,7 @@
      {
       "cx": 12,
       "cy": 12,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -4995,6 +5154,7 @@
     "card",
     "billing"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -5029,6 +5189,7 @@
     "balance",
     "payment"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -5064,6 +5225,7 @@
     "currency",
     "usd"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -5088,6 +5250,7 @@
     "bill",
     "purchase"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -5112,6 +5275,7 @@
     "buy",
     "store"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -5136,6 +5300,7 @@
     "basket",
     "checkout"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -5169,6 +5334,7 @@
     "present",
     "reward"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -5215,6 +5381,7 @@
     "pro",
     "diamond"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -5244,6 +5411,7 @@
     "savings",
     "money"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -5262,7 +5430,7 @@
      {
       "cx": 16,
       "cy": 10.5,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -5283,6 +5451,7 @@
     "compare",
     "weight"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -5324,6 +5493,7 @@
     "math",
     "numbers"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -5341,40 +5511,40 @@
       "x": 8,
       "y": 6,
       "width": 8,
-      "height": 4,
+      "height": 3.5,
       "rx": 1
      }
     ],
     [
      "circle",
      {
-      "cx": 8.75,
-      "cy": 13.5,
-      "r": 0.5
+      "cx": 8.5,
+      "cy": 13,
+      "r": 0.4
      }
     ],
     [
      "circle",
      {
       "cx": 12,
-      "cy": 13.5,
-      "r": 0.5
+      "cy": 13,
+      "r": 0.4
      }
     ],
     [
      "circle",
      {
-      "cx": 15.25,
-      "cy": 13.5,
-      "r": 0.5
+      "cx": 15.5,
+      "cy": 13,
+      "r": 0.4
      }
     ],
     [
      "circle",
      {
-      "cx": 8.75,
+      "cx": 8.5,
       "cy": 17,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -5382,15 +5552,15 @@
      {
       "cx": 12,
       "cy": 17,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
      "circle",
      {
-      "cx": 15.25,
+      "cx": 15.5,
       "cy": 17,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -5404,6 +5574,7 @@
     "winner",
     "prize"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -5452,17 +5623,18 @@
     "brackets",
     "developer"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M8.5 7.5 4 12l4.5 4.5"
+      "d": "M8 7.5 3.5 12 8 16.5"
      }
     ],
     [
      "path",
      {
-      "d": "m15.5 7.5 4.5 4.5-4.5 4.5"
+      "d": "m16 7.5 4.5 4.5-4.5 4.5"
      }
     ],
     [
@@ -5482,6 +5654,7 @@
     "shell",
     "command"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -5506,6 +5679,7 @@
     "shell",
     "window"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -5540,12 +5714,13 @@
     "source",
     "fork"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
      {
       "cx": 6.5,
-      "cy": 6,
+      "cy": 5.5,
       "r": 2.25
      }
     ],
@@ -5553,7 +5728,7 @@
      "circle",
      {
       "cx": 6.5,
-      "cy": 18,
+      "cy": 18.5,
       "r": 2.25
      }
     ],
@@ -5561,20 +5736,20 @@
      "circle",
      {
       "cx": 17.5,
-      "cy": 7.5,
+      "cy": 6.5,
       "r": 2.25
      }
     ],
     [
      "path",
      {
-      "d": "M6.5 8.25v7.5"
+      "d": "M6.5 7.75v8.5"
      }
     ],
     [
      "path",
      {
-      "d": "M17.5 9.75c0 3.5-2.5 5-6 5.25-2.3.2-3.75.9-4.6 2"
+      "d": "M17.5 8.75c0 5-4 6.25-11 7.5"
      }
     ]
    ]
@@ -5588,6 +5763,7 @@
     "source",
     "combine"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -5636,6 +5812,7 @@
     "review",
     "merge"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -5690,6 +5867,7 @@
     "automation",
     "process"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
@@ -5728,39 +5906,40 @@
     "error",
     "debug"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "rect",
      {
-      "x": 7.5,
-      "y": 7.5,
-      "width": 9,
-      "height": 12,
-      "rx": 4.5
+      "x": 7,
+      "y": 9,
+      "width": 10,
+      "height": 11.5,
+      "rx": 5
      }
     ],
     [
      "path",
      {
-      "d": "M12 12v7.5"
+      "d": "M9.25 7a2.75 2.75 0 0 1 5.5 0"
      }
     ],
     [
      "path",
      {
-      "d": "M9.5 7.5a2.5 2.5 0 0 1 5 0"
+      "d": "M12 13v7.5"
      }
     ],
     [
      "path",
      {
-      "d": "M4.5 11h3M16.5 11h3M4.5 15.5h3M16.5 15.5h3"
+      "d": "M4.5 12.5H7M17 12.5h2.5M4.5 16.5H7M17 16.5h2.5"
      }
     ],
     [
      "path",
      {
-      "d": "M8.5 5.5 7 4M15.5 5.5 17 4"
+      "d": "M10.06 5.06 8.5 3.5M13.94 5.06 15.5 3.5"
      }
     ]
    ]
@@ -5775,6 +5954,7 @@
     "start",
     "deploy"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -5804,8 +5984,8 @@
      "circle",
      {
       "cx": 12,
-      "cy": 9.5,
-      "r": 1.75
+      "cy": 10.5,
+      "r": 1.5
      }
     ]
    ]
@@ -5819,6 +5999,7 @@
     "tip",
     "hint"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -5844,6 +6025,7 @@
     "system",
     "satellite"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -5856,7 +6038,7 @@
     [
      "path",
      {
-      "d": "M19.59 8.78A8.25 8.25 0 1 1 16.49 5.08"
+      "d": "M20.22 11.28A8.25 8.25 0 1 1 14.14 4.03"
      }
     ],
     [
@@ -5878,6 +6060,7 @@
     "place",
     "marker"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -5904,6 +6087,7 @@
     "directions",
     "atlas"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -5928,6 +6112,7 @@
     "direction",
     "navigate"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -5955,6 +6140,7 @@
     "arrow",
     "gps"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -5973,6 +6159,7 @@
     "company",
     "business"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -6009,6 +6196,7 @@
     "drive",
     "transport"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -6055,6 +6243,7 @@
     "restaurant",
     "eat"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -6085,6 +6274,7 @@
     "walk",
     "track"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -6122,6 +6312,7 @@
     "day",
     "bright"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "circle",
@@ -6148,6 +6339,7 @@
     "mode",
     "night"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -6166,6 +6358,7 @@
     "liquid",
     "colour"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -6184,6 +6377,7 @@
     "hot",
     "trending"
    ],
+   "since": "0.1.0",
    "nodes": [
     [
      "path",
@@ -6202,6 +6396,7 @@
     "sync",
     "reverse"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6238,6 +6433,7 @@
     "position",
     "arrows"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6281,6 +6477,7 @@
     "enlarge",
     "diagonal"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6318,6 +6515,7 @@
     "reduce",
     "diagonal"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6353,6 +6551,7 @@
     "enter",
     "return"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6376,6 +6575,7 @@
     "indent",
     "reply"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6399,6 +6599,7 @@
     "back",
     "undo"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6422,6 +6623,7 @@
     "forward",
     "redo"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6445,6 +6647,7 @@
     "top",
     "collapse"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6468,6 +6671,7 @@
     "bottom",
     "expand"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6492,6 +6696,7 @@
     "go",
     "forward"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "circle",
@@ -6524,6 +6729,7 @@
     "scroll",
     "down"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "circle",
@@ -6556,6 +6762,7 @@
     "bottom",
     "save"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6586,6 +6793,7 @@
     "share",
     "top"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6616,6 +6824,7 @@
     "again",
     "cycle"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6651,6 +6860,7 @@
     "random",
     "mix"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6693,17 +6903,18 @@
     "delete",
     "line"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M16.5 7.25c-.6-1.4-2.3-2.5-4.5-2.5-2.6 0-4.5 1.4-4.5 3.25 0 1.1.6 1.9 1.6 2.5"
+      "d": "M16.5 7.25c-.6-1.4-2.3-2.5-4.5-2.5-2.6 0-4.5 1.4-4.5 3.25 0 .45.1.85.3 1.2"
      }
     ],
     [
      "path",
      {
-      "d": "M15.4 14.5c.7.6 1.1 1.3 1.1 2.25 0 1.85-1.9 3.25-4.5 3.25-2.4 0-4.2-1.1-4.75-2.75"
+      "d": "M15.75 15c.5.5.75 1.1.75 1.75 0 1.85-1.9 3.25-4.5 3.25-2.4 0-4.2-1.1-4.75-2.75"
      }
     ],
     [
@@ -6723,6 +6934,7 @@
     "header",
     "h1"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6741,6 +6953,7 @@
     "url",
     "hyperlink"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6772,6 +6985,7 @@
     "break",
     "chain"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6802,6 +7016,7 @@
     "increase",
     "paragraph"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6826,6 +7041,7 @@
     "decrease",
     "paragraph"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6850,6 +7066,7 @@
     "text",
     "full"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6867,6 +7084,7 @@
     "paragraph",
     "mark"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6890,6 +7108,7 @@
     "blockquote",
     "citation"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6914,6 +7133,7 @@
     "document",
     "add"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6943,6 +7163,7 @@
     "remove",
     "document"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -6973,6 +7194,7 @@
     "done",
     "approved"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7002,6 +7224,7 @@
     "find",
     "document"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7040,6 +7263,7 @@
     "text",
     "font"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7070,6 +7294,7 @@
     "copies",
     "pages"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7100,6 +7325,7 @@
     "source",
     "directory"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7129,6 +7355,7 @@
     "paste",
     "board"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7157,6 +7384,7 @@
     "task",
     "copied"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7191,6 +7419,7 @@
     "checklist",
     "notes"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7225,6 +7454,7 @@
     "disk",
     "store"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7256,6 +7486,7 @@
     "past",
     "log"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7287,6 +7518,7 @@
     "guide",
     "notes"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7316,19 +7548,20 @@
     "remove",
     "person"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "circle",
      {
       "cx": 10,
-      "cy": 8,
-      "r": 3.75
+      "cy": 7.5,
+      "r": 3.5
      }
     ],
     [
      "path",
      {
-      "d": "M3 20a7 7 0 0 1 14 0"
+      "d": "M3.5 20.5a6.5 6.5 0 0 1 13 0"
      }
     ],
     [
@@ -7348,19 +7581,20 @@
     "block",
     "person"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "circle",
      {
       "cx": 10,
-      "cy": 8,
-      "r": 3.75
+      "cy": 7.5,
+      "r": 3.5
      }
     ],
     [
      "path",
      {
-      "d": "M3 20a7 7 0 0 1 14 0"
+      "d": "M3.5 20.5a6.5 6.5 0 0 1 13 0"
      }
     ],
     [
@@ -7380,33 +7614,34 @@
     "team",
     "group"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "circle",
      {
-      "cx": 8.5,
-      "cy": 9,
+      "cx": 8,
+      "cy": 8,
       "r": 3
      }
     ],
     [
      "path",
      {
-      "d": "M3 19.5a5.5 5.5 0 0 1 11 0"
+      "d": "M2.5 20a5.5 5.5 0 0 1 11 0"
      }
     ],
     [
      "circle",
      {
-      "cx": 16,
-      "cy": 7.5,
-      "r": 3
+      "cx": 16.5,
+      "cy": 7,
+      "r": 2.75
      }
     ],
     [
      "path",
      {
-      "d": "M14.5 13.75a5.5 5.5 0 0 1 6.5 5.75"
+      "d": "M15.75 13.5a5.25 5.25 0 0 1 5.25 6.5"
      }
     ]
    ]
@@ -7421,6 +7656,7 @@
     "person",
     "card"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -7463,6 +7699,7 @@
     "badge",
     "licence"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -7505,6 +7742,7 @@
     "person",
     "access"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "circle",
@@ -7543,6 +7781,7 @@
     "label",
     "price"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7555,7 +7794,7 @@
      {
       "cx": 8,
       "cy": 8,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -7575,6 +7814,7 @@
     "sale",
     "rate"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7609,6 +7849,7 @@
     "cash",
     "change"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "circle",
@@ -7641,6 +7882,7 @@
     "cash",
     "bill"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -7665,7 +7907,7 @@
      {
       "cx": 6.5,
       "cy": 12,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -7673,7 +7915,7 @@
      {
       "cx": 17.5,
       "cy": 12,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -7686,45 +7928,46 @@
     "delivery",
     "shipping"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M3.5 16V6.5A1.5 1.5 0 0 1 5 5h8.5A1.5 1.5 0 0 1 15 6.5V17"
+      "d": "M3.5 16.5V6.5A1.5 1.5 0 0 1 5 5h8.5A1.5 1.5 0 0 1 15 6.5v11"
      }
     ],
     [
      "path",
      {
-      "d": "M15 9h3l2.5 3.25V16a1 1 0 0 1-1 1H19"
+      "d": "M15 9h3l2.5 3.25v4.25a1 1 0 0 1-1 1"
      }
     ],
     [
      "path",
      {
-      "d": "M3.5 16a1 1 0 0 0 1 1h1"
+      "d": "M3.5 16.5a1 1 0 0 0 1 1h1"
      }
     ],
     [
      "path",
      {
-      "d": "M9.5 17H15"
+      "d": "M9.5 17.5h6"
      }
     ],
     [
      "circle",
      {
-      "cx": 7.75,
-      "cy": 17.25,
-      "r": 1.75
+      "cx": 7.5,
+      "cy": 17.5,
+      "r": 2
      }
     ],
     [
      "circle",
      {
-      "cx": 16.75,
-      "cy": 17.25,
-      "r": 1.75
+      "cx": 17.5,
+      "cy": 17.5,
+      "r": 2
      }
     ]
    ]
@@ -7739,6 +7982,7 @@
     "box",
     "order"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7775,11 +8019,12 @@
     "market",
     "building"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M4.5 10.5V19a1.5 1.5 0 0 0 1.5 1.5h12a1.5 1.5 0 0 0 1.5-1.5v-8.5"
+      "d": "M6.67 10.67V19a1.5 1.5 0 0 0 1.5 1.5h7.66a1.5 1.5 0 0 0 1.5-1.5v-8.33"
      }
     ],
     [
@@ -7805,6 +8050,7 @@
     "product",
     "sku"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7823,6 +8069,7 @@
     "code",
     "link"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -7859,7 +8106,7 @@
      {
       "cx": 14.5,
       "cy": 14.5,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -7867,7 +8114,7 @@
      {
       "cx": 17,
       "cy": 17,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -7875,7 +8122,7 @@
      {
       "cx": 19.5,
       "cy": 19.5,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -7883,7 +8130,7 @@
      {
       "cx": 14.5,
       "cy": 19.5,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -7891,7 +8138,7 @@
      {
       "cx": 19.5,
       "cy": 14.5,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -7905,6 +8152,7 @@
     "pass",
     "coupon"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7929,6 +8177,7 @@
     "music",
     "listen"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -7967,6 +8216,7 @@
     "sound",
     "music"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -7991,7 +8241,7 @@
      {
       "cx": 12,
       "cy": 7.5,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -8005,6 +8255,7 @@
     "video",
     "cinema"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -8033,6 +8284,7 @@
     "audio",
     "note"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8067,14 +8319,15 @@
     "charge",
     "level"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
      {
-      "x": 2.75,
-      "y": 7,
-      "width": 16,
-      "height": 10,
+      "x": 2.5,
+      "y": 6.5,
+      "width": 15.75,
+      "height": 11,
       "rx": 2.5
      }
     ],
@@ -8087,7 +8340,7 @@
     [
      "path",
      {
-      "d": "M6.5 10.5v3M9.5 10.5v3"
+      "d": "M6.5 10.5v3M9.75 10.5v3"
      }
     ]
    ]
@@ -8101,14 +8354,15 @@
     "charge",
     "plug"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
      {
-      "x": 2.75,
-      "y": 7,
-      "width": 16,
-      "height": 10,
+      "x": 2.5,
+      "y": 6.5,
+      "width": 15.75,
+      "height": 11,
       "rx": 2.5
      }
     ],
@@ -8121,7 +8375,7 @@
     [
      "path",
      {
-      "d": "M11.5 9 9.5 12h3l-2 3"
+      "d": "M11.25 9.5 9.5 12h3l-1.75 2.5"
      }
     ]
    ]
@@ -8134,6 +8388,7 @@
     "wireless",
     "connect"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8152,6 +8407,7 @@
     "mirror",
     "stream"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8176,7 +8432,7 @@
      {
       "cx": 3.75,
       "cy": 19.5,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -8190,6 +8446,7 @@
     "stream",
     "mirror"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8213,6 +8470,7 @@
     "television",
     "screen"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -8241,6 +8499,7 @@
     "wearable",
     "clock"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -8281,6 +8540,7 @@
     "health",
     "heartbeat"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8299,6 +8559,7 @@
     "forbidden",
     "prohibited"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "circle",
@@ -8324,6 +8585,7 @@
     "verified",
     "approved"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8347,6 +8609,7 @@
     "switch",
     "off"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -8376,6 +8639,7 @@
     "switch",
     "on"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -8405,6 +8669,7 @@
     "shutdown",
     "disabled"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8434,6 +8699,7 @@
     "security",
     "warning"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8452,7 +8718,7 @@
      {
       "cx": 12,
       "cy": 15.75,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -8466,6 +8732,7 @@
     "error",
     "danger"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8484,7 +8751,7 @@
      {
       "cx": 12,
       "cy": 16,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -8497,6 +8764,7 @@
     "ringing",
     "call"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8526,6 +8794,7 @@
     "message",
     "recording"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "circle",
@@ -8559,6 +8828,7 @@
     "email",
     "read"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8583,11 +8853,18 @@
     "download",
     "incoming"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M8 8.5H6.4l-2.65 5v4.25a2.5 2.5 0 0 0 2.5 2.5h11.5a2.5 2.5 0 0 0 2.5-2.5V13.5L17.6 8.5H16"
+      "d": "M3.75 13.5 6 9M20.25 13.5 18 9"
+     }
+    ],
+    [
+     "path",
+     {
+      "d": "M3.75 13.5v4.25a2.5 2.5 0 0 0 2.5 2.5h11.5a2.5 2.5 0 0 0 2.5-2.5V13.5"
      }
     ],
     [
@@ -8618,6 +8895,7 @@
     "answer",
     "respond"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8641,6 +8919,7 @@
     "answer",
     "everyone"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8672,6 +8951,7 @@
     "pass",
     "on"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8696,6 +8976,7 @@
     "plane",
     "submit"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8721,6 +9002,7 @@
     "bubble",
     "round"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8739,6 +9021,7 @@
     "rain",
     "shower"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8763,17 +9046,18 @@
     "storm",
     "thunder"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M8.5 16H7a4 4 0 0 1-.6-7.95A5.75 5.75 0 0 1 17.6 6.8 4.6 4.6 0 0 1 17 16h-1"
+      "d": "M8 16H7a4 4 0 0 1-.6-7.95A5.75 5.75 0 0 1 17.6 6.8 4.6 4.6 0 0 1 17 16"
      }
     ],
     [
      "path",
      {
-      "d": "M13 12.5 10.5 16.5h3L11 20.5"
+      "d": "M13.25 13 11.5 16.5h3l-1.75 4"
      }
     ]
    ]
@@ -8787,25 +9071,26 @@
     "partly",
     "cloudy"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "circle",
      {
-      "cx": 8.5,
-      "cy": 8.5,
-      "r": 3
+      "cx": 8,
+      "cy": 8,
+      "r": 2.5
      }
     ],
     [
      "path",
      {
-      "d": "M8.5 3v1.25M3 8.5h1.25M4.6 4.6l.9.9M12.4 4.6l-.9.9"
+      "d": "M8 2.75v1M2.75 8h1M4.3 4.3l.7.7M11.7 4.3l-.7.7"
      }
     ],
     [
      "path",
      {
-      "d": "M10.5 19.5a3.25 3.25 0 0 1-.5-6.45A4.75 4.75 0 0 1 19.2 12a3.75 3.75 0 0 1-.45 7.5z"
+      "d": "M11 20a3.25 3.25 0 0 1-.5-6.45A4.75 4.75 0 0 1 19.7 12.5a3.75 3.75 0 0 1-.45 7.5z"
      }
     ]
    ]
@@ -8819,6 +9104,7 @@
     "cold",
     "snow"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8849,6 +9135,7 @@
     "air",
     "breeze"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8879,6 +9166,7 @@
     "plant",
     "green"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8903,6 +9191,7 @@
     "forest",
     "nature"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8927,6 +9216,7 @@
     "landscape",
     "hike"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8945,6 +9235,7 @@
     "sea",
     "ocean"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -8976,6 +9267,7 @@
     "cover",
     "insurance"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -9000,17 +9292,26 @@
     "weather",
     "heat"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M10 14.5v-9a2 2 0 0 1 4 0v9a3.75 3.75 0 1 1-4 0z"
+      "d": "M9 12.82V6a3 3 0 0 1 6 0v6.82a4.75 4.75 0 1 1-6 0z"
+     }
+    ],
+    [
+     "circle",
+     {
+      "cx": 12,
+      "cy": 16.5,
+      "r": 1.75
      }
     ],
     [
      "path",
      {
-      "d": "M12 9v7"
+      "d": "M12 14.75V9"
      }
     ]
    ]
@@ -9024,6 +9325,7 @@
     "keep",
     "attach"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -9053,6 +9355,7 @@
     "unpin",
     "remove"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -9089,6 +9392,7 @@
     "video",
     "window"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -9121,6 +9425,7 @@
     "layout",
     "inspector"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -9149,6 +9454,7 @@
     "footer",
     "drawer"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -9177,44 +9483,45 @@
     "widgets",
     "grid"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
      {
-      "x": 4,
-      "y": 4,
-      "width": 7,
-      "height": 9,
+      "x": 3.5,
+      "y": 3.5,
+      "width": 7.25,
+      "height": 9.5,
       "rx": 2
      }
     ],
     [
      "rect",
      {
-      "x": 13,
-      "y": 4,
-      "width": 7,
-      "height": 5,
+      "x": 13.75,
+      "y": 3.5,
+      "width": 6.75,
+      "height": 5.5,
       "rx": 2
      }
     ],
     [
      "rect",
      {
-      "x": 13,
-      "y": 11,
-      "width": 7,
-      "height": 9,
+      "x": 13.75,
+      "y": 12,
+      "width": 6.75,
+      "height": 8.5,
       "rx": 2
      }
     ],
     [
      "rect",
      {
-      "x": 4,
-      "y": 15,
-      "width": 7,
-      "height": 5,
+      "x": 3.5,
+      "y": 16,
+      "width": 7.25,
+      "height": 4.5,
       "rx": 2
      }
     ]
@@ -9229,6 +9536,7 @@
     "page",
     "sections"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -9270,6 +9578,7 @@
     "spreadsheet",
     "cells"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -9297,37 +9606,38 @@
     "browser",
     "application"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
      {
       "x": 3,
-      "y": 4.5,
+      "y": 4,
       "width": 18,
-      "height": 15,
+      "height": 16,
       "rx": 3
      }
     ],
     [
      "path",
      {
-      "d": "M3 9h18"
+      "d": "M3 10h18"
      }
     ],
     [
      "circle",
      {
       "cx": 6.5,
-      "cy": 6.75,
-      "r": 0.5
+      "cy": 7,
+      "r": 0.4
      }
     ],
     [
      "circle",
      {
-      "cx": 9,
-      "cy": 6.75,
-      "r": 0.5
+      "cx": 10,
+      "cy": 7,
+      "r": 0.4
      }
     ]
    ]
@@ -9341,34 +9651,35 @@
     "modules",
     "build"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
      {
-      "x": 3.75,
-      "y": 12.5,
-      "width": 7.75,
-      "height": 7.75,
+      "x": 3.5,
+      "y": 13.5,
+      "width": 7,
+      "height": 7,
       "rx": 2
      }
     ],
     [
      "rect",
      {
-      "x": 12.5,
-      "y": 12.5,
-      "width": 7.75,
-      "height": 7.75,
+      "x": 13.5,
+      "y": 13.5,
+      "width": 7,
+      "height": 7,
       "rx": 2
      }
     ],
     [
      "rect",
      {
-      "x": 12.5,
-      "y": 3.75,
-      "width": 7.75,
-      "height": 7.75,
+      "x": 13.5,
+      "y": 3.5,
+      "width": 7,
+      "height": 7,
       "rx": 2
      }
     ]
@@ -9384,36 +9695,37 @@
     "square",
     "design"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M7.5 3.5l4 7h-8z"
+      "d": "M7 3.75l3.5 6.5h-7z"
      }
     ],
     [
      "circle",
      {
-      "cx": 16.75,
-      "cy": 7.25,
+      "cx": 17,
+      "cy": 7,
       "r": 3.5
      }
     ],
     [
      "rect",
      {
-      "x": 13,
-      "y": 13,
-      "width": 7.5,
-      "height": 7.5,
+      "x": 13.5,
+      "y": 13.5,
+      "width": 7,
+      "height": 7,
       "rx": 2
      }
     ],
     [
      "circle",
      {
-      "cx": 7.5,
-      "cy": 16.75,
+      "cx": 7,
+      "cy": 17,
       "r": 3.5
      }
     ]
@@ -9428,6 +9740,7 @@
     "palette",
     "theme"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "rect",
@@ -9444,7 +9757,7 @@
      {
       "cx": 7,
       "cy": 16.75,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -9456,7 +9769,7 @@
     [
      "path",
      {
-      "d": "M7 20.5h11.5a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2h-2.25"
+      "d": "M8 20.5h10.5a2 2 0 0 0 2-2V16a2 2 0 0 0-2-2h-5"
      }
     ]
    ]
@@ -9470,6 +9783,7 @@
     "click",
     "select"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -9494,23 +9808,24 @@
     "click",
     "tap"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M9 9l11 4.5-4.75 1.75L13.5 20z"
+      "d": "M9.5 9.5l10.5 4.5-4.5 1.75L13.75 20z"
      }
     ],
     [
      "path",
      {
-      "d": "m15.25 15.25 4.25 4.25"
+      "d": "m15.5 15.75 4 4"
      }
     ],
     [
      "path",
      {
-      "d": "M7 3v2.25M3 7h2.25M4.3 4.3l1.6 1.6M10.5 4.5 9.25 5.75"
+      "d": "M9.5 3.25v2.5M3.25 9.5h2.5M4.75 4.75l1.75 1.75"
      }
     ]
    ]
@@ -9524,6 +9839,7 @@
     "capture",
     "frame"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -9565,6 +9881,7 @@
     "stopwatch",
     "countdown"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "circle",
@@ -9589,7 +9906,7 @@
     [
      "path",
      {
-      "d": "M18 7.5l1.25-1.25"
+      "d": "M17.13 8.37l1.6-1.6"
      }
     ]
    ]
@@ -9603,6 +9920,7 @@
     "time",
     "loading"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "path",
@@ -9633,6 +9951,7 @@
     "wake",
     "reminder"
    ],
+   "since": "0.2.0",
    "nodes": [
     [
      "circle",
@@ -9657,7 +9976,7 @@
     [
      "path",
      {
-      "d": "M6.5 19.5l-1.25 1.5M17.5 19.5l1.25 1.5"
+      "d": "M7.05 17.95 5.5 20M16.95 17.95 18.5 20"
      }
     ]
    ]
@@ -9674,6 +9993,7 @@
     "get",
     "started"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -9696,9 +10016,9 @@
     [
      "circle",
      {
-      "cx": 15.5,
-      "cy": 8.5,
-      "r": 1.75
+      "cx": 14.75,
+      "cy": 9.25,
+      "r": 1.5
      }
     ]
    ]
@@ -9714,6 +10034,7 @@
     "deploy",
     "flame"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -9736,15 +10057,15 @@
     [
      "circle",
      {
-      "cx": 15.5,
-      "cy": 8.5,
-      "r": 1.75
+      "cx": 14.75,
+      "cy": 9.25,
+      "r": 1.5
      }
     ],
     [
      "path",
      {
-      "d": "M7 17c-1.6.4-2.75 1.6-3.25 3.75 2.15-.5 3.35-1.65 3.75-3.25"
+      "d": "M7 17c-1.6.4-2.75 1.6-3.25 3.75 2.15-.5 3.35-1.65 3.25-3.75"
      }
     ]
    ]
@@ -9760,11 +10081,12 @@
     "design",
     "brush"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M13.72 8.72l4.5-4.5a1.1 1.1 0 0 1 1.56 1.56l-4.5 4.5"
+      "d": "M13.5 8.5 18 4a1.41 1.41 0 0 1 2 2l-4.5 4.5"
      }
     ],
     [
@@ -9798,6 +10120,7 @@
     "skills",
     "shine"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -9832,6 +10155,7 @@
     "design",
     "icons"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -9842,19 +10166,19 @@
     [
      "rect",
      {
-      "x": 3.75,
-      "y": 13,
-      "width": 7.25,
-      "height": 7.25,
+      "x": 3.5,
+      "y": 13.25,
+      "width": 7,
+      "height": 7,
       "rx": 2
      }
     ],
     [
      "circle",
      {
-      "cx": 16.75,
-      "cy": 16.6,
-      "r": 3.6
+      "cx": 17,
+      "cy": 16.75,
+      "r": 3.5
      }
     ]
    ]
@@ -9868,6 +10192,7 @@
     "seal",
     "award"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -9886,6 +10211,7 @@
     "new",
     "seal"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -9910,6 +10236,7 @@
     "sale",
     "seal"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -9928,7 +10255,7 @@
      {
       "cx": 9.25,
       "cy": 9.25,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -9936,7 +10263,7 @@
      {
       "cx": 14.75,
       "cy": 14.75,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -9950,6 +10277,7 @@
     "seal",
     "attention"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -9968,7 +10296,7 @@
      {
       "cx": 12,
       "cy": 15.75,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -9983,95 +10311,96 @@
     "apps",
     "nine"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
      {
       "x": 3.75,
       "y": 3.75,
-      "width": 4.5,
-      "height": 4.5,
-      "rx": 1.25
+      "width": 3.5,
+      "height": 3.5,
+      "rx": 1
      }
     ],
     [
      "rect",
      {
-      "x": 9.75,
+      "x": 10.25,
       "y": 3.75,
-      "width": 4.5,
-      "height": 4.5,
-      "rx": 1.25
+      "width": 3.5,
+      "height": 3.5,
+      "rx": 1
      }
     ],
     [
      "rect",
      {
-      "x": 15.75,
+      "x": 16.75,
       "y": 3.75,
-      "width": 4.5,
-      "height": 4.5,
-      "rx": 1.25
+      "width": 3.5,
+      "height": 3.5,
+      "rx": 1
      }
     ],
     [
      "rect",
      {
       "x": 3.75,
-      "y": 9.75,
-      "width": 4.5,
-      "height": 4.5,
-      "rx": 1.25
+      "y": 10.25,
+      "width": 3.5,
+      "height": 3.5,
+      "rx": 1
      }
     ],
     [
      "rect",
      {
-      "x": 9.75,
-      "y": 9.75,
-      "width": 4.5,
-      "height": 4.5,
-      "rx": 1.25
+      "x": 10.25,
+      "y": 10.25,
+      "width": 3.5,
+      "height": 3.5,
+      "rx": 1
      }
     ],
     [
      "rect",
      {
-      "x": 15.75,
-      "y": 9.75,
-      "width": 4.5,
-      "height": 4.5,
-      "rx": 1.25
+      "x": 16.75,
+      "y": 10.25,
+      "width": 3.5,
+      "height": 3.5,
+      "rx": 1
      }
     ],
     [
      "rect",
      {
       "x": 3.75,
-      "y": 15.75,
-      "width": 4.5,
-      "height": 4.5,
-      "rx": 1.25
+      "y": 16.75,
+      "width": 3.5,
+      "height": 3.5,
+      "rx": 1
      }
     ],
     [
      "rect",
      {
-      "x": 9.75,
-      "y": 15.75,
-      "width": 4.5,
-      "height": 4.5,
-      "rx": 1.25
+      "x": 10.25,
+      "y": 16.75,
+      "width": 3.5,
+      "height": 3.5,
+      "rx": 1
      }
     ],
     [
      "rect",
      {
-      "x": 15.75,
-      "y": 15.75,
-      "width": 4.5,
-      "height": 4.5,
-      "rx": 1.25
+      "x": 16.75,
+      "y": 16.75,
+      "width": 3.5,
+      "height": 3.5,
+      "rx": 1
      }
     ]
    ]
@@ -10085,6 +10414,7 @@
     "gear",
     "preferences"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -10111,6 +10441,7 @@
     "building",
     "chimney"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -10142,6 +10473,7 @@
     "dark",
     "mode"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -10160,7 +10492,7 @@
     [
      "path",
      {
-      "d": "M12 8h5.5M12 12h7M12 16h5.5"
+      "d": "M12 8h5M12 12h6M12 16h5"
      }
     ]
    ]
@@ -10176,6 +10508,7 @@
     "mode",
     "auto"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -10202,7 +10535,7 @@
      {
       "cx": 18.5,
       "cy": 6.5,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -10223,6 +10556,7 @@
     "mode",
     "sleep"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -10246,6 +10580,7 @@
     "morning",
     "dawn"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -10293,6 +10628,7 @@
     "evening",
     "dusk"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -10341,6 +10677,7 @@
     "low",
     "light"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -10355,7 +10692,7 @@
      {
       "cx": 12,
       "cy": 4.5,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -10363,7 +10700,7 @@
      {
       "cx": 12,
       "cy": 19.5,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -10371,7 +10708,7 @@
      {
       "cx": 4.5,
       "cy": 12,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -10379,7 +10716,7 @@
      {
       "cx": 19.5,
       "cy": 12,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -10387,7 +10724,7 @@
      {
       "cx": 6.7,
       "cy": 6.7,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -10395,7 +10732,7 @@
      {
       "cx": 17.3,
       "cy": 17.3,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -10403,7 +10740,7 @@
      {
       "cx": 6.7,
       "cy": 17.3,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -10411,7 +10748,7 @@
      {
       "cx": 17.3,
       "cy": 6.7,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -10425,6 +10762,7 @@
     "colour",
     "paint"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -10447,7 +10785,7 @@
     [
      "path",
      {
-      "d": "M20.5 16c0 1-.7 2-1.5 2s-1.5-1-1.5-2c0-.9 1.5-2.75 1.5-2.75s1.5 1.85 1.5 2.75z"
+      "d": "M21 18c0 1-.65 1.75-1.5 1.75S18 19 18 18c0-.9 1.5-2.75 1.5-2.75S21 17.1 21 18z"
      }
     ]
    ]
@@ -10461,6 +10799,7 @@
     "wall",
     "colour"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -10499,23 +10838,24 @@
     "picker",
     "eyedropper"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M14.5 5.5l1.7-1.7a2.12 2.12 0 0 1 3 3l-1.7 1.7"
+      "d": "M13.75 7.75l2.5-2.5a1.77 1.77 0 0 1 2.5 2.5l-2.5 2.5"
      }
     ],
     [
      "path",
      {
-      "d": "M12.5 5.5l6 6"
+      "d": "M12.5 6.5l5 5"
      }
     ],
     [
      "path",
      {
-      "d": "M14 9 6.5 16.5 5 19l2.5-1.5L15 10"
+      "d": "M13.75 7.75 6 15.5l-1.25 3.75 3.75-1.25 7.75-7.75"
      }
     ]
    ]
@@ -10529,6 +10869,7 @@
     "design",
     "art"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -10568,6 +10909,7 @@
     "design",
     "path"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -10600,6 +10942,7 @@
     "size",
     "design"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -10624,6 +10967,7 @@
     "clear",
     "rubber"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -10654,17 +10998,18 @@
     "tool",
     "effect"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M4 20l9.5-9.5"
+      "d": "M4 20l8-8"
      }
     ],
     [
      "path",
      {
-      "d": "M15 4v2.5M15 11.5V14M10.5 9H13M17.5 9H20M12 6l1.25 1.25M16.75 10.75 18 12M18 6l-1.25 1.25"
+      "d": "M15 3.75v2M15 12.25v2M9.75 9h2M18.25 9h2M11.5 5.5l1.25 1.25M17.25 11.25l1.25 1.25M18.5 5.5l-1.25 1.25"
      }
     ]
    ]
@@ -10678,11 +11023,12 @@
     "ai",
     "generate"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M4 20l9.5-9.5"
+      "d": "M4 20l8.5-8.5"
      }
     ],
     [
@@ -10708,6 +11054,7 @@
     "star",
     "shine"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -10726,23 +11073,24 @@
     "reviews",
     "favourite"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M12 3.25L13.32 6.18L16.52 6.53L14.14 8.7L14.79 11.84L12 10.25L9.21 11.84L9.86 8.7L7.48 6.53L10.68 6.18z"
+      "d": "M12 3L13.18 5.63L16.04 5.94L13.9 7.87L14.5 10.69L12 9.25L9.5 10.69L10.1 7.87L7.96 5.94L10.82 5.63z"
      }
     ],
     [
      "path",
      {
-      "d": "M6.75 11.25L8.07 14.18L11.27 14.53L8.89 16.7L9.54 19.84L6.75 18.25L3.96 19.84L4.61 16.7L2.23 14.53L5.43 14.18z"
+      "d": "M6.5 12.25L7.68 14.88L10.54 15.19L8.4 17.12L9 19.94L6.5 18.5L4 19.94L4.6 17.12L2.46 15.19L5.32 14.88z"
      }
     ],
     [
      "path",
      {
-      "d": "M17.25 11.25L18.57 14.18L21.77 14.53L19.39 16.7L20.04 19.84L17.25 18.25L14.46 19.84L15.11 16.7L12.73 14.53L15.93 14.18z"
+      "d": "M17.5 12.25L18.68 14.88L21.54 15.19L19.4 17.12L20 19.94L17.5 18.5L15 19.94L15.6 17.12L13.46 15.19L16.32 14.88z"
      }
     ]
    ]
@@ -10756,17 +11104,18 @@
     "liquid",
     "colour"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M7 9c2 2.3 3.5 4.3 3.5 6.3a3.5 3.5 0 0 1-7 0c0-2 1.5-4 3.5-6.3z"
+      "d": "M7 10.5c1.8 2.1 3.25 3.9 3.25 5.75a3.25 3.25 0 0 1-6.5 0c0-1.85 1.45-3.65 3.25-5.75z"
      }
     ],
     [
      "path",
      {
-      "d": "M15.5 3.5c2.4 2.75 4.5 5.25 4.5 7.75a4.5 4.5 0 0 1-9 0c0-2.5 2.1-5 4.5-7.75z"
+      "d": "M16.5 3.5c2.2 2.5 4 4.8 4 7a4 4 0 0 1-8 0c0-2.2 1.8-4.5 4-7z"
      }
     ]
    ]
@@ -10780,6 +11129,7 @@
     "graffiti",
     "colour"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -10808,31 +11158,23 @@
      {
       "cx": 16,
       "cy": 5.5,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
      "circle",
      {
-      "cx": 18.5,
+      "cx": 19,
       "cy": 4,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
      "circle",
      {
-      "cx": 18.5,
-      "cy": 7,
-      "r": 0.5
-     }
-    ],
-    [
-     "circle",
-     {
-      "cx": 20.75,
-      "cy": 5.5,
-      "r": 0.5
+      "cx": 19,
+      "cy": 7.5,
+      "r": 0.4
      }
     ]
    ]
@@ -10846,6 +11188,7 @@
     "overlap",
     "colour"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -10873,6 +11216,7 @@
     "stack",
     "levels"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -10898,6 +11242,7 @@
     "font",
     "underline"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -10928,6 +11273,7 @@
     "broadcast",
     "antenna"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -10964,6 +11310,7 @@
     "discover",
     "space"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -10980,7 +11327,7 @@
     [
      "path",
      {
-      "d": "M11 13.5 8 21M12.25 13l3.25 8"
+      "d": "M11.15 14.08 8.5 21M11.15 14.08l3.85 6.92"
      }
     ]
    ]
@@ -10994,6 +11341,7 @@
     "world",
     "saturn"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -11020,6 +11368,7 @@
     "launch",
     "fast"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -11056,6 +11405,7 @@
     "prize",
     "winner"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -11068,7 +11418,7 @@
     [
      "path",
      {
-      "d": "M9 10.75 6.5 3.5h3.25l2.25 5.5 2.25-5.5h3.25L15 10.75"
+      "d": "M9.08 11.25 6.5 3.5h3.25l2.25 5.5 2.25-5.5h3.25l-2.58 7.75"
      }
     ]
    ]
@@ -11082,6 +11432,7 @@
     "badge",
     "ribbon"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -11108,6 +11459,7 @@
     "pro",
     "king"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -11130,6 +11482,7 @@
    "tags": [
     "shape"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -11146,6 +11499,7 @@
    "tags": [
     "shape"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -11162,6 +11516,7 @@
    "tags": [
     "shape"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -11179,6 +11534,7 @@
     "shape",
     "stop"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -11196,6 +11552,7 @@
     "shape",
     "rhombus"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -11214,6 +11571,7 @@
     "app",
     "icon"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -11232,6 +11590,7 @@
     "draft",
     "empty"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -11273,6 +11632,7 @@
     "shape",
     "3d"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -11306,6 +11666,7 @@
     "3d",
     "database"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "ellipse",
@@ -11332,6 +11693,7 @@
     "shape",
     "3d"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -11356,6 +11718,7 @@
     "3d",
     "ball"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -11381,6 +11744,7 @@
     "unlike",
     "remove"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -11404,6 +11768,7 @@
     "health",
     "heartbeat"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -11414,7 +11779,7 @@
     [
      "path",
      {
-      "d": "M5.5 12h3.25l1.5-2.5 2.5 5 1.5-2.5h4.25"
+      "d": "M7 12h2l1.5-2.5 2.5 5 1.5-2.5H17"
      }
     ]
    ]
@@ -11427,6 +11792,7 @@
     "broken",
     "sad"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -11451,6 +11817,7 @@
     "new",
     "create"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -11478,6 +11845,7 @@
     "remove",
     "subtract"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -11506,6 +11874,7 @@
     "cancel",
     "remove"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -11533,6 +11902,7 @@
     "warning",
     "error"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -11555,7 +11925,7 @@
      {
       "cx": 12,
       "cy": 16.25,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -11568,6 +11938,7 @@
     "source",
     "embed"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -11602,6 +11973,7 @@
     "account",
     "profile"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -11637,6 +12009,7 @@
     "upload",
     "top"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -11668,6 +12041,7 @@
     "back",
     "previous"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -11699,6 +12073,7 @@
     "external",
     "open"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -11730,6 +12105,7 @@
     "top",
     "upload"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -11763,6 +12139,7 @@
     "bottom",
     "download"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -11796,6 +12173,7 @@
     "back",
     "previous"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -11829,6 +12207,7 @@
     "next",
     "forward"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -11861,6 +12240,7 @@
    "tags": [
     "next"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -11885,6 +12265,7 @@
    "tags": [
     "back"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -11909,6 +12290,7 @@
    "tags": [
     "collapse"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -11933,6 +12315,7 @@
    "tags": [
     "expand"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -11958,6 +12341,7 @@
     "start",
     "video"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -11982,6 +12366,7 @@
    "tags": [
     "hold"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -12007,6 +12392,7 @@
     "end",
     "record"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -12036,6 +12422,7 @@
     "discount",
     "sale"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -12056,7 +12443,7 @@
      {
       "cx": 9.25,
       "cy": 9.25,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -12064,7 +12451,7 @@
      {
       "cx": 14.75,
       "cy": 14.75,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -12077,6 +12464,7 @@
     "money",
     "price"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "circle",
@@ -12108,6 +12496,7 @@
     "math",
     "same"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12125,6 +12514,7 @@
     "math",
     "split"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12137,7 +12527,7 @@
      {
       "cx": 12,
       "cy": 7,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -12145,7 +12535,7 @@
      {
       "cx": 12,
       "cy": 17,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -12159,6 +12549,7 @@
     "sum",
     "total"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12177,6 +12568,7 @@
     "forever",
     "unlimited"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12195,17 +12587,18 @@
     "alarm",
     "ringing"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"
+      "d": "M6 15.5v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"
      }
     ],
     [
      "path",
      {
-      "d": "M9.75 20.75a2.5 2.5 0 0 0 4.5 0"
+      "d": "M9.75 20.25a2.5 2.5 0 0 0 4.5 0"
      }
     ],
     [
@@ -12231,23 +12624,24 @@
     "notification",
     "subscribe"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"
+      "d": "M6 15.5v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"
      }
     ],
     [
      "path",
      {
-      "d": "M9.75 20.75a2.5 2.5 0 0 0 4.5 0"
+      "d": "M9.75 20.25a2.5 2.5 0 0 0 4.5 0"
      }
     ],
     [
      "path",
      {
-      "d": "M19 2.75v4.5M16.75 5h4.5"
+      "d": "M19.5 1.75v4M17.5 3.75h4"
      }
     ]
    ]
@@ -12260,25 +12654,26 @@
     "unread",
     "notification"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
      {
-      "d": "M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"
+      "d": "M6 15.5v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"
      }
     ],
     [
      "path",
      {
-      "d": "M9.75 20.75a2.5 2.5 0 0 0 4.5 0"
+      "d": "M9.75 20.25a2.5 2.5 0 0 0 4.5 0"
      }
     ],
     [
      "circle",
      {
       "cx": 19.5,
-      "cy": 4.5,
-      "r": 2
+      "cy": 3.5,
+      "r": 1.75
      }
     ]
    ]
@@ -12292,6 +12687,7 @@
     "email",
     "compose"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12322,6 +12718,7 @@
     "sent",
     "read"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12352,6 +12749,7 @@
     "comment",
     "chat"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12376,6 +12774,7 @@
     "chat",
     "comment"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12388,7 +12787,7 @@
      {
       "cx": 8.5,
       "cy": 10.75,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -12396,7 +12795,7 @@
      {
       "cx": 12,
       "cy": 10.75,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -12404,7 +12803,7 @@
      {
       "cx": 15.5,
       "cy": 10.75,
-      "r": 0.5
+      "r": 0.4
      }
     ]
    ]
@@ -12418,6 +12817,7 @@
     "done",
     "booked"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -12438,7 +12838,7 @@
     [
      "path",
      {
-      "d": "m9 15 2 2 4-4"
+      "d": "m9.25 15.5 2 2 3.75-4"
      }
     ]
    ]
@@ -12452,6 +12852,7 @@
     "event",
     "add"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -12472,7 +12873,7 @@
     [
      "path",
      {
-      "d": "M12 12.5v6M9 15.5h6"
+      "d": "M12 12.75v5M9.5 15.25h5"
      }
     ]
    ]
@@ -12485,6 +12886,7 @@
     "cancel",
     "event"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -12519,6 +12921,7 @@
     "time",
     "event"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12556,6 +12959,7 @@
     "remove",
     "directory"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12579,6 +12983,7 @@
     "done",
     "directory"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12602,6 +13007,7 @@
     "delete",
     "directory"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12625,6 +13031,7 @@
     "find",
     "directory"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12657,6 +13064,7 @@
     "document",
     "error"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12687,6 +13095,7 @@
     "photos",
     "pictures"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -12728,6 +13137,7 @@
     "rating",
     "half"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12751,6 +13161,7 @@
     "unfavourite",
     "remove"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12774,6 +13185,7 @@
     "save",
     "add"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12796,6 +13208,7 @@
    "tags": [
     "saved"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12819,6 +13232,7 @@
     "insecure",
     "blocked"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12842,6 +13256,7 @@
     "protect",
     "add"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12865,6 +13280,7 @@
     "unprotected",
     "disabled"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12888,6 +13304,7 @@
     "offline",
     "disconnected"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12911,6 +13328,7 @@
     "synced",
     "saved"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12935,6 +13353,7 @@
     "off",
     "dark"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12965,6 +13384,7 @@
     "off",
     "flash"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -12989,6 +13409,7 @@
     "settings",
     "fix"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -13007,6 +13428,7 @@
     "tool",
     "construct"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -13030,6 +13452,7 @@
     "location",
     "hidden"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -13061,6 +13484,7 @@
     "location",
     "confirmed"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -13085,6 +13509,7 @@
     "no",
     "network"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -13099,17 +13524,11 @@
      }
     ],
     [
-     "path",
-     {
-      "d": "M10 16a2.8 2.8 0 0 1 4 0"
-     }
-    ],
-    [
      "circle",
      {
       "cx": 12,
       "cy": 18.75,
-      "r": 0.5
+      "r": 0.4
      }
     ],
     [
@@ -13129,6 +13548,7 @@
     "strength",
     "bars"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -13146,6 +13566,7 @@
     "sound",
     "quiet"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -13169,6 +13590,7 @@
     "camera",
     "off"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "rect",
@@ -13202,6 +13624,7 @@
     "photo",
     "disabled"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",
@@ -13235,6 +13658,7 @@
     "end",
     "call"
    ],
+   "since": "0.3.0",
    "nodes": [
     [
      "path",

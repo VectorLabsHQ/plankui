@@ -31,7 +31,7 @@ Every icon is named after its file with `Icon` on the end (`arrow-right` → `Ar
 | Prop | Default | What it does |
 | --- | --- | --- |
 | `size` | `24` | Width and height. A class such as `size-4` wins over it. |
-| `strokeWidth` | `1.75` | Line weight on the 24 px grid. |
+| `strokeWidth` | `1.5` | Line weight on the 24 px grid. |
 | `color` | `currentColor` | Stroke colour. |
 | `title` | | Names the icon for screen readers. Without it (or `aria-label`) the icon is `aria-hidden`. |
 | `...props` | | Passed to the `<svg>`: `className`, `style`, `ref`, events. |

@@ -1,6 +1,6 @@
 {
   "name": "@plankui/icons",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "PlankUI Icons: soft, rounded outline icons on a 24 px grid, drawn for PlankUI. React components and raw SVGs.",
   "type": "module",
   "main": "./lib/index.js",

@@ -53,7 +53,12 @@ checks them and writes:
 
 Drawing rules, so new icons match: live area 3 to 21; square containers 16.5 wide with a 4.5 radius; circles
 r 8.75 on the centre; cards and screens a 2.5 to 3.5 radius; arrowheads and chevrons open at 90 degrees with
-5.5 long arms; dots are `dot()` (tiny stroked circles that grow with the stroke).
+5.5 long arms; dots are `dot()` (tiny stroked circles that grow with the stroke); stars and polygons use
+`star()` and `poly()`, which round their points off.
+
+The build then scales each icon to one optical size (`src/fit.mjs`): up to 8% larger, about the centre, and
+never past 9.75 from it, so drawings in the 3 to 21 live area end up filling about 2.5 to 21.5. The geometry
+is scaled, not transformed, so the stroke width stays true.
 
 ## Publish an update
 

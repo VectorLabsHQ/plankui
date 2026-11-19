@@ -21,6 +21,8 @@ export const R = (x, y, width, height, rx = 0) => ({ t: "rect", a: rx ? { x, y, 
 /** A dot: a tiny circle that takes its size from the stroke. */
 export const dot = (cx, cy) => ({ t: "circle", a: { cx, cy, r: 0.4 } });
 /** An ellipse, optionally turned about its centre. */
+/** A rounded rectangle turned about its centre. */
+export const Rt = (x, y, width, height, rx, turn) => ({ t: "rect", a: { x, y, width, height, rx, transform: `rotate(${turn} ${x + width / 2} ${y + height / 2})` } });
 export const E = (cx, cy, rx, ry, turn = 0) => ({ t: "ellipse", a: turn ? { cx, cy, rx, ry, transform: `rotate(${turn} ${cx} ${cy})` } : { cx, cy, rx, ry } });
 
 /** A gear with flat, softly joined teeth. */
@@ -36,16 +38,42 @@ function gear(cx, cy, outer, inner, teeth) {
   return `M${pts.join("L")}z`;
 }
 
-/** A star; round joins soften its points. */
-function star(cx, cy, outer, inner, points = 5) {
+/** A closed polygon with each corner rounded off by r (a number, or one per corner). */
+function roundPoly(pts, r) {
+  const k = pts.length;
+  const at = (i) => pts[(i + k) % k];
+  const toward = (p, q, d) => {
+    const len = Math.hypot(q[0] - p[0], q[1] - p[1]);
+    const t = Math.min(d / len, 0.5);
+    return [p[0] + (q[0] - p[0]) * t, p[1] + (q[1] - p[1]) * t];
+  };
+  let d = "";
+  for (let i = 0; i < k; i++) {
+    const rad = Array.isArray(r) ? r[i] : r;
+    const a = toward(at(i), at(i - 1), rad);
+    const b = toward(at(i), at(i + 1), rad);
+    d += `${i ? "L" : "M"}${n(a[0])} ${n(a[1])}Q${n(at(i)[0])} ${n(at(i)[1])} ${n(b[0])} ${n(b[1])}`;
+  }
+  return d + "z";
+}
+
+/** A star with softened points: the tips round off more than the inner corners. */
+function star(cx, cy, outer, inner, points = 5, tip = outer * 0.17, notch = inner * 0.14) {
   const pts = [];
   for (let i = 0; i < points * 2; i++) {
     const r = i % 2 ? inner : outer;
     const a = -Math.PI / 2 + (Math.PI / points) * i;
-    pts.push(`${n(cx + r * Math.cos(a))} ${n(cy + r * Math.sin(a))}`);
+    pts.push([cx + r * Math.cos(a), cy + r * Math.sin(a)]);
   }
-  return `M${pts.join("L")}z`;
+  return roundPoly(pts, pts.map((_, i) => (i % 2 ? notch : tip)));
 }
+
+/** A regular polygon with soft corners. */
+const poly = (cx, cy, r, sides, rot = -90, corner = 2) =>
+  roundPoly(Array.from({ length: sides }, (_, i) => {
+    const a = ((rot + (360 / sides) * i) * Math.PI) / 180;
+    return [cx + r * Math.cos(a), cy + r * Math.sin(a)];
+  }), corner);
 
 /** A circle broken into short arcs. */
 function dashedCircle(cx, cy, r, parts = 8, gap = 0.42) {
@@ -96,7 +124,7 @@ const BOOKMARK = "M6 6a2.5 2.5 0 0 1 2.5-2.5h7A2.5 2.5 0 0 1 18 6v14l-6-4-6 4z";
 const BULB = ["M9 17.5v-1.75c0-1.2-.7-2-1.5-2.9a5.5 5.5 0 1 1 9 0c-.8.9-1.5 1.7-1.5 2.9v1.75z", "M10 20.75h4"];
 const ZAP = "M13 3.5 5 13.5h6.5L11 20.5l8-10h-6.5z";
 const MAPPIN = "M12 20.75s-6.5-5.4-6.5-10.75a6.5 6.5 0 0 1 13 0c0 5.35-6.5 10.75-6.5 10.75z";
-const BADGE = star(12, 12, 9, 7.6, 8);
+const BADGE = star(12, 12, 9, 7.6, 8, 1.2, 1);
 /** A rocket flying up and to the right, nose at the top right. */
 const ROCKET2 = "M20.25 3.75c-4.6.2-8.3 2.3-10.75 6.25l-2 3 3.5 3.5 3-2c3.95-2.45 6.05-6.15 6.25-10.75z";
 
@@ -233,8 +261,7 @@ export const icons = [
   ["list-checks", "Text", "tasks todo done", ["M11 6.5h9M11 12h9M11 17.5h9", "m3.75 6.5 1.5 1.5 3-3", "m3.75 16.5 1.5 1.5 3-3"]],
   ["text-cursor", "Text", "input field type caret", ["M13 6.5h4.5a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H13", "M7 6.5h-.5a3 3 0 0 0-3 3v5a3 3 0 0 0 3 3H7", "M10 4v16M8 4h4M8 20h4"]],
   ["type", "Text", "font text letter", ["M5 7V5.5h14V7", "M12 5.5v13", "M9.25 18.5h5.5"]],
-  ["quote", "Text", "blockquote citation", ["M5 11.5h4a1 1 0 0 1 1 1V16a1.5 1.5 0 0 1-1.5 1.5h-2A1.5 1.5 0 0 1 5 16v-5.5C5 8 6.25 6.5 8.5 6", "M14 11.5h4a1 1 0 0 1 1 1V16a1.5 1.5 0 0 1-1.5 1.5h-2A1.5 1.5 0 0 1 14 16v-5.5c0-2.5 1.25-4 3.5-4.5"]],
-
+  ["quote", "Text", "blockquote citation", ["M9.5 6c-3.5 1-5.5 3.75-5.5 7.5V17a1.5 1.5 0 0 0 1.5 1.5H8A1.5 1.5 0 0 0 9.5 17v-2.5A1.5 1.5 0 0 0 8 13H4", "M20 6c-3.5 1-5.5 3.75-5.5 7.5V17a1.5 1.5 0 0 0 1.5 1.5h2.5A1.5 1.5 0 0 0 20 17v-2.5a1.5 1.5 0 0 0-1.5-1.5h-4"]],
   /* ───── Files ───── */
   ["file", "Files", "document page blank", [FILE, FILE_FOLD]],
   ["file-text", "Files", "document page notes", [FILE, FILE_FOLD, "M9 12.5h6M9 16h4"]],
@@ -291,7 +318,7 @@ export const icons = [
   ["chart-column", "Charts", "stats analytics graph bars", [AXIS, R(8, 9, 3.5, 7.5, 1.25), R(14, 5, 3.5, 11.5, 1.25)]],
   ["chart-bar", "Charts", "stats horizontal bars", [AXIS, R(7.5, 6, 9, 3.5, 1.25), R(7.5, 12.5, 12, 3.5, 1.25)]],
   ["line-chart", "Charts", "stats trend graph", [AXIS, "M7.5 14.5l3.5-4 3 2.5 4.5-5.5"]],
-  ["chart-spline", "Charts", "stats curve smooth graph", [AXIS, "M7.5 15.5c2.75 0 2.5-7 5.5-7 2.75 0 2.25 4.5 5.5 3"]],
+  ["chart-spline", "Charts", "stats curve smooth graph", [AXIS, "M7.5 15.5c1.5-3 3-5 4.75-5s2.25 3 4 3 2.25-2.25 3.25-5"]],
   ["pie-chart", "Charts", "stats share donut", ["M12 3.75V12h8.25A8.25 8.25 0 1 1 12 3.75z", "M14.5 2.75a7 7 0 0 1 6.75 6.75H14.5z"]],
   ["target", "Charts", "goal aim focus", [RING, C(12, 12, 5.25), dot(12, 12)]],
   ["radar", "Charts", "scan detect sweep", [RING, "M12 7.5a4.5 4.5 0 1 0 4.5 4.5", "M12 12l3.5-3.5", dot(12, 12)]],
@@ -304,7 +331,7 @@ export const icons = [
   ["cart", "Commerce", "shop basket checkout", ["M3.5 4h2l2.1 10.25a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 1.95-1.55L20.5 8H6.4", C(10, 19.5, 1.25), C(17, 19.5, 1.25)]],
   ["gift", "Commerce", "present reward", [R(4, 8, 16, 4, 1.5), "M5.5 12v6.5a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V12", "M12 8v12.5", "M12 8C11 5.5 9.5 4 8 4a2 2 0 0 0 0 4", "M12 8c1-2.5 2.5-4 4-4a2 2 0 0 1 0 4"]],
   ["gem", "Commerce", "premium pro diamond", ["M7 4.5h10l3.5 4.5-8.5 11L3.5 9z", "M3.5 9h17", "M10 4.5 9 9l3 11 3-11-1-4.5"]],
-  ["piggy-bank", "Commerce", "savings money", ["M5 12.5c0-3.9 3.4-6.5 7.75-6.5 3 0 5.25 1.2 6.4 3.25h1.35v4.25l-1.75.6c-.5 1.25-1.35 2.25-2.5 2.95v2.95h-2.75v-2h-3v2H7.75v-3.1C6 15.7 5 14.3 5 12.5z", "M5 12.5c-1.25 0-1.75-.9-1.75-1.75", dot(16, 10.5), "M10.5 8.75H14"]],
+  ["piggy-bank", "Commerce", "savings money", ["M5 11.75C5 8.6 7.9 6 11.5 6c2.7 0 5 1.45 6 3.5h1a1 1 0 0 1 1 1V13a1 1 0 0 1-1 1h-1.1c-.5 1.1-1.4 2-2.4 2.6V19a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1.5h-2V19a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-2.85C5.95 15 5 13.5 5 11.75z", "M5 11.5c-1.25 0-2-.75-2-1.75", dot(15.25, 10.25), "M10 9h3"]],
   ["scale", "Commerce", "balance legal compare weight", ["M12 4v16.5", "M8.5 20.5h7", "M4.5 7h15", "M4.5 7 2.25 13.25a2.4 2.4 0 0 0 4.5 0z", "M19.5 7l-2.25 6.25a2.4 2.4 0 0 0 4.5 0z"]],
   ["calculator", "Commerce", "math numbers", [R(5, 3, 14, 18, 3), R(8, 6, 8, 3.5, 1), dot(8.5, 13), dot(12, 13), dot(15.5, 13), dot(8.5, 17), dot(12, 17), dot(15.5, 17)]],
   ["trophy", "Commerce", "award winner prize", ["M7.5 4h9v5.5a4.5 4.5 0 0 1-9 0z", "M7.5 6.25H4.5v1.5a3 3 0 0 0 3.25 3", "M16.5 6.25h3v1.5a3 3 0 0 1-3.25 3", "M12 14v3.5", "M8.5 20.25h7", "M9.5 20.25V19a1.5 1.5 0 0 1 1.5-1.5h2a1.5 1.5 0 0 1 1.5 1.5v1.25"]],
@@ -329,8 +356,7 @@ export const icons = [
   ["building", "Places", "office company business", ["M5 20.5v-15a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v15", "M15 9.5h2.5a2 2 0 0 1 2 2v9", "M3.5 20.5h17", "M8.5 7.5h3M8.5 11h3M8.5 14.5h3"]],
   ["car", "Places", "vehicle drive transport", ["M5 17H4.5a1 1 0 0 1-1-1v-3.4a2 2 0 0 1 .6-1.4l1.65-1.7 1.4-2.8a2 2 0 0 1 1.8-1.2h6.1a2 2 0 0 1 1.8 1.2l1.4 2.8 1.65 1.7a2 2 0 0 1 .6 1.4V16a1 1 0 0 1-1 1H19", "M9 17h6", C(7, 17, 2), C(17, 17, 2), "M5.75 9.5h12.5"]],
   ["utensils", "Places", "food restaurant eat", ["M6.5 3.5v6a2 2 0 0 0 4 0v-6", "M8.5 3.5v17", "M17.5 20.5v-17c-2 1-3.5 3.5-3.5 7V13h3.5"]],
-  ["footprints", "Places", "steps walk track", ["M7.5 12.5c-1.75 0-3-2-3-4.75S5.6 3.5 7.5 3.5s2.75 2 2.75 4.25-.6 4.75-2.75 4.75z", "M5.25 15.5h4.5v1.25a2.25 2.25 0 0 1-4.5 0z", "M16.5 16.5c1.75 0 3-2 3-4.75S18.4 7.5 16.5 7.5s-2.75 2-2.75 4.25.6 4.75 2.75 4.75z", "M14.25 19.25h4.5v.25a2.25 2.25 0 0 1-4.5 0z"]],
-
+  ["footprints", "Places", "steps walk track", [E(8, 10.5, 2.75, 4, -10), R(5.9, 17, 4.25, 3.75, 1.88), E(16, 7, 2.75, 4, 10), R(13.85, 13.5, 4.25, 3.75, 1.88)]],
   /* ───── Nature ───── */
   ["sun", "Nature", "light mode day bright", [C(12, 12, 3.75), "M12 3v1.75M12 19.25V21M3 12h1.75M19.25 12H21M5.6 5.6l1.25 1.25M17.15 17.15l1.25 1.25M5.6 18.4l1.25-1.25M17.15 6.85l1.25-1.25"]],
   ["moon", "Nature", "dark mode night", ["M19.5 14.25A7.75 7.75 0 1 1 9.75 4.5a7 7 0 0 0 9.75 9.75z"]],
@@ -388,7 +414,7 @@ export const icons = [
 
   ["tag-plus", "Commerce", "add label price", [TAG, dot(8, 8), "M14.5 12.25v4.5M12.25 14.5h4.5"]],
   ["percent", "Commerce", "discount sale rate", ["M18 6 6 18", C(7.5, 7.5, 2.25), C(16.5, 16.5, 2.25)]],
-  ["coins", "Commerce", "money cash change", [C(14.5, 14.5, 6), "M15.43 8.57A6 6 0 1 0 8.57 15.43", "M14.5 12v5"]],
+  ["coins", "Commerce", "money cash change", [C(15, 15, 5.5), C(15, 15, 2.25), "M14.47 9.53A5.5 5.5 0 1 0 9.53 14.47"]],
   ["banknote", "Commerce", "money cash bill", [R(2.75, 6, 18.5, 12, 3), C(12, 12, 2.5), dot(6.5, 12), dot(17.5, 12)]],
   ["truck", "Commerce", "delivery shipping", ["M3.5 16.5V6.5A1.5 1.5 0 0 1 5 5h8.5A1.5 1.5 0 0 1 15 6.5v11", "M15 9h3l2.5 3.25v4.25a1 1 0 0 1-1 1", "M3.5 16.5a1 1 0 0 0 1 1h1", "M9.5 17.5h6", C(7.5, 17.5, 2), C(17.5, 17.5, 2)]],
   ["package", "Commerce", "parcel shipping box order", ["M12 3.5l7.5 4.25v8.5L12 20.5l-7.5-4.25v-8.5z", "M4.5 7.75 12 12l7.5-4.25", "M12 12v8.5", "M8.25 5.63 15.75 9.88v3.5"]],
@@ -399,7 +425,7 @@ export const icons = [
 
   ["headphones", "Media", "audio music listen", ["M4 14.5V13a8 8 0 0 1 16 0v1.5", R(4, 13.5, 4, 6.5, 1.75), R(16, 13.5, 4, 6.5, 1.75)]],
   ["speaker", "Media", "audio sound music", [R(5.5, 3, 13, 18, 3), C(12, 14.5, 3.25), dot(12, 7.5)]],
-  ["film", "Media", "movie video cinema", [SQ, "M8.5 3.75v16.5M15.5 3.75v16.5M3.75 9.25h4.75M3.75 14.75h4.75M15.5 9.25h4.75M15.5 14.75h4.75"]],
+  ["film", "Media", "movie video cinema", [SQ, "M8 3.75v16.5M16 3.75v16.5", "M3.75 12H8M16 12h4.25"]],
   ["music", "Media", "song audio note", ["M9 18V5.5l11-2v12", C(6.5, 18, 2.5), C(17.5, 15.5, 2.5)]],
   ["battery", "Devices", "power charge level", [R(2.5, 6.5, 15.75, 11, 2.5), "M21.25 10.5v3", "M6.5 10.5v3M9.75 10.5v3"]],
   ["battery-charging", "Devices", "power charge plug", [R(2.5, 6.5, 15.75, 11, 2.5), "M21.25 10.5v3", "M11.25 9.5 9.5 12h3l-1.75 2.5"]],
@@ -416,8 +442,7 @@ export const icons = [
   ["toggle-right", "Status", "switch on", [R(2.5, 6.5, 19, 11, 5.5), C(16, 12, 2.75)]],
   ["power-off", "Status", "shutdown disabled", ["M12 3.5v4", "M7 6.5a7.5 7.5 0 1 0 10 0", "M3.5 3.5l17 17"]],
   ["shield-alert", "Status", "security warning", [SHIELD, "M12 8.5v4", dot(12, 15.75)]],
-  ["alert-octagon", "Status", "stop error danger", ["M15.44 3.7 20.3 8.56v6.88l-4.86 4.86H8.56L3.7 15.44V8.56L8.56 3.7z", "M12 8v4.5", dot(12, 16)]],
-
+  ["alert-octagon", "Status", "stop error danger", [poly(12, 12, 8.75, 8, -112.5, 1.75), "M12 8v4.5", dot(12, 16)]],
   ["phone-call", "Communication", "ringing call", [PHONE, "M14.5 3.75a6.5 6.5 0 0 1 5.75 5.75", "M14.5 7.25a3 3 0 0 1 2.25 2.25"]],
   ["voicemail", "Communication", "message recording", [C(7, 12, 3.5), C(17, 12, 3.5), "M7 15.5h10"]],
   ["mail-open", "Communication", "email read", ["M3.5 10.5 12 4l8.5 6.5V18a2.5 2.5 0 0 1-2.5 2.5H6A2.5 2.5 0 0 1 3.5 18z", "M3.75 10.75 12 16l8.25-5.25"]],
@@ -430,7 +455,7 @@ export const icons = [
 
   ["cloud-rain", "Nature", "weather rain shower", [CLOUD_S, "M8 18.5l-.75 2M12 18.5l-.75 2M16 18.5l-.75 2"]],
   ["cloud-lightning", "Nature", "weather storm thunder", ["M8 16H7a4 4 0 0 1-.6-7.95A5.75 5.75 0 0 1 17.6 6.8 4.6 4.6 0 0 1 17 16", "M13.25 13 11.5 16.5h3l-1.75 4"]],
-  ["cloud-sun", "Nature", "weather partly cloudy", [C(8, 8, 2.5), "M8 2.75v1M2.75 8h1M4.3 4.3l.7.7M11.7 4.3l-.7.7", "M11 20a3.25 3.25 0 0 1-.5-6.45A4.75 4.75 0 0 1 19.7 12.5a3.75 3.75 0 0 1-.45 7.5z"]],
+  ["cloud-sun", "Nature", "weather partly cloudy", [C(8, 8, 2.5), "M8 2.75v1M2.75 8h1M4.3 4.3l.7.7M11.7 4.3l-.7.7", "M9.5 20a3.25 3.25 0 0 1-.5-6.45A4.75 4.75 0 0 1 18.2 12.5a3.75 3.75 0 0 1-.45 7.5z"]],
   ["snowflake", "Nature", "winter cold snow", ["M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9", "m9.5 4.5 2.5 2 2.5-2", "m9.5 19.5 2.5-2 2.5 2"]],
   ["wind", "Nature", "weather air breeze", ["M3.5 9H14a2.75 2.75 0 1 0-2.75-2.75", "M3.5 15h13a3 3 0 1 1-3 3", "M3.5 12h6"]],
   ["leaf", "Nature", "eco plant green", ["M5 19c0-8 4.5-14 15-14.5-.5 10.5-6.5 15-15 14.5z", "M5 19l7-7"]],
@@ -450,7 +475,7 @@ export const icons = [
   ["app-window", "Interface", "browser application", [R(3, 4, 18, 16, 3), "M3 10h18", dot(6.5, 7), dot(10, 7)]],
   ["blocks", "Interface", "components modules build", [R(3.5, 13.5, 7, 7, 2), R(13.5, 13.5, 7, 7, 2), R(13.5, 3.5, 7, 7, 2)]],
   ["shapes", "Interface", "triangle circle square design", ["M7 3.75l3.5 6.5h-7z", C(17, 7, 3.5), R(13.5, 13.5, 7, 7, 2), C(7, 17, 3.5)]],
-  ["swatch-book", "Interface", "colours palette theme", [R(3.5, 3.5, 7, 17, 2.5), dot(7, 16.75), "M10.5 8.5l3.75-3.75a2 2 0 0 1 2.83 0l2.17 2.17a2 2 0 0 1 0 2.83L10.5 18", "M8 20.5h10.5a2 2 0 0 0 2-2V16a2 2 0 0 0-2-2h-5"]],
+  ["swatch-book", "Interface", "colours palette theme", [R(4, 3.5, 6.5, 17, 2.5), dot(7.25, 16.75), "M10.5 7.75l3.1-3.1a1.5 1.5 0 0 1 2.12 0l2.47 2.47a1.5 1.5 0 0 1 0 2.12L10.5 17", "M8 20.5h10.5a1.5 1.5 0 0 0 1.5-1.5v-3.5a1.5 1.5 0 0 0-1.5-1.5h-5.07"]],
   ["mouse-pointer", "Interface", "cursor click select", ["M5 4.5 18.5 10l-5.75 2.25L10.5 18z", "m12.75 12.25 5.5 5.5"]],
   ["mouse-pointer-click", "Interface", "cursor click tap", ["M9.5 9.5l10.5 4.5-4.5 1.75L13.75 20z", "m15.5 15.75 4 4", "M9.5 3.25v2.5M3.25 9.5h2.5M4.75 4.75l1.75 1.75"]],
   ["scan", "Interface", "scanner capture frame", ["M4 9V6.5A2.5 2.5 0 0 1 6.5 4H9", "M15 4h2.5A2.5 2.5 0 0 1 20 6.5V9", "M20 15v2.5a2.5 2.5 0 0 1-2.5 2.5H15", "M9 20H6.5A2.5 2.5 0 0 1 4 17.5V15", "M7.5 12h9"]],
@@ -460,7 +485,7 @@ export const icons = [
   /* ───── 0.3.0: variants ───── */
   ["rocket-2", "Development", "launch start ship diagonal get started", [ROCKET2, "M9 10.75H5.75L3.5 13.5l4 .5", "M13.25 15v3.25L10.5 20.5 10 16.5", C(14.75, 9.25, 1.5)]],
   ["rocket-launch", "Development", "launch start ship deploy flame", [ROCKET2, "M9 10.75H5.75L3.5 13.5l4 .5", "M13.25 15v3.25L10.5 20.5 10 16.5", C(14.75, 9.25, 1.5), "M7 17c-1.6.4-2.75 1.6-3.25 3.75 2.15-.5 3.35-1.65 3.25-3.75"]],
-  ["paintbrush", "Media", "theme theming paint design brush", ["M13.5 8.5 18 4a1.41 1.41 0 0 1 2 2l-4.5 4.5", "M12.66 7.66 16.34 11.34 14.84 12.84 11.16 9.16z", "M11.16 9.16 3.25 14.25a8 8 0 0 0 6.5 6.5l5.09-7.91", "M10.25 13.75l-3 3"]],
+  ["paintbrush", "Media", "theme theming paint design brush", ["M15.15 10.62 20.46 5.31A1.25 1.25 0 0 0 18.69 3.55L13.38 8.85", Rt(11.28, 8.47, 3.5, 5, 0.75, -45), "M13.03 13.45C12.92 16.17 9.95 18.85 5.78 18.22C5.15 14.05 7.83 11.08 10.56 10.97"]],
   ["sparkles-2", "Interface", "ai magic new skills shine", ["M10 6.5c.6 3.6 2.4 5.4 6 6-3.6.6-5.4 2.4-6 6-.6-3.6-2.4-5.4-6-6 3.6-.6 5.4-2.4 6-6z", "M17.5 3.5c.25 1.6 1.05 2.4 2.65 2.65-1.6.25-2.4 1.05-2.65 2.65-.25-1.6-1.05-2.4-2.65-2.65 1.6-.25 2.4-1.05 2.65-2.65z", C(18, 17.5, 1.25)]],
   ["shapes-2", "Interface", "triangle circle square design icons", ["M12 3.5l3.75 6.5h-7.5z", R(3.5, 13.25, 7, 7, 2), C(17, 16.75, 3.5)]],
   ["badge", "Status", "verified seal award", [BADGE]],
@@ -481,12 +506,12 @@ export const icons = [
   ["paint-bucket", "Media", "fill colour paint", ["M10 5.5l7.5 7.5-5.75 5.75a2 2 0 0 1-2.83 0L4.25 14.08a2 2 0 0 1 0-2.83z", "M10 5.5 7.5 3", "M3.75 12.75H17.5", "M21 18c0 1-.65 1.75-1.5 1.75S18 19 18 18c0-.9 1.5-2.75 1.5-2.75S21 17.1 21 18z"]],
   ["paint-roller", "Media", "paint wall colour", [R(4, 3.5, 14, 5, 2), "M18 6h1.5A1.5 1.5 0 0 1 21 7.5V10a1.5 1.5 0 0 1-1.5 1.5H12a1 1 0 0 0-1 1V14", R(9.5, 14, 3, 7, 1)]],
   ["pipette", "Media", "colour picker eyedropper", ["M13.75 7.75l2.5-2.5a1.77 1.77 0 0 1 2.5 2.5l-2.5 2.5", "M12.5 6.5l5 5", "M13.75 7.75 6 15.5l-1.25 3.75 3.75-1.25 7.75-7.75"]],
-  ["brush-vertical", "Media", "paint design art", [R(10, 3, 4, 8, 2), R(8, 11, 8, 3, 1), "M8.5 14v2.5a3.5 3.5 0 0 0 7 0V14"]],
-  ["pen-tool", "Media", "vector bezier design path", ["M5.5 13.5 8 6l4-2.5L16 6l2.5 7.5L12 20.5z", "M12 11.25V3.75", C(12, 13, 1.75)]],
+  ["brush-vertical", "Media", "paint design art", ["M10.75 10.5V4.25a1.25 1.25 0 0 1 2.5 0V10.5", R(9.5, 10.5, 5, 3.5, 0.75), "M13.75 14c1.25 1.5 1.75 3.25 1.25 4.75S13.25 21 12 21.5c-1.25-.5-2.5-1.25-3-2.75s0-3.25 1.25-4.75"]],
+  ["pen-tool", "Media", "vector bezier design path", ["M12 3.5 6.5 10l1.25 6.75h8.5L17.5 10z", "M12 3.5V11", C(12, 12.25, 1.25), "M8 20.25h8"]],
   ["ruler", "Media", "measure size design", ["M4.6 15.4 15.4 4.6a1.5 1.5 0 0 1 2.1 0l1.9 1.9a1.5 1.5 0 0 1 0 2.1L8.6 19.4a1.5 1.5 0 0 1-2.1 0l-1.9-1.9a1.5 1.5 0 0 1 0-2.1z", "M7.5 12.5 9 14M10 10l2 2M12.5 7.5 14 9"]],
   ["eraser", "Media", "delete clear rubber", ["M8.5 20.5 4.3 16.3a1.5 1.5 0 0 1 0-2.1L13.9 4.6a1.5 1.5 0 0 1 2.1 0l4.4 4.4a1.5 1.5 0 0 1 0 2.1L11 20.5", "M8 20.5h12", "M8.6 9.9l5.5 5.5"]],
-  ["wand", "Media", "magic tool effect", ["M4 20l8-8", "M15 3.75v2M15 12.25v2M9.75 9h2M18.25 9h2M11.5 5.5l1.25 1.25M17.25 11.25l1.25 1.25M18.5 5.5l-1.25 1.25"]],
-  ["wand-sparkles", "Media", "magic ai generate", ["M4 20l8.5-8.5", "M16 3.5c.4 2.4 1.6 3.6 4 4-2.4.4-3.6 1.6-4 4-.4-2.4-1.6-3.6-4-4 2.4-.4 3.6-1.6 4-4z", "M6 4v2.5M4.75 5.25h2.5"]],
+  ["wand", "Media", "magic tool effect", [Rt(2.25, 13.25, 14, 3, 1.5, -45), "M11.02 10.86l2.12 2.12", "M17 2.75v2M17 9.25v2M21.25 7h-2M14.75 7h-2M14 4l1.25 1.25M20 4l-1.25 1.25M20 10l-1.25-1.25"]],
+  ["wand-sparkles", "Media", "magic ai generate", [Rt(2.25, 13.25, 14, 3, 1.5, -45), "M11.02 10.86l2.12 2.12", "M17.25 3c.45 2.4 1.35 3.3 3.75 3.75-2.4.45-3.3 1.35-3.75 3.75-.45-2.4-1.35-3.3-3.75-3.75 2.4-.45 3.3-1.35 3.75-3.75z", "M8 3.5v3M6.5 5h3", dot(19.5, 13.5)]],
   ["sparkle", "Interface", "ai star shine", ["M12 3.5c.9 5.2 3.3 7.6 8.5 8.5-5.2.9-7.6 3.3-8.5 8.5-.9-5.2-3.3-7.6-8.5-8.5 5.2-.9 7.6-3.3 8.5-8.5z"]],
   ["stars", "Interface", "rating reviews favourite", [star(12, 7.25, 4.25, 2), star(6.5, 16.5, 4.25, 2), star(17.5, 16.5, 4.25, 2)]],
   ["droplets", "Nature", "water liquid colour", ["M7 10.5c1.8 2.1 3.25 3.9 3.25 5.75a3.25 3.25 0 0 1-6.5 0c0-1.85 1.45-3.65 3.25-5.75z", "M16.5 3.5c2.2 2.5 4 4.8 4 7a4 4 0 0 1-8 0c0-2.2 1.8-4.5 4-7z"]],
@@ -497,7 +522,7 @@ export const icons = [
 
   /* Space and rewards */
   ["satellite-dish", "Development", "signal broadcast antenna", ["M4.5 9.5a10 10 0 0 0 10 10z", "M9.5 14.5l4-4", "M15 3.5a5.5 5.5 0 0 1 5.5 5.5", "M15 6.5A2.5 2.5 0 0 1 17.5 9"]],
-  ["telescope", "Development", "explore discover space", ["M3.75 13.5 15.75 7l2 3.5-12 6.5z", "M15.75 7l1.75-1 2 3.5-1.75 1", "M11.15 14.08 8.5 21M11.15 14.08l3.85 6.92"]],
+  ["telescope", "Development", "explore discover space", [Rt(5, 7, 14, 5, 2.5, -25), "M13.06 11.77 9 21M13.06 11.77 16.5 21"]],
   ["planet", "Development", "space world saturn", [C(12, 12, 5.5), "M6.75 14c-2.6 1.4-3.9 2.8-3.4 3.7.8 1.4 5.8.4 11-2.4 5.2-2.9 8.9-6.4 8.1-7.8-.4-.8-2-.9-4.2-.4"]],
   ["shooting-star", "Development", "wish launch fast", [star(15, 9, 5.5, 2.6), "M3.5 20.5 9 15", "M3.5 15.5 6 13", "M8.5 20.5 11 18"]],
   ["medal", "Commerce", "award prize winner", [C(12, 15, 4.75), "M9.08 11.25 6.5 3.5h3.25l2.25 5.5 2.25-5.5h3.25l-2.58 7.75"]],
@@ -506,10 +531,10 @@ export const icons = [
 
   /* Shapes */
   ["triangle", "Interface", "shape", ["M10.3 4.9a2 2 0 0 1 3.4 0l6.95 12.1a2 2 0 0 1-1.7 3H5.05a2 2 0 0 1-1.7-3z"]],
-  ["hexagon", "Interface", "shape", ["M12 3l7.8 4.5v9L12 21l-7.8-4.5v-9z"]],
-  ["pentagon", "Interface", "shape", ["M12 3.5l8.56 6.22-3.27 10.06H6.71L3.44 9.72z"]],
-  ["octagon", "Interface", "shape stop", ["M15.44 3.7 20.3 8.56v6.88l-4.86 4.86H8.56L3.7 15.44V8.56L8.56 3.7z"]],
-  ["diamond", "Interface", "shape rhombus", ["M12 3 21 12l-9 9-9-9z"]],
+  ["hexagon", "Interface", "shape", [poly(12, 12, 9, 6, -90, 2)]],
+  ["pentagon", "Interface", "shape", [poly(12, 12.5, 9, 5, -90, 2)]],
+  ["octagon", "Interface", "shape stop", [poly(12, 12, 8.75, 8, -112.5, 1.75)]],
+  ["diamond", "Interface", "shape rhombus", [poly(12, 12, 9, 4, -90, 2)]],
   ["squircle", "Interface", "shape app icon", ["M12 3.5c7 0 8.5 1.5 8.5 8.5s-1.5 8.5-8.5 8.5S3.5 19 3.5 12 5 3.5 12 3.5z"]],
   ["square-dashed", "Interface", "selection draft empty", ["M3.75 8.25a4.5 4.5 0 0 1 4.5-4.5", "M15.75 3.75a4.5 4.5 0 0 1 4.5 4.5", "M20.25 15.75a4.5 4.5 0 0 1-4.5 4.5", "M8.25 20.25a4.5 4.5 0 0 1-4.5-4.5", "M10.75 3.75h2.5M20.25 10.75v2.5M13.25 20.25h-2.5M3.75 13.25v-2.5"]],
   ["cone", "Interface", "shape 3d", ["M12 3.5 5 17.5", "M12 3.5l7 14", E(12, 17.5, 7, 3)]],
@@ -566,7 +591,7 @@ export const icons = [
   ["folder-search", "Files", "find directory", [FOLDER, C(11.5, 12.75, 2), "m13 14.25 1.75 1.75"]],
   ["file-x", "Files", "delete document error", [FILE, FILE_FOLD, "m10 12.5 4 4M14 12.5l-4 4"]],
   ["images", "Files", "gallery photos pictures", [R(7, 7, 13.5, 13.5, 3.5), C(11.25, 11.25, 1.25), "M20.5 16.5l-2.9-2.8a1.5 1.5 0 0 0-2.1 0L9 20.25", "M17 7v-.5a3 3 0 0 0-3-3H6.5a3 3 0 0 0-3 3V14a3 3 0 0 0 3 3H7"]],
-  ["star-half", "Interface", "rating half", [star(12, 12.6, 9, 4.3), "M12 3.6v13.3"]],
+  ["star-half", "Interface", "rating half", [star(12, 12.6, 9, 4.3), "M12 5v11.75"]],
   ["star-off", "Interface", "unfavourite remove", [star(12, 12.6, 9, 4.3), "M4 4l16 16"]],
   ["bookmark-plus", "Interface", "save add", [BOOKMARK, "M12 7.5v5M9.5 10h5"]],
   ["bookmark-check", "Interface", "saved", [BOOKMARK, "m9.5 10 1.75 1.75 3.25-3.5"]],
@@ -577,8 +602,8 @@ export const icons = [
   ["cloud-check", "Files", "synced saved", [CLOUD, "m9.5 13.5 2 2 3.5-3.75"]],
   ["lightbulb-off", "Development", "idea off dark", [...BULB, "M4 4l16 16"]],
   ["zap-off", "Interface", "power off flash", [ZAP, "M4 4l16 16"]],
-  ["wrench", "Development", "tool settings fix", ["M15 3.75a5 5 0 0 0-4.6 7L4.3 16.85a2 2 0 0 0 2.85 2.85l6.1-6.1a5 5 0 0 0 7-4.6l-2.75 2.75-2.85-.5-.5-2.85z"]],
-  ["hammer", "Development", "build tool construct", ["M14 4.5l5.5 5.5-2.5 2.5-5.5-5.5z", "M12.75 8.75 4.5 17a1.75 1.75 0 0 0 2.5 2.5l8.25-8.25"]],
+  ["wrench", "Development", "tool settings fix", ["M11 10.88A4.75 4.75 0 0 1 17.28 4.46L14.83 6.91A1.6 1.6 0 0 0 17.09 9.17L19.54 6.72A4.75 4.75 0 0 1 13.12 13L6.87 19.25A1.5 1.5 0 0 1 4.75 17.13z"]],
+  ["hammer", "Development", "build tool construct", [Rt(10.5, 6.5, 10, 4, 1.5, 45), "M13.21 9.03 4.62 17.62a1.25 1.25 0 0 0 1.76 1.76l8.59-8.59"]],
   ["map-pin-off", "Places", "location hidden", [MAPPIN, C(12, 10, 2.4), "M4 4l16 16"]],
   ["map-pin-check", "Places", "location confirmed", [MAPPIN, "m9.5 10 1.75 1.75 3.25-3.5"]],
   ["wifi-off", "Communication", "offline no network", ["M4.5 9.5a10.6 10.6 0 0 1 15 0", "M7.25 12.75a6.7 6.7 0 0 1 9.5 0", dot(12, 18.75), "M3.5 3.5l17 17"]],

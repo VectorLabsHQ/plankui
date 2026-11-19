@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M7.5 12.5c-1.75 0-3-2-3-4.75S5.6 3.5 7.5 3.5s2.75 2 2.75 4.25-.6 4.75-2.75 4.75z"/>
-  <path d="M5.25 15.5h4.5v1.25a2.25 2.25 0 0 1-4.5 0z"/>
-  <path d="M16.5 16.5c1.75 0 3-2 3-4.75S18.4 7.5 16.5 7.5s-2.75 2-2.75 4.25.6 4.75 2.75 4.75z"/>
-  <path d="M14.25 19.25h4.5v.25a2.25 2.25 0 0 1-4.5 0z"/>
+  <ellipse cx="7.68" cy="10.38" rx="2.97" ry="4.32" transform="rotate(-10 7.68 10.38)"/>
+  <rect x="5.412" y="17.4" width="4.59" height="4.05" rx="2.03"/>
+  <ellipse cx="16.32" cy="6.6" rx="2.97" ry="4.32" transform="rotate(10 16.32 6.6)"/>
+  <rect x="13.998" y="13.62" width="4.59" height="4.05" rx="2.03"/>
 </svg>

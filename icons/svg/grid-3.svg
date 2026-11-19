@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <rect x="3.75" y="3.75" width="3.5" height="3.5" rx="1"/>
-  <rect x="10.25" y="3.75" width="3.5" height="3.5" rx="1"/>
-  <rect x="16.75" y="3.75" width="3.5" height="3.5" rx="1"/>
-  <rect x="3.75" y="10.25" width="3.5" height="3.5" rx="1"/>
-  <rect x="10.25" y="10.25" width="3.5" height="3.5" rx="1"/>
-  <rect x="16.75" y="10.25" width="3.5" height="3.5" rx="1"/>
-  <rect x="3.75" y="16.75" width="3.5" height="3.5" rx="1"/>
-  <rect x="10.25" y="16.75" width="3.5" height="3.5" rx="1"/>
-  <rect x="16.75" y="16.75" width="3.5" height="3.5" rx="1"/>
+  <rect x="3.09" y="3.09" width="3.78" height="3.78" rx="1.08"/>
+  <rect x="10.11" y="3.09" width="3.78" height="3.78" rx="1.08"/>
+  <rect x="17.13" y="3.09" width="3.78" height="3.78" rx="1.08"/>
+  <rect x="3.09" y="10.11" width="3.78" height="3.78" rx="1.08"/>
+  <rect x="10.11" y="10.11" width="3.78" height="3.78" rx="1.08"/>
+  <rect x="17.13" y="10.11" width="3.78" height="3.78" rx="1.08"/>
+  <rect x="3.09" y="17.13" width="3.78" height="3.78" rx="1.08"/>
+  <rect x="10.11" y="17.13" width="3.78" height="3.78" rx="1.08"/>
+  <rect x="17.13" y="17.13" width="3.78" height="3.78" rx="1.08"/>
 </svg>

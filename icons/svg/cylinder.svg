@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <ellipse cx="12" cy="6" rx="7" ry="2.75"/>
-  <path d="M5 6v12c0 1.5 3.1 2.75 7 2.75s7-1.25 7-2.75V6"/>
+  <ellipse cx="12" cy="5.52" rx="7.56" ry="2.97"/>
+  <path d="M4.44 5.52v12.96c0 1.62 3.348 2.97 7.56 2.97s7.56 -1.35 7.56 -2.97V5.52"/>
 </svg>

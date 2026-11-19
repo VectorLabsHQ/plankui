@@ -91,6 +91,15 @@ const PHONE = "M8.6 4.1 6.4 3.9A2 2 0 0 0 4.3 5.6c-.6 7.4 6.7 14.7 14.1 14.1a2 2
 /** A soft wave across the grid at height y. */
 const wave = (y) => `M3 ${y}c1.5 0 2.25-1.5 4.5-1.5s3 1.5 4.5 1.5 2.25-1.5 4.5-1.5 3 1.5 4.5 1.5`;
 
+const HEART = "M12 19.5S3.75 15 3.75 9.25A4.25 4.25 0 0 1 12 7.6a4.25 4.25 0 0 1 8.25 1.65C20.25 15 12 19.5 12 19.5z";
+const BOOKMARK = "M6 6a2.5 2.5 0 0 1 2.5-2.5h7A2.5 2.5 0 0 1 18 6v14l-6-4-6 4z";
+const BULB = ["M9 17.5v-1.75c0-1.2-.7-2-1.5-2.9a5.5 5.5 0 1 1 9 0c-.8.9-1.5 1.7-1.5 2.9v1.75z", "M10 20.75h4"];
+const ZAP = "M13 3.5 5 13.5h6.5L11 20.5l8-10h-6.5z";
+const MAPPIN = "M12 20.75s-6.5-5.4-6.5-10.75a6.5 6.5 0 0 1 13 0c0 5.35-6.5 10.75-6.5 10.75z";
+const BADGE = star(12, 12, 9, 7.6, 8);
+/** A rocket flying up and to the right, nose at the top right. */
+const ROCKET2 = "M20.25 3.75c-4.6.2-8.3 2.3-10.75 6.25l-2 3 3.5 3.5 3-2c3.95-2.45 6.05-6.15 6.25-10.75z";
+
 export const categories = ["Arrows", "Interface", "Status", "Users", "Text", "Files", "Communication", "Media", "Devices", "Charts", "Commerce", "Development", "Places", "Nature"];
 
 export const icons = [
@@ -451,4 +460,135 @@ export const icons = [
   ["timer", "Interface", "stopwatch countdown", [C(12, 13.5, 7.25), "M10 2.75h4", "M12 13.5V10", "M18 7.5l1.25-1.25"]],
   ["hourglass", "Interface", "wait time loading", ["M6.5 3.5h11M6.5 20.5h11", "M7.5 3.5c0 4 1.5 6 4.5 8.5-3 2.5-4.5 4.5-4.5 8.5", "M16.5 3.5c0 4-1.5 6-4.5 8.5 3 2.5 4.5 4.5 4.5 8.5"]],
   ["alarm", "Interface", "clock wake reminder", [C(12, 13, 7), "M12 9.5V13l2 1.5", "M4 5.5l2.5-2.25M20 5.5l-2.5-2.25", "M6.5 19.5l-1.25 1.5M17.5 19.5l1.25 1.5"]],
+
+  /* ───── 0.3.0: variants ───── */
+  ["rocket-2", "Development", "launch start ship diagonal get started", [ROCKET2, "M9 10.75H5.75L3.5 13.5l4 .5", "M13.25 15v3.25L10.5 20.5 10 16.5", C(15.5, 8.5, 1.75)]],
+  ["rocket-launch", "Development", "launch start ship deploy flame", [ROCKET2, "M9 10.75H5.75L3.5 13.5l4 .5", "M13.25 15v3.25L10.5 20.5 10 16.5", C(15.5, 8.5, 1.75), "M7 17c-1.6.4-2.75 1.6-3.25 3.75 2.15-.5 3.35-1.65 3.75-3.25"]],
+  ["paintbrush", "Media", "theme theming paint design brush", ["M13.72 8.72l4.5-4.5a1.1 1.1 0 0 1 1.56 1.56l-4.5 4.5", "M12.66 7.66 16.34 11.34 14.84 12.84 11.16 9.16z", "M11.16 9.16 3.25 14.25a8 8 0 0 0 6.5 6.5l5.09-7.91", "M10.25 13.75l-3 3"]],
+  ["sparkles-2", "Interface", "ai magic new skills shine", ["M10 6.5c.6 3.6 2.4 5.4 6 6-3.6.6-5.4 2.4-6 6-.6-3.6-2.4-5.4-6-6 3.6-.6 5.4-2.4 6-6z", "M17.5 3.5c.25 1.6 1.05 2.4 2.65 2.65-1.6.25-2.4 1.05-2.65 2.65-.25-1.6-1.05-2.4-2.65-2.65 1.6-.25 2.4-1.05 2.65-2.65z", C(18, 17.5, 1.25)]],
+  ["shapes-2", "Interface", "triangle circle square design icons", ["M12 3.5l3.75 6.5h-7.5z", R(3.75, 13, 7.25, 7.25, 2), C(16.75, 16.6, 3.6)]],
+  ["badge", "Status", "verified seal award", [BADGE]],
+  ["badge-plus", "Status", "add new seal", [BADGE, "M12 8.75v6.5M8.75 12h6.5"]],
+  ["badge-percent", "Status", "discount sale seal", [BADGE, "M15 9l-6 6", dot(9.25, 9.25), dot(14.75, 14.75)]],
+  ["badge-alert", "Status", "warning seal attention", [BADGE, "M12 8v4.5", dot(12, 15.75)]],
+  ["grid-3", "Interface", "layout tiles apps nine", [3.75, 9.75, 15.75].flatMap((y) => [3.75, 9.75, 15.75].map((x) => R(x, y, 4.5, 4.5, 1.25)))],
+  ["cog", "Interface", "settings gear preferences", [gear(12, 12, 9, 6.8, 6), C(12, 12, 3)]],
+  ["house", "Interface", "home building chimney", ["M4 10.5 12 4l8 6.5V18a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 18z", "M15.5 7.35V4.5H18v4.9", "M10 20.5v-5h4v5"]],
+
+  /* Theming and design */
+  ["contrast", "Media", "theme light dark mode", [RING, "M12 3.25v17.5", "M12 8h5.5M12 12h7M12 16h5.5"]],
+  ["sun-moon", "Nature", "theme light dark mode auto", [C(12, 12, 4.5), "M12 7.5v9", "M12 3v1.5M12 19.5V21M3 12h1.5M5.6 5.6l1.1 1.1M5.6 18.4l1.1-1.1", dot(18.5, 6.5), "M19 15.75v2.5M17.75 17h2.5"]],
+  ["moon-star", "Nature", "night dark mode sleep", ["M19.5 14.25A7.75 7.75 0 1 1 9.75 4.5a7 7 0 0 0 9.75 9.75z", "M17.25 3.5V7M15.5 5.25H19"]],
+  ["sunrise", "Nature", "morning dawn", ["M3 18h18", "M7.5 18a4.5 4.5 0 0 1 9 0", "M12 3.5V9", "M9.5 6 12 3.5 14.5 6", "M4.6 12.6l1.1 1.1M19.4 12.6l-1.1 1.1", "M8 21h8"]],
+  ["sunset", "Nature", "evening dusk", ["M3 18h18", "M7.5 18a4.5 4.5 0 0 1 9 0", "M12 3.5V9", "m9.5 6.5 2.5 2.5 2.5-2.5", "M4.6 12.6l1.1 1.1M19.4 12.6l-1.1 1.1", "M8 21h8"]],
+  ["sun-dim", "Nature", "brightness low light", [C(12, 12, 4), dot(12, 4.5), dot(12, 19.5), dot(4.5, 12), dot(19.5, 12), dot(6.7, 6.7), dot(17.3, 17.3), dot(6.7, 17.3), dot(17.3, 6.7)]],
+  ["paint-bucket", "Media", "fill colour paint", ["M10 5.5l7.5 7.5-5.75 5.75a2 2 0 0 1-2.83 0L4.25 14.08a2 2 0 0 1 0-2.83z", "M10 5.5 7.5 3", "M3.75 12.75H17.5", "M20.5 16c0 1-.7 2-1.5 2s-1.5-1-1.5-2c0-.9 1.5-2.75 1.5-2.75s1.5 1.85 1.5 2.75z"]],
+  ["paint-roller", "Media", "paint wall colour", [R(4, 3.5, 14, 5, 2), "M18 6h1.5A1.5 1.5 0 0 1 21 7.5V10a1.5 1.5 0 0 1-1.5 1.5H12a1 1 0 0 0-1 1V14", R(9.5, 14, 3, 7, 1)]],
+  ["pipette", "Media", "colour picker eyedropper", ["M14.5 5.5l1.7-1.7a2.12 2.12 0 0 1 3 3l-1.7 1.7", "M12.5 5.5l6 6", "M14 9 6.5 16.5 5 19l2.5-1.5L15 10"]],
+  ["brush-vertical", "Media", "paint design art", [R(10, 3, 4, 8, 2), R(8, 11, 8, 3, 1), "M8.5 14v2.5a3.5 3.5 0 0 0 7 0V14"]],
+  ["pen-tool", "Media", "vector bezier design path", ["M5.5 13.5 8 6l4-2.5L16 6l2.5 7.5L12 20.5z", "M12 11.25V3.75", C(12, 13, 1.75)]],
+  ["ruler", "Media", "measure size design", ["M4.6 15.4 15.4 4.6a1.5 1.5 0 0 1 2.1 0l1.9 1.9a1.5 1.5 0 0 1 0 2.1L8.6 19.4a1.5 1.5 0 0 1-2.1 0l-1.9-1.9a1.5 1.5 0 0 1 0-2.1z", "M7.5 12.5 9 14M10 10l2 2M12.5 7.5 14 9"]],
+  ["eraser", "Media", "delete clear rubber", ["M8.5 20.5 4.3 16.3a1.5 1.5 0 0 1 0-2.1L13.9 4.6a1.5 1.5 0 0 1 2.1 0l4.4 4.4a1.5 1.5 0 0 1 0 2.1L11 20.5", "M8 20.5h12", "M8.6 9.9l5.5 5.5"]],
+  ["wand", "Media", "magic tool effect", ["M4 20l9.5-9.5", "M15 4v2.5M15 11.5V14M10.5 9H13M17.5 9H20M12 6l1.25 1.25M16.75 10.75 18 12M18 6l-1.25 1.25"]],
+  ["wand-sparkles", "Media", "magic ai generate", ["M4 20l9.5-9.5", "M16 3.5c.4 2.4 1.6 3.6 4 4-2.4.4-3.6 1.6-4 4-.4-2.4-1.6-3.6-4-4 2.4-.4 3.6-1.6 4-4z", "M6 4v2.5M4.75 5.25h2.5"]],
+  ["sparkle", "Interface", "ai star shine", ["M12 3.5c.9 5.2 3.3 7.6 8.5 8.5-5.2.9-7.6 3.3-8.5 8.5-.9-5.2-3.3-7.6-8.5-8.5 5.2-.9 7.6-3.3 8.5-8.5z"]],
+  ["stars", "Interface", "rating reviews favourite", [star(12, 8, 4.75, 2.25), star(6.75, 16, 4.75, 2.25), star(17.25, 16, 4.75, 2.25)]],
+  ["droplets", "Nature", "water liquid colour", ["M7 9c2 2.3 3.5 4.3 3.5 6.3a3.5 3.5 0 0 1-7 0c0-2 1.5-4 3.5-6.3z", "M15.5 3.5c2.4 2.75 4.5 5.25 4.5 7.75a4.5 4.5 0 0 1-9 0c0-2.5 2.1-5 4.5-7.75z"]],
+  ["spray-can", "Media", "paint graffiti colour", [R(5.5, 9, 8, 12, 2), "M7.5 9V6.5h4V9", "M9.5 6.5V4.5h2", dot(16, 5.5), dot(18.5, 4), dot(18.5, 7), dot(20.75, 5.5)]],
+  ["blend", "Media", "mix overlap colour", [C(9, 12, 5.5), C(15, 12, 5.5)]],
+  ["layers-2", "Interface", "stack levels", ["M12 5.5l8.25 4.25L12 14 3.75 9.75z", "M3.75 14.25 12 18.5l8.25-4.25"]],
+  ["baseline", "Text", "text colour font underline", ["M4 20h16", "M7 16 12 4.5 17 16", "M8.75 12h6.5"]],
+
+  /* Space and rewards */
+  ["satellite-dish", "Development", "signal broadcast antenna", ["M4.5 9.5a10 10 0 0 0 10 10z", "M9.5 14.5l4-4", "M15 3.5a5.5 5.5 0 0 1 5.5 5.5", "M15 6.5A2.5 2.5 0 0 1 17.5 9"]],
+  ["telescope", "Development", "explore discover space", ["M3.75 13.5 15.75 7l2 3.5-12 6.5z", "M15.75 7l1.75-1 2 3.5-1.75 1", "M11 13.5 8 21M12.25 13l3.25 8"]],
+  ["planet", "Development", "space world saturn", [C(12, 12, 5.5), "M6.75 14c-2.6 1.4-3.9 2.8-3.4 3.7.8 1.4 5.8.4 11-2.4 5.2-2.9 8.9-6.4 8.1-7.8-.4-.8-2-.9-4.2-.4"]],
+  ["shooting-star", "Development", "wish launch fast", [star(15, 9, 5.5, 2.6), "M3.5 20.5 9 15", "M3.5 15.5 6 13", "M8.5 20.5 11 18"]],
+  ["medal", "Commerce", "award prize winner", [C(12, 15, 4.75), "M9 10.75 6.5 3.5h3.25l2.25 5.5 2.25-5.5h3.25L15 10.75"]],
+  ["award", "Commerce", "prize badge ribbon", [C(12, 9, 5.5), "M8.75 13.5 7.75 21 12 18.75 16.25 21l-1-7.5"]],
+  ["crown", "Commerce", "premium pro king", ["M4 7.5 8 12l4-7 4 7 4-4.5-1.5 10.5h-13z", "M6 21h12"]],
+
+  /* Shapes */
+  ["triangle", "Interface", "shape", ["M10.3 4.9a2 2 0 0 1 3.4 0l6.95 12.1a2 2 0 0 1-1.7 3H5.05a2 2 0 0 1-1.7-3z"]],
+  ["hexagon", "Interface", "shape", ["M12 3l7.8 4.5v9L12 21l-7.8-4.5v-9z"]],
+  ["pentagon", "Interface", "shape", ["M12 3.5l8.56 6.22-3.27 10.06H6.71L3.44 9.72z"]],
+  ["octagon", "Interface", "shape stop", ["M15.44 3.7 20.3 8.56v6.88l-4.86 4.86H8.56L3.7 15.44V8.56L8.56 3.7z"]],
+  ["diamond", "Interface", "shape rhombus", ["M12 3 21 12l-9 9-9-9z"]],
+  ["squircle", "Interface", "shape app icon", ["M12 3.5c7 0 8.5 1.5 8.5 8.5s-1.5 8.5-8.5 8.5S3.5 19 3.5 12 5 3.5 12 3.5z"]],
+  ["square-dashed", "Interface", "selection draft empty", ["M3.75 8.25a4.5 4.5 0 0 1 4.5-4.5", "M15.75 3.75a4.5 4.5 0 0 1 4.5 4.5", "M20.25 15.75a4.5 4.5 0 0 1-4.5 4.5", "M8.25 20.25a4.5 4.5 0 0 1-4.5-4.5", "M10.75 3.75h2.5M20.25 10.75v2.5M13.25 20.25h-2.5M3.75 13.25v-2.5"]],
+  ["cone", "Interface", "shape 3d", ["M12 3.5 5 17.5", "M12 3.5l7 14", E(12, 17.5, 7, 3)]],
+  ["cylinder", "Interface", "shape 3d database", [E(12, 6, 7, 2.75), "M5 6v12c0 1.5 3.1 2.75 7 2.75s7-1.25 7-2.75V6"]],
+  ["pyramid", "Interface", "shape 3d", ["M12 3.5 3.5 17l8.5 3.5 8.5-3.5z", "M12 3.5v17"]],
+  ["sphere", "Interface", "shape 3d ball", [RING, "M3.25 12c0 2.3 3.9 4.2 8.75 4.2s8.75-1.9 8.75-4.2"]],
+  ["heart-off", "Interface", "unlike remove", [HEART, "M4 4l16 16"]],
+  ["heart-pulse", "Interface", "health heartbeat", [HEART, "M5.5 12h3.25l1.5-2.5 2.5 5 1.5-2.5h4.25"]],
+  ["heart-crack", "Interface", "broken sad", [HEART, "M12 7.6 10.5 11l3 2-1.5 3.5"]],
+
+  /* Circle and square containers */
+  ["plus-square", "Status", "add new create", [SQ, "M12 8.5v7M8.5 12h7"]],
+  ["minus-square", "Status", "remove subtract", [SQ, "M8.5 12h7"]],
+  ["x-square", "Status", "close cancel remove", [SQ, "m9.25 9.25 5.5 5.5M14.75 9.25l-5.5 5.5"]],
+  ["alert-square", "Status", "warning error", [SQ, "M12 7.75v5", dot(12, 16.25)]],
+  ["code-square", "Development", "source embed", [SQ, "m10 9.5-2.5 2.5 2.5 2.5", "m14 9.5 2.5 2.5-2.5 2.5"]],
+  ["user-square", "Users", "avatar account profile", [SQ, C(12, 10, 2.75), "M7.25 20.25a5 5 0 0 1 9.5 0"]],
+  ["arrow-up-circle", "Arrows", "upload top", [RING, "M12 16V8", "m8.5 11.5 3.5-3.5 3.5 3.5"]],
+  ["arrow-left-circle", "Arrows", "back previous", [RING, "M16 12H8", "m11.5 8.5-3.5 3.5 3.5 3.5"]],
+  ["arrow-up-right-circle", "Arrows", "external open", [RING, "M9 15l6-6", "M10 9h5v5"]],
+  ["arrow-up-square", "Arrows", "top upload", [SQ, "M12 16V8", "m8.5 11.5 3.5-3.5 3.5 3.5"]],
+  ["arrow-down-square", "Arrows", "bottom download", [SQ, "M12 8v8", "m8.5 12.5 3.5 3.5 3.5-3.5"]],
+  ["arrow-left-square", "Arrows", "back previous", [SQ, "M16 12H8", "m11.5 8.5-3.5 3.5 3.5 3.5"]],
+  ["arrow-right-square", "Arrows", "next forward", [SQ, "M8 12h8", "m12.5 8.5 3.5 3.5-3.5 3.5"]],
+  ["chevron-right-circle", "Arrows", "next", [RING, "m10.5 8.5 3.5 3.5-3.5 3.5"]],
+  ["chevron-left-circle", "Arrows", "back", [RING, "M13.5 8.5 10 12l3.5 3.5"]],
+  ["chevron-up-circle", "Arrows", "collapse", [RING, "M8.5 13.5 12 10l3.5 3.5"]],
+  ["chevron-down-circle", "Arrows", "expand", [RING, "m8.5 10.5 3.5 3.5 3.5-3.5"]],
+  ["play-circle", "Media", "start video", [RING, "M10 8.9a.8.8 0 0 1 1.2-.7l4.6 3.1a.8.8 0 0 1 0 1.4l-4.6 3.1a.8.8 0 0 1-1.2-.7z"]],
+  ["pause-circle", "Media", "hold", [RING, "M10 9v6M14 9v6"]],
+  ["stop-circle", "Media", "end record", [RING, R(9, 9, 6, 6, 1.5)]],
+  ["percent-circle", "Commerce", "discount sale", [RING, "M15 9l-6 6", dot(9.25, 9.25), dot(14.75, 14.75)]],
+  ["dollar-circle", "Commerce", "money price", [RING, "M12 6.5v11", "M14.5 9.25c-.4-.8-1.3-1.25-2.5-1.25-1.5 0-2.5.75-2.5 1.8 0 2.45 5 1.3 5 3.95 0 1.05-1 1.85-2.6 1.85-1.4 0-2.4-.6-2.75-1.45"]],
+  ["equal", "Interface", "math same", ["M5.5 9.5h13M5.5 14.5h13"]],
+  ["divide", "Interface", "math split", ["M5 12h14", dot(12, 7), dot(12, 17)]],
+  ["sigma", "Interface", "math sum total", ["M17.5 6V4.5h-11L12 12l-5.5 7.5h11V18"]],
+  ["infinity", "Interface", "loop forever unlimited", ["M12 12c-2-2.5-3.5-4-5.5-4a4 4 0 0 0 0 8c2 0 3.5-1.5 5.5-4zm0 0c2 2.5 3.5 4 5.5 4a4 4 0 0 0 0-8c-2 0-3.5 1.5-5.5 4z"]],
+
+  /* Variants of common icons */
+  ["bell-ring", "Status", "notification alarm ringing", [BELL, BELL_TONGUE, "M2.75 7.5a7.5 7.5 0 0 1 2.5-4.25", "M21.25 7.5a7.5 7.5 0 0 0-2.5-4.25"]],
+  ["bell-plus", "Status", "add notification subscribe", [BELL, BELL_TONGUE, "M19 2.75v4.5M16.75 5h4.5"]],
+  ["bell-dot", "Status", "unread notification", [BELL, BELL_TONGUE, C(19.5, 4.5, 2)]],
+  ["mail-plus", "Communication", "new email compose", ["M20.5 12V8.5a3 3 0 0 0-3-3h-11a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3H13", "M4.25 7.5 12 13l7.75-5.5", "M18.5 15v6M15.5 18h6"]],
+  ["mail-check", "Communication", "email sent read", ["M20.5 12V8.5a3 3 0 0 0-3-3h-11a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3H13", "M4.25 7.5 12 13l7.75-5.5", "m15 18.5 2 2 4-4"]],
+  ["message-plus", "Communication", "new comment chat", [CHAT, "M12 7.75v6M9 10.75h6"]],
+  ["message-dots", "Communication", "typing chat comment", [CHAT, dot(8.5, 10.75), dot(12, 10.75), dot(15.5, 10.75)]],
+  ["calendar-check", "Interface", "event done booked", [...CAL, "m9 15 2 2 4-4"]],
+  ["calendar-plus", "Interface", "new event add", [...CAL, "M12 12.5v6M9 15.5h6"]],
+  ["calendar-x", "Interface", "cancel event", [...CAL, "m9.5 13 5 5M14.5 13l-5 5"]],
+  ["calendar-clock", "Interface", "schedule time event", ["M20.25 11V9a4 4 0 0 0-4-4h-8.5a4 4 0 0 0-4 4v7.5a4 4 0 0 0 4 4H11", "M8 3v4M16 3v4M3.75 10h7", C(17, 17, 4), "M17 15.25V17l1.25.75"]],
+  ["folder-minus", "Files", "remove directory", [FOLDER, "M9.25 13.25h5.5"]],
+  ["folder-check", "Files", "done directory", [FOLDER, "m9.5 13.25 1.75 1.75 3.25-3.5"]],
+  ["folder-x", "Files", "delete directory", [FOLDER, "m10 11.25 4 4M14 11.25l-4 4"]],
+  ["folder-search", "Files", "find directory", [FOLDER, C(11.5, 12.75, 2), "m13 14.25 1.75 1.75"]],
+  ["file-x", "Files", "delete document error", [FILE, FILE_FOLD, "m10 12.5 4 4M14 12.5l-4 4"]],
+  ["images", "Files", "gallery photos pictures", [R(7, 7, 13.5, 13.5, 3.5), C(11.25, 11.25, 1.25), "M20.5 16.5l-2.9-2.8a1.5 1.5 0 0 0-2.1 0L9 20.25", "M17 7v-.5a3 3 0 0 0-3-3H6.5a3 3 0 0 0-3 3V14a3 3 0 0 0 3 3H7"]],
+  ["star-half", "Interface", "rating half", [star(12, 12.6, 9, 4.3), "M12 3.6v13.3"]],
+  ["star-off", "Interface", "unfavourite remove", [star(12, 12.6, 9, 4.3), "M4 4l16 16"]],
+  ["bookmark-plus", "Interface", "save add", [BOOKMARK, "M12 7.5v5M9.5 10h5"]],
+  ["bookmark-check", "Interface", "saved", [BOOKMARK, "m9.5 10 1.75 1.75 3.25-3.5"]],
+  ["shield-x", "Status", "insecure blocked", [SHIELD, "m9.75 9.75 4.5 4.5M14.25 9.75l-4.5 4.5"]],
+  ["shield-plus", "Status", "protect add", [SHIELD, "M12 9v6M9 12h6"]],
+  ["shield-off", "Status", "unprotected disabled", [SHIELD, "M4 4l16 16"]],
+  ["cloud-off", "Files", "offline disconnected", [CLOUD, "M3.5 3.5l17 17"]],
+  ["cloud-check", "Files", "synced saved", [CLOUD, "m9.5 13.5 2 2 3.5-3.75"]],
+  ["lightbulb-off", "Development", "idea off dark", [...BULB, "M4 4l16 16"]],
+  ["zap-off", "Interface", "power off flash", [ZAP, "M4 4l16 16"]],
+  ["wrench", "Development", "tool settings fix", ["M15 3.75a5 5 0 0 0-4.6 7L4.3 16.85a2 2 0 0 0 2.85 2.85l6.1-6.1a5 5 0 0 0 7-4.6l-2.75 2.75-2.85-.5-.5-2.85z"]],
+  ["hammer", "Development", "build tool construct", ["M14 4.5l5.5 5.5-2.5 2.5-5.5-5.5z", "M12.75 8.75 4.5 17a1.75 1.75 0 0 0 2.5 2.5l8.25-8.25"]],
+  ["map-pin-off", "Places", "location hidden", [MAPPIN, C(12, 10, 2.4), "M4 4l16 16"]],
+  ["map-pin-check", "Places", "location confirmed", [MAPPIN, "m9.5 10 1.75 1.75 3.25-3.5"]],
+  ["wifi-off", "Communication", "offline no network", ["M4.5 9.5a10.6 10.6 0 0 1 15 0", "M7.25 12.75a6.7 6.7 0 0 1 9.5 0", "M10 16a2.8 2.8 0 0 1 4 0", dot(12, 18.75), "M3.5 3.5l17 17"]],
+  ["signal", "Communication", "network strength bars", ["M5 19v-3M9.5 19v-6M14 19v-9M18.5 19V5"]],
+  ["volume-low", "Media", "sound quiet", [SPEAKER, "M16 9a4 4 0 0 1 0 6"]],
+  ["video-off", "Media", "camera off", [R(3, 6, 12.5, 12, 3), "M15.5 10.25l4.2-2.4a.9.9 0 0 1 1.3.8v6.7a.9.9 0 0 1-1.3.8l-4.2-2.4", "M3 3l18 18"]],
+  ["camera-off", "Media", "photo disabled", ["M4 8.5A2.5 2.5 0 0 1 6.5 6h1.75l1.25-2h5l1.25 2h1.75A2.5 2.5 0 0 1 20 8.5v8a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5z", C(12, 12.5, 3.25), "M3 3l18 18"]],
+  ["phone-off", "Communication", "hang up end call", [PHONE, "M3.5 3.5l17 17"]],
 ];

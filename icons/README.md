@@ -1,6 +1,6 @@
 # PlankUI Icons
 
-319 outline icons drawn for [PlankUI](https://plankui.com) on a 24 px grid: one stroke weight, round caps and
+438 outline icons drawn for [PlankUI](https://plankui.com) on a 24 px grid: one stroke weight, round caps and
 joins, and the same soft corners as the components. React components and plain SVG. MIT licence, by Vector Labs.
 
 Browse, search and copy them at [plankui.com/docs/icons](https://plankui.com/docs/icons).

@@ -50,7 +50,7 @@ export interface DropdownMenuContentProps extends Omit<React.ComponentProps<type
 export function DropdownMenuContent({ className, side = "bottom", align = "center", sideOffset = 6, alignOffset, ...props }: DropdownMenuContentProps) {
   return (
     <Menu.Portal>
-      <Menu.Positioner side={side} align={align} sideOffset={sideOffset} alignOffset={alignOffset} className="z-[100]">
+      <Menu.Positioner side={side} align={align} sideOffset={sideOffset} alignOffset={alignOffset} className="z-[450]">
         <Menu.Popup className={cn(panel, className)} {...props} />
       </Menu.Positioner>
     </Menu.Portal>
@@ -146,7 +146,7 @@ export function DropdownMenuSubTrigger({
 export function DropdownMenuSubContent({ className, ...props }: Omit<React.ComponentProps<typeof Menu.Popup>, "className"> & { className?: string }) {
   return (
     <Menu.Portal>
-      <Menu.Positioner side="right" align="start" sideOffset={4} className="z-[100]">
+      <Menu.Positioner side="right" align="start" sideOffset={4} className="z-[450]">
         <Menu.Popup className={cn(panel, className)} {...props} />
       </Menu.Positioner>
     </Menu.Portal>

@@ -25,7 +25,7 @@ const item = menuItem;
 export function ContextMenuContent({ className, ...props }: Omit<React.ComponentProps<typeof Menu.Popup>, "className"> & { className?: string }) {
   return (
     <Menu.Portal>
-      <Menu.Positioner className="z-[100]">
+      <Menu.Positioner className="z-[450]">
         <Menu.Popup className={cn(panel, className)} {...props} />
       </Menu.Positioner>
     </Menu.Portal>
@@ -94,7 +94,7 @@ export function ContextMenuSubTrigger({ className, children, ...props }: Omit<Re
 export function ContextMenuSubContent({ className, ...props }: Omit<React.ComponentProps<typeof Menu.Popup>, "className"> & { className?: string }) {
   return (
     <Menu.Portal>
-      <Menu.Positioner side="right" align="start" sideOffset={4} className="z-[100]">
+      <Menu.Positioner side="right" align="start" sideOffset={4} className="z-[450]">
         <Menu.Popup className={cn(panel, className)} {...props} />
       </Menu.Positioner>
     </Menu.Portal>

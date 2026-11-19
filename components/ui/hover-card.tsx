@@ -11,7 +11,7 @@ export function HoverCardContent({ className, align = "center", sideOffset = 8, 
       <HC.Content
         align={align}
         sideOffset={sideOffset}
-        className={cn("vx-pop z-[100] w-72 vx-glass rounded-card border border-pop-border bg-pop p-4 text-ink shadow-pop outline-none", className)}
+        className={cn("vx-pop z-[450] w-72 vx-glass rounded-card border border-pop-border bg-pop p-4 text-ink shadow-pop outline-none", className)}
         {...props}
       />
     </HC.Portal>

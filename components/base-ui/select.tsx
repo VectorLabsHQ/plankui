@@ -62,7 +62,7 @@ export function SelectContent({
   const { position = "popper", ...rest } = props as typeof props & { position?: string };
   return (
     <SelectPrimitive.Portal>
-      <SelectPrimitive.Positioner alignItemWithTrigger={position === "item-aligned"} sideOffset={6} className="z-[100]">
+      <SelectPrimitive.Positioner alignItemWithTrigger={position === "item-aligned"} sideOffset={6} className="z-[450]">
         <SelectPrimitive.Popup
           className={cn(menuPanel, "relative min-w-[max(8rem,var(--anchor-width))]", className)}
           {...rest}

@@ -6,7 +6,7 @@
 
 /** The floating panel. */
 export const menuPanel =
-  "vx-pop vx-glass z-[100] min-w-[12rem] overflow-hidden rounded-[calc(16px*var(--radius-factor))] border border-pop-border bg-pop p-2 text-ink shadow-pop outline-none";
+  "vx-pop vx-glass z-[450] min-w-[12rem] overflow-hidden rounded-[calc(16px*var(--radius-factor))] border border-pop-border bg-pop p-2 text-ink shadow-pop outline-none";
 
 /** A row. Highlight comes from keyboard or pointer (data-highlighted) or an explicit data-active attribute. */
 export const menuItem =

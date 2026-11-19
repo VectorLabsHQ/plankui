@@ -63,7 +63,7 @@ export function Combobox({
         <ChevronsUpDownIcon className="size-4 shrink-0 text-muted" />
       </PopoverPrimitive.Trigger>
       <PopoverPrimitive.Portal>
-        <PopoverPrimitive.Positioner align="start" sideOffset={6} className="z-[100]">
+        <PopoverPrimitive.Positioner align="start" sideOffset={6} className="z-[450]">
         <PopoverPrimitive.Popup initialFocus={false} className={cn(menuPanel, "w-[var(--anchor-width)] min-w-56 p-0")}>
           <div className="flex items-center gap-2 border-b border-rule px-3">
             <SearchIcon className="size-4 text-muted" />

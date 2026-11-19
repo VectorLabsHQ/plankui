@@ -40,7 +40,7 @@ export interface PopoverContentProps extends Omit<React.ComponentProps<typeof Po
 export function PopoverContent({ className, side = "bottom", align = "center", sideOffset = 8, alignOffset, ...props }: PopoverContentProps) {
   return (
     <PopoverPrimitive.Portal>
-      <PopoverPrimitive.Positioner side={side} align={align} sideOffset={sideOffset} alignOffset={alignOffset} className="z-[100]">
+      <PopoverPrimitive.Positioner side={side} align={align} sideOffset={sideOffset} alignOffset={alignOffset} className="z-[450]">
         <PopoverPrimitive.Popup
           className={cn("vx-pop w-72 vx-glass rounded-card border border-pop-border bg-pop p-4 text-ink shadow-pop outline-none", className)}
           {...props}

@@ -39,7 +39,7 @@ export function HoverCardContent({
 }: Omit<React.ComponentProps<typeof HC.Popup>, "className"> & { className?: string; side?: Positioner["side"]; align?: Positioner["align"]; sideOffset?: number }) {
   return (
     <HC.Portal>
-      <HC.Positioner side={side} align={align} sideOffset={sideOffset} className="z-[100]">
+      <HC.Positioner side={side} align={align} sideOffset={sideOffset} className="z-[450]">
         <HC.Popup className={cn("vx-pop w-72 vx-glass rounded-card border border-pop-border bg-pop p-4 text-ink shadow-pop outline-none", className)} {...props} />
       </HC.Positioner>
     </HC.Portal>

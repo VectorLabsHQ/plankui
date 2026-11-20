@@ -26,7 +26,7 @@ npx plankui@latest add button select dialog
 
 `init` saves your choice of Radix UI or Base UI and adds the shared styles and class helper. `add` copies the component source and installs its dependencies. See the [installation guide](https://plankui.com/docs/installation) for Vite, Next.js, React Router, and manual setup.
 
-Run `npx plankui@latest list` to browse the catalog from your terminal.
+Run `npx plankui@latest list` to browse the catalog from your terminal. Works the same with `pnpm dlx`, `yarn dlx`, `bunx` or `deno run -A npm:`; the CLI installs dependencies with the package manager your project uses.
 
 ## Use PlankUI with an agent
 

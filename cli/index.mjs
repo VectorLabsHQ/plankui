@@ -89,7 +89,9 @@ function project() {
   const pm = existsSync(join(cwd, "pnpm-lock.yaml")) ? "pnpm"
     : existsSync(join(cwd, "yarn.lock")) ? "yarn"
     : existsSync(join(cwd, "bun.lockb")) || existsSync(join(cwd, "bun.lock")) ? "bun"
-    : "npm";
+    : existsSync(join(cwd, "deno.lock")) ? "deno"
+    // No lockfile yet: use whichever manager ran the CLI (pnpm dlx, yarn dlx, bunx).
+    : /^(pnpm|yarn|bun)\//.exec(process.env.npm_config_user_agent ?? "")?.[1] ?? "npm";
   return { pkg, deps, base, pm };
 }
 
@@ -102,7 +104,8 @@ function install(pm, packages, haveDeps) {
   }
   const verb = pm === "npm" ? "install" : "add";
   say(`${dim("installing")} ${missing.join(" ")}`);
-  const run = spawnSync(pm, [verb, ...missing], { cwd, stdio: "inherit", shell: process.platform === "win32" });
+  // Deno takes npm packages with an npm: prefix.
+  const run = spawnSync(pm, [verb, ...(pm === "deno" ? missing.map((p) => `npm:${p}`) : missing)], { cwd, stdio: "inherit", shell: process.platform === "win32" });
   if (run.status !== 0) fail(`${pm} ${verb} failed. Install these yourself: ${missing.join(" ")}`);
 }
 

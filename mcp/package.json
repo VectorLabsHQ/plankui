@@ -2,6 +2,7 @@
   "name": "@plankui/mcp",
   "version": "0.1.7",
   "description": "MCP server for PlankUI: gives Cursor, Claude Code, VS Code, Codex and other AI agents the real source, props and usage of every component.",
+  "mcpName": "io.github.VectorLabsHQ/plankui",
   "type": "module",
   "bin": {
     "plank-mcp": "server.mjs"
@@ -9,7 +10,8 @@
   "files": [
     "server.mjs",
     "registry.json",
-    "README.md"
+    "README.md",
+    "server.json"
   ],
   "engines": {
     "node": ">=18"

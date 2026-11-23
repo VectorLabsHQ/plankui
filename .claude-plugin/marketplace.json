@@ -1,0 +1,18 @@
+{
+  "name": "plankui",
+  "owner": {
+    "name": "Vector Labs",
+    "url": "https://plankui.com"
+  },
+  "metadata": {
+    "description": "PlankUI: React and Tailwind CSS v4 components for coding agents."
+  },
+  "plugins": [
+    {
+      "name": "plankui",
+      "source": "./",
+      "description": "PlankUI for Claude Code: a skill for building with PlankUI's React and Tailwind CSS v4 components, and the PlankUI MCP server with every component's source, props and usage.",
+      "version": "0.1.7"
+    }
+  ]
+}

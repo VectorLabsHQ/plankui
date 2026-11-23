@@ -48,6 +48,19 @@ For Cursor and other clients that use an `mcpServers` config, add the following 
 }
 ```
 
+To teach any agent (Claude Code, Codex, Cursor, Copilot and others) how to use PlankUI, add the skill:
+
+```bash
+npx skills add VectorLabsHQ/plankui
+```
+
+In Claude Code, the plugin installs the skill and the MCP server together:
+
+```
+/plugin marketplace add VectorLabsHQ/plankui
+/plugin install plankui@plankui
+```
+
 Try asking your agent to build a settings panel with PlankUI's Tabs, Switch, and Button. See the [MCP guide](https://plankui.com/docs/mcp) for setup in Codex, VS Code, and other clients.
 
 ## Repository layout
@@ -60,6 +73,7 @@ Try asking your agent to build a settings panel with PlankUI's Tabs, Switch, and
 | [cli](cli) | The `plankui` installer |
 | [icons](icons) | PlankUI Icons, the `@plankui/icons` package: React components and SVGs |
 | [mcp](mcp) | The `@plankui/mcp` server and component registry |
+| [skills/plankui](skills/plankui/SKILL.md) | The agent skill, also served as [AGENTS.md](AGENTS.md) |
 
 ## Browse components
 

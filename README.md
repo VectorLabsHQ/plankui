@@ -11,6 +11,8 @@
 [![MCP version](https://img.shields.io/npm/v/%40plankui%2Fmcp?label=MCP)](https://www.npmjs.com/package/@plankui/mcp)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
+<a href="https://www.producthunt.com/products/plankui?utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-plankui"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1324147&theme=light" alt="PlankUI on Product Hunt" width="250" height="54"></a>
+
 **91 free React components for Tailwind CSS v4.** Choose Radix UI or Base UI and copy the components into your project. Shared CSS variables power six themes, five styles, and light and dark mode.
 
 [Website](https://plankui.com) · [Docs](https://plankui.com/docs) · [Component playground](https://plankui.com/docs/components) · [MCP setup](https://plankui.com/docs/mcp)

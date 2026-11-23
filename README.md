@@ -28,6 +28,14 @@ npx plankui@latest add button select dialog
 
 `init` saves your choice of Radix UI or Base UI and adds the shared styles and class helper. `add` copies the component source and installs its dependencies. See the [installation guide](https://plankui.com/docs/installation) for Vite, Next.js, React Router, and manual setup.
 
+Already on shadcn? Every free component is also a shadcn registry item. Use `/r/shadcn/base/` for shadcn's base styles (the default) and `/r/shadcn/` for new-york and the radix styles:
+
+```bash
+npx shadcn@latest add https://plankui.com/r/shadcn/base/button.json
+```
+
+PlankUI's colours arrive as `plank-accent`, `plank-muted`, `plank-card` and `plank-ring`, so your shadcn components keep their look. See [With shadcn and v0](https://plankui.com/docs/installation#shadcn).
+
 Run `npx plankui@latest list` to browse the catalog from your terminal. Works the same with `pnpm dlx`, `yarn dlx`, `bunx` or `deno run -A npm:`; the CLI installs dependencies with the package manager your project uses.
 
 ## Use PlankUI with an agent

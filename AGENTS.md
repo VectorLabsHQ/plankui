@@ -5,6 +5,7 @@ PlankUI is a set of React 19 and Tailwind CSS v4 components whose source lives i
 ## Setting up
 - In a React 19 project with Tailwind CSS v4, run `npx plankui@latest init` once. It writes tokens.css, styles.css and the cn helper, and asks for Radix UI or Base UI.
 - pnpm, yarn, bun and deno work too (`pnpm dlx plankui@latest init`); the CLI installs packages with the project's own package manager.
+- In a project set up with shadcn (it has components.json), add with `npx shadcn@latest add https://plankui.com/r/shadcn/base/<name>.json` when its style starts with "base-", or `https://plankui.com/r/shadcn/<name>.json` otherwise. There, PlankUI's colours are named plank-accent, plank-muted, plank-card and plank-ring (`text-plank-muted`, `bg-plank-accent`), because shadcn uses the plain names for its own.
 
 ## Adding components
 - Add with the CLI: `npx plankui@latest add <name>`. It also adds the PlankUI files the component builds on and installs its npm packages. See every name with `npx plankui@latest list`.

@@ -13,7 +13,7 @@
 
 <a href="https://www.producthunt.com/products/plankui?utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-plankui"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1324147&theme=light" alt="PlankUI on Product Hunt" width="250" height="54"></a>
 
-**91 free React components for Tailwind CSS v4.** Choose Radix UI or Base UI and copy the components into your project. Shared CSS variables power six themes, five styles, and light and dark mode.
+**101 free React components for Tailwind CSS v4.** Choose Radix UI or Base UI and copy the components into your project. Shared CSS variables power six themes, five styles, and light and dark mode.
 
 [Website](https://plankui.com) · [Docs](https://plankui.com/docs) · [Component playground](https://plankui.com/docs/components) · [MCP setup](https://plankui.com/docs/mcp)
 
@@ -78,6 +78,7 @@ Try asking your agent to build a settings panel with PlankUI's Tabs, Switch, and
 | [components/ui](components/ui) | Free components, including the Radix UI implementations |
 | [components/base-ui](components/base-ui) | 27 dedicated Base UI implementations. The other components use shared source |
 | [styles](styles) and [lib](lib) | Theme tokens, base styles, and the class helper |
+| [templates](templates) | Complete screens built from PlankUI components |
 | [cli](cli) | The `plankui` installer |
 | [icons](icons) | PlankUI Icons, the `@plankui/icons` package: React components and SVGs |
 | [mcp](mcp) | The `@plankui/mcp` server and component registry |
@@ -107,6 +108,7 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 
 | Component | Description | CLI command |
 | --- | --- | --- |
+| [Checkbox card](https://plankui.com/docs/components/checkbox-card) | A whole card that toggles like a checkbox, for pick-any-number choices. | `npx plankui@latest add checkbox-card` |
 | [Fieldset](https://plankui.com/docs/components/fieldset) | Group related form controls under a native legend. | `npx plankui@latest add fieldset` |
 | [Textarea counter](https://plankui.com/docs/components/textarea-counter) | A multiline field that shows the character count and enforces a length limit. | `npx plankui@latest add textarea-counter` |
 | [Native select](https://plankui.com/docs/components/native-select) | A styled browser select that keeps the platform’s own picker and keyboard behavior. | `npx plankui@latest add native-select` |
@@ -132,6 +134,8 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 
 | Component | Description | CLI command |
 | --- | --- | --- |
+| [Info tip](https://plankui.com/docs/components/info-tip) | A small info icon beside a label that explains it on hover or focus. | `npx plankui@latest add info-tip` |
+| [Lightbox](https://plankui.com/docs/components/lightbox) | A grid of thumbnails that opens each image large, with previous and next. | `npx plankui@latest add lightbox` |
 | [Dialog](https://plankui.com/docs/components/dialog) | A modal window that traps focus and returns it to the trigger when closed. | `npx plankui@latest add dialog` |
 | [Popover](https://plankui.com/docs/components/popover) | Rich, interactive content anchored to a trigger. | `npx plankui@latest add popover` |
 | [Tooltip](https://plankui.com/docs/components/tooltip) | A short label on hover or focus, with an optional key hint. Wrap your app in TooltipProvider. | `npx plankui@latest add tooltip` |
@@ -160,6 +164,13 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 | Component | Description | CLI command |
 | --- | --- | --- |
 | [Figure](https://plankui.com/docs/components/figure) | Group an image, diagram, or code sample with a caption. | `npx plankui@latest add figure` |
+| [Typewriter](https://plankui.com/docs/components/typewriter) | Types words letter by letter with a blinking caret, then deletes them and types the next. | `npx plankui@latest add typewriter` |
+| [Text rotate](https://plankui.com/docs/components/text-rotate) | Swaps one word in a sentence on a timer, each new word rising into place. | `npx plankui@latest add text-rotate` |
+| [Code block](https://plankui.com/docs/components/code-block) | A block of code with a file name, line numbers, marked lines and a copy button. | `npx plankui@latest add code-block` |
+| [Timer](https://plankui.com/docs/components/timer) | A countdown or stopwatch with steady digits and start, pause and reset. | `npx plankui@latest add timer` |
+| [Resizable panels](https://plankui.com/docs/components/resizable) | Two panels with a handle between them that you drag or move with the arrow keys. | `npx plankui@latest add resizable` |
+| [Item](https://plankui.com/docs/components/item) | One row of a list: media, a title and description, and actions at the end. | `npx plankui@latest add item` |
+| [Citation](https://plankui.com/docs/components/citation) | A numbered source mark for AI answers that previews the source on hover. | `npx plankui@latest add citation` |
 | [Inline code](https://plankui.com/docs/components/inline-code) | Highlight short commands, identifiers, and code inside a sentence. | `npx plankui@latest add inline-code` |
 | [Timestamp](https://plankui.com/docs/components/timestamp) | Display a date or time with a machine-readable value. | `npx plankui@latest add timestamp` |
 | [Blockquote](https://plankui.com/docs/components/blockquote) | Set off a quotation with an accent rule and optional attribution. | `npx plankui@latest add blockquote` |
@@ -217,5 +228,7 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 | [Auth card](https://plankui.com/docs/components/auth-card) | Sign in, sign up and a one-time code step in one card. Uncontrolled, it hands you FormData. | `npx plankui@latest add auth-card` |
 | [Stat cards](https://plankui.com/docs/components/stat-cards) | KPI cards: a grey shell, a lit icon tile, the number and a white footer with the change. | `npx plankui@latest add stat-cards` |
 | [Agent limits](https://plankui.com/docs/components/agent-limits) | Usage against plan limits. Bars turn amber at 80% and red at the limit, with a note. | `npx plankui@latest add agent-limits` |
+
+**Templates** · [People](https://plankui.com/docs/templates/people) · [Calendar](https://plankui.com/docs/templates/calendar) · [Contact form](https://plankui.com/docs/templates/contact-form) · [Card grid](https://plankui.com/docs/templates/card-grid) · [Chat landing](https://plankui.com/docs/templates/chat-landing) · [Sign in](https://plankui.com/docs/templates/sign-in)
 
 [MIT license](LICENSE) · Built by Vector Labs

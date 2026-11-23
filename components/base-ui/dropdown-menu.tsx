@@ -74,7 +74,7 @@ export function DropdownMenuItem({
 }) {
   return (
     <Menu.Item
-      className={cn(item, destructive && "text-danger data-[highlighted]:bg-danger-wash [&_svg]:text-danger", className)}
+      className={cn(item, destructive && "text-danger-wash-ink data-[highlighted]:bg-danger-wash [&_svg]:text-danger-wash-ink", className)}
       onClick={(e) => {
         onClick?.(e);
         onSelect?.(e.nativeEvent);

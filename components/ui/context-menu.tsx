@@ -29,7 +29,7 @@ export function ContextMenuItem({
   ...props
 }: React.ComponentProps<typeof Menu.Item> & { shortcut?: string; destructive?: boolean }) {
   return (
-    <Menu.Item className={cn(item, destructive && "text-danger data-[highlighted]:bg-danger-wash [&_svg]:text-danger", className)} {...props}>
+    <Menu.Item className={cn(item, destructive && "text-danger-wash-ink data-[highlighted]:bg-danger-wash [&_svg]:text-danger-wash-ink", className)} {...props}>
       {children}
       {shortcut && <span className="ml-auto font-mono text-xs text-muted">{shortcut}</span>}
     </Menu.Item>

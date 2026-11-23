@@ -30,7 +30,7 @@ export function DropdownMenuItem({
 }: React.ComponentProps<typeof Menu.Item> & { shortcut?: string; destructive?: boolean }) {
   return (
     <Menu.Item
-      className={cn(item, destructive && "text-danger data-[highlighted]:bg-danger-wash [&_svg]:text-danger", className)}
+      className={cn(item, destructive && "text-danger-wash-ink data-[highlighted]:bg-danger-wash [&_svg]:text-danger-wash-ink", className)}
       {...props}
     >
       {children}

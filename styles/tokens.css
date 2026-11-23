@@ -34,7 +34,7 @@
   --muted: oklch(52% 0 0);
   --rule: oklch(92.2% 0 0);
   --rule-2: oklch(87% 0 0);
-  --field-edge: oklch(70.8% 0 0);
+  --field-edge: oklch(66.5% 0 0);
 
   --glass-edge: oklch(100% 0 0 / 0.65);
   --glass-hi: oklch(100% 0 0 / 0.8);
@@ -61,7 +61,7 @@
   --success: oklch(62.7% 0.17 150);
   --success-wash: oklch(96.5% 0.045 150);
   --success-wash-ink: oklch(44.8% 0.12 151);
-  --warning: oklch(76.9% 0.165 70);
+  --warning: oklch(66.5% 0.165 70);
   --warning-wash: oklch(97% 0.05 90);
   --warning-wash-ink: oklch(47% 0.12 46);
   --white: oklch(100% 0 0);
@@ -84,7 +84,7 @@
   --muted: oklch(66% 0 0);
   --rule: oklch(23% 0 0);
   --rule-2: oklch(31% 0 0);
-  --field-edge: oklch(44% 0 0);
+  --field-edge: oklch(48% 0 0);
 
   --glass-edge: oklch(100% 0 0 / 0.13);
   --glass-hi: oklch(100% 0 0 / 0.1);
@@ -110,7 +110,8 @@
 
 /* ───────── 3. Themes ───────── */
 /* Base: pure white and black, Inter, blue. The defaults above. */
-[data-theme="base"] { --h: 262; --c: 0.22; --l: 55%; }
+/* Volt was called Base until 2026-11; data-theme="base" still works. */
+[data-theme="volt"], [data-theme="base"] { --h: 262; --c: 0.22; --l: 55%; }
 
 /* Ember: warm paper, Bricolage Grotesque, orange. */
 [data-theme="ember"] {
@@ -127,7 +128,7 @@
   --muted: oklch(52% 0.025 60);
   --rule: oklch(91% 0.014 72);
   --rule-2: oklch(85.5% 0.018 70);
-  --field-edge: oklch(70% 0.025 65);
+  --field-edge: oklch(66% 0.025 65);
 }
 .dark[data-theme="ember"], .dark [data-theme="ember"] {
   --paper: oklch(12.5% 0.012 55);
@@ -138,7 +139,7 @@
   --muted: oklch(67% 0.02 70);
   --rule: oklch(24.5% 0.018 55);
   --rule-2: oklch(31.5% 0.022 55);
-  --field-edge: oklch(45% 0.025 60);
+  --field-edge: oklch(48% 0.025 60);
 }
 
 /* Grove: olive paper, Fraunces serif heads, sage. */
@@ -155,7 +156,7 @@
   --muted: oklch(51% 0.025 130);
   --rule: oklch(90.5% 0.016 115);
   --rule-2: oklch(85% 0.02 115);
-  --field-edge: oklch(68% 0.025 120);
+  --field-edge: oklch(65.5% 0.025 120);
 }
 .dark[data-theme="grove"], .dark [data-theme="grove"] {
   --paper: oklch(13% 0.014 130);
@@ -166,7 +167,7 @@
   --muted: oklch(67% 0.025 120);
   --rule: oklch(25% 0.02 130);
   --rule-2: oklch(32% 0.024 130);
-  --field-edge: oklch(46% 0.028 125);
+  --field-edge: oklch(47.5% 0.028 125);
 }
 
 /* Nebula: navy paper, Space Grotesk, violet. */
@@ -184,7 +185,7 @@
   --muted: oklch(52% 0.03 280);
   --rule: oklch(91.5% 0.014 285);
   --rule-2: oklch(86% 0.018 285);
-  --field-edge: oklch(69% 0.03 285);
+  --field-edge: oklch(66% 0.03 285);
 }
 .dark[data-theme="nebula"], .dark [data-theme="nebula"] {
   --paper: oklch(13% 0.035 275);
@@ -195,7 +196,7 @@
   --muted: oklch(68% 0.035 285);
   --rule: oklch(25% 0.045 278);
   --rule-2: oklch(32% 0.05 280);
-  --field-edge: oklch(47% 0.05 282);
+  --field-edge: oklch(48% 0.05 282);
 }
 
 /* Terminal: pure neutrals, JetBrains Mono everywhere, phosphor green. */
@@ -210,7 +211,7 @@
 
 /* Candy: blush paper, Nunito, rose. */
 [data-theme="candy"] {
-  --h: 355; --c: 0.19; --l: 62%;
+  --h: 355; --c: 0.19; --l: 59%;
   --ff-display: "Nunito", "Inter", sans-serif;
   --ff-body: "Nunito", "Inter", sans-serif;
   --display-weight: 800;
@@ -220,10 +221,10 @@
   --paper-3: oklch(93% 0.02 350);
   --ink: oklch(22% 0.03 350);
   --ink-2: oklch(40% 0.035 350);
-  --muted: oklch(54% 0.035 350);
+  --muted: oklch(52.5% 0.035 350);
   --rule: oklch(92.5% 0.016 350);
   --rule-2: oklch(87.5% 0.022 350);
-  --field-edge: oklch(71% 0.035 350);
+  --field-edge: oklch(66.5% 0.035 350);
 }
 .dark[data-theme="candy"], .dark [data-theme="candy"] {
   --paper: oklch(13.5% 0.02 350);
@@ -234,7 +235,7 @@
   --muted: oklch(69% 0.03 350);
   --rule: oklch(25.5% 0.028 350);
   --rule-2: oklch(32.5% 0.032 350);
-  --field-edge: oklch(47% 0.04 350);
+  --field-edge: oklch(48% 0.04 350);
 }
 
 /* Surfaces derived from the palette, recomputed wherever a theme re-tints it */
@@ -275,6 +276,9 @@
 [data-accent="vermilion"] { --h: 33; --c: 0.205; --l: 58%; --swatch-l: 60%; --accent-ink-override: initial; }
 [data-accent="rose"] { --h: 12; --c: 0.21; --l: 55%; --swatch-l: 62%; --accent-ink-override: initial; }
 [data-accent="amber"] { --h: 62; --c: 0.16; --l: 76%; --swatch-l: 76%; --accent-ink-override: oklch(21% 0.03 62); }
+/* Amber is too light for a focus ring on white; darken the ring in light mode only. */
+[data-accent="amber"] { --focus-d: -10%; }
+.dark[data-accent="amber"], .dark [data-accent="amber"] { --focus-d: 12%; }
 [data-accent="mono"] {
   --h: 0;
   --c: 0;

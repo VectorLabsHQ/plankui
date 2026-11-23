@@ -27,7 +27,7 @@ export function TextareaCounter({ value, defaultValue = "", maxLength, className
         aria-describedby={description ? `${description} ${counterId}` : counterId}
         className={cn("w-full", className)}
       />
-      <span id={counterId} className={cn("justify-self-end text-xs tabular-nums text-muted", current.length >= maxLength && "text-danger")}>
+      <span id={counterId} className={cn("justify-self-end text-xs tabular-nums text-muted", current.length >= maxLength && "text-danger-wash-ink")}>
         {current.length} / {maxLength}<span className="sr-only"> characters</span>
       </span>
     </div>

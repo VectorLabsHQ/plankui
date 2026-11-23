@@ -8,6 +8,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const reg = JSON.parse(readFileSync(join(dirname(fileURLToPath(import.meta.url)), "registry.json"), "utf8"));
+const pkg = JSON.parse(readFileSync(join(dirname(fileURLToPath(import.meta.url)), "package.json"), "utf8"));
 const PRO_NOTE = "This is a PlankUI Pro component. Its preview and API are open; the source comes with a Pro licence at https://plankui.com/pricing.";
 
 const bySlug = (list, slug) => list.find((x) => x.slug === String(slug ?? "").toLowerCase().trim());
@@ -125,7 +126,7 @@ function handle({ id, method, params = {} }) {
       return {
         protocolVersion: params.protocolVersion ?? "2025-06-18",
         capabilities: { tools: {} },
-        serverInfo: { name: "plankui", version: reg.version },
+        serverInfo: { name: "plankui", version: pkg.version },
         instructions: "PlankUI is a copy-paste React + Tailwind CSS v4 component library on Radix. Run get_setup once per project, then list_components or search_components, then get_component for each component you use. Import from @/components/ui/<slug>.",
       };
     case "ping":

@@ -1,6 +1,6 @@
 {
   "name": "plankui",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "PlankUI for Claude Code: a skill for building with PlankUI's React and Tailwind CSS v4 components, and the PlankUI MCP server with every component's source, props and usage.",
   "author": {
     "name": "Vector Labs",

@@ -21,7 +21,7 @@ PlankUI is a set of React 19 and Tailwind CSS v4 components whose source lives i
 
 ## Styling
 - Colours, radius and shadows come from tokens.css. Use the semantic classes (bg-paper, bg-card, text-ink, text-muted, border-rule, bg-accent, text-accent-ink) and never hard-code a colour value.
-- Themes are set with data-theme on the html element (base, ember, grove, nebula, terminal, candy), component styles with data-style (soft, flat, glass, keycap, brutal), and dark mode with the "dark" class.
+- Themes are set with data-theme on the html element (volt, ember, grove, nebula, terminal, candy), component styles with data-style (soft, flat, glass, keycap, brutal), and dark mode with the "dark" class.
 - Merge classes with cn() from "@/lib/cn".
 
 Docs: https://plankui.com/docs · Every component in one file: https://plankui.com/llms-full.txt

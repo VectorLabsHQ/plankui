@@ -134,6 +134,8 @@ code, kbd, pre { font-family: var(--ff-code); }
 @keyframes vx-spin { to { transform: rotate(360deg); } }
 @keyframes vx-shimmer { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
 @keyframes vx-reveal { from { opacity: 0; transform: translateY(4px); } }
+@keyframes vx-blink { 50% { opacity: 0; } }
+@keyframes vx-word-in { from { opacity: 0; transform: translateY(0.45em); } }
 
 .vx-pop[data-state="open"], .vx-pop[data-state="delayed-open"], .vx-pop[data-state="instant-open"] { animation: vx-pop-in var(--dur-short) var(--ease-out); }
 .vx-pop[data-state="closed"] { animation: vx-pop-out var(--dur-micro) ease-in; }
@@ -174,6 +176,11 @@ code, kbd, pre { font-family: var(--ff-code); }
   background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--paper) 60%, transparent), transparent);
   animation: vx-shimmer 1.4s ease-in-out infinite;
 }
+
+/* Amber is too light to read as text on a light page, so accent text uses its darker ink there.
+   Fills such as buttons keep the bright amber. */
+[data-accent="amber"] .text-accent, .text-accent[data-accent="amber"] { color: var(--accent-wash-ink); }
+.dark[data-accent="amber"] .text-accent, .dark [data-accent="amber"] .text-accent { color: var(--accent); }
 
 /* sugar-high code tokens: one accent, never a rainbow */
 .code-block {

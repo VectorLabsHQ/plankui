@@ -21,7 +21,7 @@ export interface TaskListProps {
   className?: string;
 }
 
-const tone = { low: "text-muted bg-paper-3", medium: "text-warning bg-warning/12", high: "text-danger bg-danger/12" };
+const tone = { low: "text-muted bg-paper-3", medium: "text-warning-wash-ink bg-warning/12", high: "text-danger-wash-ink bg-danger/12" };
 
 /** A checklist with progress, priorities, add and delete. Completed tasks fade and strike through. */
 export function TaskList({ tasks: controlled, onTasksChange, title = "Tasks", addable = true, className }: TaskListProps) {
@@ -63,7 +63,7 @@ export function TaskList({ tasks: controlled, onTasksChange, title = "Tasks", ad
               type="button"
               aria-label={`Delete ${t.title}`}
               onClick={() => set(tasks.filter((x) => x.id !== t.id))}
-              className="grid size-7 place-items-center rounded-sm text-muted opacity-0 hover:bg-paper-3 hover:text-danger focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-focus group-hover:opacity-100"
+              className="grid size-7 place-items-center rounded-sm text-muted opacity-0 hover:bg-paper-3 hover:text-danger-wash-ink focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-focus group-hover:opacity-100"
             >
               <TrashIcon className="size-3.5" />
             </button>

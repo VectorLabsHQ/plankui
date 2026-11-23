@@ -131,7 +131,9 @@ function handle({ id, method, params = {} }) {
     case "ping":
       return {};
     case "tools/list":
-      return { tools: Object.entries(tools).map(([name, t]) => ({ name, description: t.description, inputSchema: t.inputSchema })) };
+      // Every tool only reads the bundled registry: no writes, no network, same answer each time.
+      const annotations = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false };
+      return { tools: Object.entries(tools).map(([name, t]) => ({ name, description: t.description, inputSchema: t.inputSchema, annotations })) };
     case "tools/call": {
       const tool = tools[params.name];
       if (!tool) throw Object.assign(new Error(`Unknown tool: ${params.name}`), { code: -32602 });

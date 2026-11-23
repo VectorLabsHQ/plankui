@@ -40,6 +40,8 @@ Each SVG also has the class `plank-icon plank-icon-<name>`.
 
 Plain SVGs are in `svg/` (`@plankui/icons/svg/arrow-right.svg`), and `icons.json`
 (`@plankui/icons/icons.json`) lists every icon with its category, search words and shapes.
+React is an optional peer, so Vue, Svelte or plain HTML projects can install the package for the
+SVGs and the JSON without pulling in React.
 
 ## How it works
 

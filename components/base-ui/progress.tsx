@@ -10,9 +10,9 @@ export function Progress({
 }: Omit<React.ComponentProps<typeof ProgressPrimitive.Root>, "className" | "value"> & {
   value?: number | null;
   className?: string;
-  tone?: "accent" | "success" | "danger";
+  tone?: "accent" | "success" | "warning" | "danger";
 }) {
-  const fill = { accent: "bg-accent [background-image:var(--control-on-image)]", success: "bg-success", danger: "bg-danger" }[tone];
+  const fill = { accent: "bg-accent [background-image:var(--control-on-image)]", success: "bg-success", warning: "bg-warning", danger: "bg-danger" }[tone];
   const v = Math.min(100, Math.max(0, value ?? 0));
   return (
     <ProgressPrimitive.Root value={v} {...props}>

@@ -9,6 +9,7 @@ PlankUI is a set of React 19 and Tailwind CSS v4 components whose source lives i
 
 ## Adding components
 - Add with the CLI: `npx plankui@latest add <name>`. It also adds the PlankUI files the component builds on and installs its npm packages. See every name with `npx plankui@latest list`.
+- Before building a section by hand, check for a block: ready-made sections such as page-header, settings-section, plan-usage, api-keys, activity-feed, comment-thread, faq-section and error-page install the same way.
 - If the PlankUI MCP server is connected, call get_component for the real source, props and usage before writing code with a component.
 - If plankui.json says "primitives": "base", the components use Base UI: add with --base, and pass primitives "base" to the MCP tools. Otherwise they use Radix UI.
 

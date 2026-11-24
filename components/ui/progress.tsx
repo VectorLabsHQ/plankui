@@ -7,8 +7,8 @@ export function Progress({
   className,
   tone = "accent",
   ...props
-}: React.ComponentProps<typeof ProgressPrimitive.Root> & { tone?: "accent" | "success" | "danger" }) {
-  const fill = { accent: "bg-accent [background-image:var(--control-on-image)]", success: "bg-success", danger: "bg-danger" }[tone];
+}: React.ComponentProps<typeof ProgressPrimitive.Root> & { tone?: "accent" | "success" | "warning" | "danger" }) {
+  const fill = { accent: "bg-accent [background-image:var(--control-on-image)]", success: "bg-success", warning: "bg-warning", danger: "bg-danger" }[tone];
   const v = Math.min(100, Math.max(0, value ?? 0));
   return (
     <ProgressPrimitive.Root

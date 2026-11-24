@@ -13,6 +13,7 @@
     "pnpm, yarn, bun and deno work too (pnpm dlx plankui@latest init); the CLI installs packages with the project's own package manager.",
     "In a project set up with shadcn (it has components.json), add with npx shadcn@latest add https://plankui.com/r/shadcn/base/<name>.json when its style starts with \"base-\", or https://plankui.com/r/shadcn/<name>.json otherwise. There, PlankUI's colours are named plank-accent, plank-muted, plank-card and plank-ring (text-plank-muted, bg-plank-accent), because shadcn uses the plain names for its own.",
     "Add with the CLI: npx plankui@latest add <name>. It also adds the PlankUI files the component builds on and installs its npm packages. See every name with npx plankui@latest list.",
+    "Before building a section by hand, check for a block: ready-made sections such as page-header, settings-section, plan-usage, api-keys, activity-feed, comment-thread, faq-section and error-page install the same way.",
     "If the PlankUI MCP server is connected, call get_component for the real source, props and usage before writing code with a component.",
     "If plankui.json says \"primitives\": \"base\", the components use Base UI: add with --base, and pass primitives \"base\" to the MCP tools. Otherwise they use Radix UI.",
     "Import from \"@/components/ui/<name>\", for example import { Button } from \"@/components/ui/button\".",

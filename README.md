@@ -13,7 +13,7 @@
 
 <a href="https://www.producthunt.com/products/plankui?utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-plankui"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1324147&theme=light" alt="PlankUI on Product Hunt" width="250" height="54"></a>
 
-**101 free React components for Tailwind CSS v4.** Choose Radix UI or Base UI and copy the components into your project. Shared CSS variables power six themes, five styles, and light and dark mode.
+**92 free React components and 21 ready-made blocks for Tailwind CSS v4.** Choose Radix UI or Base UI and copy the components into your project. Shared CSS variables power six themes, five styles, and light and dark mode.
 
 [Website](https://plankui.com) · [Docs](https://plankui.com/docs) · [Component playground](https://plankui.com/docs/components) · [MCP setup](https://plankui.com/docs/mcp)
 
@@ -223,6 +223,18 @@ Select a component to see its live preview and usage examples. Run its CLI comma
 | [Task list](https://plankui.com/docs/components/task-list) | A checklist with progress, priorities, add and delete. Done tasks strike through. | `npx plankui@latest add task-list` |
 | [Profile card](https://plankui.com/docs/components/profile-card) | A person at a glance: avatar and status, role, labelled details and contact actions. | `npx plankui@latest add profile-card` |
 | [Invite members](https://plankui.com/docs/components/invite-members) | Invite by email, change each member's role, and copy a link that gives access. | `npx plankui@latest add invite-members` |
+| [Page header](https://plankui.com/docs/components/page-header) | The top of an app page: breadcrumb, title, a line of description and the page's actions. | `npx plankui@latest add page-header` |
+| [Activity feed](https://plankui.com/docs/components/activity-feed) | What people did and when, newest first, with avatars joined by a line. | `npx plankui@latest add activity-feed` |
+| [Poll card](https://plankui.com/docs/components/poll-card) | A question to vote on; after voting it shows each option's share. | `npx plankui@latest add poll-card` |
+| [Onboarding checklist](https://plankui.com/docs/components/onboarding-checklist) | Setup steps for a new account with progress; open steps link to where they are done. | `npx plankui@latest add onboarding-checklist` |
+| [Plan usage](https://plankui.com/docs/components/plan-usage) | The current plan with a meter per limit that warns near the limit and turns red at it. | `npx plankui@latest add plan-usage` |
+| [FAQ section](https://plankui.com/docs/components/faq-section) | A page section of questions and answers, one open at a time. | `npx plankui@latest add faq-section` |
+| [Settings section](https://plankui.com/docs/components/settings-section) | A group of settings: a heading, then a row per setting with its label, help and switch. | `npx plankui@latest add settings-section` |
+| [API keys](https://plankui.com/docs/components/api-keys) | A project's API keys, masked, with created and last-used dates, a create button and a confirmed revoke. | `npx plankui@latest add api-keys` |
+| [Cookie consent](https://plankui.com/docs/components/cookie-consent) | A cookie banner with equal Accept and Reject buttons and a panel to choose each kind. | `npx plankui@latest add cookie-consent` |
+| [Error page](https://plankui.com/docs/components/error-page) | A full-page error: the status large, what happened in plain words and a way out. | `npx plankui@latest add error-page` |
+| [Comment thread](https://plankui.com/docs/components/comment-thread) | A thread of comments with a box to add one; ⌘ or Ctrl Enter posts. | `npx plankui@latest add comment-thread` |
+| [Changelog](https://plankui.com/docs/components/changelog) | Release notes, newest first: version and date beside what is new, improved and fixed. | `npx plankui@latest add changelog` |
 | [Account menu](https://plankui.com/docs/components/account-menu) | The signed-in user's menu: name and plan, a dark mode switch, links, another account and sign out. | `npx plankui@latest add account-menu` |
 | [Applied filters](https://plankui.com/docs/components/applied-filters) | The filters in effect as removable chips, with clear all and a button to add more. | `npx plankui@latest add applied-filters` |
 | [Auth card](https://plankui.com/docs/components/auth-card) | Sign in, sign up and a one-time code step in one card. Uncontrolled, it hands you FormData. | `npx plankui@latest add auth-card` |

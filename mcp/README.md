@@ -5,7 +5,7 @@
 <h1 align="center">@plankui/mcp</h1>
 
 <p align="center">
-  Give your coding agent the source, props, and usage examples for <a href="https://plankui.com/docs/components">82 free PlankUI components</a>.
+  Give your coding agent the source, props, and usage examples for every free PlankUI <a href="https://plankui.com/docs/components">component</a>, <a href="https://plankui.com/docs/blocks">block</a> and <a href="https://plankui.com/docs/templates">template</a>.
 </p>
 
 <p align="center">
@@ -110,10 +110,12 @@ The server returns source and setup instructions that your agent can use to add 
 
 | Tool | Description |
 | --- | --- |
-| `list_components` | Component slugs, categories, and descriptions. Filter by category if needed |
+| `list_components` | Component and block slugs, categories, and descriptions. Filter by category (Blocks for ready-made sections) |
 | `search_components` | Components that match an intent, such as "confirm dialog" |
 | `get_component` | Source, dependencies, usage, and props. Pass `primitives: "base"` to request Base UI implementations where available |
 | `get_component_usage` | Usage and props only (same `primitives` option) |
+| `list_templates` | Complete screens, such as contact form, card grid and chat landing |
+| `get_template` | A template's full page source and the components it is built from |
 | `get_setup` | The tokens, styles and `cn` helper every project needs |
 | `get_theming` | Themes, styles, accents and how to change them |
 
